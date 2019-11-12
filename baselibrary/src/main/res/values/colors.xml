@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#B9B9FF</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="glay">#666666</color>
+    <color name="glaytxt">#666666</color>
+    <color name="allglay">#999999</color>
+    <color name="noglay">#F0F0F0</color>
+    <color name="yelllow">#ffff8244</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#FF333333</color>
+    <color name="oranger">#FFA97E</color>
+    <color name="blue">#B9B9FF</color>
+    <color name="red">#FF0000</color>
+    <color name="titleblack">#333333</color>
+
+
+
+</resources>
