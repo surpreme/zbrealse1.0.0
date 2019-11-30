@@ -82,15 +82,16 @@
                         app:hintEnabled="false">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/name_edit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:gravity="right|center"
-                            android:textCursorDrawable="@color/blue"
                             android:hint="请输入姓名"
                             android:maxLength="15"
                             android:maxLines="1"
                             android:textColor="@color/black"
+                            android:textCursorDrawable="@color/blue"
                             android:textSize="13sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -158,6 +159,7 @@
                         app:hintEnabled="false">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/address_edit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|center"
@@ -193,6 +195,7 @@
                         app:hintEnabled="false">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/peoplebooknumber_edit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|center"
@@ -221,32 +224,43 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="300dp"
                     android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_gravity="center">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/people_book_first_tv"
+                        android:layout_width="150dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
                         android:gravity="center"
                         android:text="+"
                         android:textSize="25sp" />
 
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/people_book_second_tv"
+                        android:layout_width="150dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_toRightOf="@+id/people_book_first_tv"
                         android:gravity="center"
                         android:text="+"
                         android:textSize="25sp" />
 
-                </LinearLayout>
+                    <ImageView
+                        android:id="@+id/people_book_first_img"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent" />
+
+
+                    <ImageView
+                        android:id="@+id/people_book_second_img"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/people_book_first_img" />
+                </RelativeLayout>
 
 
                 <LinearLayout

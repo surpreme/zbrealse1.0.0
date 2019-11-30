@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/device_list_ll"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_gravity="center|top"
+    android:background="@drawable/juxing_gray_background"
+    android:gravity="center|left"
+    android:orientation="vertical"
+    android:paddingLeft="20dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/blueya" />
+
+        <TextView
+            android:id="@+id/device_name_tv"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:text="已连接设备AA"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

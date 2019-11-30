@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#26254b"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="睡眠建议：8个小时"
+                android:textColor="@color/Violet"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="270dp"
+                android:layout_height="270dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_20dp">
+
+                <com.dinuscxj.progressbar.CircleProgressBar
+                    android:id="@+id/circle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:drawBackgroundOutsideProgress="true"
+                    app:progress_background_color="@color/Violet"
+                    app:progress_end_color="@color/glay"
+                    app:progress_shader="sweep"
+                    app:progress_start_color="@color/white"
+                    app:progress_start_degree="-90"
+                    app:progress_stroke_cap="round"
+                    app:progress_stroke_width="5dp"
+                    app:progress_text_color="@color/white"
+                    app:progress_text_size="0sp"
+                    app:style="solid_line" />
+
+                <com.lzy.basemodule.view.CircleBarStepView2
+                    android:id="@+id/circle_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    app:dotColor="@color/white"
+                    app:dotSize="8dp"
+                    app:ringColors="#938efd"
+                    app:ringSize="8dp"
+                    app:ringprogressColor="@color/white"
+                    app:showProgressText=""
+                    app:texColor="@color/white"
+                    app:texMarginSize="9dp"
+                    app:texSize="12sp"
+                    app:textPercentColor="#26254b"
+                    app:textProgressColor="#26254b"
+                    app:textProgressSize="47sp" />
+
+                <RelativeLayout
+                    android:layout_width="210dp"
+                    android:layout_height="210dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="8小时20分"
+                        android:textColor="#8B82FB"
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <com.dinuscxj.progressbar.CircleProgressBar
+                        android:id="@+id/circleProgressBar_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:drawBackgroundOutsideProgress="true"
+                        app:line_count="80"
+                        app:line_width="10dp"
+                        app:progress_background_color="@color/Violet"
+                        app:progress_end_color="@color/Violet"
+                        app:progress_shader="sweep"
+                        app:progress_start_color="@color/Violet"
+                        app:progress_start_degree="135"
+                        app:progress_stroke_cap="round"
+                        app:progress_stroke_width="1dp"
+                        app:progress_text_color="@color/white"
+                        app:progress_text_size="0sp"
+                        app:style="line" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/triagle"
+                    android:tint="#26254b" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="当前在床"
+                    android:layout_marginBottom="@dimen/margin_15dp"
+                    android:textColor="#fffefefe"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                android:gravity="center"
+                android:text="网络：良好"
+                android:textColor="@color/Violet"
+                android:textSize="19sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/yy_ll"
+                    android:layout_centerInParent="true"
+                    android:text="睡眠质量"
+                    android:textColor="#fffbfcfc"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:id="@+id/yy_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:layout_marginBottom="120dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="500分钟"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="睡眠时间"
+                            android:textColor="@color/Violet"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="180分钟"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="跑步路程"
+                            android:textColor="@color/Violet"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="好"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="心率浮动"
+                            android:textColor="@color/Violet"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout><!--<com.lzy.basemodule.view.CircleBarView-->
+    <!--android:id="@+id/crilebar_progress"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:bar_width="10dp"-->
+    <!--app:bg_color="@color/white"-->
+    <!--app:progress_color="@color/white"-->
+    <!--app:start_angle="270"-->
+    <!--app:sweep_angle="360" />-->
+    <!--<RelativeLayout-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_width="240dp"-->
+    <!--android:layout_height="240dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_margin="@dimen/margin_20dp">-->
+    <!--<com.lzy.basemodule.view.CircleBarStepView-->
+    <!--    android:visibility="gone"-->
+    <!--    android:id="@+id/sleepCircleBarStepView"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    custom:backGroundColor="#0f1e3f"-->
+    <!--    custom:lineColor="@color/yelllow"-->
+    <!--    custom:othetTextColor="#8ED8E5"-->
+    <!--    custom:outerCircleColor="#8ED8E5"-->
+    <!--    custom:outerDotColor="#ffffff"-->
+    <!--    custom:ringColor="#8ED8E5"-->
+    <!--    custom:stepNumColor="#ffffff" />-->
+    <!--</RelativeLayout>-->

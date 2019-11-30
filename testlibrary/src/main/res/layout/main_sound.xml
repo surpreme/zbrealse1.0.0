@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="41.5dp"
+    android:layout_gravity="center|top"
+    android:background="@drawable/juxing_gray_background"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp">
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="left|center"
+        android:src="@mipmap/sound" />
+
+    <TextView
+        android:id="@+id/sound_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:paddingLeft="20dp"
+        android:text="关爱老年健康 记忆与爱同行" />
+</LinearLayout>

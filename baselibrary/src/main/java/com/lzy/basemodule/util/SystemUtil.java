@@ -16,6 +16,7 @@ import android.view.View;
 
 import androidx.core.content.FileProvider;
 
+import com.lzy.basemodule.BaseConstant.BaseConstant;
 import com.lzy.basemodule.base.BaseApp;
 import com.lzy.basemodule.logcat.LogUtils;
 
@@ -76,7 +77,7 @@ public class SystemUtil {
      */
     public static Uri saveBitmapToFile(Context context, String url, Bitmap bitmap, View container, boolean isShare){
         String fileName = url.substring(url.lastIndexOf("/"),url.lastIndexOf(".")) + ".png";
-        File fileDir = new File(Constants.PATH_SDCARD);
+        File fileDir = new File(BaseConstant.PATH.PATH_SDCARD);
         if (!fileDir.exists()){
             fileDir.mkdirs();
         }
@@ -85,7 +86,7 @@ public class SystemUtil {
         if (isShare && imageFile.exists()) {
             if (Build.VERSION.SDK_INT >= 24) {
                 uri = FileProvider.getUriForFile(context.getApplicationContext(),
-                        Constants.FILE_PROVIDER_AUTHORITY, imageFile);
+                        BaseConstant.PATH.FILE_PROVIDER_AUTHORITY, imageFile);
             }
             return uri;
         }
@@ -111,7 +112,7 @@ public class SystemUtil {
         context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE,uri));
         if (Build.VERSION.SDK_INT >= 24) {
             uri = FileProvider.getUriForFile(context.getApplicationContext(),
-                    Constants.FILE_PROVIDER_AUTHORITY, imageFile);
+                    BaseConstant.PATH.FILE_PROVIDER_AUTHORITY, imageFile);
         }
         return uri;
     }
@@ -121,6 +122,11 @@ public class SystemUtil {
      */
     public static int dp2px(Context context, float dpValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
+
+    public static int dip2px(Context context, float dpValue) {
+        float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }
 

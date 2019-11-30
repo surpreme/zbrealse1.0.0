@@ -9,4 +9,8 @@ import android.content.Context;
 
 public interface BaseView {
      Context getContext();
+     void showLoading();
+     void dimissLoading();
+     void showError(String msg);
+
 }

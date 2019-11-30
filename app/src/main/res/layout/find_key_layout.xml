@@ -38,6 +38,7 @@
         android:gravity="center">
 
         <TextView
+            android:id="@+id/title_tv1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -47,6 +48,7 @@
             android:textSize="13sp" />
 
         <TextView
+            android:id="@+id/title_tv2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -66,137 +68,88 @@
         android:layout_height="20dp" />
 
     <LinearLayout
-        android:layout_width="335dp"
+        android:id="@+id/first_ll"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center">
+        android:orientation="vertical">
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
-            app:endIconMode="clear_text"
-            app:hintEnabled="false"
-            app:startIconDrawable="@mipmap/iphone"
-            app:startIconTint="@color/blue">
+            android:gravity="center">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/number_get_edit"
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="手机号码"
-                android:inputType="number"
-                android:maxLines="1"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:startIconDrawable="@mipmap/iphone"
+                app:startIconTint="@color/blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/number_get_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="手机号码"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center">
+        </LinearLayout>
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:hintEnabled="false"
-            app:passwordToggleEnabled="true"
-            app:startIconDrawable="@mipmap/lock"
-            app:startIconTint="@color/blue">
+        <View
+            android:layout_width="335dp"
+            android:layout_height="0.2dp"
+            android:layout_gravity="center"
+            android:background="@color/glay" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="335dp"
+            android:layout_height="43dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/widget_textinput_layout"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="登录密码"
-                android:imeOptions="actionDone"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:paddingLeft="10dp"
-                android:text=""
-                android:textColor="@color/glay"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_weight="1"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:startIconDrawable="@mipmap/ok"
+                app:startIconTint="@color/blue">
 
-    </LinearLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/keycode_get_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <View
-        android:layout_width="335dp"
-        android:layout_height="0.2dp"
-        android:layout_gravity="center"
-        android:background="@color/glay" />
+            <TextView
+                android:id="@+id/sendcode_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="发送验证码"
+                android:textColor="@color/blue"
+                android:textSize="13sp" />
 
-    <LinearLayout
-        android:layout_width="335dp"
-        android:layout_height="43dp"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/widget_textinput_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:endIconMode="clear_text"
-            app:hintEnabled="false"
-            app:startIconDrawable="@mipmap/ok"
-            app:startIconTint="@color/blue">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/key_get_edit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="请输入验证码"
-                android:inputType="number"
-                android:maxLines="1"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="发送验证码"
-            android:textColor="@color/blue"
-            android:textSize="13sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:hintEnabled="false"
-            app:passwordToggleEnabled="true"
-            app:startIconDrawable="@mipmap/lock"
-            app:startIconTint="@color/blue">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="登录密码"
-                android:imeOptions="actionDone"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:paddingLeft="10dp"
-                android:text=""
-                android:textColor="@color/glay"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <View
@@ -206,6 +159,81 @@
         android:background="@color/glay" />
 
     <LinearLayout
+        android:id="@+id/second_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@mipmap/lock"
+                app:startIconTint="@color/blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sure_password_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="确认新密码"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@mipmap/lock"
+                app:startIconTint="@color/blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/first_password_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="设置新密码"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="335dp"
+        android:layout_height="0.2dp"
+        android:layout_gravity="center"
+        android:background="@color/glay" />
+
+    <LinearLayout
+        android:id="@+id/next_ll"
         android:layout_width="335dp"
         android:layout_height="170dp"
         android:layout_gravity="center"
@@ -218,7 +246,26 @@
             android:layout_gravity="center"
             android:background="@drawable/round_background_blue"
             android:gravity="center"
-            android:text="下一步||提交"
+            android:text="下一步"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/over_ll"
+        android:layout_width="335dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/over_btn"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_background_blue"
+            android:gravity="center"
+            android:text="提交"
             android:textColor="#ffffffff"
             android:textSize="13sp" />
     </LinearLayout>

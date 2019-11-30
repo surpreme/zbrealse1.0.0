@@ -9,10 +9,14 @@ import androidx.fragment.app.Fragment;
 
 import com.lzy.basemodule.mvp.BasePresenterImpl;
 import com.lzy.basemodule.mvp.BaseView;
+import com.lzy.basemodule.view.GlideImageLoader;
+import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
+import com.youth.banner.Transformer;
 
 import java.lang.reflect.ParameterizedType;
 
-public class mBaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> extends Fragment implements BaseView {
+public class mBaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> extends Fragment {
     public Context context;
     public T mPresenter;
 
@@ -26,6 +30,26 @@ public class mBaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> e
     @Override
     public Context getContext() {
         return super.getContext();
+    }
+
+    //初始化banner
+    protected void initBanner(Banner banner) {
+        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
+        banner.setImageLoader(new GlideImageLoader());
+        banner.setBannerAnimation(Transformer.Default);
+        banner.setDelayTime(3000);
+        banner.isAutoPlay(true);
+
+    }
+
+    //初始化banner
+    protected void initBanner(Banner banner, int type) {
+        banner.setBannerStyle(type);
+        banner.setImageLoader(new GlideImageLoader());
+        banner.setBannerAnimation(Transformer.Default);
+        banner.setDelayTime(3000);
+        banner.isAutoPlay(true);
+
     }
 
     /**
@@ -59,7 +83,7 @@ public class mBaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> e
             e.printStackTrace();
         } catch (ClassCastException e) {
             e.printStackTrace();
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
         return null;

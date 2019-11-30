@@ -5,26 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp">
-
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
-            android:padding="10dp"
-            android:src="@drawable/back" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="注册"
-            android:textColor="@color/titleblack"
-            android:textSize="18sp" />
-    </RelativeLayout>
+    <include layout="@layout/toolbar_layout" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -76,7 +57,7 @@
                     android:inputType="number"
                     android:maxLines="1"
                     android:textColor="@color/black"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -89,17 +70,16 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/widget_textinput_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:hintEnabled="false"
+                android:layout_weight="5"
                 app:endIconMode="clear_text"
+                app:hintEnabled="false"
                 app:startIconDrawable="@mipmap/ok"
                 app:startIconTint="@color/blue">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/key_get_edit"
+                    android:id="@+id/code_get_edit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
@@ -111,8 +91,11 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/sendcode_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
                 android:text="发送验证码"
                 android:textColor="@color/blue"
                 android:textSize="13sp" />
@@ -128,6 +111,7 @@
             app:startIconTint="@color/blue">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit"
                 android:layout_width="335dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -138,7 +122,7 @@
                 android:maxLines="1"
                 android:paddingLeft="10dp"
                 android:text=""
-                android:textColor="@color/glay"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -152,6 +136,7 @@
             app:startIconTint="@color/blue">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sure_password_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -161,7 +146,7 @@
                 android:maxLines="1"
                 android:paddingLeft="10dp"
                 android:text=""
-                android:textColor="@color/glay"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,16 +162,12 @@
             android:orientation="horizontal"
             android:paddingLeft="70dp">
 
-            <ImageView
-                android:layout_width="13dp"
-                android:layout_height="13dp"
-                android:src="@drawable/juxing_background" />
 
             <CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:button="@null"
+                android:button="@drawable/check_state"
                 android:paddingLeft="10dp"
                 android:text="同意《用户服务协议 》"
                 android:textColor="@color/glaytxt"

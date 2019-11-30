@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/noglay"
+    android:background="@color/white"
     android:orientation="vertical">
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,11 +17,11 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="首页"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <LinearLayout
+            android:id="@+id/add_deivice_ll"
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
@@ -45,355 +44,247 @@
 
     </RelativeLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <com.scwang.smartrefresh.header.FlyRefreshHeader
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/noglay"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loadingdata.json"
+                app:lottie_loop="true" />
+        </com.scwang.smartrefresh.header.FlyRefreshHeader>
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <com.youth.banner.Banner
-                android:id="@+id/banner"
-                android:layout_width="355dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center|top"
-                android:background="@color/glaytxt" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
+            android:background="@color/white">
 
             <LinearLayout
-                android:layout_width="355dp"
-                android:layout_height="41.5dp"
-                android:layout_gravity="center|top"
-                android:background="@color/white"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="7dp"
+                android:paddingRight="10dp">
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="left|center"
-                    android:src="@mipmap/sound" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@color/lightglay"
+                    app:cardCornerRadius="10dp">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center|top" />
+                </androidx.cardview.widget.CardView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41.5dp"
+                    android:layout_gravity="center|top"
+                    android:background="@drawable/juxing_gray_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left|center"
+                        android:src="@mipmap/sound" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:paddingLeft="20dp"
+                        android:text="关爱老年健康 记忆与爱同行" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left|center"
-                    android:paddingLeft="20dp"
-                    android:text="关爱老年健康 记忆与爱同行" />
-            </LinearLayout>
+                    android:layout_gravity="center|top"
+                    android:paddingLeft="10dp"
+                    android:text="我的设备"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-                android:layout_width="355dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|top"
-                android:paddingLeft="10dp"
-                android:text="我的设备"
-                android:textColor="#ff333333"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="355dp"
-                android:layout_height="75dp"
-                android:layout_gravity="center|top"
-                android:gravity="center|left"
-                android:orientation="vertical"
-                android:paddingLeft="20dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/blueya" />
-
-                    <TextView
-                        android:layout_width="83dp"
-                        android:layout_height="wrap_content"
-                        android:text="已连接设备AA"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="355dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|top"
-                android:paddingLeft="10dp"
-                android:text="养老服务"
-                android:textColor="#ff333333"
-                android:textSize="14sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="355dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center|top" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
-
-            <TextView
-                android:layout_width="355dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|top"
-                android:paddingLeft="10dp"
-                android:text="残疾之家"
-                android:textColor="#ff333333"
-                android:textSize="14sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:id="@+id/main_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/main_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center_horizontal"
-                            app:srcCompat="@drawable/baomu" />
-
-                        <TextView
-                            android:id="@+id/main_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="日托"
-                            android:textColor="@color/black" />
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/shop_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/shop_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center_horizontal"
-                            app:srcCompat="@mipmap/learn_work" />
-
-                        <TextView
-                            android:id="@+id/shop_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="培训"
-                            android:textColor="#82858b" />
-
-                    </LinearLayout>
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/aroundbackground_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/aroundbackground_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center_horizontal"
-                            app:srcCompat="@drawable/finduser" />
-
-                        <TextView
-                            android:id="@+id/aroundbackground_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="就业"
-                            android:textColor="#82858b" />
-
-                    </LinearLayout>
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/news_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/news_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center_horizontal"
-                            app:srcCompat="@drawable/lessbodything" />
-
-                        <TextView
-                            android:id="@+id/news_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="助残活动"
-                            android:textColor="#82858b" />
-
-                    </LinearLayout>
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/my_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/my_img"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center_horizontal"
-                            app:srcCompat="@drawable/elseservice" />
-
-                        <TextView
-                            android:id="@+id/my_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:text="其他服务"
-                            android:textColor="#82858b" />
-
-                    </LinearLayout>
-
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
-
-            <LinearLayout
-                android:layout_width="335dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center|top"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_background_msg_green"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/chat" />
-                    <View
-                        android:layout_width="5dp"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="消息中心"
-                        android:textColor="#ffffffff"
-                        android:textSize="14sp"
-                        />
-                </LinearLayout>
                 <View
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/device_list_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center|top"
+                    android:background="@drawable/juxing_gray_background"
+                    android:gravity="center|left"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/blueya" />
+
+                        <TextView
+                            android:layout_width="83dp"
+                            android:layout_height="wrap_content"
+                            android:text="已连接设备AA"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:paddingLeft="10dp"
+                    android:text="养老服务"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/help_elder_recy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:paddingLeft="10dp"
+                    android:text="残疾之家"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/less_body_revy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_background_doctor_blue"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:gravity="center" >
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/doctor" />
+                    android:layout_height="70dp"
+                    android:gravity="center|top"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/message_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_background_msg_green"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/chat" />
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="消息中心"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
                     <View
-                        android:layout_width="5dp"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="医生咨询"
-                        android:textColor="#ffffffff"
-                        android:textSize="14sp"
-                        />
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/main_doctor_talker_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_background_doctor_blue"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/doctor" />
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="医生咨询"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="20dp"/>
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 
 </LinearLayout>

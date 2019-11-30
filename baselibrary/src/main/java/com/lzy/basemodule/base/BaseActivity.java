@@ -1,23 +1,31 @@
 package com.lzy.basemodule.base;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.lzy.basemodule.PopwindowUtils;
 import com.lzy.basemodule.R;
 import com.lzy.basemodule.androidlife.AppManager;
 import com.lzy.basemodule.logcat.LogUtils;
-import com.lzy.basemodule.mvp.BasePresenter;
 import com.lzy.basemodule.mvp.BasePresenterImpl;
 import com.lzy.basemodule.mvp.BaseView;
+import com.lzy.basemodule.util.SystemUtil;
+import com.lzy.basemodule.util.toast.ToastUtils;
+import com.lzy.basemodule.util.toast.ToastTopUtils;
 import com.lzy.basemodule.view.StatusBarUtils;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseActivity<V extends BaseView,T extends BasePresenterImpl<V>>  extends mBaseActivity<V, T> implements View.OnClickListener {
+public abstract class BaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> extends mBaseActivity<V, T> implements View.OnClickListener, BaseView {
     protected abstract int getLayoutResId();
 
     protected abstract void initView();
@@ -28,38 +36,128 @@ public abstract class BaseActivity<V extends BaseView,T extends BasePresenterImp
 
     protected abstract void initReStart();
 
+    public Bundle getSavedInstanceState() {
+        return savedInstanceState;
+    }
+
+    private Bundle savedInstanceState;
+
+    protected boolean isCanSavedInstanceState = false;
 
     private Unbinder unbinder;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
-        try{
+        if (isCanSavedInstanceState)
+            this.savedInstanceState = savedInstanceState;
+        try {
             //mvp
-            mPresenter= getInstance(this,1);
+            mPresenter = getInstance(this, 1);
             mPresenter.attachView((V) this);
-        }catch (Exception e){
-            LogUtils.e(e);
+        } catch (Exception e) {
+            LogUtils.e("mvp（可能未使用mvp格式）" + "/n" + e.getClass() + e);
         }
         context = this;
         unbinder = ButterKnife.bind((Activity) context);
         AppManager.getInstance().addActivity((Activity) context);
+//        StatusBarUtils.setTransparent(context);
         StatusBarUtils.setColor(context, getResources().getColor(R.color.white));
         initView();
         initDatas();
 
     }
 
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (isCanSavedInstanceState)
+            this.savedInstanceState = savedInstanceState;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initResume();
+        if (!SystemUtil.isNetworkConnected())
+            ToastUtils.showToast(context, "请检查网络设置");
+
+    }
+
+    public void initBottomBtn(String txt, View.OnClickListener listener) {
+        try {
+            Button bottom_btn = this.findViewById(R.id.bottom_btn);
+            bottom_btn.setOnClickListener(this);
+            bottom_btn.setText(txt);
+            bottom_btn.setOnClickListener(listener);
+        } catch (Exception e) {
+            LogUtils.e("initBottomBtn-fail" + e);
+        }
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        applypermission();
+    }
+
+    protected int getScreenWidth() {
+        return context.getResources().getDisplayMetrics().widthPixels;
+    }
+
+    protected int getScreenHeight() {
+        return context.getResources().getDisplayMetrics().heightPixels;
+    }
+
+    protected void showTopToasts(final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ToastTopUtils toastUtil = new ToastTopUtils();
+                toastUtil.Short(context, msg).setGravity(Gravity.TOP).setToastBackground(Color.WHITE, R.drawable.toast_radius).show();
+
+
+            }
+        });
+    }
+
+    protected void showToast(final String msg, final int gravity) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ToastTopUtils toastUtil = new ToastTopUtils();
+                toastUtil.Short(context, msg).setGravity(gravity).show();
+
+
+            }
+        });
+    }
+
+    protected void showToast(final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ToastUtils.showToast(context, msg);
+
+            }
+        });
+    }
+
+    protected String getBaseUrl() {
+        return getResources().getString(R.string.baseUrl);
+    }
+
     protected void killThisActvity() {
         AppManager.getInstance().killActivity((Activity) context);
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         unbinder.unbind();
-        if (mPresenter!=null)
+        if (mPresenter != null)
             mPresenter.detachView();
     }
 
@@ -68,4 +166,26 @@ public abstract class BaseActivity<V extends BaseView,T extends BasePresenterImp
 
     }
 
+    @Override
+    public void showLoading() {
+        PopwindowUtils.getmInstance().showloaddingPopupWindow(this);
+    }
+
+    @Override
+    public void dimissLoading() {
+        PopwindowUtils.getmInstance().dismissPopWindow();
+
+    }
+
+    @Override
+    public void showError(final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ToastUtils.showToast(context, msg);
+                LogUtils.e("服务器返回错误信息-----------" + msg);
+            }
+        });
+
+    }
 }

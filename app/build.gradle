@@ -7,9 +7,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    dataBinding {
+        enabled = false
+    }
     defaultConfig {
         applicationId "com.aite.aitezhongbao"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -26,6 +29,16 @@ android {
         }
         packagingOptions {
             exclude 'META-INF/rxjava.properties'
+        }
+    }
+    /**
+     * 生成apk的名字
+     */
+    applicationVariants.all{ variant->
+        variant.outputs.all { output->
+            if (variant.buildType.name == 'release' || variant.buildType.name == 'debug') {
+                outputFileName= "Zhongbao_V ${versionName}.apk"
+            }
         }
     }
     dexOptions {
@@ -89,6 +102,7 @@ dependencies {
     //arouter
     implementation project(path: ':baselibrary')
     implementation project(path: ':mainlibrary')
+    implementation project(path: ':testlibrary')
 //    implementation project(path: ':mainmodules')
     //jpush
 //    implementation 'cn.jiguang.sdk:jpush:3.3.6'  // 此处以JPush 3.3.6 版本为例。

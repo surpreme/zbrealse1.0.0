@@ -5,6 +5,7 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 
 import com.aite.aitezhongbao.R;
+import com.aite.mainlibrary.MainApp;
 import com.lzy.basemodule.base.BaseApp;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
@@ -38,9 +39,10 @@ public class App extends BaseApp {
     @Override
     public void onCreate() {
         super.onCreate();
+        MainApp.init(context);
+
 
     }
-
 
 
 }

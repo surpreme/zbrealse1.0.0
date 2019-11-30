@@ -1,82 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/white">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="圈子"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-
-    </RelativeLayout>
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="爱家"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_18sp" />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.2dp"
-        android:background="@color/allglay" />
+        android:layout_height="0.5dp"
+        android:background="@color/noglay" />
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/thingsfix_tabMode"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:layout_gravity="center"
         android:background="@color/white"
-        app:tabIndicatorColor="@color/yelllow"
         app:tabIndicatorHeight="0dp"
         app:tabSelectedTextColor="@color/yelllow"
-        app:tabTextAppearance="@style/MyTabText"
         app:tabTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/thingsfix_tab1_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="新闻" />
+            android:text="全部" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/thingsfix_tab2_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="养老" />
+            android:text="推荐圈子" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/thingsfix_tab3_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="吃喝" />
+            android:text="推荐话题" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/thingsfix_tab4_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="养生" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="养生" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="养生" />
-
+            android:text="我的圈子" />
     </com.google.android.material.tabs.TabLayout>
 
-    <com.youth.banner.Banner
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_id"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/Violet" />
+        android:layout_height="match_parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
 </LinearLayout>

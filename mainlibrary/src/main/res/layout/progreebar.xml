@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foot_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_20sp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="今日步数"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:gravity="center"
+                android:text="8866"
+                android:textColor="#fffefefe"
+                android:textSize="48sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:gravity="center"
+                android:text="目标10000"
+                android:textColor="#fffefefe"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <com.dinuscxj.progressbar.CircleProgressBar
+            android:id="@+id/circleProgressBar_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:drawBackgroundOutsideProgress="true"
+            app:line_count="30"
+            app:line_width="4dp"
+            app:progress_background_color="@color/black"
+            app:progress_end_color="#61A9FD"
+            app:progress_shader="sweep"
+            app:progress_start_color="@color/agreen"
+            app:progress_start_degree="-90"
+            app:progress_stroke_cap="round"
+            app:progress_stroke_width="10dp"
+            app:progress_text_color="@color/white"
+            app:progress_text_size="0sp"
+            app:style="solid_line" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:gravity="center"
+        android:text="最近同步：10分钟前"
+        android:textColor="#fffefefe"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/yy_ll"
+            android:layout_centerInParent="true"
+            android:text="运动分析"
+            android:textColor="#fffbfcfc"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:id="@+id/yy_ll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="160dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8866步"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今日步数"
+                    android:textColor="@color/agreen"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="180分钟"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跑步路程"
+                    android:textColor="@color/agreen"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="适中"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运动量"
+                    android:textColor="@color/agreen"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout><!--<com.lzy.basemodule.view.CircleBarView-->
+    <!--android:id="@+id/crilebar_progress"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:bar_width="10dp"-->
+    <!--app:bg_color="@color/white"-->
+    <!--app:progress_color="@color/white"-->
+    <!--app:start_angle="270"-->
+    <!--app:sweep_angle="360" />-->

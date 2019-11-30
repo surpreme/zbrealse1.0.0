@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f1e3f"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="正常心率 ：60~100次/分"
+                android:textColor="@color/green"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="此刻心率：80bpm"
+                android:textColor="@color/green"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_10dp">
+
+
+                <com.dinuscxj.progressbar.CircleProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:drawBackgroundOutsideProgress="true"
+                    app:line_count="80"
+                    app:line_width="8dp"
+                    app:progress_background_color="@color/agreen"
+                    app:progress_end_color="#61A9FD"
+                    app:progress_shader="sweep"
+                    app:progress_start_color="@color/agreen"
+                    app:progress_start_degree="-90"
+                    app:progress_stroke_cap="round"
+                    app:progress_stroke_width="3dp"
+                    app:progress_text_color="@color/white"
+                    app:progress_text_size="0sp"
+                    app:style="line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#0f1e3f" />
+
+                <RelativeLayout
+                    android:layout_width="210dp"
+                    android:layout_height="210dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/love" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="次/分"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="225"
+                            android:textColor="#fffefefe"
+                            android:textSize="43sp" />
+
+                    </LinearLayout>
+
+                    <com.dinuscxj.progressbar.CircleProgressBar
+                        android:id="@+id/circleProgressBar_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:drawBackgroundOutsideProgress="true"
+                        app:line_count="100"
+                        app:line_width="2dp"
+                        app:progress_background_color="@color/glay"
+                        app:progress_end_color="@color/agreen"
+                        app:progress_shader="sweep"
+                        app:progress_start_color="@color/agreen"
+                        app:progress_start_degree="135"
+                        app:progress_stroke_cap="round"
+                        app:progress_stroke_width="3dp"
+                        app:progress_text_color="@color/white"
+                        app:progress_text_size="0sp"
+                        app:style="line" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="135dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/margin_25dp"
+                    android:background="#0f1e3f"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/loveline" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:gravity="center"
+                android:text="最近同步：10分钟前"
+                android:textColor="#fffefefe"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/yy_ll"
+                    android:layout_centerInParent="true"
+                    android:text="心率详情"
+                    android:textColor="#fffbfcfc"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:id="@+id/yy_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/margin_50dp"
+                    android:layout_marginBottom="120dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="99次/分"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="最高心率"
+                            android:textColor="@color/green"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="99次/分"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="跑步路程"
+                            android:textColor="@color/green"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="平缓"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="心率浮动"
+                            android:textColor="@color/green"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/margin_50dp"
+                    android:background="@drawable/round_background_white"
+                    android:text="开始测试"
+                    android:textColor="#0B7C3C" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout><!--<com.lzy.basemodule.view.CircleBarView-->
+    <!--android:id="@+id/crilebar_progress"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:bar_width="10dp"-->
+    <!--app:bg_color="@color/white"-->
+    <!--app:progress_color="@color/white"-->
+    <!--app:start_angle="270"-->
+    <!--app:sweep_angle="360" />-->

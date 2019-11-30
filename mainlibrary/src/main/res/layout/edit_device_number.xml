@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/noglay" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/margin_10dp"
+        android:background="@drawable/juxing_gray_background"
+        android:hint="输入设备名称"
+        android:paddingLeft="@dimen/padding_15dp"
+        android:textSize="@dimen/textSize_15sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/margin_10dp"
+        android:background="@drawable/juxing_gray_background"
+        android:hint="输入设备码"
+        android:paddingLeft="@dimen/padding_15dp"
+        android:textSize="@dimen/textSize_15sp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_50dp"
+        android:background="@drawable/round_background_yellow"
+        android:text="绑定" />
+</LinearLayout>

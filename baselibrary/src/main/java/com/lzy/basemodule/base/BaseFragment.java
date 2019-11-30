@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
+import com.lzy.basemodule.PopwindowUtils;
 import com.lzy.basemodule.logcat.LogUtils;
 import com.lzy.basemodule.mvp.BasePresenterImpl;
 import com.lzy.basemodule.mvp.BaseView;
@@ -16,20 +16,30 @@ import com.lzy.basemodule.mvp.BaseView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> extends mBaseFragment<V, T> implements View.OnClickListener {
+public abstract class BaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> extends mBaseFragment<V, T> implements View.OnClickListener, BaseView {
+
     protected abstract void initModel();
 
     protected abstract void initViews();
 
     protected abstract int getLayoutResId();
 
+    protected float screenwidth = 0;
+
     private Unbinder unbinder;
+
+    public View getMview() {
+        return mview;
+    }
+
+    private View mview;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutResId(), container, false);
         unbinder = ButterKnife.bind(this, view);
+        mview = view;
         return view;
     }
 
@@ -42,6 +52,9 @@ public abstract class BaseFragment<V extends BaseView, T extends BasePresenterIm
         } catch (Exception e) {
             LogUtils.e("mvp错误" + e);
         }
+        if (screenwidth == 0) {
+            screenwidth = context.getResources().getDisplayMetrics().widthPixels;
+        }
 
     }
 
@@ -53,6 +66,9 @@ public abstract class BaseFragment<V extends BaseView, T extends BasePresenterIm
 
     }
 
+    public float getScreenwidth() {
+        return screenwidth;
+    }
 
     @Override
     public void onDestroy() {
@@ -61,5 +77,22 @@ public abstract class BaseFragment<V extends BaseView, T extends BasePresenterIm
             unbinder.unbind();
         if (mPresenter != null)
             mPresenter.detachView();
+    }
+
+    @Override
+    public void showLoading() {
+        PopwindowUtils.getmInstance().showloaddingPopupWindow(getActivity());
+    }
+
+    @Override
+    public void dimissLoading() {
+        PopwindowUtils.getmInstance().dismissPopWindow();
+
+
+    }
+
+    @Override
+    public void showError(String msg) {
+
     }
 }

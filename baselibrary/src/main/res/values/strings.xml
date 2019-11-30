@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">basemodule</string>
+    <string name="baseUrl">http://zhongbyi.aitecc.com</string>
+
+
 </resources>
