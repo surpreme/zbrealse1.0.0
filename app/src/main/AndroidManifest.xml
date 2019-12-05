@@ -50,12 +50,12 @@
         <activity android:name="com.aite.mainlibrary.activity.allmain.ElseHelpActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allstep.StepActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmoney.MoneyUserInformationActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allsetting.UserInformationActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.SosUserActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.PaySettingActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.BindingUserActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allsetting.AddSosUserActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allsetting.AddBindingUserActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.addsosuser.AddSosUserActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.addbindinguser.AddBindingUserActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.bookinformation.BookinformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.timebank.TimeBankActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmain.AddDeviceMainActvity" />
@@ -63,8 +63,8 @@
         <activity android:name="com.aite.mainlibrary.activity.DeviceNumberEditActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.DoctormainInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.daytogether.DayTogetherActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allshopcard.DayInformationActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allshopcard.BuyDayTogetherActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allshopcard.dayinformation.DayInformationActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allmain.buydaytogether.BuyDayTogetherActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.StarDoctorPushActvity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.helpeat.HelpEatActivity" />
         <activity android:name="com.aite.mainlibrary.activity.DeviceInformationActivity" />
@@ -93,6 +93,14 @@
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.posthelpdoctor.PostHelpDoctorActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.hekpstart.HekpStartActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.booktimebankinformation.BookTimebankInformationActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allnews.newsinformation.NewsInformationActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.minerunning.MineRunningActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.thingsbook.ThingsbookActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.adressfix.AdressFixActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.LessbodybookActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.addadrress.AddAdrressActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.changeuserinformation.ChangeUserInformationActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.appsettinginformation.AppSettingInformationActivity" />
 
 
     </application>

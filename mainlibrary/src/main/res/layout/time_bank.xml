@@ -210,7 +210,7 @@
             android:layout_height="10dp"
             android:background="@color/noglay" />
 
-        <include layout="@layout/recy_layout" />
+        <include layout="@layout/smartlayout_recy_layout" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

@@ -13,54 +13,77 @@
         app:cardCornerRadius="10dp">
 
         <com.youth.banner.Banner
+            android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:background="@color/noglay" />
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
+        android:id="@+id/eatfood_away_ll"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_gravity="center"
         android:background="@color/white"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
 
 
-        <LinearLayout
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp">
+            android:text="订餐方式"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="15dp"
-                android:text="订餐方式"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+            <CheckBox
+                android:id="@+id/eat_away_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:button="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="right|center"
-                android:paddingRight="15dp"
-                android:text="赋安科技大厦B座909"
-                android:textColor="#ff999999"
-                android:textSize="15sp" />
-        </LinearLayout>
+                android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_gravity="center"
-            android:src="@drawable/go_black" />
+
+                <TextView
+                    android:id="@+id/getshop_tv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_background_yellow"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="到店吃"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/send_user_tv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="配送"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
 
         <View
-            android:layout_width="20dp"
-            android:layout_height="0dp" />
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center" />
+
     </LinearLayout>
 
     <View
@@ -69,6 +92,7 @@
         android:background="@color/noglay" />
 
     <LinearLayout
+        android:id="@+id/choice_time_ll"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/white"
@@ -92,6 +116,7 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:id="@+id/time_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -120,6 +145,7 @@
         android:background="@color/noglay" />
 
     <LinearLayout
+        android:id="@+id/choice_oclock_ll"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/white"
@@ -143,12 +169,13 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:id="@+id/oclock_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right|center"
                 android:paddingRight="15dp"
-                android:text="12:00"
+                android:text="00:00"
                 android:textColor="#ff999999"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -162,6 +189,52 @@
         <View
             android:layout_width="20dp"
             android:layout_height="0dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/noglay" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingLeft="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="联系电话："
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:background="@null"
+                android:gravity="left|center"
+                android:inputType="phone"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <View

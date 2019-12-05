@@ -12,11 +12,13 @@ import com.lzy.okgo.model.HttpParams;
 public class DayTogetherContract {
     interface View extends BaseView {
         void onGetListSuccess(Object msg);
-        
+        void  onGetchoiceInformationSuccess(Object msg);
+
     }
 
     interface  Presenter extends BasePresenter<View> {
         void getListMsg(HttpParams httpParams);
+        void getChoiceInformation(HttpParams httpParams);
 
 
     }

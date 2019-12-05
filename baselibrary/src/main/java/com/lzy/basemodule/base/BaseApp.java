@@ -21,7 +21,7 @@ public class BaseApp extends Application {
 
     private void init() {
         context = this;
-        CrashHandler.init(new CrashHandler(getApplicationContext()));
+//        CrashHandler.init(new CrashHandler(getApplicationContext()));
         BGASwipeBackHelper.init(this, null);
 
 

@@ -21,6 +21,7 @@
 
 
         <LinearLayout
+            android:id="@+id/user_icon_ll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -40,6 +41,7 @@
                 android:textSize="17sp" />
 
             <ImageView
+                android:id="@+id/user_icon"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@mipmap/chat_man" />
@@ -55,10 +57,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
         android:background="@color/white"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
 
         <TextView
@@ -72,12 +74,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="1"
             app:endIconMode="clear_text"
             app:hintEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_edit"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@null"
@@ -93,7 +96,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/pay_setting_ll"
+        android:id="@+id/choice_family_ll"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/white"
@@ -109,13 +112,19 @@
             android:paddingLeft="20dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:paddingRight="15dp"
                 android:text="关系"
                 android:textColor="@color/black"
                 android:textSize="17sp" />
 
+            <TextView
+                android:id="@+id/famlily_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="同事" />
         </LinearLayout>
 
         <ImageView
@@ -128,38 +137,41 @@
             android:layout_width="20dp"
             android:layout_height="0dp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
         android:background="@color/white"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="联系方式"
+            android:text="手机号码"
             android:textColor="@color/black"
             android:textSize="17sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:paddingLeft="15dp"
-            android:layout_gravity="center"
             app:endIconMode="clear_text"
             app:hintEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_edit"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@null"
                 android:gravity="left|center"
-                android:hint="请输入联系方式"
+                android:hint="请输入手机号码"
+                android:inputType="phone"
                 android:maxLength="15"
                 android:maxLines="1"
                 android:textColor="@color/black"
@@ -168,24 +180,29 @@
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/noglay" />
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:checked="false"
-        style="?switchStyle"
-        android:text="设成默认紧急联系人"
-        android:paddingLeft="20dp"
-        app:thumbTint="@color/glay"
-        app:switchMinWidth="60dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:paddingRight="20dp"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="@color/noglay" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        style="?switchStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:checked="false"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="设成默认紧急联系人"
+        app:switchMinWidth="60dp"
+        app:thumbTint="@color/blue" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/noglay" />
+
+    <include layout="@layout/bottom_btn" />
 
 </LinearLayout>

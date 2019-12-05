@@ -22,8 +22,16 @@ import com.lzy.basemodule.util.toast.ToastUtils;
 import com.lzy.basemodule.util.toast.ToastTopUtils;
 import com.lzy.basemodule.view.StatusBarUtils;
 
+import java.io.File;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+
+/**
+ * @Auther: liziyang
+ * @datetime: 2019-11-23
+ * @desc:
+ */
 
 public abstract class BaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> extends mBaseActivity<V, T> implements View.OnClickListener, BaseView {
     protected abstract int getLayoutResId();
@@ -36,13 +44,13 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
 
     protected abstract void initReStart();
 
+
     public Bundle getSavedInstanceState() {
         return savedInstanceState;
     }
 
     private Bundle savedInstanceState;
 
-    protected boolean isCanSavedInstanceState = false;
 
     private Unbinder unbinder;
 
@@ -50,12 +58,15 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
-        if (isCanSavedInstanceState)
+//        if (isCanSavedInstanceState)
+        if (savedInstanceState != null && !savedInstanceState.isEmpty())
             this.savedInstanceState = savedInstanceState;
         try {
-            //mvp
-            mPresenter = getInstance(this, 1);
-            mPresenter.attachView((V) this);
+            if (isUseMvp()) {
+                //mvp
+                mPresenter = getInstance(this, 1);
+                mPresenter.attachView((V) this);
+            }
         } catch (Exception e) {
             LogUtils.e("mvp（可能未使用mvp格式）" + "/n" + e.getClass() + e);
         }
@@ -72,16 +83,22 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        if (isCanSavedInstanceState)
-            this.savedInstanceState = savedInstanceState;
+
+    }
+
+    @Override
+    protected boolean isUseMvp() {
+        return true;
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         initResume();
-        if (!SystemUtil.isNetworkConnected())
-            ToastUtils.showToast(context, "请检查网络设置");
+        if (!SystemUtil.isNetworkConnected()) {
+//            ToastUtils.showToast(context, "请检查网络设置");
+            LogUtils.d("当前无网络");
+        }
 
     }
 
@@ -101,6 +118,23 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
     protected void onStart() {
         super.onStart();
         applypermission();
+    }
+
+    @Override
+    protected void onSmartLoadMore() {
+
+
+    }
+
+    protected boolean isFileHas(File file) {
+        return file.exists();
+    }
+
+    @Override
+    protected void onSmartRefresh() {
+        if (!SystemUtil.isNetworkConnected())
+            initNodata();
+
     }
 
     protected int getScreenWidth() {

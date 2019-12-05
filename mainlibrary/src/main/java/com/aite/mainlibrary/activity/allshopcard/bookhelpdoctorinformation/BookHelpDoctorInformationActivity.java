@@ -12,7 +12,6 @@ import com.aite.mainlibrary.Mainbean.HelpDoctorInformationBean;
 import com.aite.mainlibrary.Mainbean.StateCodeBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.allshopcard.hekpstart.HekpStartActivity;
 import com.bumptech.glide.Glide;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.base.BaseActivity;
@@ -22,7 +21,6 @@ import com.lzy.okgo.model.HttpParams;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
 /**
@@ -42,6 +40,8 @@ public class BookHelpDoctorInformationActivity extends BaseActivity<BookHelpDoct
     TextView addressTv;
     @BindView(R2.id.bottom_btn)
     Button bottomBtn;
+    @BindView(R2.id.type_tv)
+    TextView typeTv;
 
     @Override
     protected int getLayoutResId() {
@@ -73,7 +73,6 @@ public class BookHelpDoctorInformationActivity extends BaseActivity<BookHelpDoct
         mPresenter.getInformation(initParams());
 
 
-
     }
 
     @Override
@@ -94,6 +93,7 @@ public class BookHelpDoctorInformationActivity extends BaseActivity<BookHelpDoct
         serviceTimeTv.setText(String.format("服务时间：%s", TimeUtils.stampToDatemm2(Long.valueOf(infoBean.getAddtime()))));
         Glide.with(context).load(((HelpDoctorInformationBean) msg).getAdvs().getAdv_img()).into(topIv);
         informationTv.setText(String.format("详情%s", infoBean.getRemarks()));
+        typeTv.setText(String.format("服务类型：%s", infoBean.getClass_name()));
 //        是否可以接单 1是 0否
         LogUtils.d(infoBean.getIs_order());
         bottomBtn.setEnabled(infoBean.getIs_order() == 1);
@@ -113,5 +113,12 @@ public class BookHelpDoctorInformationActivity extends BaseActivity<BookHelpDoct
             onBackPressed();
         }
 
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }

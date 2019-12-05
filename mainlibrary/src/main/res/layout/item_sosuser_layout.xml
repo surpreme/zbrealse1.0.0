@@ -20,12 +20,6 @@
         android:paddingEnd="10dp"
         android:paddingBottom="12dp">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@color/glaytxt"
-            android:gravity="center"
-            android:src="@mipmap/chat_women" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,20 +28,20 @@
             android:paddingLeft="10dp">
 
             <TextView
-                android:id="@+id/tv_item_bankname"
+                android:id="@+id/tv_namephone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="小燕   女儿"
+                android:text="王一一     16656565656"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tv_banknumber"
+                android:id="@+id/tv_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left|center"
                 android:paddingRight="18dp"
-                android:text="15566666666"
+                android:text="广东省深圳市南山区科技园"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
         </LinearLayout>

@@ -29,7 +29,7 @@ public class HelpdoctorPresenter extends BasePresenterImpl<HelpdoctorContract.Vi
 
     @Override
     public void getList(HttpParams httpParams) {
-        OkGo.<BaseData<HelpDoctorListBean>>post(AppConstant.LISTHELPDOCTORNEEDURL)
+        OkGo.<BaseData<HelpDoctorListBean>>get(AppConstant.LISTHELPDOCTORNEEDURL)
                 .tag(mView.getContext())
                 .params(httpParams)
                 .execute(new AbsCallback<BaseData<HelpDoctorListBean>>() {

@@ -89,11 +89,174 @@
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
 
-               <include layout="@layout/recy_layout"/>
+                <include layout="@layout/recy_layout" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right"
+            app:srcCompat="@mipmap/chat_women" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="助医服务"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="15dp"
+                    android:text="已完成"
+                    android:textColor="@color/yelllow"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="￥100.0"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="15dp">
+
+
+                <View
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="共1项服务   合计："
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:text="￥100.00"
+                        android:textColor="#ffff2d2b"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center|right"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/juxing_gray_background"
+            android:gravity="center"
+            android:text="提交信息" />
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/juxing_gray_background"
+            android:gravity="center"
+            android:text="查看详情" />
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/juxing_gray_background"
+            android:gravity="center"
+            android:text="评价"
+            android:textColor="@color/blue" />
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/juxing_gray_background"
+            android:gravity="center"
+            android:text="取消订单" />
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/juxing_gray_background"
+            android:gravity="center"
+            android:text="去付款"
+            android:textColor="@color/blue" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:paddingRight="15dp"
+        android:text="待付款"
+        android:textColor="@color/yelllow"
+        android:textSize="18sp" />
 
 </LinearLayout>

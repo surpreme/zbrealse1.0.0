@@ -2,19 +2,27 @@ package com.aite.mainlibrary.activity.allshopcard.remembershopbook;
 
 import com.lzy.basemodule.mvp.BasePresenter;
 import com.lzy.basemodule.mvp.BaseView;
+import com.lzy.okgo.model.HttpParams;
 
 /**
  * MVPPlugin
- *  邮箱 784787081@qq.com
+ * 邮箱 784787081@qq.com
  */
 
 public class RememberShopBookContract {
     interface View extends BaseView {
+        void onGetFoodInformationSuccess(Object msg);
 
-        
+        void postAllInformationSuccess(Object msg);
+
+
     }
 
-    interface  Presenter extends BasePresenter<View> {
-        
+    interface Presenter extends BasePresenter<View> {
+        void getFoodInformation(HttpParams httpParams);
+
+        void postAllInformation(HttpParams httpParams);
+
+
     }
 }

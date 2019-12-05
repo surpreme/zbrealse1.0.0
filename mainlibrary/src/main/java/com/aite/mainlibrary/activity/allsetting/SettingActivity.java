@@ -10,11 +10,9 @@ import android.widget.TextView;
 
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.allsetting.BindingUserActivity;
-import com.aite.mainlibrary.activity.allsetting.PaySettingActivity;
-import com.aite.mainlibrary.activity.allsetting.SosUserActivity;
-import com.aite.mainlibrary.activity.allsetting.UserInformationActivity;
-import com.aite.mainlibrary.activity.allsetting.UserSafetyActivity;
+import com.aite.mainlibrary.activity.allsetting.adressfix.AdressFixActivity;
+import com.aite.mainlibrary.activity.allsetting.appsettinginformation.AppSettingInformationActivity;
+import com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity;
 import com.lzy.basemodule.androidlife.AppManager;
 import com.lzy.basemodule.base.BaseActivity;
 
@@ -38,6 +36,10 @@ public class SettingActivity extends BaseActivity {
     LinearLayout baddingNuberLl;
     @BindView(R2.id.userSafety_ll)
     LinearLayout userSafetyLl;
+    @BindView(R2.id.address_ll)
+    LinearLayout addressLl;
+    @BindView(R2.id.app_setting_ll)
+    LinearLayout appSettingLl;
 
     @Override
     protected int getLayoutResId() {
@@ -54,7 +56,8 @@ public class SettingActivity extends BaseActivity {
         paySettingLl.setOnClickListener(this);
         baddingNuberLl.setOnClickListener(this);
         userSafetyLl.setOnClickListener(this);
-
+        addressLl.setOnClickListener(this);
+        appSettingLl.setOnClickListener(this);
     }
 
     /**
@@ -64,12 +67,16 @@ public class SettingActivity extends BaseActivity {
      */
     @Override
     public void onClick(View v) {
+        //AdressFixActivity
         if (v.getId() == R.id.iv_back) onBackPressed();
         if (v.getId() == R.id.user_information_ll) startActivity(UserInformationActivity.class);
         if (v.getId() == R.id.sos_user_ll) startActivity(SosUserActivity.class);
         if (v.getId() == R.id.pay_setting_ll) startActivity(PaySettingActivity.class);
         if (v.getId() == R.id.badding_nuber_ll) startActivity(BindingUserActivity.class);
         if (v.getId() == R.id.userSafety_ll) startActivity(UserSafetyActivity.class);
+        if (v.getId() == R.id.address_ll) startActivity(AdressFixActivity.class);
+        if (v.getId() == R.id.app_setting_ll) startActivity(AppSettingInformationActivity.class);
+
 
         if (v.getId() == R.id.exit_login_btn) {
             Intent intent = new Intent();
@@ -94,4 +101,10 @@ public class SettingActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 }

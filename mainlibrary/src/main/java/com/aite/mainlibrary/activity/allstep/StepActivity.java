@@ -33,9 +33,9 @@ public class StepActivity extends BaseActivity {
     protected void initView() {
         ivBack.setOnClickListener(this);
         stepview.setOnClickListener(this);
-        tvTitle.setText("签到");
+        initToolbar("签到");
         StatusBarUtils.setColor(context, getResources().getColor(R.color.blue_day_login));
-        setInitStepview(31, mprogress);
+        setInitStepview(24, mprogress);
 
     }
 

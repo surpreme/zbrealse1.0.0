@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aite.mainlibrary.Mainbean.AirMainListBean;
+import com.aite.mainlibrary.Mainbean.HelpDoctorListBean;
 import com.aite.mainlibrary.Mainbean.HelpEatUIBean;
 import com.aite.mainlibrary.Mainbean.TypeAirBean;
 import com.aite.mainlibrary.R;
@@ -46,8 +47,6 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
 
     @BindView(R2.id.floatbutton)
     FloatingActionButton floatbutton;
-    @BindView(R2.id.recycler_view)
-    RecyclerView recyclerView;
     @BindView(R2.id.banner)
     Banner banner;
     @BindView(R2.id.father_tab_ll)
@@ -73,16 +72,21 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
     @Override
     protected void initView() {
         initToolbar("喘息服务", getResources().getColor(R.color.white));
+        initMoreRecy();
         //初始化banner
         initBanner(banner);
+        //smartlayout
+        initSmartLayout(true);
+        //初始化加载
+        initLoadingAnima();
         banner.setIndicatorGravity(BannerConfig.RIGHT)
                 .setOnBannerListener(this);
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        mBaserecyclerView.setLayoutManager(linearLayoutManager);
         airServiceRecyAdapter = new AirServiceRecyAdapter(context, listBean);
-        recyclerView.setAdapter(airServiceRecyAdapter);
+        mBaserecyclerView.setAdapter(airServiceRecyAdapter);
         airServiceRecyAdapter.setClickInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
             @Override
             public void getPostion(int postion) {
@@ -105,6 +109,25 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
         mPresenter.getDataList(initParams());
     }
 
+    @Override
+    protected void onSmartLoadMore() {
+        super.onSmartLoadMore();
+        mPresenter.getDataList(initParams());
+
+    }
+
+    @Override
+    protected void onSmartRefresh() {
+        super.onSmartRefresh();
+        if (listBean != null) {
+            listBean.clear();
+            airServiceRecyAdapter.notifyDataSetChanged();
+        }
+
+        mPresenter.getDataList(initParams());
+
+    }
+
     private HttpParams initParams() {
         HttpParams httpParams = new HttpParams();
         httpParams.put("key", AppConstant.KEY);
@@ -124,10 +147,20 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
 
     @Override
     public void onDataListSuccess(Object msg) {
-        if (!listBean.isEmpty())
-            listBean.clear();
-        listBean.addAll(((AirMainListBean) msg).getList());
-        airServiceRecyAdapter.notifyDataSetChanged();
+        if (((AirMainListBean) msg).getList().isEmpty()) {
+            initNodata();
+        } else {
+            stopLoadingAnim();
+            showMoreRecy();
+            stopNoData();
+            listBean.addAll(((AirMainListBean) msg).getList());
+            airServiceRecyAdapter.notifyDataSetChanged();
+            hasMore = ((AirMainListBean) msg).getIs_nextpage() > 0;
+        }
+//        if (!listBean.isEmpty())
+//            listBean.clear();
+//        listBean.addAll(((AirMainListBean) msg).getList());
+//        airServiceRecyAdapter.notifyDataSetChanged();
     }
 
     @Override

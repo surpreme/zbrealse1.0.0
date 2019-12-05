@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +20,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.builder.TimePickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectChangeListener;
@@ -28,14 +31,22 @@ import com.bigkoo.pickerview.listener.OnTimeSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.bigkoo.pickerview.view.TimePickerView;
 import com.google.android.material.textfield.TextInputEditText;
+import com.lzy.basemodule.OnClickLstenerInterface;
+import com.lzy.basemodule.OnSmartLayoutLstenerInterface;
 import com.lzy.basemodule.R;
 import com.lzy.basemodule.logcat.LogUtils;
 import com.lzy.basemodule.mvp.BasePresenterImpl;
 import com.lzy.basemodule.mvp.BaseView;
 import com.lzy.basemodule.util.SystemUtil;
 import com.lzy.basemodule.util.TimeUtils;
+import com.lzy.basemodule.util.toast.ToastTopUtils;
 import com.lzy.basemodule.util.toast.ToastUtils;
 import com.lzy.basemodule.view.GlideImageLoader;
+import com.scwang.smartrefresh.header.WaterDropHeader;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -51,15 +62,25 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import butterknife.BindView;
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 
-public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> extends AppCompatActivity implements BaseView, BGASwipeBackHelper.Delegate {
+/**
+ * @Auther: liziyang
+ * @datetime: 2019-11-23
+ * @desc:
+ */
+
+public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> extends AppCompatActivity implements BaseView, BGASwipeBackHelper.Delegate {
     protected Context context;
     public T mPresenter;
     protected BGASwipeBackHelper mSwipeBackHelper;
     protected TimePickerView pvTime;
     protected OptionsPickerView pvOptions;
-
+    private SmartRefreshLayout smartRefreshLayout;
+    protected LottieAnimationView lottieAnimationView;
+    protected LottieAnimationView nodata_lottieAnimationView;
+    protected TextView tv_title_right;
     //  省
     protected List<String> options1Items = new ArrayList<>();
     protected List<String> city;
@@ -74,6 +95,19 @@ public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> e
     protected List<List<String>> areanumber;
     protected List<String> chirendenarea;
     protected List<String> chirendenareanumber;
+    //下拉刷新
+    protected int mCurrentPage = 1;
+
+    protected boolean hasMore = false;
+
+    protected abstract void onSmartLoadMore();
+
+    protected abstract void onSmartRefresh();
+
+    protected abstract boolean isUseMvp();
+
+    protected RecyclerView mBaserecyclerView;
+
     //  市地理
     protected List<List<String>> options2Itemsnumber = new ArrayList<>();
     //  区地理
@@ -136,6 +170,7 @@ public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> e
         return pvOptions;
     }
 
+
     protected TimePickerView initNoTitleChoiceTimer(OnTimeSelectListener listener) {
         Calendar selectedDate = Calendar.getInstance();
         Calendar startDate = Calendar.getInstance();
@@ -158,7 +193,7 @@ public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> e
 
     }
 
-    protected TimePickerView initChoiceTimer(OnTimeSelectListener listener, String title,boolean isHM) {
+    protected TimePickerView initChoiceTimer(OnTimeSelectListener listener, String title, boolean isHM) {
         Calendar selectedDate = Calendar.getInstance();
         Calendar startDate = Calendar.getInstance();
         Calendar endDate = Calendar.getInstance();
@@ -166,6 +201,50 @@ public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> e
         endDate.set(2050, 11, 31);
         pvTime = new TimePickerBuilder(this, listener)
                 .setType(new boolean[]{true, true, true, isHM, isHM, false})// 默认全部显示
+                .setCancelText("取消")//取消按钮文字
+                .setSubmitText("确定")//确认按钮文字
+                .setOutSideCancelable(true)//点击屏幕，点在控件外部范围时，是否取消显示
+                .setTitleColor(0xFFF9731E)//标题文字颜色
+                .setSubmitColor(0xFFF9731E)//确定按钮文字颜色
+                .setCancelColor(0xFFF9731E)//取消按钮文字颜色
+                .setRangDate(startDate, endDate)//起始终止年月日设定
+                .isCenterLabel(false) //是否只显示中间选中项的label文字，false则每项item全部都带有label。
+                .setTitleText(title)
+//                .isDialog(true)//是否显示为对话框样式
+                .build();
+        return pvTime;
+
+    }
+    protected TimePickerView initChoiceTimer(OnTimeSelectListener listener, String title,int year, boolean isHM) {
+        Calendar selectedDate = Calendar.getInstance();
+        Calendar startDate = Calendar.getInstance();
+        Calendar endDate = Calendar.getInstance();
+        startDate.set(year, 10, 21);
+        endDate.set(2050, 11, 31);
+        pvTime = new TimePickerBuilder(this, listener)
+                .setType(new boolean[]{true, true, true, isHM, isHM, false})// 默认全部显示
+                .setCancelText("取消")//取消按钮文字
+                .setSubmitText("确定")//确认按钮文字
+                .setOutSideCancelable(true)//点击屏幕，点在控件外部范围时，是否取消显示
+                .setTitleColor(0xFFF9731E)//标题文字颜色
+                .setSubmitColor(0xFFF9731E)//确定按钮文字颜色
+                .setCancelColor(0xFFF9731E)//取消按钮文字颜色
+                .setRangDate(startDate, endDate)//起始终止年月日设定
+                .isCenterLabel(false) //是否只显示中间选中项的label文字，false则每项item全部都带有label。
+                .setTitleText(title)
+//                .isDialog(true)//是否显示为对话框样式
+                .build();
+        return pvTime;
+
+    }
+    protected TimePickerView initChoiceHMTimer(OnTimeSelectListener listener, String title, boolean isSS) {
+        Calendar selectedDate = Calendar.getInstance();
+        Calendar startDate = Calendar.getInstance();
+        Calendar endDate = Calendar.getInstance();
+        startDate.set(2019, 10, 21);
+        endDate.set(2050, 11, 31);
+        pvTime = new TimePickerBuilder(this, listener)
+                .setType(new boolean[]{false, false, false, true, true, isSS})// 默认全部显示
                 .setCancelText("取消")//取消按钮文字
                 .setSubmitText("确定")//确认按钮文字
                 .setOutSideCancelable(true)//点击屏幕，点在控件外部范围时，是否取消显示
@@ -188,6 +267,55 @@ public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> e
 
     }
 
+    protected void initMoreRecy() {
+        mBaserecyclerView = this.findViewById(R.id.recycler_view);
+    }
+
+    protected void showMoreRecy() {
+        mBaserecyclerView.setVisibility(View.VISIBLE);
+    }
+
+    //初始化动画
+    protected void initLoadingAnima() {
+        lottieAnimationView = this.findViewById(R.id.lottieAnimationView);
+        nodata_lottieAnimationView = this.findViewById(R.id.nodata_lottieAnimationView);
+        lottieAnimationView.playAnimation();   //播放
+        smartRefreshLayout.setVisibility(View.GONE);
+        lottieAnimationView.setVisibility(View.VISIBLE);
+        mBaserecyclerView.setVisibility(View.GONE);
+
+        nodata_lottieAnimationView.setVisibility(View.GONE);
+        if (!SystemUtil.isNetworkConnected()) {
+            stopLoadingAnim();
+            initNodata();
+            ToastTopUtils toastTopUtils = new ToastTopUtils();
+            toastTopUtils.Short(context, "请检查网络").setGravity(Gravity.TOP).show();
+        }
+
+    }
+
+    protected void stopLoadingAnim() {
+        if (lottieAnimationView != null) {
+            lottieAnimationView.cancelAnimation();  //取消
+            lottieAnimationView.setVisibility(View.GONE);
+        }
+        smartRefreshLayout.setVisibility(View.VISIBLE);
+
+
+    }
+
+    protected void initNodata() {
+        stopLoadingAnim();
+        if (nodata_lottieAnimationView != null) {
+            nodata_lottieAnimationView.setVisibility(View.VISIBLE);
+            nodata_lottieAnimationView.playAnimation();
+        }
+    }
+
+    protected void stopNoData() {
+        nodata_lottieAnimationView.setVisibility(View.GONE);
+    }
+
     //初始化banner
     protected void initBanner(Banner banner) {
         banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
@@ -195,6 +323,15 @@ public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> e
         banner.setBannerAnimation(Transformer.Default);
         banner.setDelayTime(3000);
         banner.isAutoPlay(true);
+
+    }
+
+    //播放banner
+    protected void startBanner(Banner banner, List<String> list_img, List<String> list_title) {
+        banner.setImages(list_img);
+        banner.setBannerTitles(list_title);
+        banner.startAutoPlay();
+        banner.start();
 
     }
 
@@ -240,6 +377,26 @@ public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> e
 
     }
 
+    public void initToolbar(String title, String righTitle, View.OnClickListener listener) {
+        try {
+            ImageView backImg = this.findViewById(R.id.iv_back);
+            backImg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onBackPressed();
+                }
+            });
+            TextView titleTv = this.findViewById(R.id.tv_title);
+            tv_title_right = this.findViewById(R.id.tv_title_right);
+            tv_title_right.setText(righTitle);
+            tv_title_right.setOnClickListener(listener);
+            titleTv.setText(title);
+        } catch (Exception e) {
+            LogUtils.e("initToolbar-fail" + e);
+        }
+
+    }
+
     /**
      * @param title
      * @param color Color.WHITE
@@ -261,6 +418,51 @@ public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> e
         }
 
     }
+
+    /**
+     * 初始化刷新控件
+     * 是否可以上拉加载
+     *
+     * @param isRefresh
+     */
+    public void initSmartLayout(boolean isRefresh) {
+        try {
+            smartRefreshLayout = this.findViewById(R.id.smartlayout);
+            smartRefreshLayout.setEnableAutoLoadMore(isRefresh);
+            smartRefreshLayout.setRefreshHeader(new WaterDropHeader(context));
+            mCurrentPage = 1;
+            smartRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
+                @Override
+                public void onRefresh(@NonNull RefreshLayout refreshLayout) {
+                    mCurrentPage = 1;
+                    onSmartRefresh();
+                    smartRefreshLayout.finishRefresh(1000/*,false*/);//传入false表示刷新失败
+
+                }
+            });
+            smartRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
+                @Override
+                public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
+                    LogUtils.d("mCurrentPage" + mCurrentPage);
+                    if (!SystemUtil.isNetworkConnected())
+                        smartRefreshLayout.finishLoadMoreWithNoMoreData();
+                    if (hasMore) {
+                        mCurrentPage++;
+                        smartRefreshLayout.finishLoadMore(1000/*,false*/);//传入false表示加载失败
+                        onSmartLoadMore();
+                    } else {
+                        smartRefreshLayout.finishLoadMoreWithNoMoreData();
+
+                    }
+
+                }
+            });
+        } catch (Exception e) {
+            LogUtils.e("initSmartLayout-fail" + e + e.getClass());
+        }
+
+    }
+
 
     protected String getEditString(EditText editText) {
         if (isEditTextEmpty(editText)) {
@@ -305,6 +507,7 @@ public class mBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> e
         if (editText.getText().toString().trim() == null ||
                 editText.getText().toString().length() == 0 ||
                 editText.getText().toString().trim().equals("")) {
+            ToastUtils.showToast(context, "请检查输入的信息");
             return true;
         } else return false;
     }

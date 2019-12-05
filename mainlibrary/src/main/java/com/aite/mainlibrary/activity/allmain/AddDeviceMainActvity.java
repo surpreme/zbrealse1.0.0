@@ -10,6 +10,7 @@ import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.DeviceNumberEditActivity;
 import com.aite.mainlibrary.activity.allqr.QrCodeActivity;
 import com.lzy.basemodule.base.BaseActivity;
+import com.lzy.basemodule.logcat.LogUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,6 +31,7 @@ public class AddDeviceMainActvity extends BaseActivity {
         initToolbar("添加设备");
         scodeImg.setOnClickListener(this);
         editDeviceNumber.setOnClickListener(this);
+        LogUtils.d("1");
     }
 
     @Override
@@ -56,12 +58,7 @@ public class AddDeviceMainActvity extends BaseActivity {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 
     @Override
     public void showError(String msg) {

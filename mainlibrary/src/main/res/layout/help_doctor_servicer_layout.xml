@@ -151,7 +151,7 @@
 
 
     <include
-        layout="@layout/recy_layout"
+        layout="@layout/smartlayout_recy_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />

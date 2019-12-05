@@ -11,8 +11,10 @@ import com.aite.mainlibrary.Mainbean.NewsGoodBean;
 import com.aite.mainlibrary.Mainbean.TopNewsBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
+import com.aite.mainlibrary.activity.allnews.newsinformation.NewsInformationActivity;
 import com.aite.mainlibrary.adapter.AroundGoodRecyAdapter;
 import com.aite.mainlibrary.adapter.TopNewsRecyAdapter;
+import com.lzy.basemodule.OnClickLstenerInterface;
 import com.lzy.basemodule.base.BaseFragment;
 import com.lzy.basemodule.logcat.LogUtils;
 import com.lzy.okgo.model.HttpParams;
@@ -75,6 +77,13 @@ public class MainNewsFragment extends BaseFragment<MainNewsContract.View, MainNe
         topRecy.setLayoutManager(linearLayoutManager2);
         topNewsRecyAdapter = new TopNewsRecyAdapter(context, topnewsbean);
         topRecy.setAdapter(topNewsRecyAdapter);
+        topNewsRecyAdapter.setLstenerInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
+            @Override
+            public void getPostion(int postion) {
+                startActivity(NewsInformationActivity.class, "article_id", topnewsbean.get(postion).getArticle_id());
+
+            }
+        });
     }
 
     @Override
@@ -117,6 +126,8 @@ public class MainNewsFragment extends BaseFragment<MainNewsContract.View, MainNe
 
     @Override
     public void OnBannerClick(int position) {
+        startActivity(NewsInformationActivity.class, "article_id", topnewsbean.get(position).getArticle_id());
+
 
     }
 }

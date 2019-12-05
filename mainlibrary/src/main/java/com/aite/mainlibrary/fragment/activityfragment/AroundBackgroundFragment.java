@@ -66,6 +66,7 @@ public class AroundBackgroundFragment extends BaseFragment{
         initFragment();
     }
 
+
     @Override
     protected int getLayoutResId() {
         return R.layout.activity_around_fragment;

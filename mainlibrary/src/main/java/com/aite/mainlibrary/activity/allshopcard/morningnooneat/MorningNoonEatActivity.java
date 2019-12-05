@@ -57,7 +57,7 @@ public class MorningNoonEatActivity extends BaseActivity<MorningNoonEatContract.
         morningNoonEatRecyAdapter.setLstenerInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
             @Override
             public void getPostion(int postion) {
-                startActivity(RememberShopBookActivity.class);
+                startActivity(RememberShopBookActivity.class,"goods_id",goodsListBeanList.get(postion).getGoods_id());
             }
         });
 

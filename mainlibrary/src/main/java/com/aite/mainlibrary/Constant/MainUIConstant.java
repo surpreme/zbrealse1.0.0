@@ -98,9 +98,9 @@ public class MainUIConstant {
 
         public static int[] bookImg = {
                 R.mipmap.eat,
-                R.mipmap.helpdoctor,
+//                R.mipmap.helpdoctor,
 
-                R.mipmap.service,
+//                R.mipmap.service,
                 R.mipmap.elsesevice,
 
                 R.drawable.baomu,
@@ -110,8 +110,9 @@ public class MainUIConstant {
                 R.drawable.lessbodything
 
         };
+        //"助医", "喘息服务",
         public static String[] bookTv = {
-                "助餐", "助医", "喘息服务", "其它服务",
+                "助餐",  "其它服务",
                 "日托", "培训", "辅助就业", "助残活动"
         };
 

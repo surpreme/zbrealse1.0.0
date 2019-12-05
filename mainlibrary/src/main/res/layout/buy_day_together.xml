@@ -37,11 +37,14 @@
                 android:textSize="@dimen/textSize_16sp" />
 
             <EditText
+                android:id="@+id/iphone_number_edit"
                 android:layout_width="260dp"
                 android:layout_height="30dp"
+                android:paddingLeft="@dimen/margin_5dp"
                 android:layout_marginTop="@dimen/margin_10dp"
                 android:layout_marginBottom="@dimen/margin_10dp"
-                android:background="@drawable/juxing_gray_background" />
+                android:background="@drawable/juxing_gray_background"
+                android:inputType="phone" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -51,7 +54,50 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/textSize_16sp" />
 
-            <include layout="@layout/recy_layout" />
+            <include
+                layout="@layout/recy_layout"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+
+                <ImageView
+                    android:id="@+id/icon_img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/margin_15dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/title_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|left"
+                        android:text="服务商品"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥100.00"
+                        android:textColor="@color/yelllow"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,6 +113,7 @@
                     android:textSize="@dimen/textSize_14sp" />
 
                 <TextView
+                    android:id="@+id/book_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_10dp"
@@ -80,7 +127,6 @@
     </androidx.core.widget.NestedScrollView>
 
 
-    <include
-        layout="@layout/bottom_btn" />
+    <include layout="@layout/bottom_btn" />
 
 </RelativeLayout>

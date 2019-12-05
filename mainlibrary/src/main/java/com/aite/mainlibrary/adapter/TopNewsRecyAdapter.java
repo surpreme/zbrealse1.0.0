@@ -72,6 +72,12 @@ public class TopNewsRecyAdapter extends RecyclerView.Adapter<TopNewsRecyAdapter.
         holder.titleTv.setText(listBeans.get(position).getArticle_abstract());
         holder.msgTv.setText(listBeans.get(position).getArticle_comment_count() + "赞" +
                 listBeans.get(position).getArticle_publish_time());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lstenerInterface.getPostion(position);
+            }
+        });
     }
 
     @Override

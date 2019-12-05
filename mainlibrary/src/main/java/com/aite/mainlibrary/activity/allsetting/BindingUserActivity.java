@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.allsetting.AddBindingUserActivity;
+import com.aite.mainlibrary.activity.allsetting.addbindinguser.AddBindingUserActivity;
 import com.lzy.basemodule.base.BaseActivity;
 
 import butterknife.BindView;

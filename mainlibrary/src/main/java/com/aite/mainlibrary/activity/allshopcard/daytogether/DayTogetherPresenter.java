@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 
 import com.aite.mainlibrary.Mainbean.AirMainListBean;
+import com.aite.mainlibrary.Mainbean.DayTogetherChoiceBean;
 import com.aite.mainlibrary.Mainbean.LessDayBean;
 import com.aite.mainlibrary.Mainbean.RecyChoiceUIBean;
+import com.google.gson.Gson;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.androidlife.AppManager;
 import com.lzy.basemodule.bean.BaseData;
@@ -67,6 +69,54 @@ public class DayTogetherPresenter extends BasePresenterImpl<DayTogetherContract.
 
                     @Override
                     public void onSuccess(Response<BaseData<LessDayBean>> response) {
+                        LogUtils.d("onSuccess");
+
+                    }
+                });
+    }
+
+    @Override
+    public void getChoiceInformation(HttpParams httpParams) {
+        OkGo.<BaseData<DayTogetherChoiceBean>>get(AppConstant.CHOICEMSGLESSBODYLISTURL)
+                .tag(mView.getContext())
+                .params(httpParams)
+                .execute(new AbsCallback<BaseData<DayTogetherChoiceBean>>() {
+                    @Override
+                    public BaseData<DayTogetherChoiceBean> convertResponse(okhttp3.Response response) throws Throwable {
+                        LogUtils.d(response.request());
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+                        String login = jsonObject.optString("login", jsonObject.toString());
+                        if (login.equals("0")) {
+                            LogUtils.d(login);
+                            Intent intent = new Intent();
+                            intent.setAction("com.aite.aitezhongbao.app.activity.login.LoginActivity");
+                            AppManager.getInstance().killAllActivity();
+                            mView.getContext().startActivity(intent);
+                        }
+                        JSONObject object = jsonObject.optJSONObject("datas");
+                        Gson gson = new Gson();
+                        DayTogetherChoiceBean dayTogetherChoiceBean = gson.fromJson(object.toString(), DayTogetherChoiceBean.class);
+
+//                        DayTogetherChoiceBean dayTogetherChoiceBean = BeanConvertor.convertBean(object.toString(), DayTogetherChoiceBean.class);
+                        ((Activity) mView.getContext()).runOnUiThread(()
+                                -> mView.onGetchoiceInformationSuccess(dayTogetherChoiceBean));
+
+                        BaseData baseData = BeanConvertor.convertBean(jsonObject.toString(), BaseData.class);
+                        if (baseData.getDatas().getError() != null) {
+                            mView.showError(baseData.getDatas().getError());
+                            return null;
+                        }
+                        return null;
+                    }
+
+                    @Override
+                    public void onStart(Request<BaseData<DayTogetherChoiceBean>, ? extends Request> request) {
+                        LogUtils.d("onStart");
+
+                    }
+
+                    @Override
+                    public void onSuccess(Response<BaseData<DayTogetherChoiceBean>> response) {
                         LogUtils.d("onSuccess");
 
                     }

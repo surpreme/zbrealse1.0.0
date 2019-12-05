@@ -1,6 +1,5 @@
 package com.aite.mainlibrary.activity.allsetting;
 
-import android.os.Bundle;
 import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,12 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.allsetting.AddSosUserActivity;
+import com.aite.mainlibrary.activity.allsetting.addsosuser.AddSosUserActivity;
 import com.aite.mainlibrary.adapter.SosUserRecyAdapter;
 import com.lzy.basemodule.base.BaseActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class SosUserActivity extends BaseActivity {
     @BindView(R2.id.recycler_view)
@@ -64,10 +62,5 @@ public class SosUserActivity extends BaseActivity {
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 }

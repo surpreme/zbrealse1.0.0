@@ -23,6 +23,7 @@ import com.aite.mainlibrary.adapter.PostHelpDoctorTypeRecyAdapter;
 import com.bigkoo.pickerview.listener.OnOptionsSelectChangeListener;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.listener.OnTimeSelectListener;
+import com.blankj.rxbus.RxBus;
 import com.google.android.material.textfield.TextInputEditText;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.OnClickLstenerInterface;
@@ -190,8 +191,10 @@ public class PostHelpDoctorActivity extends BaseActivity<PostHelpDoctorContract.
     public void onPostSuccess(Object msg) {
         if (((TwoSuccessCodeBean) msg).getResult().toString().equals("1")) {
             showToast(((TwoSuccessCodeBean) msg).getMsg(), Gravity.TOP);
-            startActivity(HelpdoctorActivity.class);
+//            startActivity(HelpdoctorActivity.class);
             onBackPressed();
+            RxBus.getDefault().post("helpDoctorChange", "helpDoctorChange");
+
         }
     }
 

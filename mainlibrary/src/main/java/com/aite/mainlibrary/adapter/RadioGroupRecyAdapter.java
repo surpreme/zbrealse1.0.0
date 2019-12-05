@@ -49,6 +49,15 @@ public class RadioGroupRecyAdapter extends RecyclerView.Adapter<RadioGroupRecyAd
     }
 
     private OnClickLstenerInterface.OnRecyClickInterface clickInterface;
+    private OnClickLstenerInterface.OnRecyClickInterfaceAndString clickInterfaceAndString;
+
+    public OnClickLstenerInterface.OnRecyClickInterfaceAndString getClickInterfaceAndString() {
+        return clickInterfaceAndString;
+    }
+
+    public void setClickInterfaceAndString(OnClickLstenerInterface.OnRecyClickInterfaceAndString clickInterfaceAndString) {
+        this.clickInterfaceAndString = clickInterfaceAndString;
+    }
 
     public OnClickLstenerInterface.OnRecyClickInterface getClickInterface() {
         return clickInterface;
@@ -61,19 +70,14 @@ public class RadioGroupRecyAdapter extends RecyclerView.Adapter<RadioGroupRecyAd
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tvTitle.setText(listBean.get(position).getNasme());
-        if (listBean.get(position).isIsCheck()) {
-            holder.ivImg.setVisibility(View.VISIBLE);
-            holder.tvTitle.setTextColor(context.getResources().getColor(R.color.agreen));
-        } else {
-            holder.ivImg.setVisibility(View.GONE);
-            holder.tvTitle.setTextColor(context.getResources().getColor(R.color.black));
-
-        }
+        holder.ivImg.setVisibility(listBean.get(position).isIsCheck() ? View.VISIBLE : View.GONE);
+        holder.tvTitle.setTextColor(context.getResources().getColor(listBean.get(position).isIsCheck() ? R.color.agreen : R.color.black));
         holder.tvTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                listBean.get(position).setChecked();
-                clickInterface.getPostion(position);
+                clickInterface.getPostion(Integer.valueOf(listBean.get(position).getId()));
+//                clickInterfaceAndString.getPostion();
                 listBean.get(position).setChecked(true);
                 for (int i = 0; i < listBean.size(); i++) {
                     if (i == position) listBean.get(i).setChecked(true);

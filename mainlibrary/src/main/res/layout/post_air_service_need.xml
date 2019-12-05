@@ -76,12 +76,12 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:text="开始时间："
-                android:textSize="17sp" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/start_time_tv"
                 android:layout_width="0dp"
-                android:layout_height="27dp"
+                android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_weight="2"
                 android:background="@drawable/juxing_gray_background"
@@ -92,16 +92,16 @@
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:src="@drawable/longinok"
                 android:tint="@color/lightglay" />
 
             <TextView
                 android:id="@+id/start_oclock_tv"
                 android:layout_width="0dp"
-                android:layout_height="27dp"
+                android:layout_height="24dp"
                 android:layout_gravity="center"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:background="@drawable/juxing_gray_background"
                 android:gravity="center"
                 android:text="12" />
@@ -112,14 +112,15 @@
                 android:layout_gravity="center"
                 android:layout_weight="0.7"
                 android:gravity="center"
-                android:text="时" />
+                android:text="时"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/start_minute_tv"
                 android:layout_width="0dp"
-                android:layout_height="27dp"
+                android:layout_height="24dp"
                 android:layout_gravity="center"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:background="@drawable/juxing_gray_background"
                 android:gravity="center"
                 android:text="00" />
@@ -130,7 +131,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="0.7"
                 android:gravity="center"
-                android:text="分" />
+                android:text="分"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -146,12 +148,12 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:text="结束时间："
-                android:textSize="17sp" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/end_time_tv"
                 android:layout_width="0dp"
-                android:layout_height="27dp"
+                android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:layout_weight="2"
                 android:background="@drawable/juxing_gray_background"
@@ -162,16 +164,16 @@
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:src="@drawable/longinok"
                 android:tint="@color/lightglay" />
 
             <TextView
                 android:id="@+id/end_oclock_tv"
                 android:layout_width="0dp"
-                android:layout_height="27dp"
+                android:layout_height="24dp"
                 android:layout_gravity="center"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:background="@drawable/juxing_gray_background"
                 android:gravity="center"
                 android:text="00" />
@@ -182,14 +184,15 @@
                 android:layout_gravity="center"
                 android:layout_weight="0.7"
                 android:gravity="center"
-                android:text="时" />
+                android:text="时"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/end_minute_tv"
                 android:layout_width="0dp"
-                android:layout_height="27dp"
+                android:layout_height="24dp"
                 android:layout_gravity="center"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:background="@drawable/juxing_gray_background"
                 android:gravity="center"
                 android:text="00" />
@@ -200,7 +203,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="0.7"
                 android:gravity="center"
-                android:text="分" />
+                android:text="分"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout

@@ -15,14 +15,13 @@ import butterknife.BindView;
 
 /**
  * MVPPlugin
- *  邮箱 784787081@qq.com
+ * 邮箱 784787081@qq.com
  */
 
 public class MessagerActivity extends BaseActivity<MessagerContract.View, MessagerPresenter> implements MessagerContract.View {
     @BindView(R2.id.setting_gridview)
     GridView settingGridview;
-    @BindView(R2.id.iv_back)
-    ImageView ivBack;
+
 
     @Override
     protected int getLayoutResId() {
@@ -31,13 +30,13 @@ public class MessagerActivity extends BaseActivity<MessagerContract.View, Messag
 
     @Override
     protected void initView() {
-        ivBack.setOnClickListener(this);
+        initToolbar("消息");
         settingGridview.setAdapter(new GridViewIconAdapter(context, MainUIConstant.MessageConstant.settingImg, MainUIConstant.MessageConstant.settingTv));
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.iv_back) onBackPressed();
+
     }
 
     @Override

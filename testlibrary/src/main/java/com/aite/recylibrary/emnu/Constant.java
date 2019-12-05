@@ -9,6 +9,7 @@ public class Constant {
             "助餐", "助医", "时间银行", "喘息服务", "其他服务"
     };
 
+
     public static List<MainMultipleItem> getMultipleItemData() {
         List<MainMultipleItem> list = new ArrayList<>();
         for (int i = 0; i <= 4; i++) {

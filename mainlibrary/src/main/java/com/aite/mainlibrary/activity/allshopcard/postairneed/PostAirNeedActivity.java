@@ -231,8 +231,8 @@ public class PostAirNeedActivity extends BaseActivity<PostAirNeedContract.View, 
     public void onPostMsgSuccess(Object msg) {
         if (((TwoSuccessCodeBean) msg).getResult().toString().equals("1")) {
             showToast(((TwoSuccessCodeBean) msg).getMsg(), Gravity.TOP);
-            startActivity(AirActivity.class);
-            finish();
+//            startActivity(AirActivity.class);
+            onBackPressed();
         }
 
 

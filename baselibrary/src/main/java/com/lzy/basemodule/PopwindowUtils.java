@@ -17,6 +17,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,6 +32,8 @@ public class PopwindowUtils {
     private static final int errorlayoutid = R.layout.error_toast;
     private static final int recylayoutid = R.layout.recy_layout;
     private static final int threeRecylayoutid = R.layout.three_choice;
+    private static final int chioceGenderlayoutid = R.layout.choice_gender;
+    private static final int bootomrecylayoutid = R.layout.choice_bottom;
 
     public static PopwindowUtils getmInstance() {
         if (mInstance == null) {
@@ -63,7 +66,85 @@ public class PopwindowUtils {
         });
 
     }
-    public void showRecyPopupWindow(final Context context, RecyclerView.Adapter recyadpater, LinearLayoutManager linearLayoutManager, int grivaty,float alpah) {
+
+
+    public void showChioceGenderPopupWindow(final Context context, int grivaty, float alpah, OnClickLstenerInterface.OnThingClickInterface onThingClickInterface) {
+        @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(chioceGenderlayoutid, null);
+        setBackGroundAlpha(alpah, context);
+        popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, true);
+        popupWindow.setFocusable(true);
+        TextView superman_tv = view.findViewById(R.id.superman_tv);
+        TextView woman_tv = view.findViewById(R.id.woman_tv);
+        TextView cancel_tv = view.findViewById(R.id.cancel_tv);
+
+        superman_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onThingClickInterface.getString("superman");
+                popupWindow.dismiss();
+
+            }
+        });
+        woman_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onThingClickInterface.getString("woman");
+                popupWindow.dismiss();
+
+            }
+        });
+        cancel_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
+
+            }
+        });
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setContentView(view);
+        popupWindow.showAtLocation(view, grivaty, 0, 0);
+        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                setBackGroundAlpha(1.0f, context);
+                dismissPopWindow();
+            }
+        });
+
+    }
+
+    public void showChioceBottomPopupWindow(final Context context, int grivaty, float alpah, RecyclerView.Adapter adapter) {
+        @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(bootomrecylayoutid, null);
+        setBackGroundAlpha(alpah, context);
+        popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, true);
+        final RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
+        popupWindow.setFocusable(true);
+        recyclerView.setAdapter(adapter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+        TextView cancel_tv = view.findViewById(R.id.cancel_tv);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        cancel_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
+
+            }
+        });
+
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setContentView(view);
+        popupWindow.showAtLocation(view, grivaty, 0, 0);
+        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                setBackGroundAlpha(1.0f, context);
+                dismissPopWindow();
+            }
+        });
+
+    }
+
+    public void showRecyPopupWindow(final Context context, RecyclerView.Adapter recyadpater, LinearLayoutManager linearLayoutManager, int grivaty, float alpah) {
         @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(recylayoutid, null);
         setBackGroundAlpha(alpah, context);
         popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, true);
@@ -77,7 +158,7 @@ public class PopwindowUtils {
         popupWindow.setOutsideTouchable(true);
         popupWindow.setContentView(view);
 //        popupWindow.showAsDropDown(ui, 0, 0);
-        popupWindow.showAtLocation(view,grivaty,0,10);
+        popupWindow.showAtLocation(view, grivaty, 0, 10);
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {
@@ -113,7 +194,7 @@ public class PopwindowUtils {
 
     }
 
-    public void showThreeRecyPopupWindow(final Context context, RecyclerView.Adapter recyadpater, Object data1, Object data2,Object data3,LinearLayoutManager linearLayoutManager, View ui) {
+    public void showThreeRecyPopupWindow(final Context context, RecyclerView.Adapter recyadpater, Object data1, Object data2, Object data3, LinearLayoutManager linearLayoutManager, View ui) {
         @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(threeRecylayoutid, null);
         setBackGroundAlpha(1.0f, context);
         popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, true);

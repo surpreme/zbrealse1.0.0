@@ -1,22 +1,20 @@
 package com.aite.mainlibrary.activity.allshopcard.helpdoctor;
 
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.aite.mainlibrary.Mainbean.ElseHelpDoctorBean;
 import com.aite.mainlibrary.Mainbean.HelpDoctorListBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allshopcard.bookhelpdoctorinformation.BookHelpDoctorInformationActivity;
-import com.aite.mainlibrary.activity.allshopcard.helpdoctorinformation.HelpDoctorInformationActivity;
 import com.aite.mainlibrary.activity.allshopcard.posthelpdoctor.PostHelpDoctorActivity;
 import com.aite.mainlibrary.adapter.HelpDoctorRecyAdapter;
 import com.aite.mainlibrary.adapter.RadioGroupRecyAdapter;
+import com.blankj.rxbus.RxBus;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.OnClickLstenerInterface;
@@ -32,7 +30,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
@@ -42,8 +39,6 @@ import butterknife.OnClick;
  */
 
 public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, HelpdoctorPresenter> implements HelpdoctorContract.View, OnBannerListener {
-    @BindView(R2.id.recycler_view)
-    RecyclerView recyclerView;
     @BindView(R2.id.floatbutton)
     FloatingActionButton floatbutton;
     @BindView(R2.id.banner)
@@ -57,11 +52,14 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
     @BindView(R2.id.time_ll)
     LinearLayout timeLl;
     private HelpDoctorRecyAdapter helpDoctorRecyAdapter;
-    private List<HelpDoctorListBean.ListBean> listBean = new ArrayList<>();
+    private List<HelpDoctorListBean.ListBean> helpDoctorlistBean = new ArrayList<>();
     //banner datalist
     private List<String> list_img = new ArrayList<>();
     private List<String> list_title = new ArrayList<>();
     private ElseHelpDoctorBean elseHelpDoctorBean;
+    private String CLASS_ID = "0";
+    private String AREA_ID = "0";
+    private String TIME_ID = "0";
 
     @Override
     protected int getLayoutResId() {
@@ -71,19 +69,33 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
     @Override
     protected void initView() {
         initToolbar("助医服务", getResources().getColor(R.color.white));
+        initMoreRecy();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        helpDoctorRecyAdapter = new HelpDoctorRecyAdapter(context, listBean);
-        recyclerView.setAdapter(helpDoctorRecyAdapter);
+        mBaserecyclerView.setLayoutManager(linearLayoutManager);
+        helpDoctorRecyAdapter = new HelpDoctorRecyAdapter(context, helpDoctorlistBean);
+        mBaserecyclerView.setAdapter(helpDoctorRecyAdapter);
+        //smartlayout
+        initSmartLayout(true);
+        //初始化加载
+        initLoadingAnima();
         //banner
         initBanner(banner);
         banner.setIndicatorGravity(BannerConfig.RIGHT)
                 .setOnBannerListener(this);
+        RxBus.getDefault().subscribe(context, "helpDoctorChange", new RxBus.Callback<String>() {
+            @Override
+            public void onEvent(String o) {
+                if (o.equals("helpDoctorChange")) {
+                    onSmartRefresh();
+                }
+
+            }
+        });
         helpDoctorRecyAdapter.setClickInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
             @Override
             public void getPostion(int postion) {
-//                startActivity(HelpDoctorInformationActivity.class, "TYPEID", listBean.get(postion).getId());
-                startActivity(BookHelpDoctorInformationActivity.class, "TYPEID", listBean.get(postion).getId());
+//                startActivity(HelpDoctorInformationActivity.class, "TYPEID", helpDoctorlistBean.get(postion).getId());
+                startActivity(BookHelpDoctorInformationActivity.class, "TYPEID", helpDoctorlistBean.get(postion).getId());
 
             }
         });
@@ -98,17 +110,17 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
         if (v.getId() == R.id.service_ll) {
             if (elseHelpDoctorBean == null) return;
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, elseHelpDoctorBean.getClass_list());
-            showChoicePop(radioGroupRecyAdapter);
+            showChoicePop(radioGroupRecyAdapter,"CLASS_ID");
         }
         if (v.getId() == R.id.all_ll) {
             if (elseHelpDoctorBean == null) return;
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, elseHelpDoctorBean.getArea_list());
-            showChoicePop(radioGroupRecyAdapter);
+            showChoicePop(radioGroupRecyAdapter,"AREA_ID");
         }
         if (v.getId() == R.id.time_ll) {
             if (elseHelpDoctorBean == null) return;
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, elseHelpDoctorBean.getTime_array());
-            showChoicePop(radioGroupRecyAdapter);
+            showChoicePop(radioGroupRecyAdapter,"TIME_ID");
 
         }
 //        if (v.getId() == R.id.father_tab_ll) {
@@ -128,6 +140,11 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
     private HttpParams initParams() {
         HttpParams httpParams = new HttpParams();
         httpParams.put("key", AppConstant.KEY);
+        httpParams.put("curpage", mCurrentPage);
+        httpParams.put("class_id", CLASS_ID);
+        httpParams.put("area_id", AREA_ID);
+        httpParams.put("time_id", TIME_ID);
+
         return httpParams;
     }
 
@@ -141,7 +158,7 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
 
     }
 
-    private void showChoicePop(RadioGroupRecyAdapter radioGroupRecyAdapter) {
+    private void showChoicePop(RadioGroupRecyAdapter radioGroupRecyAdapter, String type) {
         //初始化选择器
         LinearLayoutManager manager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         radioGroupRecyAdapter.setClickInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
@@ -149,15 +166,67 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
             public void getPostion(int postion) {
                 //for循环不能放在这里 会卡顿 放到适配器中
                 LogUtils.d(postion);
+                switch (type.toString()) {
+                    case "CLASS_ID":
+                        CLASS_ID = String.valueOf(postion);
+                        break;
+                    case "AREA_ID":
+                        AREA_ID = String.valueOf(postion);
+                        break;
+                    case "TIME_ID":
+                        TIME_ID = String.valueOf(postion);
+                        break;
+                    default:
+                        break;
+
+                }
+                helpDoctorlistBean.clear();
+                radioGroupRecyAdapter.notifyDataSetChanged();
+                mPresenter.getList(initParams());
+                PopwindowUtils.getmInstance().dismissPopWindow();
             }
         });
         PopwindowUtils.getmInstance().showRecyPopupWindow(context, radioGroupRecyAdapter, manager, fatherTabLl);
     }
 
     @Override
+    protected void onSmartLoadMore() {
+        super.onSmartLoadMore();
+        mPresenter.getList(initParams());
+
+    }
+
+    @Override
+    protected void onSmartRefresh() {
+        super.onSmartRefresh();
+        if (helpDoctorlistBean != null) {
+            helpDoctorlistBean.clear();
+            helpDoctorRecyAdapter.notifyDataSetChanged();
+        }
+
+        mPresenter.getList(initParams());
+
+    }
+
+    @Override
     public void onGetListSuccess(Object msg) {
-        listBean.addAll(((HelpDoctorListBean) msg).getList());
-        helpDoctorRecyAdapter.notifyDataSetChanged();
+        if (((HelpDoctorListBean) msg).getList().isEmpty()) {
+            initNodata();
+        } else {
+            stopLoadingAnim();
+            showMoreRecy();
+            stopNoData();
+            helpDoctorlistBean.addAll(((HelpDoctorListBean) msg).getList());
+            helpDoctorRecyAdapter.notifyDataSetChanged();
+            hasMore = ((HelpDoctorListBean) msg).getIs_nextpage() > 0;
+        }
+
+//        LoadMoreSmartLayout(((HelpDoctorListBean) msg).getIs_nextpage() > 0, new OnSmartLayoutLstenerInterface.OnLoadMoreInterface() {
+//            @Override
+//            public void getCurrentPage(int postion) {
+//
+//            }
+//        });
     }
 
     @Override
@@ -188,4 +257,6 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
     public void OnBannerClick(int position) {
 
     }
+
+
 }

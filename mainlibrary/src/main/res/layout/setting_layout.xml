@@ -72,6 +72,7 @@
                 android:background="@color/noglay" />
 
             <LinearLayout
+                android:id="@+id/address_ll"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@color/white"
@@ -349,6 +350,7 @@
                 android:background="@color/noglay" />
 
             <LinearLayout
+                android:id="@+id/app_setting_ll"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@color/white"

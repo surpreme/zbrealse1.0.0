@@ -74,10 +74,8 @@ public class TimeBankRecyAdapter extends RecyclerView.Adapter<TimeBankRecyAdapte
         holder.addressTv.setText(listBean.get(position).getAddress());
         holder.timeTv.setText(String.format("%s-%s", listBean.get(position).getStart_time(), listBean.get(position).getEnd_time()));
         holder.getNumberTv.setText(String.format("%s积分", listBean.get(position).getCredit()));
-        if (listBean.get(position).getIs_order() != 1) {
-            holder.serviceBtn.setText("已接单");
-            holder.serviceBtn.setAlpha(0.5f);
-        }
+        holder.serviceBtn.setText(listBean.get(position).getIs_order() == 1 ? "接单" : "已接单");
+        holder.serviceBtn.setAlpha(listBean.get(position).getIs_order()==1?1.0f:0.5f);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

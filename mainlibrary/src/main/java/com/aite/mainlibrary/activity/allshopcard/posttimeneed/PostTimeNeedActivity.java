@@ -153,8 +153,8 @@ public class PostTimeNeedActivity extends BaseActivity<PostTimeNeedContract.View
     public void onPostServiceSuccess(Object msg) {
         if (((TwoSuccessCodeBean) msg).getResult().equals("1")) {
             showToast(((TwoSuccessCodeBean) msg).getMsg(), Gravity.TOP);
-            startActivity(TimeBankActivity.class);
-            finish();
+//            startActivity(TimeBankActivity.class);
+            onBackPressed();
         } else {
             showToast("服务器错误");
             LogUtils.e(msg);
@@ -294,7 +294,6 @@ public class PostTimeNeedActivity extends BaseActivity<PostTimeNeedContract.View
         httpParams.put("area_id", isStringEmpty(AREA_ID) ? "" : AREA_ID);
         return httpParams;
     }
-
 
 
 }

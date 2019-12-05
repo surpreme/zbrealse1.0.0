@@ -13,6 +13,7 @@
         android:background="@color/noglay" />
 
     <LinearLayout
+        android:id="@+id/father_ll"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
@@ -44,7 +45,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/buy_ll"
+            android:id="@+id/type_ll"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -53,7 +54,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/buy_tv"
+                android:id="@+id/type_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="服务类型"
@@ -79,7 +80,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/away_ll"
+            android:id="@+id/time_ll"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -88,7 +89,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/away_tv"
+                android:id="@+id/time_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="时间"
@@ -115,6 +116,5 @@
     </LinearLayout>
 
 
-    <include
-        layout="@layout/recy_layout" />
+    <include layout="@layout/recy_layout" />
 </LinearLayout>

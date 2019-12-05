@@ -6,66 +6,55 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:gravity="center"-->
+    <!--            android:orientation="vertical">-->
 
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_gravity="center"
-                app:srcCompat="@color/oranger" />
+    <!--            <ImageView-->
+    <!--                android:layout_width="110dp"-->
+    <!--                android:layout_height="110dp"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                app:srcCompat="@color/oranger" />-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="25dp" />
+    <!--            <View-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="25dp" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="中保APP"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                android:textStyle="bold" />
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="中保APP"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="23sp"-->
+    <!--                android:textStyle="bold" />-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="8dp" />
+    <!--            <View-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="8dp" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="应用SOLOGLAR"
-                android:textColor="@color/glay"
-                android:textSize="18sp" />
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="应用SOLOGLAR"-->
+    <!--                android:textColor="@color/glay"-->
+    <!--                android:textSize="18sp" />-->
 
 
-        </LinearLayout>
+    <!--        </LinearLayout>-->
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:indeterminateTint="@color/blue" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-    </LinearLayout>
+    <!--    </LinearLayout>-->
 
-    <LinearLayout
-        android:visibility="gone"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -73,7 +62,20 @@
             android:id="@+id/spalsh_img"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/slpah"
             android:scaleType="fitXY" />
-    </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:indeterminateTint="@color/yelllow" />
+
+    </RelativeLayout>
 
 </LinearLayout>

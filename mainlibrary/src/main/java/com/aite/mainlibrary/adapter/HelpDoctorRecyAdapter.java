@@ -17,6 +17,7 @@ import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.bumptech.glide.Glide;
 import com.lzy.basemodule.OnClickLstenerInterface;
+import com.lzy.basemodule.logcat.LogUtils;
 
 import java.util.List;
 
@@ -82,10 +83,8 @@ public class HelpDoctorRecyAdapter extends RecyclerView.Adapter<HelpDoctorRecyAd
         holder.timeTv.setText(String.format("%s-%s", listBean.get(position).getStart_time(), listBean.get(position).getEnd_time()));
         holder.typeTv.setText(listBean.get(position).getClass_name());
         holder.getNumberTv.setText(String.format("%s积分", listBean.get(position).getCredit()));
-        if (listBean.get(position).getIs_order() != 1) {
-            holder.serviceBtn.setAlpha(0.5f);
-            holder.serviceBtn.setText("已接单");
-        }
+        holder.serviceBtn.setText(listBean.get(position).getIs_order() == 1 ? "接单" : "已接单");
+        holder.serviceBtn.setAlpha(listBean.get(position).getIs_order()==1?1.0f:0.5f);
 //        holder.serviceBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -102,6 +101,7 @@ public class HelpDoctorRecyAdapter extends RecyclerView.Adapter<HelpDoctorRecyAd
 
     @Override
     public int getItemCount() {
+        LogUtils.d(listBean.size());
         return listBean == null ? 0 : listBean.size();
     }
 

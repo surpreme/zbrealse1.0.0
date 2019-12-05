@@ -14,14 +14,16 @@ import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.HealthBookActivity;
 import com.aite.mainlibrary.activity.MineCollectActivity;
 import com.aite.mainlibrary.activity.allmain.AddDeviceMainActvity;
-import com.aite.mainlibrary.activity.allmain.ElseHelpActivity;
 import com.aite.mainlibrary.activity.allmain.device.DeviceListActivity;
+import com.aite.mainlibrary.activity.allmain.messager.MessagerActivity;
 import com.aite.mainlibrary.activity.allmoney.MoneycartActivity;
+import com.aite.mainlibrary.activity.allsetting.LessbodybookActivity;
 import com.aite.mainlibrary.activity.allsetting.SettingActivity;
-import com.aite.mainlibrary.activity.allsetting.UserInformationActivity;
+import com.aite.mainlibrary.activity.allsetting.minerunning.MineRunningActivity;
 import com.aite.mainlibrary.activity.allsetting.minerural.MineRuralActivity;
+import com.aite.mainlibrary.activity.allsetting.thingsbook.ThingsbookActivity;
+import com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity;
 import com.aite.mainlibrary.activity.allshopcard.helpdoctor.HelpdoctorActivity;
-import com.aite.mainlibrary.activity.allstep.StepActivity;
 import com.aite.mainlibrary.adapter.GridViewIconAdapter;
 import com.lzy.basemodule.base.BaseFragment;
 import com.lzy.basemodule.logcat.LogUtils;
@@ -47,6 +49,8 @@ public class MineFragment extends BaseFragment {
     TextView userPhoneNumberTv;
     @BindView(R2.id.user_icon)
     ImageView userIcon;
+    @BindView(R2.id.message_iv)
+    ImageView messageIv;
 
 
     @Override
@@ -59,6 +63,7 @@ public class MineFragment extends BaseFragment {
         fixFriendsBtn.setOnClickListener(this);
         settingImg.setOnClickListener(this);
         userIcon.setOnClickListener(this);
+        messageIv.setOnClickListener(this);
         userPhoneNumberTv.setOnClickListener(this);
         settingGridview.setAdapter(new GridViewIconAdapter(context, MainUIConstant.MineConstant.settingImg, MainUIConstant.MineConstant.settingTv));
         bookGridview.setAdapter(new GridViewIconAdapter(context, MainUIConstant.MineConstant.bookImg, MainUIConstant.MineConstant.bookTv));
@@ -72,7 +77,7 @@ public class MineFragment extends BaseFragment {
                         startActivity(DeviceListActivity.class);
                         break;
                     case 1:
-                        startActivity(HelpdoctorActivity.class);
+                        startActivity(MineRunningActivity.class);
                         break;
                     case 2:
                         startActivity(MineRuralActivity.class);
@@ -91,31 +96,22 @@ public class MineFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
-                        startActivity(StepActivity.class);
+                        startActivity(ThingsbookActivity.class);
                         break;
                     case 1:
-                        startActivity(HelpdoctorActivity.class);
+                        startActivity(LessbodybookActivity.class, "page_type", "5");
                         break;
                     case 2:
-                        startActivity(HelpdoctorActivity.class);
+                        startActivity(LessbodybookActivity.class, "page_type", "1");
                         break;
                     case 3:
-                        startActivity(ElseHelpActivity.class);
+                        startActivity(LessbodybookActivity.class, "page_type", "2");
                         break;
                     case 4:
-                        startActivity(HelpdoctorActivity.class);
+                        startActivity(LessbodybookActivity.class, "page_type", "3");
                         break;
                     case 5:
-                        startActivity(HelpdoctorActivity.class);
-                        break;
-                    case 6:
-                        startActivity(HelpdoctorActivity.class);
-                        break;
-                    case 7:
-                        startActivity(HelpdoctorActivity.class);
-                        break;
-                    case 8:
-                        startActivity(HelpdoctorActivity.class);
+                        startActivity(LessbodybookActivity.class, "page_type", "4");
                         break;
                     default:
                         break;
@@ -141,7 +137,7 @@ public class MineFragment extends BaseFragment {
                     case 0:
                         startActivity(MoneycartActivity.class);
                         break;
-                    case 2:
+                    case 1:
                         startActivity(HealthBookActivity.class);
                         break;
                     default:
@@ -167,6 +163,9 @@ public class MineFragment extends BaseFragment {
             startActivity(SettingActivity.class);
         } else if (v.getId() == R.id.user_phone_number_tv || v.getId() == R.id.user_icon)
             startActivity(UserInformationActivity.class);
+        else if (v.getId() == R.id.message_iv) {
+            startActivity(MessagerActivity.class);
+        }
 
     }
 

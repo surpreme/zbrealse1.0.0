@@ -43,7 +43,16 @@ public class AppConstant {
     public static final String CHOOCELISTURL = BASEURL + "index.php?act=goods_meal&op=dishes_goods";
     //菜品选择页面信息2
     public static final String CHOOCESENCONDLISTURL = BASEURL + "index.php?act=goods_meal&op=dishes_goods_list";
-
+    //早、午餐——预约订餐 第一步 设置信息
+    public static final String REMEMBERFOODINFORMATIONURL = BASEURL + "index.php?act=goods_meal&op=meal_buy1";
+    //早、午餐——预约订餐 第二步 产生订单
+    public static final String SUREREMEMBERFOODINFORMATIONURL = BASEURL + "index.php?act=goods_meal&op=meal_buy2";
+    //
+    //订单详情接口 index.php?act=member_vr_order&op=order_detail
+    public static final String ALLBOOKINFORMATIONURL = BASEURL + "index.php?act=member_vr_order&op=order_detail";
+    //
+    //助餐服务——早、午餐订单列表
+    public static final String MINEALLBOOKURL = BASEURL + "index.php?act=member_vr_order&op=meal_order_list";
     //时间银行 获取服务列表页筛选条件及广告信息接口
     public static final String EALSETIMEBANKSERVICEMAINUIURL = BASEURL + "index.php?act=timebank&op=list_search";
     //时间银行 服务列表页信息接口
@@ -97,9 +106,31 @@ public class AppConstant {
     public static final String STARTHELPDOCTORNEEDURL = BASEURL + "index.php?act=doctor_help&op=order";
     //助医 申请服务  获取分类
     public static final String TYPECHIOCEHELPDOCTORNEEDURL = BASEURL + "index.php?act=doctor_help&op=class";
+    //上传个人基本信息
+    public static final String POSTPEPPLEINFORMATIONURL = BASEURL + "index.php?act=member_index&op=APP_editInfo";
+    //得到个人基本信息
+    public static final String GETPEPPLEINFORMATIONURL = BASEURL + "index.php?act=member_index&op=getInfo";
+    //我的关联账号-获取关系信息
+    public static final String GETFIMILYBINDINGUSERURL = BASEURL + "index.php?act=member_associate&op=relation";
+    //我的关联账号-保存接口
+    public static final String SAVEBINDINGUSERURL = BASEURL + "index.php?act=member_associate&op=my_save";
+    // index.php?act=member_contact&op=my_save
+    //紧急联系人-保存接口
+    public static final String SAVESOSUSERURL = BASEURL + "index.php?act=member_contact&op=my_save";
     //
+    //APP残疾之家商品列表筛选条件信息
+    public static final String CHOICEMSGLESSBODYLISTURL = BASEURL + "index.php?act=goods&op=dhome_list_search";
     //APP残疾之家商品列表信息
     public static final String ALLLESSBODYLISTURL = BASEURL + "index.php?act=goods&op=dhome_goods_list";
+    //APP残疾之家 APP残疾之家商品详情
+    public static final String INFORMATIONALLLESSBODYLISTURL = BASEURL + "index.php?act=goods&op=dhome_goods_detail";
+    //APP残疾之家——订单列表
+    public static String BOOKINFORMATIONLISTMINELISTURL = BASEURL + "index.php?act=member_vr_order&op=dhome_order_list";
+    //APP残疾之家—— 虚拟商品购买第二步，设置接收手机号页面
+    public static String BUYSECONDINFORMATIONLISTMINELISTURL = BASEURL + "index.php?act=member_vr_buy&op=buy_step2";
+    //APP残疾之家—— 虚拟订单第三步，产生订单
+    public static String OVERBUYINFORMATIONLISTMINELISTURL = BASEURL + "index.php?act=member_vr_buy&op=buy_step3";
+// index.php?act=member_vr_buy&op=buy_step2
 
     public static String AITEURL = "https://aitecc.com/mobile/";
     //圈子
@@ -112,8 +143,14 @@ public class AppConstant {
      * * 顶部推荐新闻
      */
     public static String TOP_NEWS = AITEURL + "index.php?act=cms&op=article_index_top";
+    /**
+     * 新闻详情
+     */
+    public static String NEWS_INFO = AITEURL
+            + "index.php?act=cms&op=article_show";
 
     // * 我的社区 发布列表页信息
     public static String MINECOLLECTPOSTLIST = AITEURL + "index.php?act=member_circle&op=Release_list";
     // index.php?act=member_circle&op=Release_list
+
 }

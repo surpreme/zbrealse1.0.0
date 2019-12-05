@@ -3,6 +3,7 @@ package com.aite.mainlibrary.fragment.activityfragment.main;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -104,6 +105,13 @@ public class MainFragment extends BaseFragment<MainContract.View, MainPresenter>
         deviceListLl.setOnClickListener(this);
         //smartlayout
         smartRefreshLayout.setEnableLoadMore(false);//是否启用上拉加载功能
+        smartRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(@NonNull RefreshLayout refreshLayout) {
+                smartRefreshLayout.finishRefresh(5000/*,false*/);//传入false表示刷新失败
+
+            }
+        });
 
         //banner
         initBanner(banner);
@@ -139,19 +147,19 @@ public class MainFragment extends BaseFragment<MainContract.View, MainPresenter>
             public void getPostion(int postion) {
                 switch (postion) {
                     case 0:
-                        startActivity(DayTogetherActivity.class,"type","1");
+                        startActivity(DayTogetherActivity.class, "type", "1");
                         break;
                     case 1:
-                        startActivity(DayTogetherActivity.class,"type","2");
+                        startActivity(DayTogetherActivity.class, "type", "2");
                         break;
                     case 2:
-                        startActivity(DayTogetherActivity.class,"type","3");
+                        startActivity(DayTogetherActivity.class, "type", "3");
                         break;
                     case 3:
-                        startActivity(DayTogetherActivity.class,"type","4");
+                        startActivity(DayTogetherActivity.class, "type", "4");
                         break;
                     case 4:
-                        startActivity(DayTogetherActivity.class,"type","5");
+                        startActivity(DayTogetherActivity.class, "type", "5");
                         break;
                     default:
                         break;
@@ -172,12 +180,6 @@ public class MainFragment extends BaseFragment<MainContract.View, MainPresenter>
                 } else if (postion == 4) {
                     startActivity(ElseHelpActivity.class);
                 }
-            }
-        });
-        smartRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
-            @Override
-            public void onRefresh(RefreshLayout refreshlayout) {
-                refreshlayout.finishRefresh(3000/*,false*/);//传入false表示刷新失败
             }
         });
 
@@ -203,6 +205,7 @@ public class MainFragment extends BaseFragment<MainContract.View, MainPresenter>
 
 
     }
+
 
 
     @Override

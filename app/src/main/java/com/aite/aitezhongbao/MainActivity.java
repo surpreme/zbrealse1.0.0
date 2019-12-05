@@ -75,7 +75,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        isCanSavedInstanceState = true;
         fragmentManager = getSupportFragmentManager();
         if (getSavedInstanceState() != null) {
             if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 0 && mainFragment == null)

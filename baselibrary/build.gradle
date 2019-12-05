@@ -9,7 +9,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -86,6 +86,20 @@ dependencies {
     api 'com.dinuscxj:circleprogressbar:1.3.0'
     //多样式消息显示控件
     api 'q.rorbin:badgeview:1.1.3'
+    //rxbinding
+    api 'com.jakewharton.rxbinding3:rxbinding-core:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding-appcompat:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding-drawerlayout:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding-leanback:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding-recyclerview:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding-slidingpanelayout:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding-swiperefreshlayout:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding-viewpager:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding-viewpager2:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding:3.1.0'
+    api 'com.jakewharton.rxbinding3:rxbinding-material:3.1.0'
+    api 'com.blankj:rxbus:1.1'
+
     //拼音
     //arouter
 //    api 'com.alibaba:arouter-api:1.5.0'

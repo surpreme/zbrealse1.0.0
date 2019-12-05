@@ -134,12 +134,12 @@ public class ShopcatAdapter extends RecyclerView.Adapter<ShopcatAdapter.ViewHold
         });
         if (isShow) {
             holder.img_delete_hide.setVisibility(View.GONE);
-            holder.tv_number_ll_hide.setVisibility(View.GONE);
-            holder.tvNumber.setVisibility(View.VISIBLE);
-        } else {
-            holder.img_delete_hide.setVisibility(View.VISIBLE);
             holder.tv_number_ll_hide.setVisibility(View.VISIBLE);
             holder.tvNumber.setVisibility(View.GONE);
+        } else {
+            holder.img_delete_hide.setVisibility(View.VISIBLE);
+            holder.tv_number_ll_hide.setVisibility(View.GONE);
+            holder.tvNumber.setVisibility(View.VISIBLE);
         }
         holder.ivPick.setChecked(cartListBeans.get(position).isChoosed());
         //增加按钮

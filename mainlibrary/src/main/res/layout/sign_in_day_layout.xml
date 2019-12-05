@@ -28,7 +28,7 @@
                 <LinearLayout
                     android:layout_below="@+id/background"
                     android:layout_width="match_parent"
-                    android:layout_height="380dp"
+                    android:layout_height="500dp"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
                     android:background="@drawable/round_background_white"
@@ -83,7 +83,7 @@
                         android:id="@+id/stepview"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp" />
+                        android:padding="5dp" />
                 </LinearLayout>
             </RelativeLayout>
 

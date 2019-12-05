@@ -3,22 +3,49 @@ package com.lzy.basemodule.base;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.lzy.basemodule.R;
+import com.lzy.basemodule.logcat.LogUtils;
 import com.lzy.basemodule.mvp.BasePresenterImpl;
 import com.lzy.basemodule.mvp.BaseView;
+import com.lzy.basemodule.util.SystemUtil;
+import com.lzy.basemodule.util.toast.ToastTopUtils;
 import com.lzy.basemodule.view.GlideImageLoader;
+import com.scwang.smartrefresh.header.WaterDropHeader;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 
 import java.lang.reflect.ParameterizedType;
 
-public class mBaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> extends Fragment {
+public abstract class mBaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> extends Fragment {
     public Context context;
     public T mPresenter;
+    //下拉刷新
+
+    protected int mCurrentPage = 1;
+
+    protected boolean hasMore = false;
+
+    protected abstract void onSmartLoadMore();
+
+    protected abstract void onSmartRefresh();
+
+    private SmartRefreshLayout smartRefreshLayout;
+
+    protected LottieAnimationView lottieAnimationView;
+    protected LottieAnimationView nodata_lottieAnimationView;
 
     @Override
     public void onAttach(Context context) {
@@ -51,6 +78,7 @@ public class mBaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> e
         banner.isAutoPlay(true);
 
     }
+
 
     /**
      * 跳转页面
@@ -102,5 +130,7 @@ public class mBaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> e
         }
         startActivity(intent);
     }
+
+
 
 }
