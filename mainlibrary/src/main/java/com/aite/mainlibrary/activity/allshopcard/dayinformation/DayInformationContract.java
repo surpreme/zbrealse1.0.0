@@ -1,9 +1,8 @@
-package com.dayinformation;
-
-import android.content.Context;
+package com.aite.mainlibrary.activity.allshopcard.dayinformation;
 
 import com.lzy.basemodule.mvp.BasePresenter;
 import com.lzy.basemodule.mvp.BaseView;
+import com.lzy.okgo.model.HttpParams;
 
 /**
  * MVPPlugin
@@ -12,10 +11,12 @@ import com.lzy.basemodule.mvp.BaseView;
 
 public class DayInformationContract {
     interface View extends BaseView {
+        void  onGetInformationSuccess(Object msg);
         
     }
 
     interface  Presenter extends BasePresenter<View> {
+        void onGetInformation(HttpParams httpParams);
         
     }
 }

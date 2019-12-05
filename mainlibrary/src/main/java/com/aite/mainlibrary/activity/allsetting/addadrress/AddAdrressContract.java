@@ -1,6 +1,4 @@
-package com.lzy.basemodule.addadrress;
-
-import android.content.Context;
+package com.aite.mainlibrary.activity.allsetting.addadrress;
 
 import com.lzy.basemodule.mvp.BasePresenter;
 import com.lzy.basemodule.mvp.BaseView;

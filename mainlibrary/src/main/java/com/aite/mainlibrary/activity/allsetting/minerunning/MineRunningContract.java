@@ -1,6 +1,4 @@
-package com.lzy.basemodule.minerunning;
-
-import android.content.Context;
+package com.aite.mainlibrary.activity.allsetting.minerunning;
 
 import com.lzy.basemodule.mvp.BasePresenter;
 import com.lzy.basemodule.mvp.BaseView;

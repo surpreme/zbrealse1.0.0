@@ -10,17 +10,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aite.mainlibrary.R;
+import com.aite.mainlibrary.R2;
 import com.mcxtzhang.swipemenulib.SwipeMenuLayout;
 
-import java.util.List;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-public class SosUserRecyAdapter extends RecyclerView.Adapter<SosUserRecyAdapter.ViewHolder> {
+public class AdrressFixRecyAdapter extends RecyclerView.Adapter<AdrressFixRecyAdapter.ViewHolder> {
     private Context context;
     private LayoutInflater inflater;
     private int[] imgs;
     private String[] names;
 
-    public SosUserRecyAdapter(Context context, int[] imgs, String[] names) {
+    public AdrressFixRecyAdapter(Context context, int[] imgs, String[] names) {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
         this.imgs = imgs;
@@ -29,14 +31,14 @@ public class SosUserRecyAdapter extends RecyclerView.Adapter<SosUserRecyAdapter.
 
     @NonNull
     @Override
-    public SosUserRecyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.item_sosuser_layout, parent, false);
-        SosUserRecyAdapter.ViewHolder viewHolder = new SosUserRecyAdapter.ViewHolder(view);
+        ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SosUserRecyAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 //        holder.tv_bankname.setText(banknames.get(position));
 //        holder.tv_banknumber.setText(banknumbers.get(position));
 //        holder.swipeMenuLayout
@@ -48,17 +50,25 @@ public class SosUserRecyAdapter extends RecyclerView.Adapter<SosUserRecyAdapter.
         return 5;
     }
 
+    static
     class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView tv_bankname, tv_banknumber;
-        private SwipeMenuLayout swipeMenuLayout;
 
-
+        @BindView(R2.id.tv_namephone)
+        TextView tvNamephone;
+        @BindView(R2.id.tv_address)
+        TextView tvAddress;
+        @BindView(R2.id.tv_edit)
+        TextView tvEdit;
+        @BindView(R2.id.tv_delete)
+        TextView tvDelete;
+        @BindView(R2.id.swipeMenuLayout)
+        SwipeMenuLayout swipeMenuLayout;
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tv_bankname = itemView.findViewById(R.id.tv_item_bankname);
-            tv_banknumber = itemView.findViewById(R.id.tv_banknumber);
-            swipeMenuLayout = itemView.findViewById(R.id.swipeMenuLayout);
+            ButterKnife.bind(this, itemView);
+
 
         }
     }
+
 }

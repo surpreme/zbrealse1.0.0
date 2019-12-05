@@ -1,9 +1,8 @@
-package com.lzy.basemodule.overedbooklist;
-
-import android.content.Context;
+package com.aite.mainlibrary.fragment.daybookchridren.overedbooklist;
 
 import com.lzy.basemodule.mvp.BasePresenter;
 import com.lzy.basemodule.mvp.BaseView;
+import com.lzy.okgo.model.HttpParams;
 
 /**
  * MVPPlugin
@@ -12,10 +11,12 @@ import com.lzy.basemodule.mvp.BaseView;
 
 public class OveredbooklistContract {
     interface View extends BaseView {
-        
+        void onGetinformationSuccess(Object msg);
+
     }
 
     interface  Presenter extends BasePresenter<View> {
-        
+        void getinformation(HttpParams httpParams);
+
     }
 }

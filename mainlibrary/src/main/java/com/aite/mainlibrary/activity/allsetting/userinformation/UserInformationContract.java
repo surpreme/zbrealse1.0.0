@@ -1,9 +1,8 @@
-package com.lzy.basemodule.userinformation;
-
-import android.content.Context;
+package com.aite.mainlibrary.activity.allsetting.userinformation;
 
 import com.lzy.basemodule.mvp.BasePresenter;
 import com.lzy.basemodule.mvp.BaseView;
+import com.lzy.okgo.model.HttpParams;
 
 /**
  * MVPPlugin
@@ -12,10 +11,12 @@ import com.lzy.basemodule.mvp.BaseView;
 
 public class UserInformationContract {
     interface View extends BaseView {
-        
+        void onGetUserInformation(Object msg);
+
     }
 
     interface  Presenter extends BasePresenter<View> {
+        void getUserInformation(HttpParams httpParams);
         
     }
 }

@@ -1,25 +1,22 @@
 package com.lzy.basemodule.adpter;
 
 import android.content.Context;
+import android.util.Log;
 import android.util.SparseArray;
-import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jakewharton.rxbinding2.view.RxView;
-import com.xy.commonbase.helper.LogHelper;
+import com.jakewharton.rxbinding3.view.RxView;
+import com.lzy.basemodule.logcat.LogUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -104,7 +101,7 @@ public abstract class BaseRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
             return;
         }
         int pageOffset = (page -1) * pageRange;
-        LogHelper.e(pageOffset+"              "+page);
+        LogUtils.e(pageOffset+"              "+page);
         if (mList!= null){
             if (mList.size() == pageOffset + list.size()) {
                 for (int i = 0; i < list.size(); i++) {
@@ -202,7 +199,7 @@ public abstract class BaseRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
 
     public int getPageByPosition(int position){
         if (pageRange!= 0 && position >= listOffset && (position - listOffset) < mList.size()){
-            LogHelper.e(position+"        "+listOffset+"        "+pageRange+"      "+(((position - listOffset) / pageRange) + 1));
+            LogUtils.e(position+"        "+listOffset+"        "+pageRange+"      "+(((position - listOffset) / pageRange) + 1));
             return ((position - listOffset) / pageRange) + 1;
         }
         return 0;

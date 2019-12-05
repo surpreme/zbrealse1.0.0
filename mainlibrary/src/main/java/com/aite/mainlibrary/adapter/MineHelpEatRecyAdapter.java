@@ -5,13 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aite.mainlibrary.Mainbean.AirMainListBean;
+import com.aite.mainlibrary.Mainbean.BookMorningNoonEatBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.bumptech.glide.Glide;
@@ -23,21 +22,21 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class RecyAdapter extends RecyclerView.Adapter<RecyAdapter.ViewHolder> {
+public class MineHelpEatRecyAdapter extends RecyclerView.Adapter<MineHelpEatRecyAdapter.ViewHolder> {
     private Context context;
     private LayoutInflater inflater;
-    private List<AirMainListBean.ListBean> listBean;
+    private List<BookMorningNoonEatBean.OrderListBean> orderListBeans;
 
-    public RecyAdapter(Context context, List<AirMainListBean.ListBean> listBean) {
+    public MineHelpEatRecyAdapter(Context context, List<BookMorningNoonEatBean.OrderListBean> orderListBeans) {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
-        this.listBean = listBean;
+        this.orderListBeans = orderListBeans;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.item_time_bank, parent, false);
+        View view = inflater.inflate(R.layout.item_thingbook_layout, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -52,62 +51,54 @@ public class RecyAdapter extends RecyclerView.Adapter<RecyAdapter.ViewHolder> {
         this.clickInterface = clickInterface;
     }
 
-    /**
-     * id : 4
-     * title : 测试时间银行服务
-     * member_id : 3
-     * class_id : 1
-     * address : 赋安科技大厦B座909
-     * start_time : 2019-11-24
-     * end_time : 11-24
-     * credit : 50.00
-     * order_status : 0
-     * is_order : 1
-     * class_name : 测试1
-     * memebr_avatar : http://zhongbyi.aitecc.com/data/upload/shop/avatar/06250585958175701_sm.jpg
-     */
+    //    page_total	整型	总页数
+//    datas->order_list[]	数组	订单记录
+//    datas->order_list[]->order_id	字符串	订单id
+//    datas->order_list[]->order_amount	字符串	订单价格
+//    datas->order_list[]->order_shipping_fee	字符串	订单配送费
+//    datas->order_list[]->goods_id	字符串	商品id
+//    datas->order_list[]->goods_name	字符串	商品名称
+//    datas->order_list[]->goods_price	字符串	商品价格
+//    datas->order_list[]->goods_image_url	字符串	商品图片
+//    datas->order_list[]->add_time	字符串	下单时间
+//    datas->order_list[]->order_state_text	字符串	订单状态文字
+//    datas->order_list[]->if_cancel	字符串	是否显示取消按钮 1是 0否
+//    datas->order_list[]->if_pay	字符串	是否可以显示支付按钮 1是 0否
+//    datas->order_list[]->if_detail	字符串	是否可以显示详情按钮 1是 0否
+//    datas->order_list[]->is_verify	字符串	是否可以显示取餐码按钮 1可以 0不可
+//    datas->order_list[]->if_evaluation	字符串	是否可以显示评价按钮 1是 0否
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-//        holder.tv_bankname.setText(banknames.get(position));
-//        holder.tv_banknumber.setText(banknumbers.get(position));
-//        holder.swipeMenuLayout
-        holder.titleTv.setText(listBean.get(position).getTitle());
-        holder.addressTv.setText(listBean.get(position).getAddress());
-        holder.timeTv.setText(String.format("%s-%s", listBean.get(position).getStart_time(), listBean.get(position).getEnd_time()));
-        Glide.with(context).load(listBean.get(position).getMemebr_avatar()).into(holder.icon);
-        holder.getNumberTv.setText(String.format("%s积分", listBean.get(position).getCredit()));
-        holder.serviceBtn.setText(listBean.get(position).getIs_order() == 1 ? "接单" : "已接单");
-        holder.serviceBtn.setAlpha(listBean.get(position).getIs_order() == 1 ? 1.0f : 0.5f);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clickInterface.getPostion(position);
-            }
-        });
+        Glide.with(context).load(orderListBeans.get(position).getGoods_image_url()).into(holder.iconIv);
+        holder.priceTv.setText(String.format("￥%s", orderListBeans.get(position).getGoods_price()));
+        holder.titleTv.setText(orderListBeans.get(position).getGoods_name());
+        holder.timeTv.setText(String.format("下单时间%s", orderListBeans.get(position).getAdd_time()));
+        holder.stateTv.setText(orderListBeans.get(position).getOrder_state_text());
+
+
     }
 
     @Override
     public int getItemCount() {
-        return listBean == null ? 0 : listBean.size();
+        return orderListBeans == null ? 0 : orderListBeans.size();
     }
 
     static
     class ViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R2.id.icon_iv)
+        ImageView iconIv;
         @BindView(R2.id.title_tv)
         TextView titleTv;
-        @BindView(R2.id.get_number_tv)
-        TextView getNumberTv;
-        @BindView(R2.id.address_tv)
-        TextView addressTv;
+        @BindView(R2.id.state_tv)
+        TextView stateTv;
+        @BindView(R2.id.information_tv)
+        TextView informationTv;
+        @BindView(R2.id.price_tv)
+        TextView priceTv;
+        @BindView(R2.id.look_information_tv)
+        TextView lookInformationTv;
         @BindView(R2.id.time_tv)
         TextView timeTv;
-        @BindView(R2.id.service_btn)
-        TextView serviceBtn;
-        @BindView(R2.id.icon)
-        ImageView icon;
-        @BindView(R2.id.father_layout)
-        LinearLayout fatherLayout;
-
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);

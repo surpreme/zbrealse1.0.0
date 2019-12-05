@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.aite.mainlibrary.fragment.lovefamilychridren.ChridrenFragmentFour;
 import com.aite.mainlibrary.fragment.lovefamilychridren.ChridrenFragmentSencond;
 import com.aite.mainlibrary.fragment.lovefamilychridren.ChridrenFragmentThrid;
-import com.aite.mainlibrary.fragment.lovefamilychridren.chridrenfirst.ChridrenFirstFragment;
+import com.aite.mainlibrary.fragment.minechridren.minerunning.MineRunningFragment;
 import com.aite.mainlibrary.fragment.newsChirend.mainnews.MainNewsFragment;
 
 /**
@@ -16,15 +16,13 @@ import com.aite.mainlibrary.fragment.newsChirend.mainnews.MainNewsFragment;
  * @datetime: 2019-11-26
  * @desc:
  */
-public class BackgroundViewPagerApdapter extends FragmentPagerAdapter {
+public class MineRunningViewPagerApdapter extends FragmentPagerAdapter {
     private int num;
-    MainNewsFragment mainNewsFragment;
+    MineRunningFragment mineRunningFragment;
     ChridrenFragmentSencond chridrenFragmentSencond;
-    ChridrenFragmentThrid chridrenFragmentThrid;
-    ChridrenFragmentFour chridrenFragmentFour;
 
 
-    public BackgroundViewPagerApdapter(FragmentManager fm, int num) {
+    public MineRunningViewPagerApdapter(FragmentManager fm, int num) {
         super(fm);
         this.num = num;
     }
@@ -34,20 +32,12 @@ public class BackgroundViewPagerApdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                if (mainNewsFragment == null) {
+                if (mineRunningFragment == null) {
                     return new MainNewsFragment();
                 }
             case 1:
                 if (chridrenFragmentSencond == null) {
                     return new ChridrenFragmentSencond();
-                }
-            case 2:
-                if (chridrenFragmentThrid == null) {
-                    return new ChridrenFragmentThrid();
-                }
-            case 3:
-                if (chridrenFragmentFour == null) {
-                    return new ChridrenFragmentFour();
                 }
             default:
                 return null;

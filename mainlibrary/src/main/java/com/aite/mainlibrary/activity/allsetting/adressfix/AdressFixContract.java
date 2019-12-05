@@ -1,6 +1,4 @@
-package com.lzy.basemodule.adressfix;
-
-import android.content.Context;
+package com.aite.mainlibrary.activity.allsetting.adressfix;
 
 import com.lzy.basemodule.mvp.BasePresenter;
 import com.lzy.basemodule.mvp.BaseView;

@@ -1,11 +1,30 @@
 package com.aite.mainlibrary.activity.allsetting.thingsbook;
 
 
+import android.view.LayoutInflater;
+import android.view.View;
+
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
 import com.aite.mainlibrary.R;
+import com.aite.mainlibrary.R2;
+import com.aite.mainlibrary.activity.allshopcard.timebank.TimeBankContract;
+import com.aite.mainlibrary.activity.allshopcard.timebank.TimeBankPresenter;
+import com.aite.mainlibrary.adapter.fragmentAdpter.BackgroundViewPagerApdapter;
+import com.aite.mainlibrary.adapter.fragmentAdpter.LoveFamilyViewPagerApdapter;
+import com.aite.mainlibrary.adapter.fragmentAdpter.ThingBookPagerApdapter;
+import com.aite.mainlibrary.fragment.daybookchridren.daybooklist.DaybooklistFragment;
+import com.google.android.material.tabs.TabLayout;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.base.BaseActivity;
 import com.lzy.basemodule.mvp.MVPBaseActivity;
 import com.lzy.okgo.model.HttpParams;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
 
 
 /**
@@ -13,7 +32,13 @@ import com.lzy.okgo.model.HttpParams;
  * 邮箱 784787081@qq.com
  */
 
-public class ThingsBookFragment extends BaseActivity<ThingsbookContract.View, ThingsbookPresenter> implements ThingsbookContract.View {
+public class ThingsbookActivity extends BaseActivity<ThingsbookContract.View, ThingsbookPresenter> implements ThingsbookContract.View {
+    private ThingBookPagerApdapter thingBookPagerApdapter;
+    @BindView(R2.id.viewpager)
+    ViewPager viewPager;
+    @BindView(R2.id.thingsfix_tabMode)
+    TabLayout tabLayout;
+    private View[] views;
 
     @Override
     protected int getLayoutResId() {
@@ -22,32 +47,48 @@ public class ThingsBookFragment extends BaseActivity<ThingsbookContract.View, Th
 
     @Override
     protected void initView() {
+        initToolbar("订单");
+        initFragment();
+    }
+
+    private void initFragment() {
+        views = new View[3];
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        views[0] = layoutInflater.inflate(R.layout.recy_layout, null);
+        views[1] = layoutInflater.inflate(R.layout.maindoctor_information, null);
+        views[2] = layoutInflater.inflate(R.layout.recy_layout, null);
+        thingBookPagerApdapter = new ThingBookPagerApdapter(this.getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(thingBookPagerApdapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+                if (tab.getPosition() == 1) {
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
+        });
 
     }
 
     @Override
+    protected boolean isUseMvp() {
+        return false;
+    }
+
+    @Override
     protected void initDatas() {
-        mPresenter.getinformation(initParams());
 
     }
 
-    /**
-     * key	get	字符串	必须			会员登录key
-     * curpage	get	字符串	必须	1		当前页码
-     * state	get	整型	必须	0		状态 0全部 1待付款 2已付款 3已完成 4评价 5已取消
-     * page_type	get	整型	必须	1		页面类型 1日托 2培训 3就业 4助残活动 5其他服务
-     *
-     * @return
-     */
-    private HttpParams initParams() {
-        HttpParams httpParams = new HttpParams();
-        httpParams.put("key", AppConstant.KEY);
-        httpParams.put("curpage", 1);
-        httpParams.put("state", 1);
-        httpParams.put("curpage", 1);
-
-        return httpParams;
-    }
 
     @Override
     protected void initResume() {
@@ -59,8 +100,5 @@ public class ThingsBookFragment extends BaseActivity<ThingsbookContract.View, Th
 
     }
 
-    @Override
-    public void onGetinformationSuccess(Object msg) {
 
-    }
 }

@@ -5,26 +5,34 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.aite.mainlibrary.activity.allsetting.thingsbook.ThingsbookActivity;
+import com.aite.mainlibrary.fragment.daybookchridren.daybooklist.DaybooklistFragment;
+import com.aite.mainlibrary.fragment.daybookchridren.overedbooklist.OveredbooklistFragment;
+import com.aite.mainlibrary.fragment.daybookchridren.unpaybooklist.UnPaybooklistFragment;
+import com.aite.mainlibrary.fragment.lessBodyfragment.lessbodybookfragment.LessBodyBookFragment;
 import com.aite.mainlibrary.fragment.lovefamilychridren.ChridrenFragmentFour;
 import com.aite.mainlibrary.fragment.lovefamilychridren.ChridrenFragmentSencond;
 import com.aite.mainlibrary.fragment.lovefamilychridren.ChridrenFragmentThrid;
 import com.aite.mainlibrary.fragment.lovefamilychridren.chridrenfirst.ChridrenFirstFragment;
-import com.aite.mainlibrary.fragment.newsChirend.mainnews.MainNewsFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Auther: liziyang
  * @datetime: 2019-11-26
  * @desc:
  */
-public class BackgroundViewPagerApdapter extends FragmentPagerAdapter {
+public class ThingBookPagerApdapter extends FragmentPagerAdapter {
+    DaybooklistFragment daybooklistFragment;
     private int num;
-    MainNewsFragment mainNewsFragment;
-    ChridrenFragmentSencond chridrenFragmentSencond;
-    ChridrenFragmentThrid chridrenFragmentThrid;
+    //    ChridrenFirstFragment chridrenFragmentFirst;
+    UnPaybooklistFragment unPaybooklistFragment;
+    OveredbooklistFragment overedbooklistFragment;
     ChridrenFragmentFour chridrenFragmentFour;
 
 
-    public BackgroundViewPagerApdapter(FragmentManager fm, int num) {
+    public ThingBookPagerApdapter(FragmentManager fm, int num) {
         super(fm);
         this.num = num;
     }
@@ -34,16 +42,16 @@ public class BackgroundViewPagerApdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                if (mainNewsFragment == null) {
-                    return new MainNewsFragment();
+                if (daybooklistFragment == null) {
+                    return new DaybooklistFragment();
                 }
             case 1:
-                if (chridrenFragmentSencond == null) {
-                    return new ChridrenFragmentSencond();
+                if (unPaybooklistFragment == null) {
+                    return new UnPaybooklistFragment();
                 }
             case 2:
-                if (chridrenFragmentThrid == null) {
-                    return new ChridrenFragmentThrid();
+                if (overedbooklistFragment == null) {
+                    return new OveredbooklistFragment();
                 }
             case 3:
                 if (chridrenFragmentFour == null) {
@@ -58,4 +66,5 @@ public class BackgroundViewPagerApdapter extends FragmentPagerAdapter {
     public int getCount() {
         return num;
     }
+
 }

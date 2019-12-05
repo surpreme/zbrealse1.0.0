@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aite.mainlibrary.Mainbean.BookLessBodyFamilyBean;
 import com.aite.mainlibrary.Mainbean.BookMorningNoonEatBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
@@ -22,12 +23,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class MineHelpEatRecyAdapter extends RecyclerView.Adapter<MineHelpEatRecyAdapter.ViewHolder> {
+public class MineLessBodybookRecyAdapter extends RecyclerView.Adapter<MineLessBodybookRecyAdapter.ViewHolder> {
     private Context context;
     private LayoutInflater inflater;
-    private List<BookMorningNoonEatBean.OrderListBean> orderListBeans;
+    private List<BookLessBodyFamilyBean.OrderListBean> orderListBeans;
 
-    public MineHelpEatRecyAdapter(Context context, List<BookMorningNoonEatBean.OrderListBean> orderListBeans) {
+    public MineLessBodybookRecyAdapter(Context context, List<BookLessBodyFamilyBean.OrderListBean> orderListBeans) {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
         this.orderListBeans = orderListBeans;
