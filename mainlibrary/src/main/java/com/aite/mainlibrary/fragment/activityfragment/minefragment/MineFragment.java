@@ -1,4 +1,5 @@
-package com.aite.mainlibrary.fragment.activityfragment;
+package com.aite.mainlibrary.fragment.activityfragment.minefragment;
+
 
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,6 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.aite.mainlibrary.Constant.MainUIConstant;
+import com.aite.mainlibrary.Mainbean.UseInformationBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.HealthBookActivity;
@@ -18,19 +20,29 @@ import com.aite.mainlibrary.activity.allmain.device.DeviceListActivity;
 import com.aite.mainlibrary.activity.allmain.messager.MessagerActivity;
 import com.aite.mainlibrary.activity.allmoney.MoneycartActivity;
 import com.aite.mainlibrary.activity.allsetting.LessbodybookActivity;
+import com.aite.mainlibrary.activity.allsetting.MinePostBookActivity;
 import com.aite.mainlibrary.activity.allsetting.SettingActivity;
 import com.aite.mainlibrary.activity.allsetting.minerunning.MineRunningActivity;
 import com.aite.mainlibrary.activity.allsetting.minerural.MineRuralActivity;
 import com.aite.mainlibrary.activity.allsetting.thingsbook.ThingsbookActivity;
 import com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity;
-import com.aite.mainlibrary.activity.allshopcard.helpdoctor.HelpdoctorActivity;
 import com.aite.mainlibrary.adapter.GridViewIconAdapter;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.base.BaseFragment;
 import com.lzy.basemodule.logcat.LogUtils;
+import com.lzy.basemodule.mvp.MVPBaseFragment;
+import com.lzy.okgo.model.HttpParams;
 
 import butterknife.BindView;
 
-public class MineFragment extends BaseFragment {
+/**
+ * MVPPlugin
+ * 邮箱 784787081@qq.com
+ */
+
+public class MineFragment extends BaseFragment<MineContract.View, MinePresenter> implements MineContract.View {
     @BindView(R2.id.toolbar)
     RelativeLayout toolbar;
     @BindView(R2.id.setting_gridview)
@@ -55,9 +67,14 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void initModel() {
+        mPresenter.getUserInformation(initParams());
 
     }
-
+    private HttpParams initParams() {
+        HttpParams httpParams = new HttpParams();
+        httpParams.put("key", AppConstant.KEY);
+        return httpParams;
+    }
     @Override
     protected void initViews() {
         fixFriendsBtn.setOnClickListener(this);
@@ -65,6 +82,7 @@ public class MineFragment extends BaseFragment {
         userIcon.setOnClickListener(this);
         messageIv.setOnClickListener(this);
         userPhoneNumberTv.setOnClickListener(this);
+
         settingGridview.setAdapter(new GridViewIconAdapter(context, MainUIConstant.MineConstant.settingImg, MainUIConstant.MineConstant.settingTv));
         bookGridview.setAdapter(new GridViewIconAdapter(context, MainUIConstant.MineConstant.bookImg, MainUIConstant.MineConstant.bookTv));
         elseGridview.setAdapter(new GridViewIconAdapter(context, MainUIConstant.MineConstant.elseImg, MainUIConstant.MineConstant.elseTv));
@@ -140,6 +158,10 @@ public class MineFragment extends BaseFragment {
                     case 1:
                         startActivity(HealthBookActivity.class);
                         break;
+                    case 2:
+                        startActivity(MinePostBookActivity.class);
+                        break;
+
                     default:
                         break;
                 }
@@ -166,6 +188,18 @@ public class MineFragment extends BaseFragment {
         else if (v.getId() == R.id.message_iv) {
             startActivity(MessagerActivity.class);
         }
+
+    }
+
+
+    @Override
+    public void onGetUserInformation(Object msg) {
+        if (((UseInformationBean) msg).getMember_info().getMember_avatar() == null) return;
+        AppConstant.ICON_URL=((UseInformationBean) msg).getMember_info().getMember_avatar();
+        AppConstant.PHONENUMBER=((UseInformationBean) msg).getMember_info().getMember_mobile();
+        Glide.with(context).load(((UseInformationBean) msg).getMember_info().getMember_avatar()).apply(RequestOptions.circleCropTransform()).into(userIcon);
+        userPhoneNumberTv.setText( replaceString(((UseInformationBean)msg).getMember_info().getMember_mobile(),2,8));
+
 
     }
 

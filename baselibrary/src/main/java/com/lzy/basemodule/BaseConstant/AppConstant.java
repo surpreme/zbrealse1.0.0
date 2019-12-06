@@ -3,12 +3,15 @@ package com.lzy.basemodule.BaseConstant;
 
 public class AppConstant {
     //ctrl+shfit+u 大写
+    //ctrl+alt+m 实现方法
     public static final String REGTYPE = "Ismobilereg";
     public static final String CLIENT = "android";
     public static String KEY = null;
     public static String USERNAME = null;
     public static String FRIEND_VALID = null;
     public static String MEMBER_ID = null;
+    public static String ICON_URL = null;
+    public static String PHONENUMBER=null;
 
     private static final String BASEURL = "http://zhongbyi.aitecc.com/mobile/";
     //  获取所有地区数据

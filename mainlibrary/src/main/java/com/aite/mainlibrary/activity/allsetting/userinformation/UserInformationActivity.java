@@ -98,11 +98,6 @@ public class UserInformationActivity extends BaseActivity<UserInformationContrac
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 }
 

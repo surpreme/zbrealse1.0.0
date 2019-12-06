@@ -13,83 +13,152 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/background"
                     android:layout_width="match_parent"
                     android:layout_height="270dp"
                     android:src="@drawable/signin_day_img" />
-                <LinearLayout
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/background"
-                    android:layout_width="match_parent"
-                    android:layout_height="500dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginRight="12dp"
-                    android:background="@drawable/round_background_white"
-                    android:orientation="vertical">
+                    android:layout_margin="@dimen/margin_20dp"
+                    android:background="@color/blue_day_login"
+                    app:cardCornerRadius="10dp">
 
-                    <androidx.appcompat.widget.LinearLayoutCompat
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
+                        android:layout_height="600dp"
+                        android:background="@drawable/round_background_white"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/step_back_2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.5" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="top"
+                                android:orientation="vertical"
+                                android:paddingTop="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="0.8dp"
+                                        android:layout_marginRight="15dp"
+                                        android:background="@color/yelllow" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="已累计：" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/blue"
+                                        android:textSize="23sp"
+                                        tools:text="5" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="  个打卡" />
+
+
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="0.8dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:background="@color/yelllow" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="累计签到20天，便可领取小礼品"
+                                    android:textColor="#ff414141"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <com.lzy.basemodule.view.StepsView
+                            android:id="@+id/stepview"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:background="@drawable/round_background_blue"
+                                android:gravity="center"
+                                android:text="签到"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize_18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_20dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginRight="@dimen/margin_20dp"
+                                android:layout_marginBottom="20dp"
+                                android:gravity="center"
+                                android:text="签到规则？"
+                                android:textColor="@color/blue" />
+                        </LinearLayout>
 
                         <View
-                            android:layout_width="80dp"
-                            android:layout_height="0.8dp"
-                            android:layout_marginRight="15dp"
-                            android:background="@color/yelllow" />
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="已累计：" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/blue"
-                            android:textSize="23sp"
-                            tools:text="5" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="  个打卡" />
-
-
-                        <View
-                            android:layout_width="80dp"
-                            android:layout_height="0.8dp"
-                            android:layout_marginLeft="15dp"
-                            android:background="@color/yelllow" />
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="累计签到20天，便可领取小礼品"
-                        android:textColor="#ff414141"
-                        android:textSize="13sp" />
-
-                    <com.lzy.basemodule.view.StepsView
-                        android:id="@+id/stepview"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="5dp" />
-                </LinearLayout>
             </RelativeLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
 
 
 </RelativeLayout>

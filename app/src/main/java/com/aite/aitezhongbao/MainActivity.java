@@ -14,9 +14,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.aite.mainlibrary.fragment.activityfragment.AroundBackgroundFragment;
 import com.aite.mainlibrary.fragment.activityfragment.LoveFamilyFragment;
-import com.aite.mainlibrary.fragment.activityfragment.MineFragment;
 import com.aite.mainlibrary.fragment.activityfragment.ShopFragment;
 import com.aite.mainlibrary.fragment.activityfragment.main.MainFragment;
+import com.aite.mainlibrary.fragment.activityfragment.minefragment.MineFragment;
 import com.lzy.basemodule.base.BaseActivity;
 import com.lzy.basemodule.view.StatusBarUtils;
 

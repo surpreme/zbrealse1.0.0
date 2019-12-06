@@ -4,14 +4,13 @@ package com.aite.mainlibrary.activity.allshopcard.air;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.aite.mainlibrary.Mainbean.AirMainListBean;
-import com.aite.mainlibrary.Mainbean.HelpDoctorListBean;
-import com.aite.mainlibrary.Mainbean.HelpEatUIBean;
 import com.aite.mainlibrary.Mainbean.TypeAirBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
@@ -57,12 +56,21 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
     LinearLayout serviceLl;
     @BindView(R2.id.time_ll)
     LinearLayout timeLl;
+    @BindView(R2.id.all_iv)
+    ImageView allIv;
+    @BindView(R2.id.service_iv)
+    ImageView serviceIv;
+    @BindView(R2.id.time_iv)
+    ImageView timeIv;
     private AirServiceRecyAdapter airServiceRecyAdapter;
-    private List<AirMainListBean.ListBean> listBean = new ArrayList<>();
+    private List<AirMainListBean.ListBean> airMainListBean = new ArrayList<>();
     //banner datalist
     private List<String> list_img = new ArrayList<>();
     private List<String> list_title = new ArrayList<>();
     private TypeAirBean typeAirBean;
+    private String CLASS_ID = "0";
+    private String AREA_ID = "0";
+    private String TIME_ID = "0";
 
     @Override
     protected int getLayoutResId() {
@@ -85,16 +93,16 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         mBaserecyclerView.setLayoutManager(linearLayoutManager);
-        airServiceRecyAdapter = new AirServiceRecyAdapter(context, listBean);
+        airServiceRecyAdapter = new AirServiceRecyAdapter(context, airMainListBean);
         mBaserecyclerView.setAdapter(airServiceRecyAdapter);
         airServiceRecyAdapter.setClickInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
             @Override
             public void getPostion(int postion) {
                 Intent intent = new Intent(context, BookTimebankInformationActivity.class);
-                intent.putExtra("TYPEID", listBean.get(postion).getId());
+                intent.putExtra("TYPEID", airMainListBean.get(postion).getId());
                 intent.putExtra("activity", "AirActivity");
                 startActivity(intent);
-//                startActivity(BookTimebankInformationActivity.class,"TYPEID",listBean.get(postion).getId());
+//                startActivity(BookTimebankInformationActivity.class,"TYPEID",airMainListBean.get(postion).getId());
 
 
             }
@@ -105,7 +113,7 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
 
     @Override
     protected void initDatas() {
-        mPresenter.getTypeDataList(initParams());
+        mPresenter.getTypeDataList(initTypeParams());
         mPresenter.getDataList(initParams());
     }
 
@@ -119,8 +127,8 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
     @Override
     protected void onSmartRefresh() {
         super.onSmartRefresh();
-        if (listBean != null) {
-            listBean.clear();
+        if (airMainListBean != null) {
+            airMainListBean.clear();
             airServiceRecyAdapter.notifyDataSetChanged();
         }
 
@@ -128,9 +136,19 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
 
     }
 
+    private HttpParams initTypeParams() {
+        HttpParams httpParams = new HttpParams();
+        httpParams.put("key", AppConstant.KEY);
+        return httpParams;
+    }
+
     private HttpParams initParams() {
         HttpParams httpParams = new HttpParams();
         httpParams.put("key", AppConstant.KEY);
+        httpParams.put("curpage", mCurrentPage);
+        httpParams.put("class_id", CLASS_ID);
+        httpParams.put("area_id", AREA_ID);
+        httpParams.put("time_id", TIME_ID);
         return httpParams;
     }
 
@@ -153,13 +171,13 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
             stopLoadingAnim();
             showMoreRecy();
             stopNoData();
-            listBean.addAll(((AirMainListBean) msg).getList());
+            airMainListBean.addAll(((AirMainListBean) msg).getList());
             airServiceRecyAdapter.notifyDataSetChanged();
             hasMore = ((AirMainListBean) msg).getIs_nextpage() > 0;
         }
-//        if (!listBean.isEmpty())
-//            listBean.clear();
-//        listBean.addAll(((AirMainListBean) msg).getList());
+//        if (!airMainListBean.isEmpty())
+//            airMainListBean.clear();
+//        airMainListBean.addAll(((AirMainListBean) msg).getList());
 //        airServiceRecyAdapter.notifyDataSetChanged();
     }
 
@@ -191,23 +209,26 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
         }
         if (v.getId() == R.id.service_ll) {
             if (typeAirBean == null) return;
+            serviceIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, typeAirBean.getClass_list());
-            showChoicePop(radioGroupRecyAdapter);
+            showChoicePop(radioGroupRecyAdapter, "CLASS_ID");
         }
         if (v.getId() == R.id.all_ll) {
             if (typeAirBean == null) return;
+            allIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, typeAirBean.getArea_list());
-            showChoicePop(radioGroupRecyAdapter);
+            showChoicePop(radioGroupRecyAdapter, "AREA_ID");
         }
         if (v.getId() == R.id.time_ll) {
             if (typeAirBean == null) return;
+            timeIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, typeAirBean.getTime_array());
-            showChoicePop(radioGroupRecyAdapter);
+            showChoicePop(radioGroupRecyAdapter, "TIME_ID");
 
         }
     }
 
-    private void showChoicePop(RadioGroupRecyAdapter radioGroupRecyAdapter) {
+    private void showChoicePop(RadioGroupRecyAdapter radioGroupRecyAdapter, String type) {
         //初始化选择器
         LinearLayoutManager manager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         radioGroupRecyAdapter.setClickInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
@@ -215,13 +236,54 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
             public void getPostion(int postion) {
                 //for循环不能放在这里 会卡顿 放到适配器中
                 LogUtils.d(postion);
+                switch (type.toString()) {
+                    case "CLASS_ID":
+                        CLASS_ID = String.valueOf(postion);
+
+                        break;
+                    case "AREA_ID":
+                        AREA_ID = String.valueOf(postion);
+
+                        break;
+                    case "TIME_ID":
+                        TIME_ID = String.valueOf(postion);
+
+                        break;
+                    default:
+                        break;
+
+                }
+                airMainListBean.clear();
+                radioGroupRecyAdapter.notifyDataSetChanged();
+                mPresenter.getDataList(initParams());
+                PopwindowUtils.getmInstance().dismissPopWindow();
             }
         });
-        PopwindowUtils.getmInstance().showRecyPopupWindow(context, radioGroupRecyAdapter, manager, fatherTabLl);
+        PopwindowUtils.getmInstance().showRecyPopupWindow(context, radioGroupRecyAdapter, manager, fatherTabLl, new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                resetChoiceIv();
+
+            }
+        });
+    }
+
+    private void resetChoiceIv() {
+        serviceIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+        allIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+        timeIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+
     }
 
     @Override
     public void OnBannerClick(int position) {
 
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }

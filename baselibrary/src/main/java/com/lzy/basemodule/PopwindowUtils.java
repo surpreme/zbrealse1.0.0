@@ -194,6 +194,25 @@ public class PopwindowUtils {
 
     }
 
+    public void showRecyPopupWindow(final Context context, RecyclerView.Adapter recyadpater, LinearLayoutManager linearLayoutManager, View ui, PopupWindow.OnDismissListener onDismissListeners) {
+        @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(recylayoutid, null);
+        setBackGroundAlpha(1.0f, context);
+        popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, false);
+        final RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
+        popupWindow.setFocusable(true);
+
+        //图片设置透明度
+//        recyclerView.setAlpha(0.4f);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(recyadpater);
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setContentView(view);
+        popupWindow.showAsDropDown(ui, 0, 0);
+        popupWindow.setOnDismissListener(onDismissListeners);
+
+
+    }
+
     public void showThreeRecyPopupWindow(final Context context, RecyclerView.Adapter recyadpater, Object data1, Object data2, Object data3, LinearLayoutManager linearLayoutManager, View ui) {
         @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(threeRecylayoutid, null);
         setBackGroundAlpha(1.0f, context);

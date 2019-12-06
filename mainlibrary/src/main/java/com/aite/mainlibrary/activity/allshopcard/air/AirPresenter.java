@@ -27,7 +27,7 @@ public class AirPresenter extends BasePresenterImpl<AirContract.View> implements
 
     @Override
     public void getDataList(HttpParams httpParams) {
-        OkGo.<BaseData<AirMainListBean>>post(AppConstant.AIRLISTRECYURL)
+        OkGo.<BaseData<AirMainListBean>>get(AppConstant.AIRLISTRECYURL)
                 .tag(mView.getContext())
                 .params(httpParams)
                 .execute(new AbsCallback<BaseData<AirMainListBean>>() {

@@ -1,6 +1,7 @@
 package com.lzy.basemodule.base;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.PopwindowUtils;
 import com.lzy.basemodule.R;
 import com.lzy.basemodule.androidlife.AppManager;
@@ -99,6 +101,7 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
 //            ToastUtils.showToast(context, "请检查网络设置");
             LogUtils.d("当前无网络");
         }
+
 
     }
 

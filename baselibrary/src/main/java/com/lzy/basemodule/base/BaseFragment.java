@@ -127,6 +127,8 @@ public abstract class BaseFragment<V extends BaseView, T extends BasePresenterIm
             nodata_lottieAnimationView.setVisibility(View.VISIBLE);
             nodata_lottieAnimationView.playAnimation();
         }
+
+
     }
 
 
@@ -201,6 +203,17 @@ public abstract class BaseFragment<V extends BaseView, T extends BasePresenterIm
 
     }
 
+    protected String replaceString(String msg, int start, int end) {
+        StringBuilder b = new StringBuilder();
+        for (int i = 0; i < msg.toCharArray().length; i++) {
+            if (i > start && i < end) {
+                b.append("*");
+            } else {
+                b.append(msg.toCharArray()[i]);
+            }
+        }
+        return b.toString();
+    }
 
     @Override
     protected void onSmartRefresh() {

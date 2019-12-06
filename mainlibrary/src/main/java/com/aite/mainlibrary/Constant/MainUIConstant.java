@@ -10,7 +10,7 @@ public class MainUIConstant {
                 "助餐", "助医", "时间银行", "喘息服务", "其他服务"
         };
 
-}
+    }
 
     public static class MainFragmentConstant {
         public static int[] settingImg = {
@@ -22,10 +22,11 @@ public class MainUIConstant {
         };
 
         public static String[] settingTv = {
-                "日托","培训", "就业", "助残活动", "其他服务"
+                "日托", "培训", "就业", "助残活动", "其他服务"
         };
 
     }
+
     public static class MoneycartActivityConstant {
         public static int[] settingImg = {
                 R.drawable.fact_money,
@@ -84,6 +85,19 @@ public class MainUIConstant {
 
     }
 
+    public static class MinePostServiceConstant {
+        public static int[] settingImg = {
+                R.mipmap.service,
+                R.mipmap.helpdoctor,
+                R.mipmap.elsesevice,
+        };
+
+        public static String[] settingTv = {
+                "时间银行", "助医服务", "喘息服务"
+        };
+
+    }
+
     public static class MineConstant {
         public static int[] settingImg = {
                 R.mipmap.mine_device,
@@ -112,7 +126,7 @@ public class MainUIConstant {
         };
         //"助医", "喘息服务",
         public static String[] bookTv = {
-                "助餐",  "其它服务",
+                "助餐", "其它服务",
                 "日托", "培训", "辅助就业", "助残活动"
         };
 

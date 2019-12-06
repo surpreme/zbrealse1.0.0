@@ -101,7 +101,8 @@
         <activity android:name="com.aite.mainlibrary.activity.allsetting.addadrress.AddAdrressActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.changeuserinformation.ChangeUserInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.appsettinginformation.AppSettingInformationActivity" />
-
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.MinePostBookActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.minepostbookchriend.MinePostBookChriendActivity" />
 
     </application>
 

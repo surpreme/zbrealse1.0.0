@@ -2,23 +2,22 @@ package com.aite.mainlibrary.activity.allshopcard.timebank;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.aite.mainlibrary.Mainbean.ElseTimeBankListBean;
-import com.aite.mainlibrary.Mainbean.HelpDoctorListBean;
 import com.aite.mainlibrary.Mainbean.TimeBankListBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allshopcard.NumberBankActivity;
 import com.aite.mainlibrary.activity.allshopcard.booktimebankinformation.BookTimebankInformationActivity;
 import com.aite.mainlibrary.activity.allshopcard.posttimeneed.PostTimeNeedActivity;
-import com.aite.mainlibrary.adapter.HelpDoctorRecyAdapter;
 import com.aite.mainlibrary.adapter.RadioGroupRecyAdapter;
 import com.aite.mainlibrary.adapter.TimeBankRecyAdapter;
 import com.bumptech.glide.Glide;
@@ -37,6 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
@@ -69,6 +69,12 @@ public class TimeBankActivity extends BaseActivity<TimeBankContract.View, TimeBa
     LinearLayout timeLl;
     @BindView(R2.id.number_bank_ll)
     LinearLayout numberBankLl;
+    @BindView(R2.id.all_iv)
+    ImageView allIv;
+    @BindView(R2.id.service_iv)
+    ImageView serviceIv;
+    @BindView(R2.id.time_iv)
+    ImageView timeIv;
     private TimeBankRecyAdapter timeBankRecyAdapter;
     private List<TimeBankListBean.ListBean> timeBankListBean = new ArrayList<>();
     //banner datalist
@@ -125,16 +131,19 @@ public class TimeBankActivity extends BaseActivity<TimeBankContract.View, TimeBa
         }
         if (v.getId() == R.id.service_ll) {
             if (elseTimeBankListBean == null) return;
+            serviceIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, elseTimeBankListBean.getClass_list());
             showChoicePop(radioGroupRecyAdapter, "CLASS_ID");
         }
         if (v.getId() == R.id.all_ll) {
             if (elseTimeBankListBean == null) return;
+            allIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, elseTimeBankListBean.getArea_list());
             showChoicePop(radioGroupRecyAdapter, "AREA_ID");
         }
         if (v.getId() == R.id.time_ll) {
             if (elseTimeBankListBean == null) return;
+            timeIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, elseTimeBankListBean.getTime_array());
             showChoicePop(radioGroupRecyAdapter, "TIME_ID");
 
@@ -151,6 +160,13 @@ public class TimeBankActivity extends BaseActivity<TimeBankContract.View, TimeBa
     protected void onSmartLoadMore() {
         super.onSmartLoadMore();
         mPresenter.showUiListData(initParams());
+
+    }
+
+    private void resetChoiceIv() {
+        serviceIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+        allIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+        timeIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
 
     }
 
@@ -194,7 +210,12 @@ public class TimeBankActivity extends BaseActivity<TimeBankContract.View, TimeBa
                 PopwindowUtils.getmInstance().dismissPopWindow();
             }
         });
-        PopwindowUtils.getmInstance().showRecyPopupWindow(context, radioGroupRecyAdapter, manager, fatherTabLl);
+        PopwindowUtils.getmInstance().showRecyPopupWindow(context, radioGroupRecyAdapter, manager, fatherTabLl, new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                resetChoiceIv();
+            }
+        });
     }
 
     @Override
@@ -233,7 +254,8 @@ public class TimeBankActivity extends BaseActivity<TimeBankContract.View, TimeBa
 
     @Override
     public void onMainUiListDataSuccess(Object msg) {
-        if (((TimeBankListBean) msg).getList().isEmpty()) {
+        if (((TimeBankListBean) msg).getList() ==
+                null || ((TimeBankListBean) msg).getList().isEmpty()) {
             initNodata();
         } else {
             stopLoadingAnim();
@@ -292,4 +314,10 @@ public class TimeBankActivity extends BaseActivity<TimeBankContract.View, TimeBa
 
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 }

@@ -13,6 +13,9 @@ import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allsetting.adressfix.AdressFixActivity;
 import com.aite.mainlibrary.activity.allsetting.appsettinginformation.AppSettingInformationActivity;
 import com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.androidlife.AppManager;
 import com.lzy.basemodule.base.BaseActivity;
 
@@ -40,6 +43,10 @@ public class SettingActivity extends BaseActivity {
     LinearLayout addressLl;
     @BindView(R2.id.app_setting_ll)
     LinearLayout appSettingLl;
+    @BindView(R2.id.icon_iv)
+    ImageView iconIv;
+    @BindView(R2.id.user_name_tv)
+    TextView userNameTv;
 
     @Override
     protected int getLayoutResId() {
@@ -88,6 +95,10 @@ public class SettingActivity extends BaseActivity {
 
     @Override
     protected void initDatas() {
+        if (AppConstant.ICON_URL != null)
+            Glide.with(context).load(AppConstant.ICON_URL).apply(RequestOptions.circleCropTransform()).into(iconIv);
+        if (AppConstant.USERNAME != null)
+            userNameTv.setText(AppConstant.USERNAME);
 
     }
 

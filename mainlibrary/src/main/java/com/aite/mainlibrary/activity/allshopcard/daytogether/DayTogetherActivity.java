@@ -3,7 +3,9 @@ package com.aite.mainlibrary.activity.allshopcard.daytogether;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
@@ -59,6 +61,12 @@ public class DayTogetherActivity extends BaseActivity<DayTogetherContract.View, 
     LinearLayout timeLl;
     @BindView(R2.id.father_ll)
     LinearLayout fatherLl;
+    @BindView(R2.id.all_iv)
+    ImageView allIv;
+    @BindView(R2.id.service_iv)
+    ImageView serviceIv;
+    @BindView(R2.id.time_iv)
+    ImageView timeIv;
     private AllLessBodyRecyAdapter allLessBodyRecyAdapter;
     private List<LessDayBean.GoodsListBean> goodsListBeans = new ArrayList<>();
     private DayTogetherChoiceBean dayTogetherChoiceBean;
@@ -114,14 +122,17 @@ public class DayTogetherActivity extends BaseActivity<DayTogetherContract.View, 
 //        if (v.getId() == R.id.infortion_item_ll) startActivity(DayInformationActivity.class);
         if (v.getId() == R.id.all_ll) {
             if (dayTogetherChoiceBean == null) return;
+            allIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, dayTogetherChoiceBean.getList_order());
             showChoicePop(radioGroupRecyAdapter, "LIST_ORDER");
         } else if (v.getId() == R.id.type_ll) {
             if (dayTogetherChoiceBean == null) return;
+            serviceIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, dayTogetherChoiceBean.getList_class());
             showChoicePop(radioGroupRecyAdapter, "LIST_CLASS");
         } else if (v.getId() == R.id.time_ll) {
             if (dayTogetherChoiceBean == null) return;
+            timeIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, dayTogetherChoiceBean.getList_time());
             showChoicePop(radioGroupRecyAdapter, "LIST_TIME");
 
@@ -158,7 +169,19 @@ public class DayTogetherActivity extends BaseActivity<DayTogetherContract.View, 
 
             }
         });
-        PopwindowUtils.getmInstance().showRecyPopupWindow(context, radioGroupRecyAdapter, manager, fatherLl);
+        PopwindowUtils.getmInstance().showRecyPopupWindow(context, radioGroupRecyAdapter, manager, fatherLl, new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                resetChoiceIv();
+            }
+        });
+    }
+
+    private void resetChoiceIv() {
+        serviceIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+        allIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+        timeIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+
     }
 
     //get
@@ -182,6 +205,7 @@ public class DayTogetherActivity extends BaseActivity<DayTogetherContract.View, 
         httpParams.put("curpage", 1);
         return httpParams;
     }
+
     private HttpParams initTypeParams() {
         HttpParams httpParams = new HttpParams();
         httpParams.put("key", AppConstant.KEY);

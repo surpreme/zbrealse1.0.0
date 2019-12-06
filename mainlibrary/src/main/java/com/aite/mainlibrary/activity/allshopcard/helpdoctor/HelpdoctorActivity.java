@@ -1,8 +1,11 @@
 package com.aite.mainlibrary.activity.allshopcard.helpdoctor;
 
 
+import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -30,6 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
@@ -51,6 +55,12 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
     LinearLayout serviceLl;
     @BindView(R2.id.time_ll)
     LinearLayout timeLl;
+    @BindView(R2.id.all_iv)
+    ImageView allIv;
+    @BindView(R2.id.service_iv)
+    ImageView serviceIv;
+    @BindView(R2.id.time_iv)
+    ImageView timeIv;
     private HelpDoctorRecyAdapter helpDoctorRecyAdapter;
     private List<HelpDoctorListBean.ListBean> helpDoctorlistBean = new ArrayList<>();
     //banner datalist
@@ -109,18 +119,21 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
         }
         if (v.getId() == R.id.service_ll) {
             if (elseHelpDoctorBean == null) return;
+            serviceIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, elseHelpDoctorBean.getClass_list());
-            showChoicePop(radioGroupRecyAdapter,"CLASS_ID");
+            showChoicePop(radioGroupRecyAdapter, "CLASS_ID");
         }
         if (v.getId() == R.id.all_ll) {
             if (elseHelpDoctorBean == null) return;
+            allIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, elseHelpDoctorBean.getArea_list());
-            showChoicePop(radioGroupRecyAdapter,"AREA_ID");
+            showChoicePop(radioGroupRecyAdapter, "AREA_ID");
         }
         if (v.getId() == R.id.time_ll) {
             if (elseHelpDoctorBean == null) return;
+            timeIv.setImageDrawable(getResources().getDrawable(R.drawable.top));
             RadioGroupRecyAdapter radioGroupRecyAdapter = new RadioGroupRecyAdapter(context, elseHelpDoctorBean.getTime_array());
-            showChoicePop(radioGroupRecyAdapter,"TIME_ID");
+            showChoicePop(radioGroupRecyAdapter, "TIME_ID");
 
         }
 //        if (v.getId() == R.id.father_tab_ll) {
@@ -134,6 +147,13 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
         mPresenter.getList(initParams());
         mPresenter.getTypeData(initParams());
 
+
+    }
+
+    private void resetChoiceIv() {
+        serviceIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+        allIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
+        timeIv.setImageDrawable(getResources().getDrawable(R.drawable.low));
 
     }
 
@@ -186,7 +206,13 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
                 PopwindowUtils.getmInstance().dismissPopWindow();
             }
         });
-        PopwindowUtils.getmInstance().showRecyPopupWindow(context, radioGroupRecyAdapter, manager, fatherTabLl);
+        PopwindowUtils.getmInstance().showRecyPopupWindow(context, radioGroupRecyAdapter, manager, fatherTabLl, new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                resetChoiceIv();
+
+            }
+        });
     }
 
     @Override

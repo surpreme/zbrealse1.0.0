@@ -28,7 +28,7 @@ public class TimeBankPresenter extends BasePresenterImpl<TimeBankContract.View> 
 
     @Override
     public void showUiListData(HttpParams httpParams) {
-        OkGo.<BaseData<TimeBankListBean>>post(AppConstant.TIMEBANKSERVICEMAINUIURL)
+        OkGo.<BaseData<TimeBankListBean>>get(AppConstant.TIMEBANKSERVICEMAINUIURL)
                 .tag(mView.getContext())
                 .params(httpParams)
                 .execute(new AbsCallback<BaseData<TimeBankListBean>>() {
@@ -42,7 +42,8 @@ public class TimeBankPresenter extends BasePresenterImpl<TimeBankContract.View> 
                             return null;
                         } else {
                             JSONObject object = jsonObject.optJSONObject("datas");
-                            TimeBankListBean timeBankListBean = BeanConvertor.convertBean(object.toString(), TimeBankListBean.class);
+                            Gson gson=new Gson();
+                            TimeBankListBean timeBankListBean = gson.fromJson(object.toString(), TimeBankListBean.class);
                             ((Activity) mView.getContext()).runOnUiThread(()
                                     -> mView.onMainUiListDataSuccess(timeBankListBean));
                         }

@@ -2,17 +2,14 @@ package com.lzy.basemodule.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 
 import com.lzy.basemodule.R;
 import com.lzy.basemodule.util.SystemUtil;
@@ -35,8 +32,8 @@ public class StepsView extends View {
     /**
      * 中间线 以及背景线
      */
-    private int backColor = Color.parseColor("#EEEEEE"),
-            rashColor = Color.parseColor("#EEEEEE"),
+    private int backColor = Color.parseColor("#cbdddf"),
+            rashColor = Color.parseColor("#c2d2e2"),
             textColor = Color.parseColor("#EEEEEE");
     private List<Bitmap> bitmapList = new LinkedList<>();
     private int signInCount = 9;
@@ -58,16 +55,16 @@ public class StepsView extends View {
         paint = new Paint();
         paint.setAntiAlias(true);
         //控制线的宽度
-        strokeWidth = SystemUtil.dip2px(context, 19);
+        strokeWidth = SystemUtil.dip2px(context, 7);
 //        checkBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.sign_ok);
         //控制图的大小
-        checkBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign2x, 22, 22, false);
-        uncheckBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign_un2x, 22, 22, false);
+        checkBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign2x, 20, 20, false);
+        uncheckBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign_un2x, 20, 20, false);
 //         = BitmapFactory.decodeResource();
-        closeGiftBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign_un2x, 22, 22, false);
+        closeGiftBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign_un2x, 20, 20, false);
 
 //        closeGiftBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.superthings);
-        openGiftBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign2x, 22, 22, false);
+        openGiftBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign2x, 20, 20, false);
 
 //        openGiftBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.fly);
     }
@@ -112,8 +109,7 @@ public class StepsView extends View {
         int rowCount = (monthDays % 5 == 0 ? monthDays / 5 : monthDays / 5 + 1);
         int rowHeigh = height / (rowCount);
         int startX = 0 + rowHeigh / 2;
-        int endX = width - rowHeigh / 2
-                ;
+        int endX = width - rowHeigh / 2;
         int days = 0;
 
         for (int a = 0; a < rowCount; a++) {

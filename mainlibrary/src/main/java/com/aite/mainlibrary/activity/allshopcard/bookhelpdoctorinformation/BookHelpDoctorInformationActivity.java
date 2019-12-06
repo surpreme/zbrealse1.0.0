@@ -12,6 +12,7 @@ import com.aite.mainlibrary.Mainbean.HelpDoctorInformationBean;
 import com.aite.mainlibrary.Mainbean.StateCodeBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
+import com.aite.mainlibrary.activity.allshopcard.hekpstart.HekpStartActivity;
 import com.bumptech.glide.Glide;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.base.BaseActivity;
@@ -51,7 +52,7 @@ public class BookHelpDoctorInformationActivity extends BaseActivity<BookHelpDoct
     @Override
     protected void initView() {
         initToolbar("服务详情");
-        initBottomBtn("接单", new View.OnClickListener() {
+        initBottomBtn("开始服务", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mPresenter.StartService(initParams());
@@ -98,7 +99,7 @@ public class BookHelpDoctorInformationActivity extends BaseActivity<BookHelpDoct
         LogUtils.d(infoBean.getIs_order());
         bottomBtn.setEnabled(infoBean.getIs_order() == 1);
         if (infoBean.getIs_order() == 0) {
-            bottomBtn.setText("服务已接单");
+            bottomBtn.setText("已被接单");
             bottomBtn.setAlpha(0.5f);
         }
 
@@ -108,17 +109,11 @@ public class BookHelpDoctorInformationActivity extends BaseActivity<BookHelpDoct
     @Override
     public void onStartServiceSuccess(Object msg) {
         if (((StateCodeBean) msg).getResult().equals("1")) {
-//            startActivity(HekpStartActivity.class, "HELPID", getIntent().getStringExtra("TYPEID"));
+            startActivity(HekpStartActivity.class, "HELPID", getIntent().getStringExtra("TYPEID"));
             showToast(((StateCodeBean) msg).getMsg(), Gravity.TOP);
-            onBackPressed();
+//            onBackPressed();
         }
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }
