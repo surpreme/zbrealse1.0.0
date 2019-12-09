@@ -12,6 +12,9 @@ import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allsetting.adressfix.AdressFixActivity;
 import com.aite.mainlibrary.activity.allsetting.appsettinginformation.AppSettingInformationActivity;
+import com.aite.mainlibrary.activity.allsetting.bindinguser.BindingUserActivity;
+import com.aite.mainlibrary.activity.allsetting.elderhelphouse.ElderHelpHouseActivity;
+import com.aite.mainlibrary.activity.allsetting.sosuser.SosUserActivity;
 import com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -47,6 +50,8 @@ public class SettingActivity extends BaseActivity {
     ImageView iconIv;
     @BindView(R2.id.user_name_tv)
     TextView userNameTv;
+    @BindView(R2.id.elder_helpHouse_ll)
+    LinearLayout elderHelpHouseLl;
 
     @Override
     protected int getLayoutResId() {
@@ -65,6 +70,7 @@ public class SettingActivity extends BaseActivity {
         userSafetyLl.setOnClickListener(this);
         addressLl.setOnClickListener(this);
         appSettingLl.setOnClickListener(this);
+        elderHelpHouseLl.setOnClickListener(this);
     }
 
     /**
@@ -83,6 +89,7 @@ public class SettingActivity extends BaseActivity {
         if (v.getId() == R.id.userSafety_ll) startActivity(UserSafetyActivity.class);
         if (v.getId() == R.id.address_ll) startActivity(AdressFixActivity.class);
         if (v.getId() == R.id.app_setting_ll) startActivity(AppSettingInformationActivity.class);
+        if (v.getId() == R.id.elder_helpHouse_ll) startActivity(ElderHelpHouseActivity.class);
 
 
         if (v.getId() == R.id.exit_login_btn) {
@@ -111,6 +118,7 @@ public class SettingActivity extends BaseActivity {
     protected void initReStart() {
 
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

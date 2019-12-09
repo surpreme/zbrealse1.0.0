@@ -59,7 +59,6 @@ public class AddBindingUserActivity extends BaseActivity<AddBindingUserContract.
                     return;
                 }
                 mPresenter.postBindUser(initParams());
-
             }
         });
         choiceFamilyLl.setOnClickListener(this);
@@ -125,7 +124,6 @@ public class AddBindingUserActivity extends BaseActivity<AddBindingUserContract.
         datasBeans.addAll(((AddbinduserfamilyBean) msg).getDatas());
 
     }
-
 
 
 }

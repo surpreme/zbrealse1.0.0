@@ -29,6 +29,7 @@ import com.lzy.basemodule.util.TimeUtils;
 import com.lzy.okgo.model.HttpParams;
 import com.zhihu.matisse.Matisse;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -140,13 +141,13 @@ public class ChangeUserInformationActivity extends BaseActivity<ChangeUserInform
         httpParams.put("key", AppConstant.KEY);
         httpParams.put("member_sex", isStringEmpty(MEMBER_SEX) ? "" : MEMBER_SEX);
         if (mSelected != null && !mSelected.isEmpty()) {
-            if (mSelected.get(0) != null) {
-                if (FileUtils.getFileByUri(context, mSelected.get(0)).exists()) {
-                    httpParams.put("avator", FileUtils.getFileByUri(context, mSelected.get(0)));
 
+            for (Uri uri : mSelected) {
+                File file = FileUtils.getFileByUri(context, uri);
+                if (file!= null && file.exists()){
+                    httpParams.put("avator", file);
                 }
             }
-
         }
         httpParams.put("member_truename", isEditTextEmpty(nameEdit) ? "" : getEditString(nameEdit));
         httpParams.put("birthday", isStringEmpty(mDate) ? "" : mDate);

@@ -2,6 +2,7 @@ package com.aite.mainlibrary.activity.allsetting.adressfix;
 
 import com.lzy.basemodule.mvp.BasePresenter;
 import com.lzy.basemodule.mvp.BaseView;
+import com.lzy.okgo.model.HttpParams;
 
 /**
  * MVPPlugin
@@ -10,10 +11,12 @@ import com.lzy.basemodule.mvp.BaseView;
 
 public class AdressFixContract {
     interface View extends BaseView {
-        
+        void onGetAdressListSuccess(Object msg);
+
     }
 
     interface  Presenter extends BasePresenter<View> {
-        
+        void getAdressList(HttpParams httpParams);
+
     }
 }

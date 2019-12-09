@@ -4,6 +4,7 @@ package com.lzy.basemodule.BaseConstant;
 public class AppConstant {
     //ctrl+shfit+u 大写
     //ctrl+alt+m 实现方法
+    //@SerializedName(value = "name", alternate = {"Name", "studentName", "fullName"})中有两个属性,value="默认key",alternate="别名key1,别名key1..."，别名可以有多个，多个别名用“,”分隔,便降低了数据别名不统一造成的解析异常
     public static final String REGTYPE = "Ismobilereg";
     public static final String CLIENT = "android";
     public static String KEY = null;
@@ -11,7 +12,7 @@ public class AppConstant {
     public static String FRIEND_VALID = null;
     public static String MEMBER_ID = null;
     public static String ICON_URL = null;
-    public static String PHONENUMBER=null;
+    public static String PHONENUMBER = null;
 
     private static final String BASEURL = "http://zhongbyi.aitecc.com/mobile/";
     //  获取所有地区数据
@@ -38,6 +39,20 @@ public class AppConstant {
     public static final String LOGINURL = BASEURL + "index.php?act=login&op=index";
     //app首页
     public static final String MAINUIDATAURL = BASEURL + "index.php?act=index&op=APPindex";
+    //添加地址 -获取地址列表信息
+    public static final String LISTINFORMATIONADDRESSDATAURL = BASEURL + "index.php?act=member_address&op=address_list";
+    //添加地址-提交
+    public static final String ADDADDRESSDATAURL = BASEURL + "index.php?act=member_address&op=address_add";
+    //健康档案-得到信息
+    public static final String GETHEALTHINFORMATIONDATAURL = BASEURL + "index.php?act=health_record&op=detail";
+    //健康档案-子页面提交
+    public static final String CHDRENADDHEALTHINFORMATIONDATAURL = BASEURL + "index.php?act=health_record&op=health_add";
+    //健康档案-疾病史/医疗笔记/过敏反应/药物使用列表信息
+    public static final String LISTMSGHEALTHINFORMATIONDATAURL = BASEURL + "index.php?act=health_record&op=health_list";
+    // index.php?act=member_timebank&op=my_qrcode
+
+    //健康档案-主页面提交
+    public static final String MIANADDHEALTHINFORMATIONDATAURL = BASEURL + "index.php?act=health_record&op=info_add";
     //助餐首页
     public static final String HELPEATUIURL = BASEURL + "index.php?act=goods_meal&op=index";
     //早、午餐——商品列表信息
@@ -84,7 +99,8 @@ public class AppConstant {
     public static final String INFORMATIONAIRINSERVICEURL = BASEURL + "index.php?act=respite&op=detail";
     //喘息服务相关接口 服务接单
     public static final String STARTAIRINSERVICEURL = BASEURL + "index.php?act=respite&op=order";
-
+    //我发布的服务-核销码接口 时间银行
+    public static final String SUREBOOKSERVICETIMEBANKURL = BASEURL + "index.php?act=member_timebank&op=my_qrcode";
     //购物车 添加
     public static final String ADDSHOPCARDURL = BASEURL + "index.php?act=member_cart&op=app_cart_add";
 
@@ -113,6 +129,12 @@ public class AppConstant {
     public static final String POSTPEPPLEINFORMATIONURL = BASEURL + "index.php?act=member_index&op=APP_editInfo";
     //得到个人基本信息
     public static final String GETPEPPLEINFORMATIONURL = BASEURL + "index.php?act=member_index&op=getInfo";
+    //
+    //我的紧急联系人 - 列表接口
+    public static final String LISTSOSPEPPLEINFORMATIONURL = BASEURL + "index.php?act=member_contact&op=my_list";
+    //我的关联账号 - 列表接口
+    public static final String LISTPEPPLEINFORMATIONURL = BASEURL + "index.php?act=member_associate&op=my_list";
+
     //我的关联账号-获取关系信息
     public static final String GETFIMILYBINDINGUSERURL = BASEURL + "index.php?act=member_associate&op=relation";
     //我的关联账号-保存接口
@@ -120,20 +142,69 @@ public class AppConstant {
     // index.php?act=member_contact&op=my_save
     //紧急联系人-保存接口
     public static final String SAVESOSUSERURL = BASEURL + "index.php?act=member_contact&op=my_save";
-    //
+    // index.php?act=member_nursing_store&op=Untied
+    //养老院 - 点击解绑接口
+    public static final String UNBINDHELPELDERHOUSEURL = BASEURL + "index.php?act=member_nursing_store&op=Untied";
+    //养老院 - 点击绑定接口
+    public static final String BINDHELPELDERHOUSEURL = BASEURL + "index.php?act=member_nursing_store&op=Binding";
+    //养老院 - 列表接口
+    public static final String HELPELDERHOUSEURL = BASEURL + "index.php?act=member_nursing_store&op=list";
+    /**
+     * 发布
+     */
+    //时间银行 我发布的服务——列表信息
+    public static final String POSTTIMEBANKMINETOGETHERLISTURL = BASEURL + "index.php?act=member_timebank&op=my_list";
+    //时间银行 我发布的服务——服务详情
+    public static final String POSTTIMEBANKINFORMATIONMINETOGETHERURL = BASEURL + "index.php?act=member_timebank&op=my_detail";
+    //喘息服务 我发布的服务——列表信息
+    public static final String POSTAIRSERVICEMINETOGETHERLISTURL = BASEURL + "index.php?act=member_respite&op=my_list";
+    //喘息服务 我发布的服务——服务详情
+    public static final String POSTAIRSERVICEINFORMATIONMINETOGETHERURL = BASEURL + "index.php?act=member_respite&op=my_detail";
+    //助医服务 我发布的服务——列表信息
+    public static final String POSTHELPDOCTORMINETOGETHERLISTURL = BASEURL + "index.php?act=member_doctor_help&op=my_list";
+    //助医服务 我发布的服务——服务详情
+    public static final String POSTHELPDOCTORINFORMATIONMINETOGETHERURL = BASEURL + "index.php?act=member_doctor_help&op=my_detail";
+    /**
+     *
+     */
+    /**
+     * 参与
+     */
+    //时间银行 我参与的服务——列表信息
+    public static final String TIMEBANKMINETOGETHERLISTURL = BASEURL + "index.php?act=member_timebank&op=order_list";
+    //时间银行 我参与的服务——服务详情
+    public static final String TIMEBANKINFORMATIONMINETOGETHERURL = BASEURL + "index.php?act=member_timebank&op=order_detail";
+    //喘息服务 我参与的服务——列表信息
+    public static final String AIRSERVICEMINETOGETHERLISTURL = BASEURL + "index.php?act=member_respite&op=order_list";
+    //喘息服务 我参与的服务——服务详情
+    public static final String AIRSERVICEINFORMATIONMINETOGETHERURL = BASEURL + "index.php?act=member_respite&op=order_detail";
+    //助医服务 我参与的服务——列表信息
+    public static final String HELPDOCTORMINETOGETHERLISTURL = BASEURL + "index.php?act=member_doctor_help&op=order_list";
+    //助医服务 我参与的服务——服务详情
+    public static final String HELPDOCTORINFORMATIONMINETOGETHERURL = BASEURL + "index.php?act=member_doctor_help&op=order_detail";
+    /**
+     *
+     */
+    // index.php?act=member_respite&op=order_list
     //APP残疾之家商品列表筛选条件信息
     public static final String CHOICEMSGLESSBODYLISTURL = BASEURL + "index.php?act=goods&op=dhome_list_search";
     //APP残疾之家商品列表信息
     public static final String ALLLESSBODYLISTURL = BASEURL + "index.php?act=goods&op=dhome_goods_list";
     //APP残疾之家 APP残疾之家商品详情
     public static final String INFORMATIONALLLESSBODYLISTURL = BASEURL + "index.php?act=goods&op=dhome_goods_detail";
+    //APP残疾之家 APP残疾之家商品收藏
+    public static final String COLLECTLLESSBODYLISTURL = BASEURL + "index.php?act=goods&op=favoritesgoods";
     //APP残疾之家——订单列表
     public static String BOOKINFORMATIONLISTMINELISTURL = BASEURL + "index.php?act=member_vr_order&op=dhome_order_list";
     //APP残疾之家—— 虚拟商品购买第二步，设置接收手机号页面
     public static String BUYSECONDINFORMATIONLISTMINELISTURL = BASEURL + "index.php?act=member_vr_buy&op=buy_step2";
     //APP残疾之家—— 虚拟订单第三步，产生订单
     public static String OVERBUYINFORMATIONLISTMINELISTURL = BASEURL + "index.php?act=member_vr_buy&op=buy_step3";
-// index.php?act=member_vr_buy&op=buy_step2
+    //  index.php?act=member_timebank&op=order_start
+
+    //我参与的服务-服务开始接口
+    public static String STARTSERVICEPOSTIMNGURL = BASEURL + "index.php?act=member_timebank&op=order_start";
+
 
     public static String AITEURL = "https://aitecc.com/mobile/";
     //圈子

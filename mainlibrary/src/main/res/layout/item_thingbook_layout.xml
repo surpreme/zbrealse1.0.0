@@ -4,10 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/margin_5dp"
+    android:layout_marginLeft="@dimen/margin_10dp"
+    android:layout_marginTop="@dimen/margin_3dp"
+    android:layout_marginRight="@dimen/margin_10dp"
+    android:layout_marginBottom="@dimen/margin_3dp"
     android:background="@color/noglay"
     android:orientation="vertical"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +23,7 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:gravity="center|left"
+            android:gravity="top|left"
             android:orientation="horizontal"
             android:paddingLeft="15dp">
 
@@ -30,8 +34,8 @@
 
                 <ImageView
                     android:id="@+id/icon_iv"
-                    android:layout_width="86dp"
-                    android:layout_height="75dp"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="right"
                     android:scaleType="fitXY"
                     app:srcCompat="@mipmap/chat_women" />
@@ -54,6 +58,7 @@
                         android:id="@+id/title_tv"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_15dp"
                         android:layout_weight="1"
                         android:ellipsize="end"
                         android:maxLines="1"
@@ -128,69 +133,58 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:gravity="center|right"
+            android:gravity="right|bottom"
             android:paddingRight="15dp">
 
             <TextView
                 android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:background="@drawable/juxing_gray_background"
+                android:layout_height="26dp"
+                android:background="@drawable/juxing_background_yellow"
                 android:gravity="center"
                 android:text="提交信息"
-                android:visibility="gone" />
+                android:textSize="@dimen/textSize_13sp" />
 
-            <View
-                android:layout_width="15dp"
-                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/look_information_tv"
                 android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:background="@drawable/juxing_gray_background"
+                android:layout_height="26dp"
+                android:background="@drawable/juxing_background_yellow"
                 android:gravity="center"
-                android:text="查看详情" />
+                android:text="查看详情"
+                android:textSize="@dimen/textSize_13sp" />
 
-            <View
-                android:layout_width="15dp"
-                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="70dp"
-
-                android:layout_height="30dp"
-                android:background="@drawable/juxing_gray_background"
+                android:layout_height="26dp"
+                android:background="@drawable/juxing_background_blue"
                 android:gravity="center"
                 android:text="评价"
-                android:textColor="@color/blue"
+                android:textSize="@dimen/textSize_13sp"
                 android:visibility="gone" />
 
-            <View
-                android:layout_width="15dp"
-                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:background="@drawable/juxing_gray_background"
+                android:layout_height="26dp"
+                android:background="@drawable/juxing_background_yellow"
                 android:gravity="center"
                 android:text="取消订单"
-                android:visibility="gone" />
+                android:textSize="@dimen/textSize_13sp" />
 
-            <View
-                android:layout_width="15dp"
-                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:background="@drawable/juxing_gray_background"
+                android:layout_height="26dp"
                 android:gravity="center"
                 android:text="去付款"
-                android:textColor="@color/blue"
-                android:visibility="gone" />
+                android:textColor="@color/red" />
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
 
         <TextView
             android:layout_width="0dp"

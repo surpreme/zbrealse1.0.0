@@ -99,7 +99,7 @@ public class SureShopBookActivity extends BaseActivity<SureShopBookContract.View
 
     }
 
-    @OnClick({R2.id.sure_buy_btn})
+    @OnClick({R2.id.sure_buy_btn,R2.id.user_information_ll})
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.sure_buy_btn) {

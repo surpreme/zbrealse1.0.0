@@ -41,6 +41,7 @@ public class SureShopBookPresenter extends BasePresenterImpl<SureShopBookContrac
                                     -> mView.onGetInformationSuccess(bookInfprmationMorningNoonEatBean));
                         }
 
+//                        dfadsg
 
                         return null;
                     }

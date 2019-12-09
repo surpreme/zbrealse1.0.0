@@ -75,6 +75,12 @@ public class MineLessBodybookRecyAdapter extends RecyclerView.Adapter<MineLessBo
         holder.titleTv.setText(orderListBeans.get(position).getGoods_name());
         holder.timeTv.setText(String.format("下单时间%s", orderListBeans.get(position).getAdd_time()));
         holder.stateTv.setText(orderListBeans.get(position).getOrder_state_text());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickInterface.getPostion(position);
+            }
+        });
 
 
     }

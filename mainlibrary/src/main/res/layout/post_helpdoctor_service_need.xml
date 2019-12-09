@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <include layout="@layout/toolbar_layout" />
 
@@ -409,6 +409,7 @@
                         android:text="服务类型："
                         android:textColor="@color/black"
                         android:textSize="17sp" />
+
                     <TextView
                         android:id="@+id/service_type_tv"
                         android:layout_width="wrap_content"
@@ -417,6 +418,7 @@
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="17sp" />
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -436,7 +438,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:text="备注："
+                        android:text="详情："
                         android:textColor="@color/black"
                         android:textSize="17sp" />
 

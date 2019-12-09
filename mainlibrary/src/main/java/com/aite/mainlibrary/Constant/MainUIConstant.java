@@ -107,7 +107,7 @@ public class MainUIConstant {
         };
 
         public static String[] settingTv = {
-                "我的设备", "我的活动", "我的社区", "我的收藏"
+                "我的设备", "参与的活动", "我的社区", "我的收藏"
         };
 
         public static int[] bookImg = {

@@ -9,24 +9,26 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aite.mainlibrary.Mainbean.SettingAddressListBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.mcxtzhang.swipemenulib.SwipeMenuLayout;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class AdrressFixRecyAdapter extends RecyclerView.Adapter<AdrressFixRecyAdapter.ViewHolder> {
+
     private Context context;
     private LayoutInflater inflater;
-    private int[] imgs;
-    private String[] names;
+    private List<SettingAddressListBean.AddressListBean> addressListBeans;
 
-    public AdrressFixRecyAdapter(Context context, int[] imgs, String[] names) {
+    public AdrressFixRecyAdapter(Context context, List<SettingAddressListBean.AddressListBean> addressListBeans) {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
-        this.imgs = imgs;
-        this.names = names;
+        this.addressListBeans = addressListBeans;
     }
 
     @NonNull
@@ -39,20 +41,18 @@ public class AdrressFixRecyAdapter extends RecyclerView.Adapter<AdrressFixRecyAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-//        holder.tv_bankname.setText(banknames.get(position));
-//        holder.tv_banknumber.setText(banknumbers.get(position));
-//        holder.swipeMenuLayout
+        holder.tvAddress.setText(addressListBeans.get(position).getArea_info());
+        holder.tvNamephone.setText(String.format("%s %s", addressListBeans.get(position).getTrue_name(), addressListBeans.get(position).getMob_phone()));
 
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+        return addressListBeans == null ? 0 : addressListBeans.size();
     }
 
     static
     class ViewHolder extends RecyclerView.ViewHolder {
-
         @BindView(R2.id.tv_namephone)
         TextView tvNamephone;
         @BindView(R2.id.tv_address)
@@ -63,6 +63,7 @@ public class AdrressFixRecyAdapter extends RecyclerView.Adapter<AdrressFixRecyAd
         TextView tvDelete;
         @BindView(R2.id.swipeMenuLayout)
         SwipeMenuLayout swipeMenuLayout;
+
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);

@@ -5,6 +5,8 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
+import com.lzy.basemodule.util.ArithUtil;
+
 import java.lang.ref.WeakReference;
 
 public class BitmapUtils {
@@ -40,7 +42,7 @@ public class BitmapUtils {
 
     //计算图片实际宽高 是 传入宽高值的 最小整数倍数
     private static int getSampleSize(int outWidth, int outHeight, int w, int h) {
-        int sizer = 1;
+        /*int sizer = 1;
         if (outWidth > w && outHeight > h) {
             sizer = 2;
             while (outWidth / sizer > w && outHeight / sizer > h) {
@@ -48,7 +50,9 @@ public class BitmapUtils {
             }
         }
 
-        sizer /= 2;
+        sizer /= 2;*/
+        int sizer = (int) (ArithUtil.round(ArithUtil.div(outWidth,w) > ArithUtil.div(outHeight,h)
+                ? ArithUtil.div(outWidth,w):ArithUtil.div(outHeight,h),0));
         return sizer;
     }
 }

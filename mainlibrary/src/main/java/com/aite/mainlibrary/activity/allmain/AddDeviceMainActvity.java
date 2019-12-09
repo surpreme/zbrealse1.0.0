@@ -1,6 +1,5 @@
 package com.aite.mainlibrary.activity.allmain;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -8,12 +7,11 @@ import android.widget.TextView;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.DeviceNumberEditActivity;
-import com.aite.mainlibrary.activity.allqr.QrCodeActivity;
+import com.aite.mainlibrary.activity.allqr.qrcode.QrCodeActivity;
 import com.lzy.basemodule.base.BaseActivity;
 import com.lzy.basemodule.logcat.LogUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class AddDeviceMainActvity extends BaseActivity {
     @BindView(R2.id.scode_img)

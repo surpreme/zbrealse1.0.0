@@ -8,10 +8,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.aite.mainlibrary.Mainbean.BookLessBodyFamilyBean;
 import com.aite.mainlibrary.Mainbean.BookMorningNoonEatBean;
 import com.aite.mainlibrary.R;
+import com.aite.mainlibrary.activity.allshopcard.dayinformation.DayInformationActivity;
 import com.aite.mainlibrary.adapter.MineHelpEatRecyAdapter;
 import com.aite.mainlibrary.adapter.MineLessBodybookRecyAdapter;
 import com.blankj.rxbus.RxBus;
 import com.lzy.basemodule.BaseConstant.AppConstant;
+import com.lzy.basemodule.OnClickLstenerInterface;
 import com.lzy.basemodule.base.BaseFragment;
 import com.lzy.basemodule.base.BaseLazyFragment;
 import com.lzy.basemodule.logcat.LogUtils;
@@ -49,6 +51,12 @@ public class LessBodyBookFragment extends BaseLazyFragment<LessBodyBookFragmetnC
         mBaserecyclerView.setLayoutManager(linearLayoutManager);
         mineLessBodybookRecyAdapter = new MineLessBodybookRecyAdapter(context, orderListBeans);
         mBaserecyclerView.setAdapter(mineLessBodybookRecyAdapter);
+        mineLessBodybookRecyAdapter.setClickInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
+            @Override
+            public void getPostion(int postion) {
+                startActivity(DayInformationActivity.class, "goods_id", orderListBeans.get(postion).getGoods_id());
+            }
+        });
         //smartlayout
         initSmartLayout(true);
         //初始化加载

@@ -22,6 +22,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.bumptech.glide.Glide;
 
 public class PopwindowUtils {
     private static PopwindowUtils mInstance;
@@ -34,6 +35,7 @@ public class PopwindowUtils {
     private static final int threeRecylayoutid = R.layout.three_choice;
     private static final int chioceGenderlayoutid = R.layout.choice_gender;
     private static final int bootomrecylayoutid = R.layout.choice_bottom;
+    private static final int qrcodelayoutid = R.layout.pop_img;
 
     public static PopwindowUtils getmInstance() {
         if (mInstance == null) {
@@ -66,7 +68,23 @@ public class PopwindowUtils {
         });
 
     }
+    public void showImgPopupWindow(final Context context,String url) {
+        @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(qrcodelayoutid, null);
+        setBackGroundAlpha(0.6f, context);
+        popupWindow = new PopupWindow(view, 1000, 700, false);
+        ImageView qrcode_iv=view.findViewById(R.id.qrcode_iv);
+        Glide.with(context).load(url).into(qrcode_iv);
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setContentView(view);
+        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                setBackGroundAlpha(1.0f, context);
+            }
+        });
 
+    }
 
     public void showChioceGenderPopupWindow(final Context context, int grivaty, float alpah, OnClickLstenerInterface.OnThingClickInterface onThingClickInterface) {
         @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(chioceGenderlayoutid, null);

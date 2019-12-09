@@ -12,11 +12,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.aite.mainlibrary.Mainbean.AddbinduserfamilyBean;
+import com.aite.mainlibrary.Mainbean.TwoSuccessCodeBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.adapter.AddBindingUserAdapter;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.textfield.TextInputEditText;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.BaseConstant.BaseConstant;
@@ -55,6 +57,8 @@ public class AddSosUserActivity extends BaseActivity<AddSosUserContract.View, Ad
     LinearLayout choiceFamilyLl;
     @BindView(R2.id.famlily_tv)
     TextView famlilyTv;
+    @BindView(R2.id.isMust_switch)
+    SwitchMaterial isMustSwitch;
     private List<Uri> mSelected = new ArrayList<>();
     private List<AddbinduserfamilyBean.DatasBean> datasBeans = new ArrayList<>();
     private String FAMILY_ID = "";
@@ -124,16 +128,18 @@ public class AddSosUserActivity extends BaseActivity<AddSosUserContract.View, Ad
         if (mSelected != null && !mSelected.isEmpty()) {
             if (mSelected.get(0) != null) {
                 if (FileUtils.getFileByUri(context, mSelected.get(0)).exists()) {
-                    httpParams.put("avator", FileUtils.getFileByUri(context, mSelected.get(0)));
+                    httpParams.put("avatar", FileUtils.getFileByUri(context, mSelected.get(0)));
 
                 }
             }
 
         }
         httpParams.put("type", 1);
-        httpParams.put("member_truename", isEditTextEmpty(nameEdit) ? "" : getEditString(nameEdit));
+        httpParams.put("realname", isEditTextEmpty(nameEdit) ? "" : getEditString(nameEdit));
         httpParams.put("mobile", isEditTextEmpty(phoneEdit) ? "" : getEditString(phoneEdit));
         httpParams.put("relation", FAMILY_ID);
+        httpParams.put("is_default", isMustSwitch.isChecked() ? "1" : "0");
+
 
         return httpParams;
     }
@@ -185,6 +191,11 @@ public class AddSosUserActivity extends BaseActivity<AddSosUserContract.View, Ad
 
     @Override
     public void onPostAllBindUserfamilyInformationSuccess(Object msg) {
-
+        if (((TwoSuccessCodeBean) msg).getMsg().equals("保存成功") && ((TwoSuccessCodeBean) msg).getResult().equals("1")) {
+            showToast(((TwoSuccessCodeBean) msg).getMsg(), Gravity.TOP);
+            onBackPressed();
+        }
     }
+
+
 }

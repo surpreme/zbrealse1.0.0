@@ -1,5 +1,6 @@
 package com.aite.mainlibrary.Mainbean;
 
+import com.google.gson.annotations.SerializedName;
 import com.lzy.basemodule.bean.ErrorBean;
 
 import java.io.Serializable;
@@ -10,7 +11,7 @@ public class TwoSuccessCodeBean extends ErrorBean implements Serializable {
      * "result":1,
      * "msg":"申请成功"
      */
-
+    @SerializedName(value = "result", alternate = {"state"})
     private String result;
     private String msg;
 

@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">中保</string>
-    <string name="login">立即登录</string>
-    <string name="next">下一步</string>
-    <string name="baseUrl">http://zhongbyi.aitecc.com</string>
-    <string name="shoppingcat">购物车</string>
-    <string name="actionBar_edit">编辑</string>
-    <string name="all">全选</string>
-    <string name="order_total">合计 :</string>
+    <string name="app_name">中宝逸</string>
+    <string name="login" translatable="false">立即登录</string>
+    <string name="next" translatable="false">下一步</string>
+    <string name="baseUrl" translatable="false">http://zhongbyi.aitecc.com</string>
+    <string name="shoppingcat" translatable="false">购物车</string>
+    <string name="actionBar_edit" translatable="false">编辑</string>
+    <string name="all" translatable="false">全选</string>
+    <string name="order_total" translatable="false">合计 :</string>
 </resources>

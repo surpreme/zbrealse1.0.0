@@ -61,6 +61,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
@@ -216,7 +217,8 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
         return pvTime;
 
     }
-    protected TimePickerView initChoiceTimer(OnTimeSelectListener listener, String title,int year, boolean isHM) {
+
+    protected TimePickerView initChoiceTimer(OnTimeSelectListener listener, String title, int year, boolean isHM) {
         Calendar selectedDate = Calendar.getInstance();
         Calendar startDate = Calendar.getInstance();
         Calendar endDate = Calendar.getInstance();
@@ -238,6 +240,7 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
         return pvTime;
 
     }
+
     protected TimePickerView initChoiceHMTimer(OnTimeSelectListener listener, String title, boolean isSS) {
         Calendar selectedDate = Calendar.getInstance();
         Calendar startDate = Calendar.getInstance();
@@ -480,19 +483,13 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
     }
 
     protected boolean isStringEmpty(String s) {
-        if (s == null ||
-                s.length() == 0 ||
-                s.toString().equals("")) {
-            return true;
-        } else return false;
+        return s == null || s.isEmpty();
     }
 
     protected boolean isEditTextEmpty(EditText editText) {
-        if (editText.getText().toString().trim() == null ||
+        return editText.getText() == null ||
                 editText.getText().toString().length() == 0 ||
-                editText.getText().toString().trim().equals("")) {
-            return true;
-        } else return false;
+                editText.getText().toString().trim().equals("");
     }
 
     /**
@@ -591,6 +588,19 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
     public void startActivity(Class<?> clz, String tag, String extra) {
         Intent intent = new Intent(this, clz);
         intent.putExtra(tag, extra);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转页面
+     *
+     * @param clz 所跳转的目的Activity类
+     */
+    public void startActivity(Class<?> clz, String tag, String extra, String tag2, String extra2) {
+        Intent intent = new Intent(this, clz);
+        intent.putExtra(tag, extra);
+        intent.putExtra(tag2, extra2);
+
         startActivity(intent);
     }
 

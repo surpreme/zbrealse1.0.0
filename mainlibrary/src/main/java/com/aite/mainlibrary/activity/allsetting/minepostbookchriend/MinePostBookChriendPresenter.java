@@ -3,7 +3,7 @@ package com.aite.mainlibrary.activity.allsetting.minepostbookchriend;
 import android.app.Activity;
 import android.content.Intent;
 
-import com.aite.mainlibrary.Mainbean.DayTogetherChoiceBean;
+import com.aite.mainlibrary.Mainbean.MineTogetherServiceBean;
 import com.google.gson.Gson;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.androidlife.AppManager;
@@ -21,19 +21,19 @@ import org.json.JSONObject;
 
 /**
  * MVPPlugin
- *  邮箱 784787081@qq.com
+ * 邮箱 784787081@qq.com
  */
 
-public class MinePostBookChriendPresenter extends BasePresenterImpl<MinePostBookChriendContract.View> implements MinePostBookChriendContract.Presenter{
+public class MinePostBookChriendPresenter extends BasePresenterImpl<MinePostBookChriendContract.View> implements MinePostBookChriendContract.Presenter {
 
     @Override
-    public void getListInformation(HttpParams httpParams) {
-        OkGo.<BaseData<DayTogetherChoiceBean>>get(AppConstant.CHOICEMSGLESSBODYLISTURL)
+    public void getListInformation(String url, HttpParams httpParams) {
+        OkGo.<BaseData<MineTogetherServiceBean>>get(url)
                 .tag(mView.getContext())
                 .params(httpParams)
-                .execute(new AbsCallback<BaseData<DayTogetherChoiceBean>>() {
+                .execute(new AbsCallback<BaseData<MineTogetherServiceBean>>() {
                     @Override
-                    public BaseData<DayTogetherChoiceBean> convertResponse(okhttp3.Response response) throws Throwable {
+                    public BaseData<MineTogetherServiceBean> convertResponse(okhttp3.Response response) throws Throwable {
                         LogUtils.d(response.request());
                         JSONObject jsonObject = new JSONObject(response.body().string());
                         String login = jsonObject.optString("login", jsonObject.toString());
@@ -46,11 +46,11 @@ public class MinePostBookChriendPresenter extends BasePresenterImpl<MinePostBook
                         }
                         JSONObject object = jsonObject.optJSONObject("datas");
                         Gson gson = new Gson();
-                        DayTogetherChoiceBean dayTogetherChoiceBean = gson.fromJson(object.toString(), DayTogetherChoiceBean.class);
+                        MineTogetherServiceBean mineTogetherServiceBean = gson.fromJson(object.toString(), MineTogetherServiceBean.class);
 
 //                        DayTogetherChoiceBean dayTogetherChoiceBean = BeanConvertor.convertBean(object.toString(), DayTogetherChoiceBean.class);
                         ((Activity) mView.getContext()).runOnUiThread(()
-                                -> mView.onGetListInformationSuccess(dayTogetherChoiceBean));
+                                -> mView.onGetListInformationSuccess(mineTogetherServiceBean));
 
                         BaseData baseData = BeanConvertor.convertBean(jsonObject.toString(), BaseData.class);
                         if (baseData.getDatas().getError() != null) {
@@ -61,13 +61,13 @@ public class MinePostBookChriendPresenter extends BasePresenterImpl<MinePostBook
                     }
 
                     @Override
-                    public void onStart(Request<BaseData<DayTogetherChoiceBean>, ? extends Request> request) {
+                    public void onStart(Request<BaseData<MineTogetherServiceBean>, ? extends Request> request) {
                         LogUtils.d("onStart");
 
                     }
 
                     @Override
-                    public void onSuccess(Response<BaseData<DayTogetherChoiceBean>> response) {
+                    public void onSuccess(Response<BaseData<MineTogetherServiceBean>> response) {
                         LogUtils.d("onSuccess");
 
                     }

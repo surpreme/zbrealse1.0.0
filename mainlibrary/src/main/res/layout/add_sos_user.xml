@@ -187,6 +187,7 @@
         android:background="@color/noglay" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/isMust_switch"
         style="?switchStyle"
         android:layout_width="match_parent"
         android:layout_height="50dp"

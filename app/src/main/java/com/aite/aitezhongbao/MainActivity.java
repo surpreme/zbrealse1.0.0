@@ -1,5 +1,6 @@
 package com.aite.aitezhongbao;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.aite.a.HomeTabActivity;
+import com.aite.a.activity.InformationActivity;
 import com.aite.mainlibrary.fragment.activityfragment.AroundBackgroundFragment;
 import com.aite.mainlibrary.fragment.activityfragment.LoveFamilyFragment;
 import com.aite.mainlibrary.fragment.activityfragment.ShopFragment;
@@ -56,7 +59,7 @@ public class MainActivity extends BaseActivity {
     TextView myTv;
     @BindView(R.id.my_layout)
     RelativeLayout myLayout;
-    private static final String[] FRAGMENT_TAG = {"MainFragment", "ShopFragment", "AroundBackgroundFragment", "LoveFamilyFragment", "MineFragment"};
+    private static final String[] FRAGMENT_TAG = {"MainFragment" /*"ShopFragment"*/, "AroundBackgroundFragment", "LoveFamilyFragment", "MineFragment"};
     protected String CODE_FRAGMENT_KEY = "fragment_tag";//key
 
     private MainFragment mainFragment;
@@ -79,14 +82,14 @@ public class MainActivity extends BaseActivity {
         if (getSavedInstanceState() != null) {
             if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 0 && mainFragment == null)
                 mainFragment = (MainFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG[0]);
-            if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 1 && shopFragment == null)
-                shopFragment = (ShopFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG[1]);
-            if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 2 && aroundBackgroundFragment == null)
-                aroundBackgroundFragment = (AroundBackgroundFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG[2]);
-            if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 3 && loveFamilyFragment == null)
-                loveFamilyFragment = (LoveFamilyFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG[3]);
-            if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 4 && mineFragment == null)
-                mineFragment = (MineFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG[4]);
+//            if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 1 && shopFragment == null)
+//                shopFragment = (ShopFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG[1]);
+            if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 1 && aroundBackgroundFragment == null)
+                aroundBackgroundFragment = (AroundBackgroundFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG[1]);
+            if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 2 && loveFamilyFragment == null)
+                loveFamilyFragment = (LoveFamilyFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG[2]);
+            if (getSavedInstanceState().getInt(CODE_FRAGMENT_KEY) == 3 && mineFragment == null)
+                mineFragment = (MineFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG[3]);
             setTabSelection(getSavedInstanceState().getInt(CODE_FRAGMENT_KEY));
         } else {
             setTabSelection(0);
@@ -134,17 +137,17 @@ public class MainActivity extends BaseActivity {
                     transaction.show(mainFragment);
                 }
                 break;
+//            case 1:
+//                shopImg.setImageResource(R.drawable.shop);
+//                shopTv.setTextColor(getResources().getColor(R.color.blue));
+//                if (shopFragment == null) {
+//                    shopFragment = new ShopFragment();
+//                    transaction.add(R.id.content, shopFragment, FRAGMENT_TAG[index]);
+//                } else {
+//                    transaction.show(shopFragment);
+//                }
+//                break;
             case 1:
-                shopImg.setImageResource(R.drawable.shop);
-                shopTv.setTextColor(getResources().getColor(R.color.blue));
-                if (shopFragment == null) {
-                    shopFragment = new ShopFragment();
-                    transaction.add(R.id.content, shopFragment, FRAGMENT_TAG[index]);
-                } else {
-                    transaction.show(shopFragment);
-                }
-                break;
-            case 2:
                 aroundbackgroundImg.setImageResource(R.drawable.around);
                 aroundbackgroundTv.setTextColor(getResources().getColor(R.color.blue));
                 if (aroundBackgroundFragment == null) {
@@ -154,8 +157,8 @@ public class MainActivity extends BaseActivity {
                     transaction.show(aroundBackgroundFragment);
                 }
                 break;
-            case 3:
-                newsImg.setImageResource(R.drawable.news);
+            case 2:
+                newsImg.setImageResource(R.drawable.app_news);
                 newsTv.setTextColor(getResources().getColor(R.color.blue));
                 if (loveFamilyFragment == null) {
                     loveFamilyFragment = new LoveFamilyFragment();
@@ -164,7 +167,7 @@ public class MainActivity extends BaseActivity {
                     transaction.show(loveFamilyFragment);
                 }
                 break;
-            case 4:
+            case 3:
                 myImg.setImageResource(R.drawable.mine);
                 myTv.setTextColor(getResources().getColor(R.color.blue));
                 StatusBarUtils.setColor(context, getResources().getColor(R.color.blue));
@@ -207,9 +210,9 @@ public class MainActivity extends BaseActivity {
         if (mainFragment != null) {
             transaction.hide(mainFragment);
         }
-        if (shopFragment != null) {
-            transaction.hide(shopFragment);
-        }
+//        if (shopFragment != null) {
+//            transaction.hide(shopFragment);
+//        }
         if (aroundBackgroundFragment != null) {
             transaction.hide(aroundBackgroundFragment);
         }
@@ -240,28 +243,43 @@ public class MainActivity extends BaseActivity {
 //            case R.id.shop_tv:
 //                break;
             case R.id.shop_layout:
-                setTabSelection(1);
+                //       setTabSelection(1);
+                Intent intent = new Intent(getContext(), HomeTabActivity.class);
+//                intent.setClassName(getContext(),"com.aite.a.activity.MainActivity");
+                //getContext(),com.aite.a.activity.MainActivity.class
+//                intent.setAction("com.aite.zhongbao.shop.MainActivity");
+                startActivity(intent);
+
                 break;
 //            case R.id.aroundbackground_img:
 //                break;
 //            case R.id.aroundbackground_tv:
 //                break;
             case R.id.aroundbackground_layout:
-                setTabSelection(2);
+//                setTabSelection(1);
+                Intent information = new Intent(getContext(), InformationActivity.class);
+                startActivity(information);
+
                 break;
 //            case R.id.news_img:
 //                break;
 //            case R.id.news_tv:
 //                break;
             case R.id.news_layout:
-                setTabSelection(3);
+//                Intent intent1 = new Intent(com.aite.a.activity.MainActivity.this,
+//                        InformationActivity.class);
+//                startActivity(intent1);
+                Intent person_in = new Intent(getContext(), InformationActivity.class);
+                person_in.putExtra("person_in", "2");
+                startActivity(person_in);
+//                setTabSelection(2);
                 break;
 //            case R.id.my_img:
 //                break;
 //            case R.id.my_tv:
 //                break;
             case R.id.my_layout:
-                setTabSelection(4);
+                setTabSelection(3);
                 break;
         }
     }

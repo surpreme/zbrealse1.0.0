@@ -58,13 +58,13 @@ public class StepsView extends View {
         strokeWidth = SystemUtil.dip2px(context, 7);
 //        checkBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.sign_ok);
         //控制图的大小
-        checkBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign2x, 20, 20, false);
-        uncheckBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign_un2x, 20, 20, false);
+        checkBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign2x, 45, 45, false);
+        uncheckBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign_un2x, 45, 45, false);
 //         = BitmapFactory.decodeResource();
-        closeGiftBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign_un2x, 20, 20, false);
+        closeGiftBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign_un2x, 45, 45, false);
 
 //        closeGiftBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.superthings);
-        openGiftBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign2x, 20, 20, false);
+        openGiftBitmap = BitmapUtils.setBitmapSize(new WeakReference<Context>(context), R.drawable.sign2x, 45, 45, false);
 
 //        openGiftBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.fly);
     }
@@ -108,6 +108,7 @@ public class StepsView extends View {
         paint.setStrokeWidth(strokeWidth);
         int rowCount = (monthDays % 5 == 0 ? monthDays / 5 : monthDays / 5 + 1);
         int rowHeigh = height / (rowCount);
+//        int rowHeigh = width / (rowCount);
         int startX = 0 + rowHeigh / 2;
         int endX = width - rowHeigh / 2;
         int days = 0;

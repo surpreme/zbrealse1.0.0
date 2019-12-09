@@ -5,6 +5,8 @@ import android.content.Intent;
 
 import com.aite.mainlibrary.Mainbean.LessBodyInformationBean;
 import com.aite.mainlibrary.Mainbean.LessDayBean;
+import com.aite.mainlibrary.Mainbean.TwoSuccessCodeBean;
+import com.google.gson.Gson;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.androidlife.AppManager;
 import com.lzy.basemodule.bean.BaseData;
@@ -65,6 +67,52 @@ public class DayInformationPresenter extends BasePresenterImpl<DayInformationCon
 
                     @Override
                     public void onSuccess(Response<BaseData<LessBodyInformationBean>> response) {
+                        LogUtils.d("onSuccess");
+
+                    }
+                });
+    }
+
+    @Override
+    public void onCollect(HttpParams httpParams) {
+        OkGo.<BaseData<TwoSuccessCodeBean>>get(AppConstant.COLLECTLLESSBODYLISTURL)
+                .tag(mView.getContext())
+                .params(httpParams)
+                .execute(new AbsCallback<BaseData<TwoSuccessCodeBean>>() {
+                    @Override
+                    public BaseData<TwoSuccessCodeBean> convertResponse(okhttp3.Response response) throws Throwable {
+                        LogUtils.d(response.request());
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+                        String login = jsonObject.optString("login", jsonObject.toString());
+                        if (login.equals("0")) {
+                            LogUtils.d(login);
+                            Intent intent = new Intent();
+                            intent.setAction("com.aite.aitezhongbao.app.activity.login.LoginActivity");
+                            AppManager.getInstance().killAllActivity();
+                            mView.getContext().startActivity(intent);
+                        }
+                        JSONObject object = jsonObject.optJSONObject("datas");
+                        Gson gson=new Gson();
+                        TwoSuccessCodeBean twoSuccessCodeBean = gson.fromJson(object.toString(), TwoSuccessCodeBean.class);
+                        ((Activity) mView.getContext()).runOnUiThread(()
+                                -> mView.onCollectSuccess(twoSuccessCodeBean));
+
+                        BaseData baseData = BeanConvertor.convertBean(jsonObject.toString(), BaseData.class);
+                        if (baseData.getDatas().getError() != null) {
+                            mView.showError(baseData.getDatas().getError());
+                            return null;
+                        }
+                        return null;
+                    }
+
+                    @Override
+                    public void onStart(Request<BaseData<TwoSuccessCodeBean>, ? extends Request> request) {
+                        LogUtils.d("onStart");
+
+                    }
+
+                    @Override
+                    public void onSuccess(Response<BaseData<TwoSuccessCodeBean>> response) {
                         LogUtils.d("onSuccess");
 
                     }

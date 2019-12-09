@@ -1,5 +1,8 @@
 package com.aite.mainlibrary.activity;
 
+import android.content.Intent;
+import android.widget.Toast;
+
 import com.aite.mainlibrary.R;
 import com.lzy.basemodule.base.BaseActivity;
 
@@ -12,6 +15,10 @@ public class MineCollectActivity extends BaseActivity {
     @Override
     protected void initView() {
         initToolbar("我的收藏");
+
+
+
+
 
     }
 

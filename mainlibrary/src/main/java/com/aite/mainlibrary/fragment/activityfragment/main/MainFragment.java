@@ -138,7 +138,7 @@ public class MainFragment extends BaseFragment<MainContract.View, MainPresenter>
                     , SystemUtil.dip2px(context, 0), SystemUtil.dip2px(context, 0)
                     , SystemUtil.dip2px(context, 0), SystemUtil.dip2px(context, 0)
                     , ContextCompat.getColor(context, R.color.noglay), context
-                    , 4.33f, "7.1:12"));
+                    , 5.33f, "7.1:12"));
         }
 
         //设置适配器点击监听

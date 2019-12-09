@@ -105,7 +105,7 @@
                         android:layout_weight="1"
                         android:gravity="right|center"
                         android:paddingRight="15dp"
-                        android:text="赋安科技大厦B座909"
+                        android:text="去设置"
                         android:textColor="#ff999999"
                         android:textSize="15sp" />
                 </LinearLayout>
@@ -313,6 +313,7 @@
                 android:background="@color/noglay" />
 
             <LinearLayout
+                android:id="@+id/elder_helpHouse_ll"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@color/white"

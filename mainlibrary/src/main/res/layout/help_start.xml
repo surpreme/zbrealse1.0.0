@@ -17,10 +17,21 @@
     <ImageView
         android:id="@+id/result_iv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/height_200dp"
         android:padding="@dimen/padding_10dp"
         android:scaleType="fitXY"
         android:visibility="gone" />
+
+    <Button
+        android:id="@+id/bottom_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@drawable/round_background_blue"
+        android:text="上传图片"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:id="@+id/father_layout"
@@ -35,6 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@mipmap/cemera" />
+
 
         <View
             android:layout_width="0dp"

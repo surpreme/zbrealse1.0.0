@@ -10,17 +10,18 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="5dp"
+        android:layout_height="2dp"
         android:background="@color/noglay" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/thingsfix_tabMode"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginRight="@dimen/margin_15dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@color/white"
         app:tabIndicatorColor="@color/blue"
-        app:tabIndicatorHeight="0dp"
         app:tabSelectedTextColor="@color/blue"
         app:tabTextAppearance="@style/MyTabText"
         app:tabTextColor="@color/black">

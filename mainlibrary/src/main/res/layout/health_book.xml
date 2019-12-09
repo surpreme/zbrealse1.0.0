@@ -6,7 +6,7 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar_layout" />
+    <include layout="@layout/toolbar_right_layout" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -21,40 +21,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/noglay" />
-            <TextView
+
+            <EditText
+                android:id="@+id/high_edit"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:background="@null"
                 android:gravity="center|left"
+                android:inputType="number"
                 android:paddingLeft="20dp"
                 android:paddingRight="15dp"
-                android:text="身高：175cm"
                 android:textColor="@color/black"
-                android:textSize="17sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/noglay" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center|left"
-                android:paddingLeft="20dp"
-                android:paddingRight="15dp"
-                android:text="体重：70kg"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/noglay" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center|left"
-                android:paddingLeft="20dp"
-                android:paddingRight="15dp"
-                android:text="血型：o型"
-                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 android:textSize="17sp" />
 
             <View
@@ -62,223 +40,228 @@
                 android:layout_height="1dp"
                 android:background="@color/noglay" />
 
-
-            <LinearLayout
-                android:id="@+id/pay_setting_ll"
+            <EditText
+                android:id="@+id/height_edit"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/white"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingLeft="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="15dp"
-                        android:text="支付设置"
-                        android:textColor="@color/black"
-                        android:textSize="17sp" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/go_black" />
-
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="0dp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/noglay" />
-
-            <LinearLayout
-                android:id="@+id/badding_nuber_ll"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/white"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingLeft="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="15dp"
-                        android:text="关联账号"
-                        android:textColor="@color/black"
-                        android:textSize="17sp" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/go_black" />
-
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="0dp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/noglay" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/white"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingLeft="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="15dp"
-                        android:text="关联养老院"
-                        android:textColor="@color/black"
-                        android:textSize="17sp" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/go_black" />
-
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="0dp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/noglay" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/white"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingLeft="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="15dp"
-                        android:text="设置"
-                        android:textColor="@color/black"
-                        android:textSize="17sp" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/go_black" />
-
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="0dp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/noglay" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/white"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingLeft="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="15dp"
-                        android:text="支付设置"
-                        android:textColor="@color/black"
-                        android:textSize="17sp" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/go_black" />
-
-                <View
-                    android:layout_width="20dp"
-                    android:layout_height="0dp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/noglay" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:background="@null"
                 android:gravity="center|left"
+                android:inputType="number"
                 android:paddingLeft="20dp"
                 android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/noglay" />
+
+            <EditText
+                android:id="@+id/xue_type_edit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/noglay" />
+
+
+            <LinearLayout
+                android:id="@+id/disease_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="15dp"
+                        android:text="疾病史"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/go_black" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/noglay" />
+
+            <LinearLayout
+                android:id="@+id/hostory_note_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="15dp"
+                        android:text="医疗笔记"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/go_black" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/noglay" />
+
+            <LinearLayout
+                android:id="@+id/hate_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="15dp"
+                        android:text="过敏反应"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/go_black" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/noglay" />
+
+            <LinearLayout
+                android:id="@+id/medicine_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="15dp"
+                        android:text="药物使用"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/go_black" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/noglay" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/noglay" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/send_body_switch"
+                style="?switchStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:checked="false"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:text="是否捐赠器官者：否"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
+                app:switchMinWidth="60dp"
+                app:thumbTint="@color/oranger" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"

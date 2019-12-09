@@ -23,7 +23,6 @@ public class StepActivity extends BaseActivity {
     StepsView stepview;
     private int mprogress = 5;
 
-
     @Override
     protected int getLayoutResId() {
         return R.layout.sign_in_day_layout;
@@ -35,7 +34,7 @@ public class StepActivity extends BaseActivity {
         stepview.setOnClickListener(this);
         initToolbar("签到");
         StatusBarUtils.setColor(context, getResources().getColor(R.color.blue_day_login));
-        setInitStepview(24, mprogress);
+        setInitStepview(30, mprogress);
 
     }
 

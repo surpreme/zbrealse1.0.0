@@ -1,2 +1,2 @@
-include ':app', ':baselibrary',  ':mainlibrary', ':testlibrary'
+include ':app', ':baselibrary', ':mainlibrary', ':testlibrary', ':shopMallLibrary'
 rootProject.name='aitezhongbao'

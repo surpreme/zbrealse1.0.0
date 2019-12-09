@@ -3,6 +3,7 @@ package com.lzy.basemodule.base;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.Gravity;
@@ -138,6 +139,10 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
         if (!SystemUtil.isNetworkConnected())
             initNodata();
 
+    }
+
+    protected String getUrlKey(String url, String key) {
+        return Uri.parse(url).getQueryParameter(key);
     }
 
     protected int getScreenWidth() {

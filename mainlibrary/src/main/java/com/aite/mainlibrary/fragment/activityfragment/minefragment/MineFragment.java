@@ -1,6 +1,7 @@
 package com.aite.mainlibrary.fragment.activityfragment.minefragment;
 
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -13,7 +14,6 @@ import com.aite.mainlibrary.Constant.MainUIConstant;
 import com.aite.mainlibrary.Mainbean.UseInformationBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.HealthBookActivity;
 import com.aite.mainlibrary.activity.MineCollectActivity;
 import com.aite.mainlibrary.activity.allmain.AddDeviceMainActvity;
 import com.aite.mainlibrary.activity.allmain.device.DeviceListActivity;
@@ -22,7 +22,8 @@ import com.aite.mainlibrary.activity.allmoney.MoneycartActivity;
 import com.aite.mainlibrary.activity.allsetting.LessbodybookActivity;
 import com.aite.mainlibrary.activity.allsetting.MinePostBookActivity;
 import com.aite.mainlibrary.activity.allsetting.SettingActivity;
-import com.aite.mainlibrary.activity.allsetting.minerunning.MineRunningActivity;
+import com.aite.mainlibrary.activity.allsetting.bookdispute.BookDisputeActivity;
+import com.aite.mainlibrary.activity.allsetting.healthbook.HealthBookActivity;
 import com.aite.mainlibrary.activity.allsetting.minerural.MineRuralActivity;
 import com.aite.mainlibrary.activity.allsetting.thingsbook.ThingsbookActivity;
 import com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity;
@@ -32,7 +33,6 @@ import com.bumptech.glide.request.RequestOptions;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.base.BaseFragment;
 import com.lzy.basemodule.logcat.LogUtils;
-import com.lzy.basemodule.mvp.MVPBaseFragment;
 import com.lzy.okgo.model.HttpParams;
 
 import butterknife.BindView;
@@ -64,17 +64,24 @@ public class MineFragment extends BaseFragment<MineContract.View, MinePresenter>
     @BindView(R2.id.message_iv)
     ImageView messageIv;
 
-
     @Override
-    protected void initModel() {
+    public void onResume() {
+        super.onResume();
         mPresenter.getUserInformation(initParams());
 
     }
+
+    @Override
+    protected void initModel() {
+
+    }
+
     private HttpParams initParams() {
         HttpParams httpParams = new HttpParams();
         httpParams.put("key", AppConstant.KEY);
         return httpParams;
     }
+
     @Override
     protected void initViews() {
         fixFriendsBtn.setOnClickListener(this);
@@ -95,13 +102,16 @@ public class MineFragment extends BaseFragment<MineContract.View, MinePresenter>
                         startActivity(DeviceListActivity.class);
                         break;
                     case 1:
-                        startActivity(MineRunningActivity.class);
+                        startActivity(MinePostBookActivity.class, "COMETYPE", "MINEGETBOOKACTIVITY");
                         break;
                     case 2:
                         startActivity(MineRuralActivity.class);
                         break;
                     case 3:
-                        startActivity(MineCollectActivity.class);
+//                        startActivity(MineCollectActivity.class);
+                        Intent intent7 = new Intent(getContext(), com.aite.a.activity.FavoriteListFargmentActivity.class);
+                        intent7.putExtra("i", 1);
+                        context.startActivity(intent7);
                         break;
 
                     default:
@@ -159,7 +169,10 @@ public class MineFragment extends BaseFragment<MineContract.View, MinePresenter>
                         startActivity(HealthBookActivity.class);
                         break;
                     case 2:
-                        startActivity(MinePostBookActivity.class);
+                        startActivity(MinePostBookActivity.class, "COMETYPE", "MINEPOSTBOOKACTIVITY");
+                        break;
+                    case 3:
+                        startActivity(BookDisputeActivity.class);
                         break;
 
                     default:
@@ -195,10 +208,10 @@ public class MineFragment extends BaseFragment<MineContract.View, MinePresenter>
     @Override
     public void onGetUserInformation(Object msg) {
         if (((UseInformationBean) msg).getMember_info().getMember_avatar() == null) return;
-        AppConstant.ICON_URL=((UseInformationBean) msg).getMember_info().getMember_avatar();
-        AppConstant.PHONENUMBER=((UseInformationBean) msg).getMember_info().getMember_mobile();
+        AppConstant.ICON_URL = ((UseInformationBean) msg).getMember_info().getMember_avatar();
+        AppConstant.PHONENUMBER = ((UseInformationBean) msg).getMember_info().getMember_mobile();
         Glide.with(context).load(((UseInformationBean) msg).getMember_info().getMember_avatar()).apply(RequestOptions.circleCropTransform()).into(userIcon);
-        userPhoneNumberTv.setText( replaceString(((UseInformationBean)msg).getMember_info().getMember_mobile(),2,8));
+        userPhoneNumberTv.setText(replaceString(((UseInformationBean) msg).getMember_info().getMember_mobile(), 2, 8));
 
 
     }

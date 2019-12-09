@@ -83,9 +83,11 @@ public class AddSosUserPresenter extends BasePresenterImpl<AddSosUserContract.Vi
                             mView.showError(baseData.getDatas().getError());
                             return null;
                         }
-                        AddbinduserfamilyBean addbinduserfamilyBean = BeanConvertor.convertBean(jsonObject.toString(), AddbinduserfamilyBean.class);
+                        JSONObject object = jsonObject.optJSONObject("datas");
+                        Gson gson=new Gson();
+                        TwoSuccessCodeBean twoSuccessCodeBean = gson.fromJson(object.toString(), TwoSuccessCodeBean.class);
                         ((Activity) mView.getContext()).runOnUiThread(()
-                                -> mView.onPostAllBindUserfamilyInformationSuccess(addbinduserfamilyBean));
+                                -> mView.onPostAllBindUserfamilyInformationSuccess(twoSuccessCodeBean));
 
 
                         return null;

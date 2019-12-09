@@ -16,7 +16,7 @@ public class MinePostBookChriendContract {
     }
 
     interface  Presenter extends BasePresenter<View> {
-        void getListInformation(HttpParams httpParams);
+        void getListInformation(String url,HttpParams httpParams);
 
     }
 }

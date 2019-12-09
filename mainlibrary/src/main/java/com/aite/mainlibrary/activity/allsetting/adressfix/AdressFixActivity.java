@@ -6,11 +6,17 @@ import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aite.mainlibrary.Mainbean.SettingAddressListBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allsetting.addadrress.AddAdrressActivity;
 import com.aite.mainlibrary.adapter.AdrressFixRecyAdapter;
+import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.base.BaseActivity;
+import com.lzy.okgo.model.HttpParams;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 
@@ -24,8 +30,8 @@ public class AdressFixActivity extends BaseActivity<AdressFixContract.View, Adre
 
     @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
-
     private AdrressFixRecyAdapter adrressFixRecyAdapter;
+    private List<SettingAddressListBean.AddressListBean> addressListBeans = new ArrayList<>();
 
     @Override
     protected int getLayoutResId() {
@@ -41,11 +47,8 @@ public class AdressFixActivity extends BaseActivity<AdressFixContract.View, Adre
                 startActivity(AddAdrressActivity.class);
             }
         });
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        adrressFixRecyAdapter = new AdrressFixRecyAdapter(this, null, null);
-        recyclerView.setAdapter(adrressFixRecyAdapter);
-        adrressFixRecyAdapter.notifyDataSetChanged();
+        recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        recyclerView.setAdapter( adrressFixRecyAdapter = new AdrressFixRecyAdapter(context, addressListBeans));
     }
 
     @Override
@@ -56,6 +59,7 @@ public class AdressFixActivity extends BaseActivity<AdressFixContract.View, Adre
 
     @Override
     protected void initDatas() {
+        mPresenter.getAdressList(initParams());
 
     }
 
@@ -64,10 +68,21 @@ public class AdressFixActivity extends BaseActivity<AdressFixContract.View, Adre
 
     }
 
+    private HttpParams initParams() {
+        HttpParams httpParams = new HttpParams();
+        httpParams.put("key", AppConstant.KEY);
+        return httpParams;
+    }
+
     @Override
     protected void initReStart() {
 
     }
 
 
+    @Override
+    public void onGetAdressListSuccess(Object msg) {
+        addressListBeans.addAll(((SettingAddressListBean) msg).getAddress_list());
+        adrressFixRecyAdapter.notifyDataSetChanged();
+    }
 }

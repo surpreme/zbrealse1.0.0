@@ -51,15 +51,15 @@
         <activity android:name="com.aite.mainlibrary.activity.allstep.StepActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmoney.MoneyUserInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allsetting.SosUserActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.sosuser.SosUserActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.PaySettingActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allsetting.BindingUserActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.bindinguser.BindingUserActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.addsosuser.AddSosUserActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.addbindinguser.AddBindingUserActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.bookinformation.BookinformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.timebank.TimeBankActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmain.AddDeviceMainActvity" />
-        <activity android:name="com.aite.mainlibrary.activity.allqr.QrCodeActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allqr.qrcode.QrCodeActivity" />
         <activity android:name="com.aite.mainlibrary.activity.DeviceNumberEditActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.DoctormainInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.daytogether.DayTogetherActivity" />
@@ -76,7 +76,7 @@
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.NumberBankActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.minerural.MineRuralActivity" />
         <activity android:name="com.aite.mainlibrary.activity.MineCollectActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.HealthBookActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.healthbook.HealthBookActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.UserSafetyActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.choiceeat.ChoiceEatActivity" />
         <activity android:name=".activity.newuser.NewUserActivity" />
@@ -103,6 +103,12 @@
         <activity android:name="com.aite.mainlibrary.activity.allsetting.appsettinginformation.AppSettingInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.MinePostBookActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.minepostbookchriend.MinePostBookChriendActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.helpdocotorinformationbook.PostInformationBookActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.getinformationbook.GetInformationBookActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.bookdispute.BookDisputeActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.addhealthbook.AddHealthBookActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.elderhelphouse.ElderHelpHouseActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.healthbooklist.HealthBookListActivity" />
 
     </application>
 

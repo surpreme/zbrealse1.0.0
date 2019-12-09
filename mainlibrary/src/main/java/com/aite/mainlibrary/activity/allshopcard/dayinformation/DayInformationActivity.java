@@ -2,11 +2,15 @@ package com.aite.mainlibrary.activity.allshopcard.dayinformation;
 
 
 import android.annotation.SuppressLint;
+import android.os.Build;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
+
 import com.aite.mainlibrary.Mainbean.LessBodyInformationBean;
+import com.aite.mainlibrary.Mainbean.TwoSuccessCodeBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allmain.buydaytogether.BuyDayTogetherActivity;
@@ -63,19 +67,21 @@ public class DayInformationActivity extends BaseActivity<DayInformationContract.
     @Override
     protected void initView() {
 //        buy_tv.setOnClickListener(this);
+//        collectIv.setOnClickListener(this);
 
     }
 
-    @OnClick({R2.id.buy_service_tv, R2.id.iv_back})
+    @OnClick({R2.id.buy_service_tv, R2.id.iv_back, R2.id.collect_iv})
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.iv_back) {
             onBackPressed();
-        }
-        if (v.getId() == R.id.buy_service_tv) {
+        } else if (v.getId() == R.id.buy_service_tv) {
             LogUtils.d("goods_id", !isStringEmpty(getIntent().getStringExtra("goods_id")) ? getIntent().getStringExtra("goods_id") : "");
             startActivity(BuyDayTogetherActivity.class, "goods_id",
                     !isStringEmpty(getIntent().getStringExtra("goods_id")) ? getIntent().getStringExtra("goods_id") : "");
+        } else if (v.getId() == R.id.collect_iv) {
+            mPresenter.onCollect(initParams());
         }
     }
 
@@ -120,6 +126,20 @@ public class DayInformationActivity extends BaseActivity<DayInformationContract.
         talkBadNumberTv.setText(String.format("%s%%", String.format("差评(%d)", lessBodyInformationBean.getEvaluate_info().getBad_percent())));
         talkNormNumberTv.setText(String.format("%s%%", String.format("中评(%d)", lessBodyInformationBean.getEvaluate_info().getNormal_percent())));
         talkGoodNumberTv.setText(String.format("%s%%", String.format("好评(%d)", lessBodyInformationBean.getEvaluate_info().getGood_percent())));
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    public void onCollectSuccess(Object msg) {
+        if (((TwoSuccessCodeBean) msg).getResult().equals("1") && ((TwoSuccessCodeBean) msg).getMsg().equals("收藏成功")) {
+            showToast(((TwoSuccessCodeBean) msg).getMsg());
+            collectIv.setImageDrawable(getDrawable(R.drawable.ic_collect_full));
+        }
+        if (((TwoSuccessCodeBean) msg).getResult().equals("1") && ((TwoSuccessCodeBean) msg).getMsg().equals("取消收藏成功")) {
+            showToast(((TwoSuccessCodeBean) msg).getMsg());
+            collectIv.setImageDrawable(getDrawable(R.drawable.collect_red));
+        }
 
     }
 

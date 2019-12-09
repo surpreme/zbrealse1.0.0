@@ -95,6 +95,7 @@
 
 
     <LinearLayout
+        android:id="@+id/area_choice_ll"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/white"
@@ -112,6 +113,7 @@
             android:textSize="17sp" />
 
         <TextView
+            android:id="@+id/area_tv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/margin_20dp"
@@ -168,6 +170,7 @@
         android:background="@color/noglay" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_often_user"
         style="?switchStyle"
         android:layout_width="match_parent"
         android:layout_height="50dp"

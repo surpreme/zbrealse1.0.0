@@ -21,6 +21,10 @@
         <include layout="@layout/recy_layout" />
 
         <include layout="@layout/bottom_btn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
     </LinearLayout>
 
 
