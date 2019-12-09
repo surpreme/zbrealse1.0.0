@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/order_number"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:textColor="@color/gray" />
+
+    <View style="@style/view_line" />
+
+    <com.aite.a.view.MyListView
+        android:id="@+id/lv_goods_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View style="@style/view_line" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp" >
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/state" />
+
+        <TextView
+            android:id="@+id/tv_statedata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_state"
+            android:text="@string/release_goods152"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_statedata"
+            android:text="@string/total_one_yf" />
+
+        <TextView
+            android:id="@+id/goods_pricedata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/goods_price"
+            android:text="10.0"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/goods_pricedata"
+            android:text="@string/real" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/goods_price"
+            android:layout_toRightOf="@+id/tv_amount"
+            android:text="@string/yuan_10"
+            android:textColor="@color/red"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goods_img"
+        android:background="#fffafafa"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/order_item_bt1"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.0"
+            android:background="#fffafafa"
+            android:gravity="center"
+            android:textSize="12.0sp" />
+
+        <Button
+            android:id="@+id/order_item_bt2"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.0"
+            android:background="#fffafafa"
+            android:gravity="center"
+            android:textSize="12.0sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/order_item_bt3"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.0"
+            android:background="#fffafafa"
+            android:gravity="center"
+            android:textSize="12.0sp" />
+
+        <Button
+            android:id="@+id/bt_send"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.0"
+            android:background="#fffafafa"
+            android:gravity="center"
+            android:text="@string/determinesend"
+            android:textSize="12.0sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,4237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- JazzyViewPager -->
+    <string name="app_name">ZhongBaoYi</string>
+
+    <string name="scan_tip">please put the QR code in the viewfinder and scan</string>
+    <!-- QR code -->
+    <string name="scan_retry">QR code scanning error, please rescan</string>
+    <string name="scan_title">scan</string>
+    <string name="xlistview_header_hint_normal">pull-down refresh</string>
+    <string name="xlistview_header_hint_ready">release refresh data</string>
+    <string name="xlistview_header_hint_loading">is loading...</string>
+    <string name="xlistview_header_last_time">last update time: </string>
+    <string name="xlistview_footer_hint_normal">view more</string>
+    <string name="xlistview_footer_hint_ready">release uploads more</string>
+    <string name="pull_to_refresh_pull_label">pull-down refresh</string>
+    <string name="pull_to_refresh_release_label">pull-down refresh</string>
+    <string name="pull_to_refresh_refreshing_label">is refreshing\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">pulls more</string>
+    <string name="pull_to_refresh_footer_pull_label">pulls more</string>
+    <string name="pull_to_refresh_footer_refreshing_label">is loading\u2026</string>
+    <string name="act_no_data_load">has no data to load! </string>
+    <string name="tab_home">Homepage</string>
+    <string name="tab_category">Category</string>
+    <string name="tab_message">Message</string>
+
+    <string name="tab_periphery">Around</string>
+    <string name="tab_cart">Cart</string>
+    <string name="tab_personal">My</string>
+    <string name="previouspage">previouspage</string>
+    <string name="nextpage">nextpage</string>
+    <string name="lastpage">lastpage</string>
+    <string name="act_no_data">has no data!  </string>
+    <string name="act_net_error">network connection failed!  </string>
+    <string name="nostop">no shop</string>
+    <string name="act_waiting">waiting... </string>
+    <string name="act_stock">inventory: </string>
+    <string name="act_a">a</string>
+    <string name="act_no_more">cannot exceed the maximum number of products</string>
+    <string name="act_less_one">purchase quantity cannot be less than 1 piece</string>
+    <string name="act_loading">loading...</string>
+    <string name="act_del_success">deleted successfully! </string>
+    <string name="act_del_fail">delete failed! </string>
+    <string name="address_manage">address management</string>
+    <string name="selector">option</string>
+    <string name="update">modify</string>
+    <string name="del">delete</string>
+    <string name="yuan">RMB</string>
+    <string name="province">province</string>
+    <string name="city">city</string>
+    <string name="area">area/county</string>
+    <string name="province_not_choice">did not select province</string>
+    <string name="city_not_choice">did not select city</string>
+    <string name="area_not_choice">did not select area/county</string>
+    <string name="see_map">check the map</string>
+    <string name="all_order">all orders</string>
+    <string name="all_classifying">all classifying</string>
+    <string name="refresh">refresh ===</string>
+    <string name="total">total</string>
+    <string name="stop_empty">no goods</string>
+    <string name="balance">settlement</string>
+    <string name="cart">shopping cart</string>
+    <string name="please_choose_goods">please select goods</string>
+    <string name="update_success">modified successfully! </string>
+    <string name="updating">modifying...</string>
+    <string name="update_password">change password</string>
+    <string name="perdata">profile</string>
+    <string name="virtualorders">virtualorder</string>
+    <string name="servicelorders">service order</string>
+    <string name="serviceorders">service order</string>
+    <string name="old_password_not">old password is not filled!  </string>
+    <string name="new_password_not">new password is not filled! </string>
+    <string name="repeat_password_not">repeat password unfilled! </string>
+    <string name="new_password_length_not_6">New password is no longer than 6! </string>
+    <string name="new_password_length_not_24">New password is no longer than 24!</string>
+    <string name="two_password_not_consistent">The password entered is inconsistent!  </string>
+    <string name="evaluation_of_success">Evaluation successful!  </string>
+    <string name="evaluation_of_fail">Evaluation failed! </string>
+    <string name="evaluation">evaluation </string>
+    <string name="add_success">added successfully! </string>
+        
+    <string name="update_fail">Modification failed! </string>
+        
+    <string name="add_fail">Add failed! </string>
+        
+    <string name="new_address">Add address </string>
+        
+    <string name="update_address"> modify the address </string>
+        
+    <string name="contact_empty">contact cannot be empty</string>
+        
+    <string name="location_empty">location cannot be empty</string>
+        
+    <string name="detail_empty">Detailed address cannot be empty</string>
+        
+    <string name="phone_empty">Mobile or phone cannot be empty</string>
+        
+    <string name="edit">edit </string>
+        
+    <string name="virtual">virtual order </string>
+        
+    <string name="footprint">footprint </string>
+        
+    <string name="collectionfcf">Collection baby </string>
+        
+    <string name="collectionfcf2">Collection store </string>
+        
+    <string name="collection_list">Favorites list </string>
+        
+    <string name="my_footprint">My footprints</string>
+        
+    <string name="buyer_orders">order management </string>
+        
+    <string name="reset_password"> reset password </string>
+        
+    <string name="username_empty">User name is not filled! </string>
+        
+    <string name="email_empty">email is not filled! </string>
+        
+    <string name="email_error">Please enter the correct email address! </string>
+        
+    <string name="goods_detail">Product details </string>
+        
+    <string name="goods_empty"> could not find this item, please select the product specification! </string>
+        
+    <string name="num_over"> the num of good over the stock! </string>
+    <string name="storage_zero"> the storage is zero </string>
+    <string name="goods_list">product list </string>
+        
+    <string name="operation_success">Operation succeeded! </string>
+        
+    <string name="operation_fail"> operation failed! </string>
+        
+    <string name="net_reconnect">The network connection failed, please reconnect! </string>
+        
+    <string name="goods_manage">Product Management </string>
+        
+    <string name="login_success">User login success </string>
+    <string name="logging">Login....</string>
+        
+    <string name="password_empty">The password is not filled! </string>
+        
+    <string name="logout_fail">Logout failed! </string>
+        
+    <string name="safe_exit"> safe exit....</string>
+        
+    <string name="more">more </string>
+        
+    <string name="tomore">more></string>
+        
+    <string name="clean_cache">Clear the cache....</string>
+        
+    <string name="location">location </string>
+        
+    <string name="my_shop">My Store</string>
+        
+    <string name="my_shop2">My Store</string>
+        
+    <string name="shop_data">store information </string>
+        
+    <string name="confirm">OK</string>
+        
+    <string name="m100">100 meters </string>
+        
+    <string name="m200">200 meters </string>
+        
+    <string name="m300">300 meters </string>
+        
+    <string name="m400">400 meters </string>
+        
+    <string name="m500">500 meters </string>
+        
+    <string name="m600">600 meters </string>
+        
+    <string name="m700">700 meters </string>
+        
+    <string name="m800">800 meters </string>
+        
+    <string name="m900">900 meters </string>
+        
+    <string name="m1000">1000 meters </string>
+        
+    <string name="m1000_more">1000 meters or more </string>
+        
+    <string name="shop_position_empty">The store has no location information! </string>
+        
+    <string name="no_position">no location</string>
+        
+    <string name="tip">tip </string>
+        
+    <string name="no_position_get">No location information, please get the current location! </string>
+        
+    <string name="cancel">Cancel </string>
+        
+    <string name="commit_success">Submit successfully! </string>
+        
+    <string name="upload_fail">Please upload the correct information! </string>
+        
+    <string name="commit_fail">submission failed </string>
+        
+    <string name="uploading">Uploading data....</string>
+        
+    <string name="individual_settled">personal resident </string>
+        
+    <string name="new_small">Xiaoxin</string>
+        
+    <string name="wh">Wanhui</string>
+        
+    <string name="shop_name_empty">The store name is not filled! </string>
+        
+    <string name="province_empty">No provinces selected! </string>
+        
+    <string name="area_empty">No area selected! </string>
+        
+    <string name="errr">Please fill in the complete information </string>
+        
+    <string name="downtown_empty"> did not choose the city! </string>
+    <string name="detail_is_empty">The detailed address is not filled! </string>
+        
+    <string name="contact_is_empty">contact name is not filled! </string>
+        
+    <string name="phone_is_empty">contact phone is not filled! </string>
+        
+    <string name="phone_is_empty2">Contact Phone: </string>
+        
+    <string name="phone_is_empty3">E-mail: </string>
+        
+    <string name="phone_is_empty4">Real Name: </string>
+        
+    <string name="phone_is_firmempty4"> business license number: </string>
+        
+    <string name="phone_is_empty5">Identity ID : </string>
+        
+    <string name="phone_is_firmempty5">Business scope: </string>
+        
+    <string name="phone_is_empty6">Scan upload: </string>
+        
+    <string name="phone_is_empty7"> Alipay name : </string>
+        
+    <string name="phone_is_firmempty7">Bank account name : </string>
+        
+    <string name="phone_is_empty8"> Alipay account number : </string>
+        
+    <string name="phone_is_firmempty8">Bank account number : </string>
+        
+    <string name="phone_is_firmempty82">sub-branch name: </string>
+        
+    <string name="phone_is_firmempty83">Sub-branch number: </string>
+        
+    <string name="phone_is_firmempty84">Bank location: </string>
+        
+    <string name="phone_is_empty9">Business account number : </string>
+        
+    <string name="phone_is_firmempty9">Store Name : </string>
+        
+    <string name="phone_is_empty10">Regional Agent: </string>
+        
+    <string name="phone_is_empty11">Store Level : </string>
+        
+    <string name="phone_is_empty12">Store Category : </string>
+        
+    <string name="phone_is_empty13">Business Category: </string>
+        
+    <string name="email_is_empty">Mailbox is not filled! </string>
+        
+    <string name="name_is_empty">Name is not filled! </string>
+        
+    <string name="id_is_empty">Identity card is not filled! </string>
+        
+    <string name="choose">Please select </string>
+        
+    <string name="select_id_scan">Please select ID card scan! </string>
+        
+    <string name="alipay_name_is_empty"> Alipay name is not filled! </string>
+        
+    <string name="account_number_is_empty"> Alipay account is not filled! </string>
+        
+    <string name="merchant_name_is_empty">Business name is not filled! </string>
+        
+    <string name="merchant_account_is_empty">Business account is not filled! </string>
+        
+    <string name="shop_level_is_empty"> did not choose the store level! </string>
+        
+    <string name="shop_category_is_empty"> did not choose store classification! </string>
+        
+    <string name="select_shop_level_1">Please select the store business category level classification! </string>
+        
+    <string name="select_shop_level_2">Please select the second category of the store business category! </string>
+        
+    <string name="select_shop_level_3">Please select the three-category classification of the store management category! </string>
+        
+    <string name="select_picture_source">Select image source </string>
+        
+    <string name="media_lib">media library</string>
+        
+    <string name="take_picture">photograph </string>
+        
+    <string name="update_address_success">Change address successfully! </string>
+        
+    <string name="commit_order_success">Submit order successfully! </string>
+        
+    <string name="payment_password_correct"> payment password is correct! </string>
+        
+    <string name="payment_password_error"> payment password error! </string>
+        
+    <string name="confirm_order">confirm order </string>
+        
+    <string name="no">no </string>
+        
+    <string name="select_pay_way">Please select the payment method </string>
+    <string name="advance_payment_or_not">Please choose whether to use prepayment </string>
+        
+    <string name="put_in_payment_password">Please enter the payment password </string>
+        
+    <string name="confirm_order_right_button"> confirm the title button on the right side of the order </string>
+        
+    <string name="pay_wayfcf">payment method </string>
+        
+    <string name="zhifufangshi">payment method\t: </string>
+        
+    <string name="pay_or_not">Do you want to pay? </string>
+        
+    <string name="function_closed">This feature is not enabled </string>
+        
+    <string name="hello">Hello </string>
+        
+    <string name="the_balance">balance </string>
+        
+    <string name="collection_goods">Collected baby </string>
+        
+    <string name="collection_shop">Collected stores </string>
+        
+    <string name="personal_center">Personal Center</string>
+        
+    <string name="want_to_open_shop">I want to open a store </string>
+        
+    <string name="personal_info">profile </string>
+        
+    <string name="c_friend">Caoyou</string>
+        
+    <string name="birthday_is_empty">Birthday is not filled! </string>
+        
+    <string name="click_picture_to_upload">Click on the image to achieve upload method </string>
+        
+    <string name="commiting_data">Submission information....</string>
+        
+    <string name="uploading_picture">Uploading images....</string>
+        
+    <string name="picture_full">The picture is full </string>
+        
+    <string name="add_picture">Add picture </string>
+        
+    <string name="select_category">Please select a category! </string>
+        
+    <string name="edit_goods">Edit product </string>
+        
+    <string name="goods_not_allowed_edit">This item is not allowed to be edited! </string>
+        
+    <string name="release_goods">release product </string>
+        
+    <string name="confirm_remove_picture">Are you sure to remove the added picture? </string>
+        
+    <string name="load_more">Load more....</string>
+        
+    <string name="load_more2">Load more </string>
+        
+    <string name="more_new_message">More new messages....</string>
+        
+    <string name="notice_is_clicked">The notification was clicked: </string>
+        
+    <string name="unknown">unknown</string>
+        
+    <string name="now_updating">Updating....</string>
+        
+    <string name="gong"> total </string>
+        
+    <string name="message_load"> information, loaded </string>
+        
+    <string name="t_message">Article information </string>
+        
+    <string name="t_message_update"> information, updated </string>
+        
+    <string name="t_message_new"> new information </string>
+        
+    <string name="register_success">Registration is successful! </string>
+        
+    <string name="registing">Registering....</string>
+        
+    <string name="get_token_success">Get the verification code successfully! </string>
+        
+    <string name="getting_token"> is getting the verification code....</string>
+        
+    <string name="get_back_password_fail">Failed to retrieve password! </string>
+        
+    <string name="getting_back_password"> password recovery....</string>
+        
+    <string name="ordinary_registration">new user registration>></string>
+        
+    <string name="login_automatic">automatic login</string>
+        
+    <string name="anonymous">anonymous</string>
+        
+    <string name="biaoti">Aite Mall</string>
+        
+    <string name="login_user">account </string>
+        
+    <string name="login_psw">password</string>
+        
+    <string name="user_name">username: </string>
+        
+    <string name="sms_registration">Mobile number registration>></string>
+        
+    <string name="phone_number">Mobile number: </string>
+        
+    <string name="get_back_password">retrieve password </string>
+        
+    <string name="check_code_is_empty">Checksum is not filled! </string>
+        
+    <string name="password_is_empty">Password is empty! </string>
+    <string name="user_is_empty">User did not fill in.!</string>
+        
+    <string name="type_in_correct_user">Please enter the correct user! </string>
+        
+    <string name="password_incorrect">Inconsistent passwords! </string>
+        
+    <string name="seconds_resend">s</string>
+        
+    <string name="send">send </string>
+        
+    <string name="re_get_token">Re-acquire verification code </string>
+    <string name="seller_orders">Seller Order </string>
+        
+    <string name="shop_introduction"> shop introduction </string>
+        
+    <string name="location_1">Location: </string>
+        
+    <string name="open_shop_date"> shop opening time: </string>
+        
+    <string name="wangwang">Wangwang: </string>
+        
+    <string name="phone">phone: </string>
+        
+    <string name="shop_detail">Store Details </string>
+        
+    <string name="contact">Contact: \t\t\t </string>
+        
+    <string name="mobilephone"> hand \t\t machine: \t\t\t</string>
+        
+    <string name="address">Address: </string>
+        
+    <string name="price">price: </string>
+        
+    <string name="sure_to_delete">Are you sure you want to delete it? </string>
+        
+    <string name="counts">quantity</string>
+        
+    <string name="pay_code">payment number \t: </string>
+        
+    <string name="freight"> Shipping: </string>
+        
+    <string name="paid">paid: </string>
+        
+    <string name="cancel_order"> cancel order </string>
+        
+    <string name="confirm_receipt">confirm receipt </string>
+        
+    <string name="view_logistics">View Logistics</string>
+        
+    <string name="sure_cancel_order">Do you really want to cancel the order? </string>
+        
+    <string name="order_no">order number : </string>
+        
+    <string name="logisticsnumber">Logistics number : </string>
+        
+    <string name="sendnote"> shipping notes : </string>
+        
+    <string name="couriernumber">Courier company number : </string>
+        
+    <string name="thegoodsname">Consignee Name : </string>
+        
+    <string name="thegoodsregion">Consignee Area : </string>
+        
+    <string name="thegoodsregiondetailed">receipt address street information : </string>
+        
+    <string name="thegoodsphone">Consignee mobile phone : </string>
+        
+    <string name="oneselfnumber">From the point number: </string>
+        
+    <string name="thegoodsnumber">deliverer address number : </string>
+        
+    <string name="thegoodslandline">Consignee contact number : </string>
+        
+    <string name="status">Status: </string>
+        
+    <string name="update_price"> modify the price </string>
+        
+    <string name="update_freight"> modify shipping </string>
+        
+    <string name="update_price_unit"> modify the price (unit: yuan) </string>
+        
+    <string name="update_freight_unit"> modify the shipping cost (unit: yuan) </string>
+        
+    <string name="sure_delete_goods">Do you want to delete the item? </string>
+        
+    <string name="specification_not_exist">This specification does not exist! </string>
+        
+    <string name="in_total"> total </string>
+        
+    <string name="first">first</string>
+        
+    <string name="pager">page</string>
+        
+    <string name="input_comments">Please enter the comment content </string>
+        
+    <string name="input_message">Please enter the message content </string>
+        
+    <string name="input_comments2">\nPlease enter the comment content\n1</string>
+        
+    <string name="image_failure">Failed to get the image, please try again</string>
+        
+    <string name="a_goods">pieces </string>
+        
+    <string name="isdownload1">downloaded </string>
+    <string name="isdownload2">not downloaded</string>
+        
+    <string name="isdownload3">Downloading </string>
+        
+    <string name="issend1">sent </string>
+        
+    <string name="issend2"> has expired </string>
+        
+    <string name="inexistencefile"> file does not exist </string>
+        
+    <string name="isdownload">Start downloading files</string>
+        
+    <string name="openfail"> file open failed </string>
+        
+    <string name="switchcamera">Switch camera </string>
+        
+    <string name="internetphone">Internet phone </string>
+        
+    <string name="waitingconnect">waiting for the other party to connect...</string>
+        
+    <string name="zhengzaitonghua">in the call </string>
+        
+    <string name="notonline">the other party is not online</string>
+        
+    <string name="mute">mute </string>
+        
+    <string name="camera">camera </string>
+        
+    <string name="speaker">speaker </string>
+        
+    <string name="invitation">Invite members</string>
+        
+    <string name="packup"> put away </string>
+        
+    <string name="messagereply">message reply </string>
+        
+    <string name="voicereply"> voice answer </string>
+        
+    <string name="screenshots">video screenshot </string>
+        
+    <string name="screenshots2"> screenshot success </string>
+        
+    <string name="screenshots3"> screenshot failed </string>
+        
+    <string name="hangup">hang up</string>
+        
+    <string name="reply">answer </string>
+        
+    <string name="voice_short"> recording time is too short </string>
+        
+    <string name="intercom"> intercom </string>
+        
+    <string name="change_voice">Variation </string>
+        
+    <string name="recording_voice">recording </string>
+        
+    <string name="press_speak">hold and talk </string>
+        
+    <string name="input_name">Please enter the search user name </string>
+        
+    <string name="request_successful">Successfully send request </string>
+        
+    <string name="hautizuozhe">Topic author : </string>
+        
+    <string name="hautixiangqing">topic details </string>
+        
+    <string name="laiziquanzi">from the circle : </string>
+        
+    <string name="shop2">store </string>
+        
+    <string name="dianzanchenggong"> like success </string>
+        
+    <string name="xiangguanwenzhang">related articles </string>
+        
+    <string name="found">micro discovery </string>
+        
+    <string name="goodthings">good things </string>
+        
+    <string name="commencist">comment list </string>
+        
+    <string name="wenzhangxiangqing">Article details </string>
+        
+    <string name="foundmenu1"> find good things </string>
+        
+    <string name="recommendedinfo">Recommended details </string>
+        
+    <string name="foundmenu2"> Daren recommendation </string>
+        
+    <string name="foundmenu3">shop street </string>
+        
+    <string name="gobuy">go to buy </string>
+        
+    <string name="community">community </string>
+        
+    <string name="quanzi">Circle : </string>
+    <string name="quanzimingcheng">Circle Name : </string>
+        
+    <string name="jiarushijian"> join time: </string>
+        
+    <string name="wodedengji">My rating : </string>
+        
+    <string name="communitymenu1">all </string>
+        
+    <string name="communitymenu2">Recommended circle </string>
+        
+    <string name="communitymenu3"> recommended topic </string>
+        
+    <string name="communitymenu4">My Circles</string>
+        
+    <string name="need">required </string>
+        
+    <string name="topic">Topic: </string>
+        
+    <string name="crew">Group member : </string>
+        
+    <string name="placedatthetop">top </string>
+        
+    <string name="immediately_exchange"> redeem </string>
+        <string name="exchange">exchange </string> now
+        
+    <string name="information">information</string>
+        
+    <string name="informationcenter">News Center</string>
+        
+    <string name="informationmenu_1">Industry dynamics</string>
+        
+    <string name="informationmenu_2">social state </string>
+        
+    <string name="informationmenu_3">Time to win gold </string>
+        
+    <string name="informationmenu_4">News information</string>
+        
+    <string name="news">news</string>
+        
+    <string name="aitefound">Aite good things </string>
+        
+    <string name="aitecommunity">Aite Community</string>
+        
+    <string name="integral_mall">point mall </string>
+        
+    <string name="hot_vouchers">hot vouchers</string>
+        
+    <string name="hot_gift">hot gifts </string>
+        
+    <string name="my_integral">My points</string>
+        
+    <string name="gift">redeemed gifts</string>
+        
+    <string name="gif2"> redemption record </string>
+        
+    <string name="vouchers">available vouchers</string>
+        
+    <string name="all_comments">All comments</string>
+        
+    <string name="fabutiezi">post post</string>
+        
+    <string name="determinerelease">confirm release </string>
+        
+    <string name="bbsinput">Talk about your gossip...</string>
+        
+    <string name="mallbbs">forum </string>
+        
+    <string name="mall">shop </string>
+        
+    <string name="fenxiao_tixian">drawing </string>
+        
+    <string name="distribution">Distribution Center</string>
+        
+    <string name="commission"> commission : </string>
+        
+    <string name="integral">integration:</string>
+        
+    <string name="fans">Number of fans: </string>
+        
+    <string name="num">quantity x</string>
+        
+    <string name="nonekucun">The item is not in stock </string>
+        
+    <string name="agreement3">Free shop </string>
+        
+    <string name="agreement">Click on the free store to indicate your agreement </string>
+        
+    <string name="agreement2"> User Registration Agreement </string>
+        
+    <string name="free_registered">free registration </string>
+        
+    <string name="personal_openshop">personal shop ></string>
+        
+    <string name="enterprise_openshop">enterprise entry></string>
+        
+    <string name="property_openshop">property settled ></string>
+        
+    <string name="supplier_openshop">Suppliers settled in ></string>
+        
+    <string name="et_shopname">Please enter the store name </string>
+        
+    <string name="et_firmshopname">Please enter the company name </string>
+        
+    <string name="et_addresses">Please be accurate to the house number </string>
+        
+    <string name="et_contactname">Please enter a contact name</string>
+        
+    <string name="et_contactphone">Please enter the contact phone number </string>
+        
+    <string name="et_contactemail">Please enter your contact email </string>
+        
+    <string name="et_names">Please enter your name</string>
+        
+    <string name="et_firmnames">Please enter the business license number </string>
+        
+    <string name="et_cardnumber">Please enter your ID number </string>
+        
+    <string name="et_zhifubaoname">Please enter your Alipay name</string>
+        
+    <string name="et_firmzhifubaoname">Please enter the bank account name </string>
+        
+    <string name="et_zhifubaouser">Please enter your Alipay account </string>
+        
+    <string name="et_firmzhifubaouser">Please enter the company bank account number </string>
+        
+    <string name="et_firmzhifubaouser2">Please enter the name of the bank branch branch </string>
+        
+    <string name="et_firmzhifubaouser3">Please enter the branch number </string>
+        
+    <string name="et_firmzhifubaouser4">Please enter the location of the bank where you opened </string>
+        
+    <string name="et_merchantsuser">Please enter a merchant account </string>
+        
+    <string name="et_firmmerchantsuser">The store name cannot be modified after registration, please fill in </string>
+    <string name="et_choose">Select file </string>
+        
+    <string name="et_choose2">Please select </string>
+        
+    <string name="et_choose3"> + select add category </string>
+        
+    <string name="promptt2"> Daily Beijing time 00:00-08:00, WeChat red envelopes are not cashed.\n WeChat cash withdrawals are only allowed at 1.00 yuan - 200.00 yuan.</string>
+        
+    <string name="submitt">submit </string>
+        
+    <string name="txmoney">to raise cash amount </string>
+        
+    <string name="bankname">bank name </string>
+        
+    <string name="banknum">bank card number </string>
+        
+    <string name="zhifubaouser"> Alipay account </string>
+        
+    <string name="bankkhname">Bank Account Name </string>
+        
+    <string name="wxenvelope"> WeChat red envelope withdrawal </string>
+        
+    <string name="largetx"> large amount of cash withdrawal </string>
+        
+    <string name="promptt">Please fill in the information carefully, otherwise it will lead to the withdrawal! </string>
+        
+    <string name="current">current balance\t:\t0.00 yuan</string>
+        
+    <string name="positioningcity">Target city :\t</string>
+        
+    <string name="allcity">all cities </string>
+        
+    <string name="startrecording">Start recording </string>
+        
+    <string name="yuyininput"> Dear! Evaluation can be done with voice, and we can help you type things! </string>
+        
+    <string name="fcoding">F code purchase </string>
+        
+    <string name="inputfcoding">Please enter F code </string>
+        
+    <string name="courierinfo">Express company information </string>
+        
+    <string name="thegoods">consignee information </string>
+        
+    <string name="noinformation">The product has no store information temporarily </string>
+        
+    <string name="noGoodAttr">No attributes </string>
+    <string name="addressinfoo">address information </string>
+        
+    <string name="cityy">The whole city </string>
+        
+    <string name="distancee">distance </string>
+        
+    <string name="typee">classification </string>
+        
+    <string name="paixu">sort </string>
+        
+    <string name="thirdpartylogin">Login with another account</string>
+        
+    <string name="score">Product Rating : </string>
+        
+    <string name="qupingjia"> write evaluation </string>
+        
+    <string name="huifushu">Publish evaluation</string>
+        
+    <string name="release">release </string>
+        
+    <string name="beidianzan">praise</string>
+        
+    <string name="myevaluation">my evaluation</string>
+        
+    <string name="yesterdaysales"> yesterday sales </string>
+        
+    <string name="month">month sales </string>
+        
+    <string name="today">Today\'s income </string>
+        
+    <string name="yesterday"> yesterday\'s income </string>
+        
+    <string name="determinesend">confirm shipment </string>
+        
+    <string name="lastprice"> total price before modification: </string>
+        
+    <string name="actualprice">Buyers pay: </string>
+        
+    <string name="editor">edit </string>
+        
+    <string name="order">View all orders></string>
+        
+    <string name="start">Experience now </string>
+        
+    <string name="sure_to_delete_goods">Do you want to delete the favorite baby? </string>
+        
+    <string name="sure_to_delete_shops">Do you want to delete the favorite store? </string>
+        
+    <string name="main_product">Main product: </string>
+        
+    <string name="not_open_shop_edit">There is no open shop editing function! </string>
+        
+    <string name="cancel_collection_success"> cancel collection success! </string>
+        
+    <string name="cancel_collection_fail"> cancel collection failed! </string>
+        
+    <string name="collection_success">Collection success! </string>
+        
+    <string name="collection_fail">Collection failed! </string>
+        
+    <string name="left">leftover</string>
+    <string name="hour">hours</string>
+        
+    <string name="minus">minute </string>
+        
+    <string name="seconds">seconds</string>
+        
+    <string name="panic_buying"> snapped up </string>
+        
+    <string name="limited_time_discount">limited time discount</string>
+        
+    <string name="market_price">Market price: </string>
+        
+    <string name="promotion_type"> Promotion type: </string>
+        
+    <string name="promotion_price">Promotional price: </string>
+        
+    <string name="brand">Brand: </string>
+        
+    <string name="sold">sold: </string>
+        
+    <string name="praise_has">" Praise (already "</string>
+        
+    <string name="person_evaluation">person evaluation)</string>
+        
+    <string name="oingjiadengji">Evaluation level :\t</string>
+        
+    <string name="scan_quantity">views :\t</string>
+        
+    <string name="liulanliang">views </string>
+        
+    <string name="limit_counts">limit number :\t</string>
+        
+    <string name="every_one">per person </string>
+        
+    <string name="no_more_data">No more data! </string>
+        
+    <string name="confirmation_of_receipt">Confirm receipt success! </string>
+        
+    <string name="confirmation_of_receipt_fail">Confirm receipt failure! </string>
+        
+    <string name="wx_pay"> WeChat payment </string>
+        
+    <string name="alipay_mobile_pay"> Alipay mobile payment </string>
+        
+    <string name="not_login">You have not logged in yet, go to login now </string>
+        
+    <string name="not_set_address">You have not set the address yet, now go to set the address </string>
+        
+    <string name="phone_validate_length">The length of the mobile phone number is not legal </string>
+        
+    <string name="phone_validate_char">The phone number contains non-numeric characters</string>
+        
+    <string name="phone_validate_incorrect"> is not the correct mobile number </string>
+        
+    <string name="now_time">current time \t:\t</string>
+        
+    <string name="day">day</string>
+        
+    <string name="recent_item_value">Value of the current Item: </string>
+        
+    <string name="message_tip"> prompt information </string>
+        
+    <string name="year_2013">2013 </string>
+        
+    <string name="recent_update">Recently updated: </string>
+        
+    <string name="generate_payment_order"> is generating a payment order....</string>
+        
+    <string name="get_order_fail">Get order failed....</string>
+        
+    <string name="pay_no">-Payment number: </string>
+        
+    <string name="pay_success">Payment success! </string>
+        
+    <string name="signature_error">Signature error, unregistered APPID, incorrect project setting APPID, registered APPID and setting mismatch, other exceptions, etc. </string>
+        
+    <string name="user_cancel_payment">User canceled the payment! </string>
+        
+    <string name="re_payment">Re-pay! </string>
+        
+    <string name="payment_fail">Payment failed! </string>
+        
+    <string name="checking_for_update">Checking for updates....</string>
+        
+    <string name="recent_version">current version: </string>
+        
+    <string name="the_latest_version"> is currently the latest version! </string>
+        
+    <string name="program_update">program update </string>
+        
+    <string name="downloading">Program update is being downloaded: </string>
+        
+    <string name="not_login_please_login">You have not logged in yet, please login </string>
+        
+    <string name="push_diagnosis"> push diagnostics </string>
+        
+    <string name="network_changet">Network status has changed</string>
+        
+    <string name="payment_result_confirm">payment result confirmation </string>
+        
+    <string name="check_result">Check the result as: </string>
+        
+    <string name="one_key_update">0ms One-click diagnostics starts executing.....</string>
+        
+    <string name="ms_network_well">ms Network is in good condition! </string>
+        
+    <string name="ms_network_error"> ms network status is abnormal, please check if it is connected! </string>
+        
+    <string name="ms_check_network"> ms network status is abnormal, please check if it is connected!\r\n</string>
+        
+    <string name="ms_xg_network_well">ms The pigeon cloud network is in good condition! </string>
+        
+    <string name="ms_xg_network_error">ms The cloud cloud network status is abnormal, please check if it is connected!</string>
+        
+    <string name="ms_xg_error">ms The cloud cloud network status is abnormal, please check if it is connected!\r\n</string>
+        
+    <string name="ms_xg_logon_re_success">ms homing pigeon terminal registration is successful! </string>
+        
+    <string name="ms_xg_logon_success">ms homing terminal registration is successful! </string>
+        
+    <string name="ms_zd_logon_fail">ms pigeon terminal registration failed!\r\n</string>
+        
+    <string name="ms_zd_re_logon_error">ms pigeon terminal terminal registration failed!\r\n</string>
+        
+    <string name="ms_xg_not_start">ms The pigeon terminal service process did not start normally! </string>
+        
+    <string name="ms_xg_start_success">ms The pigeon terminal service process starts normally! </string>
+        
+    <string name="notice_local">diagnostics ---> local notification test </string>
+        
+    <string name="ms_add_notice_success">ms homing pigeon terminal to add local notification success! </string>
+        
+    <string name="ms_clean_notice_success">ms The pigeon terminal cleans up the local notification cache successfully! </string>
+        
+    <string name="ms_xg_add_label_success">ms homing terminal to add tags successfully! </string>
+        
+    <string name="ms_xg_delete_label_success">ms pigeon terminal delete label successfully! </string>
+        
+    <string name="network_notice_test">diagnostics ---> network notification test </string>
+        
+    <string name="ms_xg_request_fail">ms The pigeon terminal failed to send a notification to the cloud request!\r\n</string>
+        
+    <string name="ms_xg_request_success">ms The pigeon terminal sends a notification to the cloud request success!</string>
+        
+    <string name="one_key_over"> One-click diagnostics completed!\r\n</string>
+        
+    <string name="send_to_manager">Please package the /sdcard0/tencent/Tpush/Logs directory to the administrator!\r\n</string>
+        
+    <string name="cut_to_manager">If you don\'t understand the above, please take a screenshot and contact your developer!</string>
+        
+    <string name="parameter_error_validate"> parameter error, please check if each field is legal!</string>
+    <string name="requst_timestamp_error">Request timestamp is not valid!</string>
+        
+    <string name="sign_code_error">sign verification is invalid, check access id and secret key (note that it is not access key)!</string>
+        
+    <string name="bind_more_10">The number of terminals bound to the alias/account is full (10)!</string>
+        
+    <string name="token_error"> received an illegal token, for example, the ios terminal failed to get the correct token!</string>
+        
+    <string name="xg_server_busy">The pigeon pigeon logical server is busy!</string>
+        
+    <string name="oprate_error"> operation timing error \r\n For example: the deviceToken was not obtained before the tag operation. The reason for not getting the deviceToken: 1. There is no registered pigeon or apple push. 2.provisioning profile is not made correctly!</string>
+        
+    <string name="authentication_error"> authentication error, may be because the Access ID and Access Key do not match, please check whether 1.AndroidMenifest.xml is configured correctly; 2. Whether the cloud environment is a formal environment! </string>
+        
+    <string name="push_token_error">The pushed token is not registered in the homing pigeon. Please re-execute the registration process, or increase the registration failure retry logic! And check if the anti-registration logic is not used properly?</string>
+        
+    <string name="push_account_error">The pushed account is not registered in the pigeon, please re-execute the registration process, or increase the registration failure retry logic!</string>
+        
+    <string name="label_system_busy">The tag system is busy, please re-execute the setting tag process, or add the setting tag failure retry logic!</string>
+        
+    <string name="apns_server_busy">APNS server is busy!</string>
+        
+    <string name="message_char_more">The number of message characters exceeds the limit, the notification does not exceed 75 characters, and the message does not exceed 4096 bytes!</string>
+        
+    <string name="requst_busy">The request is too frequent, please try again later!</string>
+        
+    <string name="apns_certificate_error">APNS certificate error, please resubmit the correct certificate!</string>
+        
+    <string name="param_error">Parameter error, for example, a single-character alias is bound, or the length of the ios token is incorrect, it should be 64 characters!</string>
+        
+    <string name="start_error">Start error!</string>
+        
+    <string name="oprate_type_error"> operation type error code, such as when the parameter is wrong! </string>
+        
+    <string name="execute_logon_error">When a registration operation is being performed, another registration error is coming, then call back this error code!</string>
+        
+    <string name="permission_error"> permission error, please check the AndroidMenifest.xml permissions are fully configured, see http://developer.xg.qq.com/index.php/Android_SDK%E5%BF%AB%E9%80 %9F%E6%8C%87%E5%8D%97!</string>
+        
+    <string name="so_error">so error, please check if the project imports libtpnsSecurity.so and libtpnsWatchdog.so, then reinstall!</string>
+        
+    <string name="network_not_in_use">The current network is not available, please check if wifi or mobile network is open!</string>
+        
+    <string name="create_net_error">Failed to create the link, please restart the application!</string>
+        
+    <string name="request_handle_close"> During the request processing, the link is actively closed!</string>
+        
+    <string name="request_handle_server_close"> During the request processing, the server closes the link!</string>
+        
+    <string name="request_handle_client_error"> During the request processing, the client generates an exception!</string>
+        
+    <string name="request_handle_time_out"> During the request processing, the send or receive message timed out!</string>
+        
+    <string name="request_handle_wait_out"> During the request processing, waiting for the send request to time out!</string>
+        
+    <string name="request_handle_receive_out"> During the request processing, waiting to receive the request timed out!</string>
+        
+    <string name="server_return_error"> server returns an exception message! </string>
+        
+    <string name="unknown_exception">Unknown exception, please contact the administrator directly in the QQ group, or go to the forum to post a message!</string>
+        
+    <string name="create_handler_null">The handler for creating the link is null!</string>
+        
+    <string name="have_one_message">You have 1 new message, </string>
+        
+    <string name="notice_show"> notification is displayed, </string>
+        
+    <string name="registration_success">Unregistered successfully </string>
+        
+    <string name="registration_fail">Unregister failed </string>
+        
+    <string name="set_success">Setting success </string>
+        
+    <string name="set_up">Settings</string>
+        
+    <string name="set_fail_code">Setting failed, error code: </string>
+        
+    <string name="delete_fail_code">delete failed, error code: </string>
+        
+    <string name="notice_is_opened"> Notification is turned on : </string>
+        
+    <string name="notice_is_cleaned"> Notification is cleared: </string>
+        
+    <string name="receive_message"> received the message: </string>
+        
+    <string name="message">message </string>
+        
+    <string name="return_back">return to superior </string>
+        
+    <string name="one_key_diagnostic"> one-click diagnosis </string>
+        
+    <string name="device_id">Your device Token is: </string>
+        
+    <string name="choose_category">Select Category </string>
+        
+    <string name="specifications">Specifications</string>
+        
+    <string name="price_stock">¥49.00 Stock 750</string>
+        
+    <string name="select_city">Select city </string>
+        
+    <string name="complete">complete</string>
+        
+    <string name="select_all">select all </string>
+        
+    <string name="total_price">total: 128.00</string>
+        
+    <string name="am_hungry"> Master, I am hungry! tT.T</string>
+        
+    <string name="goto_shopping">Go shopping now</string>
+        
+    <string name="night_app">It’s too late to know that everyone is hungry. Hungry just try to order with the app just written </string>
+        
+    <string name="counts_d">quantity </string>
+        
+    <string name="counts_d2">Quantity: </string>
+        
+    <string name="old_password_d">old \t secret \t code: \t</string>
+        
+    <string name="put_in_old_d">Please enter the old password (6-24 characters) </string>
+        
+    <string name="new_password_d">new \t secret \t code: \t</string>
+        
+    <string name="put_in_new_d">Please enter a new password (6-24 characters) </string>
+        
+    <string name="confirm_new_password_d"> confirm password: </string>
+        
+    <string name="confirm_new_password_d2"> Confirm password: </string>
+        
+    <string name="re_put_in_new_d">Please enter the new password again (6-24 characters) </string>
+        
+    <string name="confirm_update"> confirm the modification </string>
+        
+    <string name="evaluation_of_goods">Evaluation product: </string>
+        
+    <string name="evaluation_of_content">Evaluation content: </string>
+        
+    <string name="scan">sweep </string>
+        
+    <string name="put_in_goods_name">Please enter the relevant product name </string>
+        
+    <string name="goods_d">baby </string>
+        
+    <string name="shop">store </string>
+        
+    <string name="username">username: </string>
+        
+    <string name="put_in_phone_number">Please enter your registered mobile number </string>
+        
+    <string name="email">Mailbox: </string>
+        
+    <string name="put_in_email">Please enter the registered email address (6-24 characters) </string>
+        
+    <string name="sure_confirm">confirm </string>
+        
+    <string name="go_to_shop">Enter the store</string>
+        
+    <string name="fruit">fruit</string>
+        
+    <string name="last_new">latest </string>
+        
+    <string name="sales_volume"> people has paid</string>
+        
+    <!--<string name="sales_volume">sales</string>-->
+    <string name="put_in_your_username">Please enter username/mailbox/verified phone</string>
+    <string name="put_in_your_password">Please enter the password </string>
+        
+    <string name="inputpsw">Please enter the password </string>
+        
+    <string name="immediately_log_in">Log in now </string>
+        
+    <string name="forget_password">forgot password </string>
+        
+    <string name="qqlogin">QQ login </string>
+        
+    <string name="wxlogin"> WeChat login </string>
+        
+    <string name="palm_spike"> Pocket Spike </string>
+        
+    <string name="clean_cache_picture">Clear the cache picture </string>
+        
+    <string name="welcome_page">Welcome page</string>
+        
+    <string name="welcome_page2">Welcome</string>
+        
+    <string name="service_agreement">service agreement </string>
+        
+    <string name="check_for_update">Check for updates</string>
+        
+    <string name="about">about</string>
+        
+    <string name="exit">secure exit</string>
+        
+    <string name="two_level_domain_name"> second-level domain name: </string>
+        
+    <string name="replacement">replace </string>
+        
+    <string name="ali_wangwang"> Ali Wangwang: </string>
+        
+    <string name="shop_phone">shop phone: </string>
+        
+    <string name="seo_des">SEO description: </string>
+        
+    <string name="xx_app">Xiaoxin APP</string>
+        
+    <string name="yuan_0">0.00 RMB </string>
+        
+    <string name="zhanghuyue"> account balance </string>
+        
+    <string name="your_account_balance">Your account balance ¥ </string>
+        
+    <string name="goods_up">release baby </string>
+        
+    <string name="order_manage">order management </string>
+        
+    <string name="tip_t">Tip! </string>
+        
+    <string name="no_net">No network, please set up the network!</string>
+        
+    <string name="setting">Settings </string>
+        
+    <string name="consignee">Consignee\t: </string>
+        
+    <string name="nameadd">*name:</string>
+        
+    <string name="select_contact">Select a contact </string>
+        
+    <string name="mobilephone_num">* mobile number : </string>
+        
+    <string name="the_area">*where: </string>
+        
+    <string name="click_select_address">Click to select an address</string>
+        
+    <string name="detail_address">*Detailed address: </string>
+        
+    <string name="detail_address2">Detailed address :</string>
+        
+    <string name="contactname">Contact Name : </string>
+        
+    <string name="shop_contact_info">Store and contact information </string>
+        
+    <string name="shop_name">store name : </string>
+        
+    <string name="firmshop_name">company name : </string>
+        
+    <string name="where"> where: </string>
+        
+    <string name="where2">location: </string>
+        
+    <string name="xm">surname \u0009\u0009\u0009 name: </string>
+        
+    <string name="dh">electric \u0009\u0009\u0009 words: </string>
+        
+    <string name="email_addr">E-mail: </string>
+        
+    <string name="identity_card_information">ID card information </string>
+        
+    <string name="ID_number">Identity ID: </string>
+        
+    <string name="scan_part">Scan: </string>
+        
+    <string name="settlement_account_information">Settlement (Alipay) account information </string>
+        
+    <string name="zh">Account \u0009\u0009\u0009: </string>
+        
+    <string name="store_management_information">store business information </string>
+        
+    <string name="merchant_name">Business name: </string>
+        
+    <string name="merchant_no"> Merchant account: </string>
+        
+    <string name="shop_level">store level: </string>
+        
+    <string name="shop_category">Store Category: </string>
+        
+    <string name="business_category">Business Category: </string>
+        
+    <string name="add">add </string>
+        
+    <string name="one_category">first class </string>
+        
+    <string name="two_category"> secondary category </string>
+        
+    <string name="three_category">three-level category </string>
+        
+    <string name="operation">operation </string>
+        
+    <string name="read_and_accepted"> I have seen and accepted </string>
+        
+    <string name="confirm_regist">confirm registration </string>
+        
+    <string name="japanese_interpretation">Japanese interpreting generally refers to life interaction with strong interaction, accompanying translation, foreign tour guides, foreign affairs reception, foreign trade business negotiations, etc. </string>
+        
+    <string name="yuan_68">¥68.52</string>
+        
+    <string name="number_2">Quantity: x2</string>
+        
+    <string name="trade_off">transaction closed </string>
+        
+    <string name="total_1">Total 1 item\t\t Freight: </string>
+        
+    <string name="should_pay"> should pay: </string>
+    <string name="yuan_10">¥10.00</string>
+        
+    <string name="delete_order">delete order</string>
+        
+    <string name="no_order">no order</string>
+        
+    <string name="number">order number: </string>
+        
+    <string name="time">Order time: </string>
+        
+    <string name="confirm_payment">confirm payment </string>
+        
+    <string name="commit_order">submit order </string>
+        
+    <string name="consignee_information">Consignee information: </string>
+    <string name="shouhuoreninfo">receiver information </string>
+        
+    <string name="name_ng">Name: </string>
+        
+    <string name="phone_133">Mobile: </string>
+        
+    <string name="address_sc">Address: </string>
+        
+    <string name="payment_and_delivery">payment and delivery: </string>
+        
+    <string name="online_payment">online payment </string>
+        
+    <string name="cash_on_delivery"> cash on delivery </string>
+        
+    <string name="pre_deposit_payment">pay with pre-deposit </string>
+        
+    <string name="yes">is </string>
+        
+    <string name="nono">no</string>
+        
+    <string name="goods_name">product name: </string>
+        
+    <string name="test_goods">tested goods </string>
+        
+    <string name="goods_des"> product description: </string>
+        
+    <string name="test_des">Detailed description of the test item </string>
+        
+    <string name="goods_price">Product price: </string>
+        
+    <string name="yuan_test">0.01 yuan </string>
+        
+    <string name="payment">payment </string>
+        
+    <string name="notpaying">pending payment</string>
+        
+    <string name="checking_account">Check account </string>
+        
+    <string name="yuan_220">¥220\n balance</string>
+        
+    <string name="store_22">22\n favorite store </string>
+        
+    <string name="store_82">82\n favorite baby </string>
+        
+    <string name="to_be_shipped">to be shipped </string>
+        
+    <string name="goods_to_be_received"> pending goods </string>
+        
+    <string name="transaction_completion">transaction completed </string>
+        
+    <string name="buyers_center">My order</string>
+        
+    <string name="myorder">My order</string>
+        
+    <string name="seller_center">Seller Center</string>
+        
+    <string name="myapplication">My application</string>
+        
+    <string name="callcenter">Customer Service Center</string>
+        
+    <string name="platformservice"> platform customer service </string>
+        
+    <string name="tradecomplaint">transaction complaints</string>
+        
+    <string name="buyers">Buyer Center</string>
+        
+    <string name="welfare">welfare</string>
+    <string name="merchant_order"> merchant order </string>
+        
+    <string name="rhm">username </string>
+        
+    <string name="xm_xm">name: </string>
+        
+    <string name="now_photo">now photo </string>
+        
+    <string name="portrait">portrait : </string>
+        
+    <string name="xb">Gender:</string>
+    <string name="boy">Male</string>
+    <string name="girl">Female</string>
+    <string name="confidential">confidential</string>
+    <string name="sr">birthday:</string>
+    <string name="select_date">Please choose date</string>
+    <string name="ww">wangwang: </string>
+    <string name="qq">QQ: </string>
+    <string name="commodity_information"> product information </string>
+    <string name="goods_pic"> product image: </string>
+        
+    <string name="market_price_m">market price: </string>
+        
+    <string name="commodity_stocks"> merchandise inventory: </string>
+        
+    <string name="logistics_information"> logistics information </string>
+        
+    <string name="szd">Location: </string>
+        
+    <string name="yf"> shipping \u0009\u0009\u0009 fee: </string>
+        
+    <string name="store_up">Favorites</string>
+        
+    <string name="m_sold"> sold: </string>
+        
+    <string name="m_shop">store </string>
+        
+    <string name="members">member </string>
+        
+    <string name="see_and_see"> looked and watched </string>
+        
+    <string name="graphic_presentation"> graphic introduction </string>
+        
+    <string name="evaluation_list">evaluation list</string>
+        
+    <string name="buy_immediately">Buy now </string>
+        
+    <string name="add_to_cart">Add to cart</string>
+        
+    <string name="loading">Loading....</string>
+        
+    <string name="sold_one"> sold 1 piece </string>
+        
+    <string name="type_in_phone_regist">Please enter your mobile number </string>
+        
+    <string name="school_check_code"> proof code: </string>
+        
+    <string name="click_get_check_code">Getting the check code</string>
+        
+    <string name="m_email">Mailbox: </string>
+        
+    <string name="type_in_email">Please enter the email address (6-24 characters) </string>
+        
+    <string name="m_password"> password: </string>
+        
+    <string name="m_confirm_password"> confirm password: </string>
+        
+    <string name="madden_recommended"> Madden recommendation </string>
+        
+    <string name="recommended">recommended </string>
+        
+    <string name="popular_classification">hot category </string>
+        
+    <string name="all_classification">all categories </string>
+        
+    <string name="total_one_yf"> shipping: </string>
+        
+    <string name="real"> paid: </string>
+        
+    <string name="state"> Status: </string>
+        
+    <string name="m_all">all </string>
+        
+    <string name="new_orders">new order</string>
+        
+    <string name="m_paid">paid </string>
+        
+    <string name="m_daifahuo">to be shipped </string>
+        
+    <string name="delivered"> shipped </string>
+        
+    <string name="completed">completed </string>
+        
+    <string name="start_shop">Openning time：\t\t\t\t\t2001-3-15</string>
+    <string name="s_z_d">Location：、\t\t\t\t\t\tShenzhen,Guangdong</string>
+    <string name="m_des">Description match: </string>
+    <string name="service_attitude">service attitude</string>
+        
+    <string name="delivery_speed">delivery speed: </string>
+        
+    <string name="m_qq">QQ : </string>
+        
+    <string name="contactservice">Contact customer service ></string>
+        
+    <string name="m_ww">Wangwang: \t\t\t\t\t\t\t360000</string>
+        
+    <string name="m_dh">Phone: \t\t\t\t\t13207215521</string>
+        
+    <string name="aite">Aite </string>
+        
+    <string name="all_bb">all baby </string>
+        
+    <string name="m_201">201</string>
+        
+    <string name="top_ranking">Top Ranking </string>
+        
+    <string name="latest_ranking"> latest ranking </string>
+        
+    <string name="sales_ranking"> sales ranking </string>
+        
+    <string name="shop_bb"> shop baby </string>
+        
+    <string name="see_more_bb">View more baby</string>
+        
+    <string name="total_100">Total: 100.00</string>
+        
+    <string name="sm_4">The above gives a total of 4 methods available for pro-test, each with conditions of use. </string>
+        
+    <string name="m_12564">12564</string>
+        
+    <string name="m_125">125</string>
+        
+    <string name="add_new_address">Add a shipping address </string>
+        
+    <string name="m_ph">Phone number </string>
+    <string name="gdsz">Address</string>
+    <string name="g_price">Price</string>
+    <string name="customer">Customer Service </string>
+    <string name="store">store </string>
+        
+    <string name="collection">collection </string>
+        
+    <string name="goods">product </string>
+        
+    <string name="search_goods">search </string>
+        
+    <string name="woyaoshaidan">I want to order </string>
+        
+    <string name="woyaoshaidan2">Take the goods to the order </string>
+        
+    <string name="woyaoshaidan3">image upload request </string>
+        
+    <string name="woyaoshaidan4">Please use jpg\jpeg\png format, single-size images up to 1 megabyte, up to five photos, and the uploaded images will be saved in the personal homepage album for other uses.</string>
+        
+    <string name="woyaoshaidan5">evaluation information</string>
+        
+    <string name="woyaoshaidan6">Product Information : </string>
+        
+    <string name="woyaoshaidan7">Product Rating : </string>
+        
+    <string name="woyaoshaidan8">Evaluation details : </string>
+        
+    <string name="woyaoshaidan9">Uploading a single photo </string>
+        
+    <string name="woyaoshaidan10">Upload image </string>
+        
+    <string name="woyaoshaidan11">confirm submission </string>
+        
+    <string name="customerservicelist"> platform customer service consulting list </string>
+        
+    <string name="shequ">community</string>
+        
+    <string name="weifaxian">micro discovery </string>
+        
+    <string name="customerservice"> platform customer service </string>
+        
+    <string name="customerservice1"> consulting content </string>
+        
+    <string name="customerservice2"> consulting time </string>
+        
+    <string name="customerservice3"> status </string>
+        
+    <string name="customerservice4">operation </string>
+        
+    <string name="customerservice5"> consulting platform customer service </string>
+        
+    <string name="customerservice6"> fill in the consultation content </string>
+        
+    <string name="customerservice7"> platform customer service reply </string>
+        
+    <string name="customerservice8"> consulting completed </string>
+        
+    <string name="customerservice9"> consulting type: </string>
+        
+    <string name="customerservice10">Please select</string>
+        
+    <string name="customerservice11">Commodity consultation </string>
+        
+    <string name="customerservice12">order consultation </string>
+        
+    <string name="customerservice13">Please select...</string>
+        
+    <string name="customerservice14">Please select the type of consultation </string>
+        
+    <string name="customerservice15">Please write the product link, or the platform item number. \nIf you have any questions about product specifications, introductions, etc., you can start a consultation on the product details page "Purchasing Consultation" and get a timely professional response</string>
+    <string name="customerservice16">Please indicate the item number to be consulted. \nIf there is a dispute in the transaction, please select the complaint </string>
+        
+    <string name="customerservice17">Consultation content : </string>
+        
+    <string name="customerservice18">confirm submission </string>
+        
+    <string name="customerservice19"> cancel and return </string>
+        
+    <string name="customerservice20"> Tips </string>
+        
+    <string name="customerservice21">1. If you have any questions about product specifications, introductions, etc., you can start a consultation on the product details page "Purchasing Consultation" and get a timely professional response; \n2. If the transaction is generated For disputes, please choose a complaint; \n3. Select the type of consultation when consulting, and fill in the consultation content (required, no more than 200 words). Please fill in the details you want to consult in order to help us solve your problems in the shortest possible time. </string>
+        
+    <string name="customerservice22"> consulting type: </string>
+        
+    <string name="customerservice23">Consultation content : </string>
+        
+    <string name="customerservice24"> consultation time : </string>
+        
+    <string name="customerservice25">Reply status : </string>
+        
+    <string name="customerservice26">Reply content : </string>
+        
+    <string name="customerservice27">return list </string>
+        
+    <string name="customerservice28">Please select the type of consultation </string>
+        
+    <string name="customerservice29">Please enter the consultation content </string>
+        
+    <string name="customerservice30">submit successfully </string>
+        
+    <string name="customerservice31">delete successfully </string>
+        
+    <string name="customerservice32"> has reached the bottom </string>
+        
+    <string name="systembusy"> system is busy </string>
+        
+    <string name="examine">View </string>
+        
+    <string name="delete">delete </string>
+        
+    <string name="topup1">Online recharge</string>
+        
+    <string name="topup2">charge details </string>
+        
+    <string name="topup3">charge card balance </string>
+        
+    <string name="topup4">charge card recharge </string>
+        
+    <string name="topup5">charge amount: </string>
+        
+    <string name="topup6">submit </string>
+        
+    <string name="topup7">Please enter the amount </string>
+        
+    <string name="distribution_center1">balance: </string>
+        
+    <string name="distribution_center2">Points: </string>
+        
+    <string name="distribution_center3">Number of fans : </string>
+        
+    <string name="distribution_center4">draw </string>
+        
+    <string name="distribution_center5">Distribution Center</string>
+        
+    <string name="distribution_center6">My referrer </string>
+        
+    <string name="distribution_center7">My team</string>
+        
+    <string name="distribution_center8">My commission </string>
+        
+    <string name="distribution_center9">Request to withdraw cash </string>
+        
+    <string name="distribution_center10">My client</string>
+        
+    <string name="distribution_center11">You are not a distributor </string>
+        
+    <string name="distribution_center12">No recommender </string>
+        
+    <string name="distribution_center13">not concerned </string>
+        
+    <string name="distribution_center14">has been concerned </string>
+        
+    <string name="distribution_center15">User mailbox: </string>
+        
+    <string name="distribution_center16">Registration time: </string>
+        
+    <string name="distribution_center17">My referrer </string>
+        
+    <string name="distribution_center18">My team</string>
+        
+    <string name="distribution_center19">Recommender :</string>
+        
+    <string name="distribution_center20">Successful consumption: </string>
+        
+    <string name="distribution_center21">cumulative commission: </string>
+        
+    <string name="distribution_center22"> platform customer service </string>
+        
+    <string name="distribution_center23">transaction complaints</string>
+        
+    <string name="distribution_center24">Refund return </string>
+        
+    <string name="distribution_center25"> account security </string>
+        
+    <string name="distribution_center26">My Favorites</string>
+
+    <string name="distribution_center27">Membership Certification </string>
+    <string name="distribution_center28">Violation report </string>
+    <string name="distribution_center29">Report list </string>
+    <string name="distribution_center30">Related Products :</string>
+    <string name="distribution_center31">Business : </string>
+    <string name="distribution_center32">Reporting time :</string>
+    <string name="distribution_center33">Status :</string>
+    <string name="distribution_center34">Processing results: </string>
+    <string name="distribution_center35">Report details </string>
+    <string name="distribution_center36">Report item </string>
+    <string name="distribution_center37">Please enter the report content </string>
+    <string name="distribution_center38">Circle </string>
+    <string name="distribution_center39">professional </string>
+    <string name="distribution_center40">Distribution Center</string>
+    <string name="distribution_center41">General Manager </string>
+    <string name="distribution_center42">Deputy General Manager </string>
+    <string name="distribution_center43">Senior Director </string>
+    <string name="distribution_center44">Supervisor </string>
+    <string name="distribution_center45"> leader </string>
+    <string name="distribution_center46">Pending payment</string>
+    <string name="distribution_center47">cancelled </string>
+    <string name="deposit_info">pre-deposit details</string>
+    <string name="item_mymoney1"> place an order: </string>
+    <string name="item_mymoney2">Available :</string>
+    <string name="item_mymoney3">Confirm the refund, order number: </string>
+    <string name="item_mymoney4">freeze :</string>
+    <string name="item_mymoney5">Total points: </string>
+    <string name="item_mymoney6"> points acquisition rules </string>
+    <string name="item_mymoney7">My points details </string>
+    <string name="item_mymoney8">point rules </string>
+    <string name="commission_info"> commission details </string>
+    <string name="freeze_money">freeze amount </string>
+    <string name="my_money">My balance</string>
+    <string name="worker_add">Add </string>
+    <string name="type_in_phone">Enter mobile number </string>
+    <string name="null_customer">Without customers, add it now!</string>
+    <string name="null_worker">No workers, add it now!</string>
+    <string name="client_list">customer list </string>
+    <string name="bc_alldecorat12">select </string>
+    <string name="add_client">Customer Add</string>
+    <string name="worker_name">name</string>
+    <string name="hint_input">Please enter </string>
+    <string name="worker_phone">mobile </string>
+    <string name="worker_address">address </string>
+    <string name="user_save">Save </string>
+    <string name="please_choose_address">Please select the address </string>
+    <string name="correct_phone_number">Please enter the correct mobile number!</string>
+    <string name="edit_phone_name"> account or mailbox can not be empty </string>
+    <string name="hydropower_worker">Hydroelectric worker </string>
+    <string name="stand_inside_letter">Site letter </string>
+    <string name="station_letter_list">station letter list </string>
+    <string name="direct_messages"> private letter </string>
+    <string name="leave_a_message">Message </string>
+    <string name="received_station_letter">received information</string>
+    <string name="send_station_letter">System Message </string>
+    <string name="to_send_station_letter">I want to send a station letter </string>
+    <string name="send_object">Send object </string>
+    <string name="choose_workers">Please select workers</string>
+    <string name="content">content </string>
+    <string name="message_type">Select message type </string>
+    <string name="hotel">hotel</string>
+    <string name="rich"> rich list </string>
+    <string name="myredpackage">My red envelope </string>
+    <string name="redpackageactivity"> red envelope activity </string>
+    <string name="goodsdatailsmenu_1">products </string>
+        
+    <string name="goodsdatailsmenu_2">introduction</string>
+        
+    <string name="goodsdatailsmenu_3">evaluation</string>
+        
+    <string name="integrall">integration</string>
+        
+    <string name="topic_list">topic list </string>
+        
+    <string name="system_prompt">Please log in with a merchant account!</string>
+        
+    <string name="levelcategory1">first class </string>
+        
+    <string name="levelcategory2">secondary category </string>
+        
+    <string name="levelcategory3">three-level category </string>
+        
+    <string name="levelcategory4">Operation </string>
+        
+    <string name="ruzhuinput1">Please enter your name</string>
+        
+    <string name="ruzhuinput2">Please enter a merchant account </string>
+        
+    <string name="ruzhuinput3">Please enter the store name </string>
+        
+    <string name="ruzhuinput4">Please select the store level </string>
+        
+    <string name="ruzhuinput5">Please select the store category </string>
+        
+    <string name="ruzhuinput6">Please select the business category </string>
+        
+    <string name="ruzhuinput7">Please select your region </string>
+        
+    <string name="ruzhuinput8">Please enter the detailed address </string>
+        
+    <string name="ruzhuinput9">Get location error</string>
+        
+    <string name="ruzhuinput10">Please enter the contact phone number </string>
+        
+    <string name="ruzhuinput11">Please enter the contact name </string>
+        
+    <string name="ruzhuinput12">Please enter the contact email </string>
+        
+    <string name="ruzhuinput13">Please select ID card scan </string>
+        
+    <string name="ruzhuinput14">Please enter the ID number </string>
+        
+    <string name="ruzhuinput15">Please enter Alipay name / bank account name </string>
+        
+    <string name="ruzhuinput16">Please enter Alipay account / bank account </string>
+        
+    <string name="ruzhuinput17">The application for admission has been submitted, please wait for the administrator to review </string>
+        
+    <string name="ruzhuinput18">The application for admission failed, please contact the administrator </string>
+        
+    <string name="ruzhuinput19">Please enter the name of the bank branch branch </string>
+        
+    <string name="ruzhuinput20">Please enter the branch number of the branch </string>
+        
+    <string name="ruzhuinput21">Please enter the location of the bank where you opened </string>
+        
+    <string name="deletee">delete </string>
+        
+    <string name="storehome2">Register </string>
+        
+    <string name="storehome3">login </string>
+        
+    <string name="storehome4">return </string>
+        
+    <string name="storehome5">Mobile number : </string>
+        
+    <string name="storehome6">Password: </string>
+        
+    <string name="storehome7">checksum: </string>
+        
+    <string name="storehome8">Please enter the check code </string>
+        
+    <string name="storehome9">Get the check code </string>
+        
+    <string name="storehome10"> registration success </string>
+        
+    <string name="storehome11">System busy </string>
+        
+    <string name="storehome12"> re-acquisition in seconds</string>
+        
+    <string name="storehome13">Retrieve password </string>
+        
+    <string name="storehome14">Register now </string>
+        
+    <string name="storehome15">Account: </string>
+        
+    <string name="storehome16">Password: </string>
+        
+    <string name="storehome17">Please enter an account </string>
+        
+    <string name="storehome18">Login now </string>
+        
+    <string name="storehome19"> yesterday sales </string>
+        
+    <string name="storehome20">Today\'s sales </string>
+        
+    <string name="storehome21">Today\'s income </string>
+        
+    <string name="storehome22"> yesterday\'s income </string>
+        
+    <string name="storehome23">Online</string>
+        
+    <string name="storehome24">baby </string>
+        
+    <string name="storehome25">Under </string>
+        
+    <string name="storehome26">release baby </string>
+        
+    <string name="storehome27">Product Management </string>
+        
+    <string name="storehome28">order management </string>
+        
+    <string name="storehome29">My store</string>
+        
+    <string name="storehome30">No data!</string>
+        
+    <string name="storehome31">Operation succeeded!</string>
+        
+    <string name="storehome32"> operation failed! </string>
+        
+    <string name="storehome33">price : </string>
+        
+    <string name="storehome34">Inventory: </string>
+        
+    <string name="storehome35">tip </string>
+        
+    <string name="storehome36">Are you sure you want to delete it?</string>
+        
+    <string name="storehome37">all </string>
+        
+    <string name="storehome38">new order</string>
+        
+    <string name="storehome39">to be shipped </string>
+        
+    <string name="storehome40"> shipped </string>
+        
+    <string name="storehome41">completed </string>
+        
+    <string name="storehome42">seller order </string>
+        
+    <string name="storehome43">Clear the cache</string>
+        
+    <string name="storehome44">Welcome page</string>
+        
+    <string name="storehome45">About </string>
+        
+    <string name="storehome46">secure exit </string>
+        
+    <string name="storehome47">Logout failed!</string>
+        
+    <string name="storehome48">More </string>
+    <string name="storehome49">Clear success</string>
+        
+    <string name="storehome50">Personal shop ></string>
+        
+    <string name="storehome51">Enterprises settled in ></string>
+        
+    <string name="storehome52">property in residence></string>
+        
+    <string name="storehome53">Suppliers settled in ></string>
+        
+    <string name="storehome54">free shop </string>
+        
+    <string name="release_goods1">edit picture </string>
+        
+    <string name="release_goods2">edit parameters </string>
+        
+    <string name="release_goods3">Gifts </string>
+        
+    <string name="release_goods4">Recommended combination </string>
+        
+    <string name="release_goods5">product basic information </string>
+        
+    <string name="release_goods6">Product Category : </string>
+        
+    <string name="release_goods7">edit </string>
+        
+    <string name="release_goods8">product name: </string>
+        
+    <string name="release_goods9">The title of the product title is at least 3 characters long and the maximum length is 50 Chinese characters </string>
+        
+    <string name="release_goods10">Commodity short title, up to 30 Chinese characters </string>
+        
+    <string name="release_goods11">Short title: </string>
+        
+    <string name="release_goods12">Product selling point : </string>
+        
+    <string name="release_goods13">The maximum selling price of goods can not exceed 140 Chinese characters </string>
+        
+    <string name="release_goods14">commodity price : </string>
+        
+    <string name="release_goods15">The price must be a number between 0.01 and 9999999 and cannot be higher than the market price. </string>
+        
+    <string name="release_goods16">Member price : </string>
+        
+    <string name="release_goods17">Advanced agent price </string>
+        
+    <string name="release_goods18">The price purchased by different level members is different, 0 defaults to not change the price of the product! </string>
+        
+    <string name="release_goods19">Bronze agent price </string>
+        
+    <string name="release_goods20">Gold Agent Price </string>
+        
+    <string name="release_goods21">diamond agent price </string>
+        
+    <string name="release_goods22">Certified member price </string>
+        
+    <string name="release_goods23">Market price : </string>
+        
+    <string name="release_goods24">The price must be a number between 0.01 and 9999999. This price is only the market reference price. Please fill in carefully according to the actual situation. </string>
+        
+    <string name="release_goods25">cost price: </string>
+        
+    <string name="release_goods26">The price must be a number between 0.00 and 9999999. This price is a note of the merchant\'s actual cost price of the goods sold. It is not required and will not be displayed on the front sales page. </string>
+        
+    <string name="release_goods27">discount :</string>
+        
+    <string name="release_goods28">Automatically generated based on the sales price to market price ratio, no editing required. </string>
+        
+    <string name="release_goods29">Assign commission: </string>
+        
+    <string name="release_goods30">This price is the number of commissions that the item is assigned to the distributor, and the commission percentage of the different levels of distributors is set by the platform. </string>
+        
+    <string name="release_goods31">Available points :</string>
+        
+    <string name="release_goods32">Set the user\'s available credit offset amount, and each item needs to pay at least 0.01 yuan. The ratio is 1 integral equal to 0.01 yuan. This part of the amount is at your own risk. </string>
+        
+    <string name="release_goods33">inventory configuration: </string>
+        
+    <string name="release_goods34">Product inventory: </string>
+        
+    <string name="release_goods35">The number of store inventory must be an integer between 0 and 999999999. If inventory configuration is enabled, the system automatically calculates the total number of items, no need to fill in the seller here </string>
+        
+    <string name="release_goods36">inventory warning value: </string>
+        
+    <string name="release_goods37">Set the minimum inventory alert value. When the inventory is lower than the warning value, the merchant center item list page inventory column red text reminder. </string>
+        
+    <string name="release_goods38">Item No.: </string>
+        
+    <string name="release_goods39">Product number refers to the number of the goods managed by the merchant, the buyer is not visible, can input up to 20 characters, support input Chinese, letters, numbers, _, /, - and decimal point </string>
+        
+    <string name="release_goods40">Up to 5 product images can be published. Support image uploading and adding from user space in two ways. Support jpg, jpeg, gif, png format pictures, it is recommended to upload pictures with a size of 300x300 or more and a size of 4.00M. The uploaded pictures will be automatically saved in the preset category of the user\'s picture space. </string>
+        
+    <string name="release_goods41">image upload </string>
+        
+    <string name="release_goods42">Select from the image space </string>
+        
+    <string name="release_goods43">close album </string>
+        
+    <string name="release_goods44">User Album>All Pictures</string>
+        
+    <string name="release_goods45">Home </string>
+        
+    <string name="release_goods46">previous page </string>
+        
+    <string name="release_goods47">Next page </string>
+        
+    <string name="release_goods48">last page </string>
+    <string name="release_goods49">Product Description </string>
+        
+    <string name="release_goods50">Product brand: </string>
+        
+    <string name="release_goods51">top board </string>
+        
+    <string name="release_goods52">bottom plate </string>
+        
+    <string name="release_goods53">Special Products</string>
+        
+    <string name="release_goods54">*F code items cannot participate in the three promotions of snapping, limited time discount and combined sales. It is also not possible to pre-sell and recommend matching. </string>
+        
+    <string name="release_goods55">is </string>
+        
+    <string name="release_goods56">No</string>
+        
+    <string name="release_goods57">F code goods: </string>
+        
+    <string name="release_goods58">Generate the number of F codes: </string>
+        
+    <string name="release_goods59">Please fill in the number below 100. Adding an F code when editing an item will not calculate the original F code quantity and continue to generate the corresponding quantity. </string>
+        
+    <string name="release_goods60">F code prefix: </string>
+        
+    <string name="release_goods61">Please fill in 3~5 digits of English letters. It is recommended to use a different prefix for each generated F code. </string>
+        
+    <string name="release_goods62">Pre-sale: </string>
+        
+    <string name="release_goods63">*Pre-sale items cannot participate in three promotions, such as snapping, limited time discount and combined sales. Also can not recommend matching. </string>
+        
+    <string name="release_goods64"> Merchant delivery time.</string>
+        
+    <string name="release_goods65">delivery date: </string>
+        
+    <string name="release_goods66">Product Logistics Information</string>
+        
+    <string name="release_goods67">Location: </string>
+        
+    <string name="release_goods68">Use shipping template</string>
+        
+    <string name="release_goods69">fixed shipping </string>
+        
+    <string name="release_goods70">The shipping cost is set to 0, and the front item will be displayed as free shipping. </string>
+        
+    <string name="release_goods71">Select shipping template</string>
+        
+    <string name="release_goods72">invoice information </string>
+        
+    <string name="release_goods73"> whether to open a VAT invoice </string>
+        
+    <string name="release_goods74">Other information</string>
+        
+    <string name="release_goods75">shop classification :</string>
+        
+    <string name="release_goods76">Products can be subordinate to multiple categories of stores, and store categories can be customized by "Business Center -> Stores -> Store Categories" </string>
+        
+    <string name="release_goods77">Add a new category</string>
+        
+    <string name="release_goods78">Product Release: </string>
+        
+    <string name="release_goods79">release now</string>
+        
+    <string name="release_goods80">release time </string>
+        
+    <string name="release_goods81"> put into the warehouse </string>
+        
+    <string name="release_goods82">reservation: </string>
+        
+    <string name="release_goods83">Only items with zero stock can be set as reserved items. After the merchant replenishes the goods, the platform automatically posts a message to notify the members who have made an appointment. </string>
+        
+    <string name="release_goods84">release date: </string>
+        
+    <string name="release_goods85">The date of sale of the reserved item. </string>
+        
+    <string name="release_goods86">Product recommendation: </string>
+        
+    <string name="release_goods87">The recommended item will be displayed on the store home page </string>
+        
+    <string name="release_goods88">submit </string>
+        
+    <string name="release_goods89">Product label: </string>
+        
+    <string name="release_goods90">Please separate the multiple tags with a comma. For product search </string>
+        
+    <string name="release_goods91"> product image : </string>
+        
+    <string name="release_goods92">Next, upload the product image </string>
+        
+    <string name="release_goods93"> associative board: </string>
+        
+    <string name="release_goods94">OK</string>
+        
+    <string name="release_goods95">Product Classification </string>
+        
+    <string name="release_goods96">Freight: </string>
+        
+    <string name="release_goods97">Product Attributes: </string>
+        
+    <string name="release_goods98">Product Description :</string>
+        
+    <string name="release_goods99">User Album></string>
+        
+    <string name="release_goods100">no data</string>
+        
+    <string name="release_goods101">all brands </string>
+        
+    <string name="release_goods102">Other </string>
+        
+    <string name="release_goods103">brand name keyword lookup</string>
+        
+    <string name="release_goods104"> does not match "</string>
+        
+    <string name="release_goods105">" conditional brand </string>
+        
+    <string name="release_goods106">Please enter the search content</string>
+        
+    <string name="release_goods107">Upload 5 images </string>
+        
+    <string name="release_goods108">Edit product </string>
+        
+    <string name="release_goods109">This item is not allowed to be edited!</string>
+        
+    <string name="release_goods110">Next, confirm the release of the product </string>
+        
+    <string name="release_goods111">Upload product image </string>
+        
+    <string name="release_goods112">Upload requirements</string>
+        
+    <string name="release_goods113">1. Please use a square image with a size of 4M or less in jpg\jpeg\png format. </string>
+        
+    <string name="release_goods114">2. The maximum size of the uploaded image will be kept at 1280 pixels. </string>
+        
+    <string name="release_goods115">3. ​​Up to 5 images can be uploaded for each color or existing images can be selected from the image space. The uploaded images will also be saved in the store image space for other uses. </string>
+        
+    <string name="release_goods116">4. Modify the order in which the product images are displayed by changing the sorting number. </string>
+        
+    <string name="release_goods117">5. The picture quality should be clear, not blurred, and the brightness should be sufficient. </string>
+        
+    <string name="release_goods118">6. Please click Next after the operation is completed, otherwise it will not take effect on the website. </string>
+        
+    <string name="release_goods119">Recommendation: </string>
+        
+    <string name="release_goods120">1. The main picture is a white background front view. </string>
+        
+    <string name="release_goods121">2. Sorting is Front View -> Rear View -> Side View -> Detail View. </string>
+        
+    <string name="release_goods122">default main image </string>
+        
+    <string name="release_goods123">sort: </string>
+        
+    <string name="release_goods124">Upload</string>
+        
+    <string name="release_goods125">This price is the number of commissions that the item is assigned to the distributor, and the commission percentage of the different levels of distributors is set by the platform. </string>
+    <string name="release_goods126">+add specification value</string>
+        
+    <string name="release_goods127">Add specification value</string>
+        
+    <string name="release_goods128">Specification value name </string>
+        
+    <string name="release_goods129">Please enter the specification value name </string>
+        
+    <string name="release_goods130">Specifications: </string>
+        
+    <string name="release_goods131">warning value: </string>
+        
+    <string name="release_goods132">Product number: </string>
+        
+    <string name="release_goods133">F code: </string>
+        
+    <string name="release_goods134"> (unused) </string>
+        
+    <string name="release_goods135"> (used) </string>
+        
+    <string name="release_goods136">ship template </string>
+        
+    <string name="release_goods137">No shipping template</string>
+        
+    <string name="release_goods138">application template </string>
+        
+    <string name="release_goods139">first piece (a): </string>
+        
+    <string name="release_goods140"> shipping (yuan): </string>
+        
+    <string name="release_goods141"> continuation (a): </string>
+        
+    <string name="release_goods142"> shipping (yuan): </string>
+        
+    <string name="release_goods143">Please select </string>
+        
+    <string name="release_goods144">Please complete the information</string>
+        
+    <string name="release_goods145">Please select the product image </string>
+        
+    <string name="release_goods146">edit success </string>
+        
+    <string name="release_goods147"> shelves goods </string>
+        
+    <string name="release_goods148">violation goods </string>
+        
+    <string name="release_goods149">waiting for review</string>
+        
+    <string name="release_goods150">Warehouse </string>
+        
+    <string name="release_goods151">The price of the commodity cannot be higher than the market price </string>
+        
+    <string name="release_goods152">not paid</string>
+        
+    <string name="release_goods153">this month\'s sales </string>
+        
+    <string name="preventwrongoperation"> press again to exit the program </string>
+        
+    <string name="release_goods1477">member level price </string>
+        
+    <string name="release_goods1488">Certified member price </string>
+        
+    <string name="release_goods1499">Available points :</string>
+        
+    <string name="release_goods1500">Cross-border goods: </string>
+        
+    <string name="release_goods1511">* Cross-border merchandise will be displayed in the cross-border section. </string>
+        
+    <string name="release_goods1522">Cross-boundary attributes</string>
+        
+    <string name="release_goods1533">Country of origin (land): </string>
+        
+    <string name="release_goods154">Description copy... </string>
+        
+    <string name="release_goods155">There is no origin mark: </string>
+        
+    <string name="release_goods156">has </string>
+        
+    <string name="release_goods157">no </string>
+        
+    <string name="release_goods158">Import port: </string>
+        
+    <string name="release_goods159">goods clearance status: </string>
+        
+    <string name="release_goods160">Customs declaration number: </string>
+        
+    <string name="release_goods161">Multiple discounts:</string>
+        
+    <string name="release_goods162">*Multiple discounted items cannot participate in the three promotions of snapping, limited time discount and combined sales. </string>
+        
+    <string name="release_goods163">Add rule </string>
+        
+    <string name="release_goods164">activity rules: </string>
+        
+    <string name="release_goods165">* rules to meet a certain number of items with different discounts (discount by 100%)</string>
+        
+    <string name="rules_number">Quantity: </string>
+        
+    <string name="rules">Discount :</string>
+        
+    <string name="rules_remove">Remove </string>
+        
+    <string name="rules_ts">Discount can only be an integer from 1 to 100 </string>
+        
+    <string name="isprovideinvoice"> whether to provide an invoice </string>
+        
+    <string name="gifts1"> Description : </string>
+        
+    <string name="gifts2">1. Please do not select the same item repeatedly. </string>
+        
+    <string name="gifts3">2. Special items (such as virtual goods, F-code items, pre-sale items) cannot be used as gifts. </string>
+        
+    <string name="gifts4">3. The gift is a normal sale item, and the sales will be recorded after the gift is delivered. </string>
+        
+    <string name="gifts5">4. If the gift inventory is insufficient or has been removed, it will not be added to the order process as a gift. </string>
+        
+    <string name="gifts6">commodity price :</string>
+        
+    <string name="gifts7">Inventory : </string>
+        
+    <string name="gifts8">Bundle bundle: </string>
+        
+    <string name="gifts9"> give away gifts </string>
+        
+    <string name="gifts10">Select gifts </string>
+        
+    <string name="gifts11">product name </string>
+        
+    <string name="gifts12">Please enter the product name </string>
+        
+    <string name="gifts13">+add items</string>
+        
+    <string name="gifts14">Number of gifts : </string>
+        
+    <string name="recommended1">1. Please do not select the same item repeatedly. </string>
+        
+    <string name="recommended2">2. Special items (such as virtual goods, F-code items, pre-sale items) cannot participate in the recommended combination. </string>
+        
+    <string name="recommended3">Select product recommendation combination </string>
+        
+    <string name="recommended4">Cancel recommendation </string>
+        
+    <string name="recommended5">sale price : ¥ </string>
+        
+    <string name="recommended6">edit parameters </string>
+        
+    <string name="recommended7">Specifications: </string>
+        
+    <string name="recommended8">Set parameters </string>
+        
+    <string name="recommended9">Product Information :</string>
+        
+    <string name="addrules">Add rules</string>
+        
+    <string name="operationissuccessful"> operation succeeded </string>
+    <string name="main_top_search">search </string>
+        
+    <string name="confirmdelivery">Confirm receipt </string>
+        
+    <string name="order_refund">order refund </string>
+        
+    <string name="order_datails">order details </string>
+        
+    <string name="refundstate"> refund return </string>
+        
+    <string name="cancel_successful"> cancel success </string>
+        
+    <string name="cancel_failure"> cancel failed </string>
+        
+    <string name="hotel_order">hotel order</string>
+        
+    <string name="talent1">all categories</string>
+        
+    <string name="talent2">integrity</string>
+        
+    <string name="talent3">talent</string>
+        
+    <string name="talent4">sort </string>
+        
+    <string name="servicehome">service home page </string>
+        
+    <string name="talentmarket">talent hall </string>
+        
+    <string name="talentmarket2">Service Hall </string>
+        
+    <string name="serviceproviders1">transaction </string>
+        
+    <string name="serviceproviders2"> pen, favorable rate </string>
+        
+    <string name="serviceproviders3"> has been sold </string>
+        
+    <string name="serviceproviders4"> times </string>
+        
+    <string name="serviceproviders5">pen, </string>
+        
+    <string name="serviceprovidersa">pen</string>
+        
+    <string name="serviceproviders6"> favorable rate </string>
+        
+    <string name="service_advertising1">Trademark free inquiry</string>
+        
+    <string name="service_advertising2">effectively improve registration efficiency</string>
+        
+    <string name="service_advertising3">free legal documents </string>
+        
+    <string name="service_advertising4">Enterprise risk effective circumvention</string>
+        
+    <string name="service_advertising5">Trademark Guarantee Registration</string>
+        
+    <string name="service_advertising6">Unsuccessful withdrawal of full payment </string>
+        
+    <string name="service_advertising7">Starting a company</string>
+        
+    <string name="service_advertising8">Corporate Inquiry Room</string>
+        
+    <string name="service_advertising9">ground promotion</string>
+        
+    <string name="service_advertising10">Precision crowd oriented promotion</string>
+        
+    <string name="service_advertising11">Recommended service provider</string>
+        
+    <string name="service_advertising12">Recommended service</string>
+        
+    <string name="service_advertising13">Enterprise Service Manager </string>
+        
+    <string name="service_advertising14">one-stop enterprise service</string>
+        
+    <string name="service_advertising15">Taobao traffic</string>
+        
+    <string name="service_advertising16">Improve the ranking as long as 119</string>
+        
+    <string name="service_advertising17">Friends circle forwarding</string>
+        
+    <string name="service_advertising18">Users are really good </string>
+        
+    <string name="service_searchhint">Look for professional people to do professional things....</string>
+        
+    <string name="thereisnogoods">This item does not exist! </string>
+        
+    <string name="thereisnostore">The store does not exist! </string>
+        
+    <string name="servicexzlm">Select category </string>
+        
+    <string name="pleasefillinthecompletedata">Please complete the information</string>
+        
+    <string name="servicexztime">Select time </string>
+        
+    <string name="zhaobiao">bidding</string>
+        
+    <string name="areward">reward </string>
+        
+    <string name="servicecase">Introduction, case </string>
+        
+    <string name="storehome">store home page </string>
+        
+    <string name="servicesell">sold service </string>
+        
+    <string name="servicecredit">evaluation, credit</string>
+        
+    <string name="credit">credit </string>
+        
+    <string name="rate"> favorable rate </string>
+        
+    <string name="turnover">transaction amount </string>
+        
+    <string name="currency">¥</string>
+        
+    <string name="contactta">Contact TA</string>
+        
+    <string name="buyservice">buy service</string>
+        
+    <string name="servicedetails">Service Details</string>
+        
+    <string name="workspeed"> work speed: </string>
+        
+    <string name="workquality">Quality of work :</string>
+        
+    <string name="workattitude"> work attitude: </string>
+        
+    <string name="minemenu1"> account management </string>
+        
+    <string name="minemenu2">My message </string>
+        
+    <string name="minemenu3">I want to withdraw </string>
+        
+    <string name="minemenu4">financial details</string>
+        
+    <string name="minemenu5">charge </string>
+        
+    <string name="mycollection">My Favorites</string>
+        
+    <string name="mytast">I posted the task </string>
+        
+    <string name="ceiling">The number of attachments has reached the upper limit </string>
+        
+    <string name="category">category </string>
+        
+    <string name="releasetask">release task </string>
+        
+    <string name="budget">budget </string>
+    <string name="budgettime">budget time </string>
+        
+    <string name="fbtype">mode </string>
+        
+    <string name="inputdemand">Please describe your needs</string>
+        
+    <string name="demandtitle">required title </string>
+        
+    <string name="nocustomerservice">The store does not have customer service information! </string>
+        
+    <string name="nocustomerservice2">Please install QQ</string>
+        <string name="alreadysold"> has been sold </string> first
+        
+    <string name="fbtask">release task </string>
+        
+    <string name="mall2">Mall Home </string>
+        
+    <string name="svnum">number </string>
+        
+    <string name="service">service</string>
+        
+    <string name="ruzhu_biaoti1">shop and contact information </string>
+        
+    <string name="firmruzhu_biaoti">Company and contact information </string>
+        
+    <string name="ruzhu_biaoti2">ID card information </string>
+        
+    <string name="ruzhu_firmbiaoti2">business license information </string>
+        
+    <string name="ruzhu_biaoti3">Billing Information </string>
+        
+    <string name="ruzhu_firmbiaoti3"> bank account information </string>
+        
+    <string name="ruzhu_biaoti4">Business Information </string>
+        
+    <string name="commit">Post a comment</string>
+        
+    <string name="phone_num">phone number: </string>
+        
+    <string name="all_orders1">\t evaluation\t</string>
+        
+    <string name="my_shopping_cart">Shopping Cart </string>
+        
+    <string name="all_orders">all orders </string>
+        
+    <string name="pingjiadengji">Evaluation level :\t</string>
+        
+    <string name="km">km</string>
+        
+    <string name="m">m</string>
+        
+    <string name="praisesuccess"> like success! </string>
+        
+    <string name="signin">check in </string>
+
+        <!-- 2018-11-12 -->
+        
+    <string name="discover">discover </string>
+        
+    <string name="hotspot">hotspot</string>
+        
+    <string name="distribution2">distribution </string>
+        
+    <string name="getacoupon"> collar coupon </string>
+        
+    <string name="sundrying">sun order </string>
+        
+    <string name="homeserch">Please enter the product keyword </string>
+        
+    <string name="succeed">success </string>
+        
+    <string name="image">image </string>
+        
+    <string name="please_enter_content">Please enter the content </string>
+        
+    <string name="insufficient_permissions"> operation failed, please turn on recording permission </string>
+        
+    <string name="access_request"> permission application </string>
+        
+    <string name="access_request2">Open the camera and storage permissions in Settings - Authorization Management - Application Rights Management to use the photo or image selection function </string>
+        
+    <string name="go_to_set"> to set </string>
+        
+    <string name="release_your_finger">release your finger to send </string>
+        
+    <string name="position">location</string>
+        
+    <string name="recording_short"> recording time is too short </string>
+        
+    <string name="recording_long">recording time can not exceed one minute </string>
+        
+    <string name="recording_error">recording error </string>
+        
+    <string name="added_successfully">add success </string>
+        
+    <string name="successful_application"> application success </string>
+        
+    <string name="withdraw_money1">Please enter the amount of cash </string>
+        
+    <string name="withdraw_money2">Please enter the bank name </string>
+        
+    <string name="withdraw_money3">Please enter the bank card number </string>
+        
+    <string name="withdraw_money4">Please enter the bank account name </string>
+        
+    <string name="withdraw_money5">Please enter Alipay account </string>
+        
+    <string name="withdraw_money6"> can not be less than 1 yuan </string>
+        
+    <string name="withdraw_money7">Not yet open </string>
+        
+    <string name="binding_prompt">Verify that the email has been sent to your mailbox, please log in to the mailbox within 24 hours and complete the verification</string>
+        
+    <string name="binding_prompt2">binding success </string>
+        
+    <string name="binding_prompt3">Enter SMS check code </string>
+        
+    <string name="binding_prompt4"> bind immediately </string>
+        
+    <string name="binding_prompt5">Please enter the verification code </string>
+        
+    <string name="binding_prompt6">1. After binding the mobile phone, you can directly accept important operations such as security verification through SMS. </string>
+        
+    <string name="binding_prompt7">2. When changing the phone, please re-enter the new phone number binding after security verification. </string>
+        
+    <string name="binding_prompt8">3. After receiving the security verification code, please complete the verification within 30 minutes. </string>
+        
+    <string name="email_verification">Mailbox authentication </string>
+        
+    <string name="phonebinding">phone binding</string>
+        
+    <string name="timing">reissue after seconds</string>
+        
+    <string name="get_verification_code">Get the verification code </string>
+        
+    <string name="no_product_information">No product information</string>
+        
+    <string name="complaint_prompt1">transaction complaint application </string>
+        
+    <string name="complaint_prompt2">New Complaint</string>
+        
+    <string name="complaint_prompt3">Pending appeal</string>
+        
+    <string name="complaint_prompt4">Dialog </string>
+        
+    <string name="complaint_prompt5"> pending arbitration </string>
+        
+    <string name="complaint_prompt6"> is completed </string>
+        
+    <string name="complaint_prompt7">Complaint Information</string>
+        
+    <string name="complaint_prompt8">The shop being complained of: </string>
+        
+    <string name="complaint_prompt9">Complaint topic: </string>
+        
+    <string name="complaint_prompt10">Complaint time: </string>
+        
+    <string name="complaint_prompt11">Complaints :</string>
+        
+    <string name="complaint_prompt12">complaint evidence: </string>
+        
+    <string name="complaint_prompt13">return list </string>
+        
+    <string name="complaint_prompt14">Complaint details</string>
+        
+    <string name="complaint_prompt15">You have already complained about the order, please wait for processing </string>
+        
+    <string name="complaint_prompt16">Complaint application </string>
+        
+    <string name="complaint_prompt17">Please enter the complaint content </string>
+        
+    <string name="complaint_prompt18">Please upload evidence </string>
+        
+    <string name="complaint_prompt19">Please select the image source </string>
+        
+    <string name="complaint_prompt20">Album </string>
+    <string name="complaint_prompt21">camera </string>
+        
+    <string name="complaint_prompt22">Select the subject of the complaint : </string>
+        
+    <string name="complaint_prompt23"> after-sales guarantee service </string>
+        
+    <string name="complaint_prompt24"> Within 30 days after the transaction is completed, in the process of using the goods, the goods are found to have quality problems or cannot be used normally, and the rights can be defended</string>
+        
+    <string name="complaint_prompt25"> did not receive the goods </string>
+        
+    <string name="complaint_prompt26">The transaction was successful, the goods were not received, the money was paid to the merchant, and the rights could be defended</string>
+        
+    <string name="complaint_prompt27">Upload evidence of complaint: </string>
+        
+    <string name="complaint_prompt28">No files selected </string>
+        
+    <string name="complaint_prompt29"> (image must be jpg/jpeg/gif/png)</string>
+        
+    <string name="complaint_prompt30">All</string>
+        
+    <string name="complaint_prompt31">in progress</string>
+        
+    <string name="complaint_prompt32">The complaint was passed to the respondent </string>
+        
+    <string name="complaint_prompt33">The respondent has appealed </string>
+        
+    <string name="complaint_prompt34">Submit arbitration</string>
+        
+    <string name="complaint_prompt35"> is closed </string>
+        
+    <string name="complaint_prompt36">complaint merchandise </string>
+        
+    <string name="complaint_prompt37">complaint time </string>
+        
+    <string name="complaint_prompt38">complaint status </string>
+        
+    <string name="complaint_prompt39">Detailed call : </string>
+        
+    <string name="integral_prompt1"> total required points </string>
+        
+    <string name="integral_prompt2">Point redemption confirmation consignee information </string>
+        
+    <string name="integral_prompt3">Exchange amount: </string>
+        
+    <string name="integral_prompt4"> redeem the required points: </string>
+        
+    <string name="integral_prompt5">Contact Phone : </string>
+        
+    <string name="integral_prompt6">Select address </string>
+        
+    <string name="integral_prompt7"> total points required: </string>
+        
+    <string name="integral_prompt8"> redemption completed </string>
+        
+    <string name="integral_prompt9">Reply </string>
+        
+    <string name="integral_prompt10">not reply </string>
+        
+    <string name="integral_prompt11">You are using </string>
+        
+    <string name="integral_prompt12">Exchange 1 </string>
+        
+    <string name="integral_prompt13"> yuan shop vouchers (full </string>
+        
+    <string name="integral_prompt14">minus</string>
+        
+    <string name="integral_prompt15">Store vouchers are valid until </string>
+        
+    <string name="integral_prompt16">Redemption success</string>
+        
+    <string name="integral_prompt17">Voucher redemption confirmation</string>
+        
+    <string name="integral_prompt18">Confirm exchange </string>
+        
+    <string name="integral_prompt19"> platform customer service </string>
+        
+    <string name="verification_prompt1">Operation prompt </string>
+        
+    <string name="verification_prompt2">1. This mailbox will receive password recovery, order notification and other sensitive security services and reminders, please be sure to fill in the correct address. </string>
+        
+    <string name="verification_prompt3">2. After the submission is submitted, the system will automatically send a verification email to your bound mailbox. You need to log in to the mailbox within 24 hours and complete the verification. </string>
+        
+    <string name="verification_prompt4">3. When changing the mailbox, please re-enter the new email address binding after security verification. </string>
+        
+    <string name="verification_prompt5">Verification method: </string>
+        
+    <string name="verification_prompt6">Select authentication method </string>
+        
+    <string name="verification_prompt7">Verification Code :</string>
+        
+    <string name="verification_prompt8">Please enter the security verification code </string>
+        
+    <string name="verification_prompt9">New phone :</string>
+        
+    <string name="verification_prompt10"> SMS verification code </string>
+        
+    <string name="verification_prompt11">bind mailbox</string>
+        
+    <string name="verification_prompt12">new mailbox </string>
+        
+    <string name="verification_prompt13">binding mobile phone </string>
+        
+    <string name="verification_prompt14">new phone </string>
+        
+    <string name="verification_prompt15">S and then resend </string>
+        
+    <string name="verification_prompt16">My redemption record</string>
+        
+    <string name="verification_prompt17"> redemption order number : </string>
+        
+    <string name="verification_prompt18">Total (integration): </string>
+        
+    <string name="verification_prompt19">Quantity: </string>
+        
+    <string name="verification_prompt20">Points: </string>
+        
+    <string name="verification_prompt21">Exchange time : </string>
+        
+    <string name="join_merchant1"> first class </string>
+
+
+    <string name="join_merchant2"> secondary category </string>
+    <string name="join_merchant3"> tertiary category </string>
+    <string name="join_merchant4">-Please select -</string>
+    <string name="join_merchant5">topic </string>
+    <string name="join_merchant6"> Property in </string>
+    <string name="join_merchant7">Enterprises settled </string>
+    <string name="join_merchant8">Suppliers settled </string>
+    <string name="join_merchant9">integrated sorting</string>
+    <string name="join_merchant10"> sales priority </string>
+    <string name="join_merchant11">Filter </string>
+    <string name="join_merchant12">There is no relevant record yet~T_T~</string>
+    <string name="join_merchant13">price from high to low</string>
+    <string name="join_merchant14">price from low to high</string>
+    <string name="join_merchant15"> popularity sorting </string>
+    <string name="evaluation_tips1">Operation Tips: </string>
+    <string name="evaluation_tips2">The evaluation information can be filled up to 250 words. Please give a true and objective evaluation based on this transaction; your evaluation will be the reference of other members. </string>
+    <string name="evaluation_tips3">The evaluation will be completed with "10 experience points" and "50 points". </string>
+    <string name="evaluation_tips4">The default value of the store dynamic rating is "5 points". You can give the business a rating based on the transaction status. Once submitted, you cannot modify it. </string>
+    <string name="evaluation_tips5">Comments</string>
+    <string name="evaluation_tips6">member level </string>
+    <string name="evaluation_tips7"> redeem gift list </string>
+    <string name="evaluation_tips8">all levels </string>
+    <string name="evaluation_tips9">default </string>
+    <string name="evaluation_tips10">integral value </string>
+    <string name="evaluation_tips11">shelf time </string>
+    <string name="evaluation_tips12"> vouchers list </string>
+    <string name="evaluation_tips13">Exchange amount </string>
+    <string name="evaluation_tips14">All denominations</string>
+    <string name="evaluation_tips15">yuan vouchers</string>
+    <string name="evaluation_tips16">Shopping is full </string>
+    <string name="evaluation_tips17"> meta available</string>
+    <string name="evaluation_tips18">Valid until </string>
+    <string name="evaluation_tips19">Denomination</string>
+    <string name="evaluation_tips20">Authentication through </string>
+    <string name="evaluation_tips21"> Tips: </string>
+    <string name="evaluation_tips22">The purchase of goods after the certification will be more favorable </string>
+    <string name="evaluation_tips23">Mobile number : </string>
+    <string name="evaluation_tips24">Identity Image </string>
+    <string name="evaluation_tips25">not selected file </string>
+    <string name="evaluation_tips26">business license image </string>
+    <string name="evaluation_tips27">Submit authentication </string>
+    <string name="evaluation_tips28">Audit Status:</string>
+    <string name="evaluation_tips29">Consignee : </string>
+    <string name="evaluation_tips30">Contact: </string>
+    <string name="evaluation_tips31">receipt address : </string>
+    <string name="evaluation_tips32">Exchange time : </string>
+    <string name="evaluation_tips33"> redemption order details </string>
+    <string name="evaluation_tips34">Quantity: </string>
+    <string name="evaluation_tips35">point redemption shopping cart </string>
+    <string name="evaluation_tips36">Exchange Subtotal: </string>
+    <string name="evaluation_tips37">Original price: </string>
+    <string name="evaluation_tips38">Required points : </string>
+    <string name="evaluation_tips39">remaining quantity : </string>
+    <string name="evaluation_tips40">Limited redemption : This item is limited to </string>
+    <string name="evaluation_tips41"> a </string>
+    per person
+    <string name="evaluation_tips42">Exchange product details </string>
+    <string name="evaluation_tips43">This redemption time is left : </string>
+    <string name="evaluation_tips44">Limited redemption : </string>
+    <string name="evaluation_tips45">Exchange amount </string>
+    <string name="evaluation_tips46">Successful registration of members: increase </string>
+    <string name="evaluation_tips47">Members log in every day: increase </string>
+    <string name="evaluation_tips48">Evaluation completed order: increase </string>
+    <string name="evaluation_tips49">The ratio of consumption to gift points: 1 yuan equals </string>
+    <string name="evaluation_tips50">Maximum points per order: </string>
+    <string name="evaluation_tips51">Distribution lower-level consumption to send points ratio: 1 yuan equals </string>
+    <string name="evaluation_tips52">Distribution recommended users to send points: each increase </string>
+    <string name="evaluation_tips53">WeChat pays attention to send points: increase </string>
+    <string name="evaluation_tips54">Good luck broadcast: </string>
+    <string name="evaluation_tips55">hot redemption</string>
+    <string name="evaluation_tips56">Point redemption success</string>
+    <string name="evaluation_tips57">The redemption order has been submitted, I wish you a happy shopping </string>
+    <string name="evaluation_tips58">Your redemption order has been successfully generated</string>
+    <string name="evaluation_tips59"> redeem points : </string>
+    <string name="evaluation_tips60"> is available through the User Center </string>
+    <string name="evaluation_tips61">point redemption record</string>
+    <string name="evaluation_tips62">View the status of the redemption order</string>
+    <string name="evaluation_tips63">Continue shopping</string>
+    <string name="evaluation_tips64">View details</string>
+    <string name="evaluation_tips65">Get success</string>
+    <string name="evaluation_tips66">Save successfully </string>
+    <string name="invoice1">invoice list </string>
+    <string name="invoice2">Add a new publication</string>
+        
+    <string name="invoice3">Normal invoice </string>
+        
+    <string name="invoice4">VAT invoice </string>
+        
+    <string name="invoice5">invoice header: </string>
+        
+    <string name="invoice6">unit name </string>
+        
+    <string name="invoice7">invoice content: </string>
+        
+    <string name="invoice8">unit name: </string>
+        
+    <string name="invoice9">taxpayer identification number: </string>
+        
+    <string name="invoice10">Registered address: </string>
+        
+    <string name="invoice11">Register phone: </string>
+        
+    <string name="invoice12"> bank account: </string>
+        
+    <string name="invoice13">Bank account: </string>
+        
+    <string name="invoice14">If you are issuing a special VAT invoice for the first time, please fill in the billing information such as the taxpayer identification number, and upload a copy of the business license with the official seal, a copy of the tax registration certificate, the general taxpayer qualification certificate and A scanned copy of the bank account opening permit will be mailed to us. After receiving your billing information, we will review it as soon as possible. </string>
+        
+    <string name="invoice15">invoice content: </string>
+        
+    <string name="invoice16">Details</string>
+        
+    <string name="invoice17">Invoice name: </string>
+        
+    <string name="invoice18">Invoicer mobile number: </string>
+        
+    <string name="invoice19">Invoice province: </string>
+        
+    <string name="invoice20">Click to select the region </string>
+        
+    <string name="invoice21">delivery address: </string>
+        
+    <string name="invoice22">Save invoice information </string>
+        
+    <string name="invoice23">No invoice </string>
+        
+    <string name="invoice24">person </string>
+        
+    <string name="invoice25">unit </string>
+        
+    <string name="invoice26"> wine </string>
+        
+    <string name="invoice27">food </string>
+        
+    <string name="invoice28">beverage </string>
+        
+    <string name="invoice29">toy </string>
+        
+    <string name="invoice30">commodity </string>
+        
+    <string name="invoice31">decoration materials </string>
+        
+    <string name="invoice32">cosmetic </string>
+        
+    <string name="invoice33">office supplies</string>
+        
+    <string name="invoice34">Student supplies</string>
+        
+    <string name="invoice35">Household goods </string>
+        
+    <string name="invoice36">ornaments</string>
+        
+    <string name="invoice37">clothing</string>
+        
+    <string name="invoice38">no optional invoice </string>
+        
+    <string name="invoice39">Please select invoice </string>
+        
+    <string name="invoice40">Please enter the unit name </string>
+        
+    <string name="invoice41">Please enter the taxpayer identification number </string>
+        
+    <string name="invoice42">Please enter the registered address </string>
+        
+    <string name="invoice43">Please enter the registration phone </string>
+        
+    <string name="invoice44">Please enter the bank of deposit </string>
+        
+    <string name="invoice45">Please enter the bank account </string>
+        
+    <string name="invoice46">Please enter the name of the invoice </string>
+        
+    <string name="invoice47">Please enter the invoicer\'s mobile number </string>
+        
+    <string name="invoice48">Please enter the delivery address </string>
+        
+    <string name="invoice49">Please select the region </string>
+        
+    <string name="invoice50">Please enter user account </string>
+        
+    <string name="invoice51">Login </string>
+        
+    <string name="invoice52">Forgot your password?</string>
+        
+    <string name="invoice53">New User Registration>></string>
+        
+    <string name="invoice54">Mobile number registration </string>
+        
+    <string name="member_centre1">Points</string>
+        
+    <string name="member_centre2">Freeze</string>
+        
+    <string name="member_centre3">red envelope</string>
+        
+    <string name="member_centre4"> vouchers</string>
+        
+    <string name="member_centre5"> balance</string>
+        
+    <string name="member_centre6">to be evaluated </string>
+        
+    <string name="member_centre7">return / after sale </string>
+        
+    <string name="member_centre8">My service</string>
+        
+    <string name="member_centre9">sign-in success</string>
+        
+    <string name="member_centre10">year </string>
+        
+    <string name="member_centre11">month </string>
+        
+    <string name="member_centre12">day </string>
+        
+    <string name="member_centre13"> one </string>
+        
+    <string name="member_centre14"> two </string>
+        
+    <string name="member_centre15">three </string>
+        
+    <string name="member_centre16">four </string>
+        
+    <string name="member_centre17"> five </string>
+        
+    <string name="member_centre18"> six </string>
+        
+    <string name="member_centre19"> first-level referrer </string>
+    <string name="member_centre20">Secondary recommender </string>
+        
+    <string name="member_centre21">three-level recommender </string>
+        
+    <string name="member_centre22">Your application has been submitted to the background for review, please be patient </string>
+        
+    <string name="member_centre23">station</string>
+        
+    <string name="member_centre24">Your account balance ¥ </string>
+        
+    <string name="member_centre25">Go to the store </string>
+        
+    <string name="member_centre26">You don\'t have your own store yet</string>
+        
+    <string name="member_centre27">Locating...</string>
+        
+    <string name="member_centre28">Location failed </string>
+        
+    <string name="member_centre29">Error Description </string>
+        
+    <string name="member_centre30"> rating </string>
+        
+    <string name="member_centre31">Please enter the recharge card number </string>
+        
+    <string name="member_centre32">charge amount </string>
+        
+    <string name="member_centre33"> platform recharge card number </string>
+        
+    <string name="member_centre34">Please enter the number of the recharge </string>
+        
+    <string name="member_centre35">not paid</string>
+        
+    <string name="member_centre36">Available Amount : </string>
+        
+    <string name="member_centre37"> meta, frozen amount: </string>
+        
+    <string name="member_centre38">charge the number </string>
+        
+    <string name="member_centre39">Create time </string>
+        
+    <string name="member_centre40">charge amount (yuan) </string>
+        
+    <string name="member_centre41">Available recharge card balance : </string>
+        
+    <string name="member_centre42"> yuan, freeze the amount of the recharge card: </string>
+        
+    <string name="member_centre43">revenue (yuan) </string>
+        
+    <string name="member_centre44">expenditure (yuan) </string>
+        
+    <string name="member_centre45">freeze (yuan) </string>
+        
+    <string name="member_centre46">Change Description </string>
+        
+    <string name="member_centre47">No eligible data records </string>
+        
+    <string name="member_centre48">transaction success </string>
+        
+    <string name="member_centre49">Express has been signed, thanks to the use of XX express </string>
+        
+    <string name="member_centre50">Contact customer service </string>
+        
+    <string name="member_centre51">Logistics details </string>
+        
+    <string name="order_reminder1">Order time: </string>
+        
+    <string name="order_reminder2">order number : </string>
+        
+    <string name="order_reminder3">Number of products : </string>
+        
+    <string name="order_reminder4">return / refund </string>
+        
+    <string name="order_reminder5"> total merchandise : </string>
+        
+    <string name="order_reminder6">+freight : </string>
+        
+    <string name="order_reminder7">real payment : </string>
+        
+    <string name="order_reminder8">Buyer Message : </string>
+        
+    <string name="order_reminder9">delivery time : </string>
+        
+    <string name="order_reminder10">invoice information: </string>
+        
+    <string name="order_reminder11">Business Information </string>
+        
+    <string name="order_reminder12">Contact: </string>
+        
+    <string name="order_reminder13">Region: </string>
+        
+    <string name="order_reminder14"> shipping information </string>
+        
+    <string name="order_reminder15">Shipper: </string>
+        
+    <string name="order_reminder16">Company Name : </string>
+        
+    <string name="order_reminder17">Contact Phone : </string>
+        
+    <string name="order_reminder18"> shipping address: </string>
+        
+    <string name="order_reminder19">Cancel order, partial refund </string>
+        
+    <string name="order_reminder20">Cancel the order, all refunds </string>
+        
+    <string name="order_reminder21">1. If you want to cancel the purchase and agree to a refund with the merchant after paying the order, please fill out the "Order Refund" and submit it. </string>
+        
+    <string name="order_reminder22">2. Successfully complete the refund/return; after the mall review, the refund amount will be returned to your balance account in the form of "pre-deposit" (the recharge card part can only be returned to the top-up account) Card balance). </string>
+        
+    <string name="order_reminder23">If the business does not agree, you can apply or complain again. </string>
+        
+    <string name="order_reminder24"> Reason for refund: </string>
+        
+    <string name="order_reminder25">Refund amount : </string>
+    <string name="order_reminder26">Refund Instructions : </string>
+        
+    <string name="order_reminder27">Upload credentials: </string>
+        
+    <string name="order_reminder28">The item has been removed or does not exist </string>
+        
+    <string name="order_reminder29">Name : </string>
+        
+    <string name="order_reminder30">Mobile: </string>
+        
+    <string name="order_reminder31">Address: </string>
+        
+    <string name="order_reminder32">Quantity: </string>
+        
+    <string name="order_reminder33">Total order amount: ¥ </string>
+        
+    <string name="order_reminder34">Unit price (yuan): ¥ </string>
+        
+    <string name="order_reminder35">Please re-pay </string>
+        
+    <string name="order_reminder36">payment remaining time </string>
+        
+    <string name="order_reminder37">Store name: </string>
+        
+    <string name="order_reminder38">Unit price (yuan): </string>
+        
+    <string name="order_reminder39">payment password </string>
+        
+    <string name="order_reminder40">Please enter the confirmation password </string>
+        
+    <string name="order_reminder41">1. "Payment Password" is used to enter the password when using "Account Balance" when ordering, please keep in mind and ensure security. </string>
+        
+    <string name="order_reminder42">2. If you modify or retrieve the "payment password", please complete the security verification operation and resubmit. </string>
+        
+    <string name="order_reminder43">*Set the payment password: </string>
+        
+    <string name="order_reminder44">6-20 characters, which can be composed of English, numbers and punctuation. </string>
+        
+    <string name="order_reminder45">* Confirm payment password: </string>
+        
+    <string name="order_reminder46">Please enter the graphic verification code </string>
+        
+    <string name="order_reminder47">Graphical verification code error </string>
+        
+    <string name="order_reminder48">Name: </string>
+        
+    <string name="order_reminder49">sex: </string>
+        
+    <string name="order_reminder50">Life Day: </string>
+        
+    <string name="order_reminder51">Wangwang: </string>
+        
+    <string name="order_reminder52">Please select the area </string>
+        
+    <string name="order_reminder53">Please select the province </string>
+        
+    <string name="order_reminder54">Please select city </string>
+        
+    <string name="order_reminder55">low </string>
+        
+    <string name="order_reminder56">medium</string>
+        
+    <string name="order_reminder57">high </string>
+        
+    <string name="order_reminder58"> has been set </string>
+        
+    <string name="order_reminder59">Unbound </string>
+        
+    <string name="order_reminder60"> modify the mailbox </string>
+        
+    <string name="order_reminder61"> modify the phone </string>
+        
+    <string name="order_reminder62">Set password </string>
+        
+    <string name="order_reminder63"> account security </string>
+        
+    <string name="order_reminder64">your security service</string>
+        
+    <string name="order_reminder65">Current security level: </string>
+        
+    <string name="order_reminder66"> (It is recommended that you open all security settings to protect your account and funds)</string>
+        
+    <string name="order_reminder67">login password </string>
+        
+    <string name="order_reminder68">A secure password can make your account more secure. It is recommended that you change your password regularly and set a password that contains numbers and letters and is longer than 6 digits. To ensure the security of your account, you can only change the password after you bind your mailbox or mobile phone. </string>
+        
+    <string name="order_reminder69">mailbox binding</string>
+        
+    <string name="order_reminder70">After mailbox verification, it can be used to receive authentication information for sensitive operations and to subscribe to promotional emails for more favorable offers. </string>
+        
+    <string name="order_reminder71">After mobile phone verification, you can receive authentication information for sensitive operations and verify the verification of points consumption, which is very helpful to protect your account and account property security. </string>
+        
+    <string name="order_reminder72">After setting the payment password, you need to enter the payment password when using the balance in the account. </string>
+        
+    <string name="order_reminder73">Offer Package</string>
+        
+    <string name="order_reminder74">Set price : </string>
+        
+    <string name="order_reminder75">Original price: </string>
+        
+    <string name="order_reminder76">Save ¥ </string>
+        
+    <string name="order_reminder77">Freight: </string>
+        
+    <string name="order_reminder78">Special price : </string>
+        
+    <string name="order_reminder79">The product does not have a recommended combination </string>
+        
+    <string name="order_reminder80">Shop price: </string>
+        
+    <string name="order_reminder81">not cashed </string>
+        
+    <string name="order_reminder82">drawn </string>
+        
+    <string name="order_reminder83">Amount : ¥ </string>
+        
+    <string name="order_reminder84">Receiving time : </string>
+        
+    <string name="order_reminder85">Red envelope amount: </string>
+        
+    <string name="order_reminder86"> red envelope amount random : </string>
+        
+    <string name="order_reminder87">Validity: </string>
+        
+    <string name="order_reminder88"> immediately grab </string>
+        
+    <string name="order_reminder89"> has ended </string>
+        
+    <string name="order_reminder90">Share</string>
+        
+    <string name="order_reminder91">I want to share</string>
+        
+    <string name="order_reminder92">application time: </string>
+        
+    <string name="order_reminder93">Store Name : </string>
+        
+    <string name="order_reminder94">Refund number : </string>
+        
+    <string name="order_reminder95">Refund Instructions : Agree </string>
+        
+    <string name="order_reminder96">Refund Instructions : Pending review </string>
+        
+    <string name="order_reminder97">Refund Instructions: Disagree </string>
+        
+    <string name="order_reminder98">Business Notes: </string>
+        
+    <string name="order_reminder99">Return refund number : </string>
+        
+    <string name="order_reminder100">return quantity: </string>
+        
+    <string name="order_reminder101">Return reason : </string>
+        
+    <string name="order_reminder102">Return refund instructions : </string>
+        
+    <string name="order_reminder103">Agree </string>
+        
+    <string name="order_reminder104">Pending review</string>
+        
+    <string name="order_reminder105">disagree </string>
+        
+    <string name="order_reminder106">Audit Status: </string>
+    <string name="order_reminder107">Refund request </string>
+        
+    <string name="order_reminder108">return request </string>
+        
+    <string name="order_reminder109">Please login first </string>
+        
+    <string name="order_reminder110">This type of file is not supported</string>
+        
+    <string name="order_reminder111"> can not find the file path </string>
+        
+    <string name="order_reminder112"> platform audit processing </string>
+        
+    <string name="order_reminder113">Report completed </string>
+        
+    <string name="order_reminder114">reported merchant: </string>
+        
+    <string name="order_reminder115">Report Type: </string>
+        
+    <string name="order_reminder116">Report topic: </string>
+        
+    <string name="order_reminder117">Report content: </string>
+        
+    <string name="order_reminder118">image :</string>
+        
+    <string name="order_reminder119">Violation Reports </string>
+        
+    <string name="order_reminder120">1. Please provide sufficient evidence to ensure the success of the report, please cherish your membership rights and help the mall better manage the website; </string>
+        
+    <string name="order_reminder121">2. Items that have been reported to be processed cannot be submitted for violations repeatedly. The goods after the removal of the shelves cannot be reported again. If the business still violates the regulations after re-stocking, the goods can be reported again. ;</string>
+        
+    <string name="order_reminder122">3. Reporting is only for the goods or the merchant itself. If you need to deal with disputes arising from the transaction, please select the complaint; </string>
+        
+    <string name="order_reminder123">4. In the report, select the report type and report topic (required), fill in the violation description (required, no more than 200 words), upload the proof picture within 3 (optional), detail The content of the report helps the platform to accurately handle the report. </string>
+        
+    <string name="order_reminder124">Recommended by: </string>
+        
+    <string name="order_reminder125">Successful consumption: </string>
+        
+    <string name="order_reminder126">cumulative commission: </string>
+        
+    <string name="order_reminder127">Send successfully </string>
+        
+    <string name="order_reminder128">Multiple separated by English characters \', \'</string>
+        
+    <string name="order_reminder129">sun order success</string>
+        
+    <string name="order_reminder130">fans</string>
+        
+    <string name="order_reminder131">Number of services </string>
+        
+    <string name="order_reminder132">Topic author : </string>
+        
+    <string name="order_reminder133"> from the circle : </string>
+        
+    <string name="order_reminder134">payment submission </string>
+        
+    <string name="order_reminder135"> recharge number : </string>
+        
+    <string name="order_reminder136">You have applied for account balance recharge, please pay online now! </string>
+        
+    <string name="order_reminder137">payment choice </string>
+        
+    <string name="order_reminder138">Confirm submit payment </string>
+        
+    <string name="order_reminder139">All reports </string>
+        
+    <string name="order_reminder140">unprocessed</string>
+        
+    <string name="order_reminder141">processed </string>
+        
+    <string name="order_reminder142">Invalid report </string>
+        
+    <string name="order_reminder143"> malicious report </string>
+        
+    <string name="order_reminder144">valid report </string>
+        
+    <string name="order_reminder145"> balance: </string>
+        
+    <string name="order_reminder146"> Recharge card balance: </string>
+        
+    <string name="order_reminder147"> top-up card balance: </string>
+        
+    <string name="order_reminder148">Please enter the receiving mobile number correctly to ensure timely access to the "electronic redemption code" </string>
+        
+    <string name="order_reminder149">list of goods</string>
+        
+    <string name="order_reminder150">balance payment </string>
+        
+    <string name="order_reminder151">charge card payment </string>
+        
+    <string name="order_reminder152">My vouchers</string>
+        
+    <string name="order_reminder153"> (conditions of use: </string>
+        
+    <string name="order_reminder154">Use now </string>
+        
+    <string name="order_reminder155">not used </string>
+        
+    <string name="order_reminder156">used </string>
+        
+    <string name="order_reminder157"> has expired </string>
+        
+    <string name="order_reminder158">\t\t address: \t\t\t</string>
+        
+    <string name="order_reminder159"> set as default </string>
+        
+    <string name="order_reminder160">product type </string>
+        
+    <string name="order_reminder161">Self-operated </string>
+        
+    <string name="order_reminder162">[delete] </string>
+        
+    <string name="order_reminder163">live </string>
+        
+    <string name="order_reminder164">Do you cancel the order? </string>
+    <string name="order_reminder165">Optional: Description of this transaction</string>
+        
+    <string name="order_reminder166">Enter the store &gt;</string>
+        
+    <string name="order_reminder167">Offer set</string>
+        
+    <string name="order_reminder168">Recommended combination </string>
+        
+    <string name="order_reminder169"> Promotional price: ¥ </string>
+        
+    <string name="order_reminder170"> (rushed) </string>
+        
+    <string name="order_reminder171">Original price: </string>
+        
+    <string name="order_reminder172">Market price: </string>
+        
+    <string name="order_reminder173"> (limited time) </string>
+        
+    <string name="order_reminder174"> (second kill) </string>
+        
+    <string name="order_reminder175"> only look at the current product </string>
+        
+    <string name="order_reminder176">All evaluations</string>
+        
+    <string name="order_reminder177">Medium review</string>
+        
+    <string name="order_reminder178"> bad review </string>
+        
+    <string name="order_reminder179">has a picture </string>
+        
+    <string name="order_reminder180">Please confirm that the SD card has been inserted</string>
+        
+    <string name="order_reminder181">Please select the upload method </string>
+        
+    <string name="near_reminder1">closest to me</string>
+        
+    <string name="near_reminder2"> praise priority </string>
+        
+    <string name="near_reminder3">Recommended store </string>
+        
+    <string name="near_reminder4"> popularity priority </string>
+        
+    <string name="near_reminder5">near </string>
+        
+    <string name="near_reminder6">0.5-0.2km </string>
+        
+    <string name="near_reminder7">2-4km </string>
+        
+    <string name="near_reminder8">>4km </string>
+        
+    <string name="near_reminder9">number of successful bids </string>
+        
+    <string name="near_reminder10">price (single choice) </string>
+        
+    <string name="near_reminder11">Custom : </string>
+        
+    <string name="near_reminder12">star (single choice) </string>
+        
+    <string name="near_reminder13">Unlimited</string>
+        
+    <string name="near_reminder14">Recommended sorting</string>
+        
+    <string name="near_reminder15">price low->high</string>
+        
+    <string name="near_reminder16">price high->low</string>
+        
+    <string name="near_reminder17">distance near->far</string>
+        
+    <string name="near_reminder18">Score High->Low</string>
+        
+    <string name="near_reminder19">Please enter the quantity </string>
+        
+    <string name="near_reminder20"> refresh success </string>
+        
+    <string name="near_reminder21">refresh failed </string>
+        
+    <string name="near_reminder22">Load successfully </string>
+        
+    <string name="near_reminder23">Load failed </string>
+        
+    <string name="near_reminder24">Your account is already logged in on another device, please log in again</string>
+        
+    <string name="find_reminder1">Online consultation</string>
+        
+    <string name="find_reminder2">Personal Homepage </string>
+        
+    <string name="find_reminder3">No more </string>
+        
+    <string name="find_reminder4">Industry circle</string>
+        
+    <string name="find_reminder5">Friend circle </string>
+        
+    <string name="find_reminder6">Details</string>
+        
+    <string name="find_reminder7">Create activity is successful, waiting for review </string>
+        
+    <string name="find_reminder8">Please enter the title </string>
+        
+    <string name="find_reminder9">Please enter the price </string>
+        
+    <string name="find_reminder10">Please enter the address </string>
+        
+    <string name="find_reminder11">Please select the start time </string>
+        
+    <string name="find_reminder12">Please select the end time </string>
+        
+    <string name="find_reminder13">Create activity</string>
+        
+    <string name="find_reminder14">themes </string>
+        
+    <string name="find_reminder15">Please fill in the event theme </string>
+        
+    <string name="find_reminder16">start time </string>
+        
+    <string name="find_reminder17">end time </string>
+        
+    <string name="find_reminder18">cost </string>
+        
+    <string name="find_reminder19">activity fee (such as: free, per capita XX yuan) </string>
+        
+    <string name="find_reminder20">Location </string>
+        
+    <string name="find_reminder21">Please fill in the event address </string>
+        
+    <string name="find_reminder22">Please introduce the content of the event</string>
+        
+    <string name="find_reminder23">Upload cover image </string>
+    <string name="find_reminder24">The picture ratio is listed as 4:5. If the cover is not uploaded, the default picture is displayed. The picture size is no more than 2M</string>
+        
+    <string name="find_reminder25">release event description </string>
+        
+    <string name="find_reminder26">1, the event deadline for registration, the system defaults to three hours before the start of the event. </string>
+        
+    <string name="find_reminder27"> 2, if the activity involves fees, take the form of on-site payment, the platform does not charge fees, only registration </string>
+        
+    <string name="find_reminder28">3, when the number of offline activities reaches a certain number of people, after the audit is true and effective, the platform can issue certain activity subsidies for the activity funds. </string>
+        
+    <string name="find_reminder29">4, after the event is initiated, it will enter the background review and will be processed within three working days. </string>
+        
+    <string name="find_reminder30">5, the event can not be modified after passing the review, only the activity can be canceled. </string>
+        
+    <string name="find_reminder31">I want to publish </string>
+        
+    <string name="find_reminder32">Please enter the group name </string>
+        
+    <string name="find_reminder33">Create a group </string>
+        
+    <string name="find_reminder34">Select group avatar </string>
+        
+    <string name="find_reminder35">fill the group name </string>
+        
+    <string name="find_reminder36">fill the group label (multiple labels are separated by </string>
+        <string name="find_reminder37">fill in the group condition </string>)
+        
+    <string name="find_reminder38">fill in the group introduction </string>
+        
+    <string name="find_reminder39">Top Events</string>
+        
+    <string name="find_reminder40">I want to send an event</string>
+        
+    <string name="find_reminder41">Latest friends dynamic </string>
+        
+    <string name="find_reminder42">I want to send a dynamic </string>
+        
+    <string name="find_reminder43">Latest group </string>
+        
+    <string name="find_reminder44">Hot Posts</string>
+        
+    <string name="find_reminder45">More posts</string>
+        
+    <string name="find_reminder46">I want to post </string>
+        
+    <string name="find_reminder47">Follow </string>
+        
+    <string name="find_reminder48">Essence </string>
+        
+    <string name="find_reminder49">hot </string>
+        
+    <string name="find_reminder50">I want to post </string>
+        
+    <string name="find_reminder51">Favorites </string>
+        
+    <string name="find_reminder52">post</string>
+        
+    <string name="find_reminder53">posting</string>
+        
+    <string name="find_reminder54">Unfollow</string>
+        
+    <string name="find_reminder55">the same city party </string>
+        
+    <string name="find_reminder56">total </string>
+        
+    <string name="find_reminder57">Essence </string>
+        
+    <string name="find_reminder58">post today</string>
+        
+    <string name="find_reminder59">+ attention </string>
+        
+    <string name="find_reminder60">hot </string>
+        
+    <string name="find_reminder61">Official activities</string>
+        
+    <string name="find_reminder62">Event Home </string>
+        
+    <string name="find_reminder63">near a week</string>
+        
+    <string name="find_reminder64"> nearly half a month</string>
+        
+    <string name="find_reminder65">nearly month </string>
+        
+    <string name="find_reminder66">data error</string>
+        
+    <string name="find_reminder67"> members of this group </string>
+        
+    <string name="find_reminder68">announcement </string>
+        
+    <string name="find_reminder69">activity </string>
+        
+    <string name="find_reminder70">No group activity</string>
+        
+    <string name="find_reminder71">label </string>
+        
+    <string name="find_reminder72">group condition </string>
+        
+    <string name="find_reminder73">group owner </string>
+        
+    <string name="find_reminder74">time </string>
+        
+    <string name="find_reminder75">Apply to join the group</string>
+        
+    <string name="find_reminder76">Save to album </string>
+        
+    <string name="find_reminder77">Application successful, waiting for review </string>
+        
+    <string name="find_reminder78">Please enter the reason for adding group </string>
+        
+    <string name="find_reminder79">Request verification </string>
+        
+    <string name="find_reminder80">plus group reason </string>
+        
+    <string name="find_reminder81">Please make sure that you meet the conditions of the group, and then talk about the reason for grouping </string>
+        
+    <string name="find_reminder82">Friends circle message </string>
+        
+    <string name="find_reminder83">Clear </string>
+    <string name="find_reminder84">My activity</string>
+        
+    <string name="find_reminder85">contact </string>
+        
+    <string name="find_reminder86">new friend </string>
+        
+    <string name="find_reminder87">Create group chat </string>
+        
+    <string name="find_reminder88">Friends </string>
+        
+    <string name="find_reminder89">group </string>
+        
+    <string name="find_reminder90">Group chat I created</string>
+        
+    <string name="find_reminder91">Group chat I manage</string>
+        
+    <string name="find_reminder92">Group chat I joined</string>
+        
+    <string name="find_reminder93">Friend notification </string>
+        
+    <string name="find_reminder94">Create </string>
+        
+    <string name="find_reminder95">Enter what you are looking for</string>
+        
+    <string name="find_reminder96">My group</string>
+        
+    <string name="find_reminder97">People feel very good</string>
+        
+    <string name="find_reminder98">where </string>
+        
+    <string name="find_reminder99">Do not display </string>
+        
+    <string name="find_reminder100">public </string>
+        
+    <string name="find_reminder101"> partially visible </string>
+        
+    <string name="find_reminder102">secret </string>
+        
+    <string name="find_reminder103"> send dynamic </string>
+        
+    <string name="find_reminder104">this moment of thought </string>
+        
+    <string name="find_reminder105">Who can watch </string>
+        
+    <string name="find_reminder106">determine the release </string>
+        
+    <string name="find_reminder107">All friends are visible</string>
+        
+    <string name="find_reminder108">only visible to yourself</string>
+        
+    <string name="find_reminder109">Friends visible </string>
+        
+    <string name="find_reminder110">Please select the cover image </string>
+        
+    <string name="find_reminder111">Friends circle </string>
+        
+    <string name="find_reminder112">Please enter a search keyword </string>
+        
+    <string name="find_reminder113">company </string>
+        
+    <string name="find_reminder114">No results found</string>
+        
+    <string name="find_reminder115">Time: </string>
+        
+    <string name="find_reminder116">cost: </string>
+        
+    <string name="find_reminder117">exhibition </string>
+        
+    <string name="find_reminder118">Location: </string>
+        
+    <string name="find_reminder119">Time: </string>
+        
+    <string name="find_reminder120">this group </string>
+        
+    <string name="find_reminder121">person </string>
+        
+    <string name="find_reminder122">Join the group</string>
+        
+    <string name="find_reminder123"> group introduction </string>
+        
+    <string name="find_reminder124">Introduction to the group </string>
+        
+    <string name="find_reminder125">This group of people </string>
+        
+    <string name="find_reminder126">plus friends</string>
+        
+    <string name="find_reminder127">Member: </string>
+        
+    <string name="find_reminder128">Publish event</string>
+        
+    <string name="find_reminder129">My post</string>
+        
+    <string name="find_reminder130">My shopping cart</string>
+        
+    <string name="find_reminder131">Membership Package </string>
+        
+    <string name="find_reminder132">Feedback</string>
+        
+    <string name="find_reminder133">Exit login </string>
+        
+    <string name="find_reminder134">likes</string>
+        
+    <string name="find_reminder135">health</string>
+        
+    <string name="find_reminder136">facilities </string>
+        
+    <string name="find_reminder137">Publish </string>
+        
+    <string name="find_reminder138">You booked room type : </string>
+        
+    <string name="find_reminder139">no </string>
+        
+    <string name="find_reminder140">has </string>
+    <string name="find_reminder141">bed type : </string>
+        
+    <string name="find_reminder142">Breakfast: </string>
+        
+    <string name="find_reminder143">Broadband: </string>
+        
+    <string name="find_reminder144">order submission success </string>
+        
+    <string name="find_reminder145">between</string>
+        
+    <string name="find_reminder146">Please enter the name of the resident </string>
+        
+    <string name="find_reminder147">Please enter the mobile phone </string>
+        
+    <string name="find_reminder148"> reservation information </string>
+        
+    <string name="find_reminder149">Time of entry: </string>
+        
+    <string name="find_reminder150">Departure time : </string>
+        
+    <string name="find_reminder151">Number of rooms : </string>
+        
+    <string name="find_reminder152"> (If you need more than 12 rooms, please call the reservation) </string>
+        
+    <string name="find_reminder153"> latest arrival store: </string>
+        
+    <string name="find_reminder154">Contact Information </string>
+        
+    <string name="find_reminder155"> occupant name : </string>
+        
+    <string name="find_reminder156">Contact the phone : </string>
+        
+    <string name="find_reminder157">Mailbox: </string>
+        
+    <string name="find_reminder158"> room, check in </string>
+        
+    <string name="find_reminder159">night </string>
+        
+    <string name="find_reminder160">Hotel front desk payment : ¥ </string>
+        
+    <string name="find_reminder161">No ratings</string>
+        
+    <string name="find_reminder162">No comment </string>
+        
+    <string name="find_reminder163">about your distance </string>
+        
+    <string name="find_reminder164">km</string>
+        
+    <string name="find_reminder165">Time selection error </string>
+        
+    <string name="find_reminder166">Hotel Details </string>
+        
+    <string name="find_reminder167">Cancel </string>
+        
+    <string name="find_reminder168">Cannot be canceled </string>
+        
+    <string name="find_reminder169"> swimming pool </string>
+        
+    <string name="find_reminder170">Parking </string>
+        
+    <string name="find_reminder171">non-smoking room</string>
+        
+    <string name="find_reminder172"> gym </string>
+        
+    <string name="find_reminder173">check in </string>
+        
+    <string name="find_reminder174">Departure </string>
+        
+    <string name="find_reminder175">Hotel introduction </string>
+        
+    <string name="find_reminder176">Domestic </string>
+        
+    <string name="find_reminder177">chain </string>
+        
+    <string name="find_reminder178">B&amp;B </string>
+        
+    <string name="find_reminder179">Address error </string>
+        
+    <string name="find_reminder180">Location failed, please open the positioning permission </string>
+        
+    <string name="find_reminder181">Aite Hotel Reservation</string>
+        
+    <string name="find_reminder182">Domestic Hotel </string>
+        
+    <string name="find_reminder183">chain hotel </string>
+        
+    <string name="find_reminder184">Bed &amp; Breakfast Hotel</string>
+        
+    <string name="find_reminder185">destination </string>
+        
+    <string name="find_reminder186">date</string>
+        
+    <string name="find_reminder187">Keywords </string>
+        
+    <string name="find_reminder188">Hotel Name / Brand / Location </string>
+        
+    <string name="find_reminder189">map search </string>
+        
+    <string name="find_reminder190">Search now </string>
+        
+    <string name="find_reminder191">Current location: </string>
+        
+    <string name="find_reminder192">Not yet rated </string>
+        
+    <string name="find_reminder193">Article Comments|</string>
+        
+    <string name="find_reminder194">about you about </string>
+        
+    <string name="find_reminder195">Location area </string>
+        
+    <string name="find_reminder196">price star </string>
+        
+    <string name="find_reminder197">Unit price: </string>
+        
+    <string name="find_reminder198"> occupant information </string>
+        
+    <string name="find_reminder199">Region : </string>
+        
+    <string name="find_reminder200">A total of one product payment: </string>
+        
+    <string name="find_reminder201">order payment </string>
+        
+    <string name="find_reminder202">to be confirmed </string>
+        
+    <string name="find_reminder203">waiting </string>
+        
+    <string name="find_reminder204"> Alipay </string>
+        
+    <string name="find_reminder205">WeChat payment </string>
+        
+    <string name="find_reminder206">Features</string>
+        
+    <string name="find_reminder207">brand </string>
+        
+    <string name="find_reminder208"> within kilometers </string>
+        
+    <string name="find_reminder209">We advocate green live broadcast, cover and live content involving pornography, vulgarity, violence, temptation, exposure, etc. will be blocked accounts, while prohibiting live broadcasts, gatherings, etc. Civilized live broadcast, starting from me [network police 24-hour online inspection] </string>
+        
+    <string name="find_reminder210">system</string>
+        
+    <string name="find_reminder211"> normal </string>
+        
+    <string name="find_reminder212">Sunshine Time List</string>
+        
+    <string name="find_reminder213"> Say something...</string>
+        
+    <string name="find_reminder214">Add topic tag </string>
+        
+    <string name="find_reminder215">hot topic </string>
+        
+    <string name="find_reminder216">selected </string>
+        
+    <string name="find_reminder217">Custom topic </string>
+        
+    <string name="find_reminder218">reverse </string>
+        
+    <string name="find_reminder219">clear screen </string>
+        
+    <string name="find_reminder220">flash </string>
+    <string name="find_reminder221">large subtitles</string>
+        
+    <string name="find_reminder222">video</string>
+        
+    <string name="find_reminder223"> start broadcasting </string>
+        
+    <string name="find_reminder224">release dynamic </string>
+        
+    <string name="find_reminder225">live channel </string>
+        
+    <string name="find_reminder226"> not selected </string>
+        
+    <string name="find_reminder227">topic tag </string>
+        
+    <string name="find_reminder228">Start live </string>
+        
+    <string name="find_reminder229">new password </string>
+        
+    <string name="find_reminder230">Confirm password </string>
+        
+    <string name="find_reminder231">Bind the mobile number: </string>
+        
+    <string name="find_reminder232">Binding email address: </string>
+        
+    <string name="find_reminder233">Please enter the email address </string>
+        
+    <string name="find_reminder234">send verification email </string>
+        
+    <string name="find_reminder235">payee name </string>
+        
+    <string name="find_reminder236">The bound Alipay account will become your withdrawal account, please make sure that it is my operation and carefully check </string>
+        
+    <string name="find_reminder237">list of events</string>
+        
+    <string name="find_reminder238">activity classification </string>
+        
+    <string name="find_reminder239">activity time </string>
+        
+    <string name="find_reminder240"> redemption information </string>
+        
+    <string name="find_reminder241"> redeem a single logistics information </string>
+        
+    <string name="find_reminder242">Cancel redemption</string>
+        
+    <string name="find_reminder243">Search nearby locations</string>
+        
+    <string name="find_reminder244">1. Please select the "Binding Mailbox" or "Binding Mobile Phone" mode as one of the ways to obtain the security check code and input it correctly. </string>
+        
+    <string name="find_reminder245">2. If your mailbox has expired, you can bind the phone and receive the SMS to complete the verification. </string>
+        
+    <string name="find_reminder246">3. If your phone has expired, you can bind the mailbox and complete the verification by receiving the message. </string>
+        
+    <string name="find_reminder247">4. Please enter the following graphic verification code correctly. If you can\'t see the clickable picture, you can replace it. After the input is completed, proceed to the next step. </string>
+        
+    <string name="find_reminder248">5. After receiving the security verification code, please complete the verification within 30 minutes. </string>
+        
+    <string name="find_reminder249">Select the authentication method: </string>
+        
+    <string name="find_reminder250">Get security verification code</string>
+        
+    <string name="find_reminder251">Please enter the security verification code :</string>
+        
+    <string name="find_reminder252">graphic verification code: </string>
+        
+    <string name="find_reminder253">Can\'t see? Change picture </string>
+        
+    <string name="find_reminder254"> Confirm, go to the next step </string>
+        
+    <string name="find_reminder255">Publish a new post</string>
+        
+    <string name="find_reminder256">section classification </string>
+        
+    <string name="find_reminder257">post title </string>
+        
+    <string name="find_reminder258">Please enter what you want to share with you...</string>
+        
+    <string name="find_reminder259">session </string>
+        
+    <string name="find_reminder260">evaluation level </string>
+        
+    <string name="find_reminder261">Please select time </string>
+        
+    <string name="find_reminder262"> when </string>
+        
+    <string name="find_reminder263">Please enter the fee </string>
+        
+    <string name="find_reminder264">Limited time specials</string>
+        
+    <string name="find_reminder265">Reservation now </string>
+        
+    <string name="find_reminder266">Please enter the activity parameter </string>
+        
+    <string name="find_reminder267">Please enter a discount</string>
+        
+    <string name="find_reminder268">Failed to get session data! </string>
+        
+    <string name="find_reminder269">Exit </string>
+        
+    <string name="find_reminder270">Try again </string>
+        
+    <string name="find_reminder271">Edit data </string>
+        
+    <string name="find_reminder272">This person is too busy Forgot to sign </string>
+        
+    <string name="find_reminder273">My dynamic </string>
+        
+    <string name="find_reminder274">Dynamic </string>
+        
+    <string name="find_reminder275">fresh </string>
+        
+    <string name="find_reminder276">vouchers</string>
+        
+    <string name="find_reminder277">Product screening </string>
+        
+    <string name="find_reminder278">reset </string>
+        
+    <string name="find_reminder279">price range </string>
+        
+    <string name="find_reminder280">lowest price </string>
+        
+    <string name="find_reminder281">highest price </string>
+        
+    <string name="find_reminder282">gifts </string>
+        
+    <string name="find_reminder283">virtual </string>
+        
+    <string name="find_reminder284">store type </string>
+        
+    <string name="find_reminder285"> platform self-operated </string>
+        
+    <string name="find_reminder286">Product brand </string>
+        
+    <string name="find_reminder287">Filter items </string>
+        
+    <string name="find_reminder288">Selected redemption gift</string>
+        
+    <string name="find_reminder289">Charlan exchange list, increase the number of gifts, go to the next step </string>
+        
+    <string name="find_reminder290">confirm the redemption</string>
+        
+    <string name="find_reminder291">product rating </string>
+        
+    <string name="find_reminder292">Evaluation details </string>
+        
+    <string name="find_reminder293">received amount: </string>
+        
+    <string name="find_reminder294">from </string>
+        
+    <string name="find_reminder295">live </string>
+        
+    <string name="find_reminder296">activity name: </string>
+    <string name="find_reminder297"> dump to balance </string>
+        
+    <string name="find_reminder298">Book now </string>
+        
+    <string name="find_reminder299">Upload Credentials</string>
+        
+    <string name="find_reminder300">Business refund processing </string>
+        
+    <string name="find_reminder301">Mall refund review </string>
+        
+    <string name="find_reminder302">initiate </string>
+        
+    <string name="find_reminder303">Freight: </string>
+        
+    <string name="find_reminder304">to </string>
+        
+    <string name="find_reminder305">Ignore unread </string>
+        
+    <string name="find_reminder306">Online User</string>
+        
+    <string name="find_reminder307">receiving </string>
+        
+    <string name="find_reminder308">Gifts</string>
+        
+    <string name="find_reminder309">Opening the location can bring more viewing users~\n If you don\'t want others to see the real location, you can choose to roam to other cities. </string>
+        
+    <string name="find_reminder310">Select a location city</string>
+        
+    <string name="find_reminder311"> ruddy: </string>
+        
+    <string name="find_reminder312">whitening: </string>
+        
+    <string name="find_reminder313">Microdermabrasion: </string>
+        
+    <string name="find_reminder314">smooth </string>
+        
+    <string name="find_reminder315">natural </string>
+        
+    <string name="find_reminder316">unclear</string>
+        
+    <string name="find_reminder317">Filter: </string>
+        
+    <string name="find_reminder318">beauty </string>
+        
+    <string name="find_reminder319">filter </string>
+        
+    <string name="find_reminder320">Starting immediately </string>
+        
+    <string name="find_reminder321">Describe the degree of conformity: </string>
+        
+    <string name="find_reminder322">Cooperative pleasure: </string>
+        
+    <string name="find_reminder323">Interaction timelines : </string>
+        
+    <string name="find_reminder324">brand flagship store </string>
+        
+    <string name="up">Shelf</string>
+
+    <string name="down">Obtained</string>
+    <string name="up_goods">On shelves</string>
+    <string name="illegal_goods">Violating goods</string>
+    <string name="waiting_for_audit">Moderated</string>
+    <string name="audit_success">Successful review</string>
+    <string name="children_clothing">Children\'s wear</string>
+    <string name="accessories">Accessories</string>
+    <string name="wyd">brand on sale</string>
+    <string name="yuan_129">From 129 yuan</string>
+    <string name="day_33">33 days and 16 hours</string>
+    <string name="characteristic_market">Specialty market</string>
+    <string name="ladies">Women\'s clothing</string>
+    <string name="underwear">underwear</string>
+    <string name="sports_wear">Sportswear</string>
+    <string name="today_deal">Today\'s specials</string>
+    <string name="find_reminder325">Standard credit account</string>
+
+    <string name="find_reminder326">Types of</string>
+    <string name="find_reminder327">Please enter the transfer amount</string>
+    <string name="find_reminder328">*Note: Cannot be revoked after withdrawal</string>
+    <string name="find_reminder329">Bank card</string>
+    <string name="find_reminder330">Time of arrival</string>
+    <string name="find_reminder331">Expected to arrive within two business days</string>
+    <string name="find_reminder332">Withdrawal request submitted</string>
+    <string name="find_reminder333">Cash withdrawal completed</string>
+    <string name="find_reminder334">management</string>
+    <string name="find_reminder335">total:</string>
+    <string name="find_reminder336">Into the store</string>
+    <string name="find_reminder337">Please select a product</string>
+    <string name="find_reminder338">express delivery</string>
+    <string name="goodsdatails_reminder1">Monthly sales</string>
+    <string name="goodsdatails_reminder2">parameter</string>
+    <string name="goodsdatails_reminder3">Baby evaluation</string>
+    <string name="goodsdatails_reminder3_1">no evaluation</string>
+    <string name="goodsdatails_reminder4">view all</string>
+    <string name="goodsdatails_reminder5">Go shopping</string>
+    <string name="goodsdatails_reminder6">all products</string>
+    <string name="goodsdatails_reminder7">Baby description</string>
+    <string name="goodsdatails_reminder8">Seller service</string>
+    <string name="goodsdatails_reminder9">Logistics Services</string>
+    <string name="goodsdatails_reminder10">Shop recommendation</string>
+    <string name="goodsdatails_reminder11">Time limit</string>
+    <string name="goodsdatails_reminder12">Spike</string>
+    <string name="goodsdatails_reminder13">Offer</string>
+    <string name="goodsdatails_reminder14">in stock</string>
+    <string name="goodsdatails_reminder15">Product parameters</string>
+    <string name="goodsdatails_reminder16">Grand total commission</string>
+    <string name="goodsdatails_reminder17">Continuous check-in</string>
+    <string name="goodsdatails_reminder18">Cumulative check-in</string>
+    <string name="goodsdatails_reminder19">Number of fans</string>
+    <string name="goodsdatails_reminder20">Only refund</string>
+    <string name="goodsdatails_reminder21">Refunds</string>
+    <string name="goodsdatails_reminder22">most</string>
+    <string name="goodsdatails_reminder23">Please enter a refund amount</string>
+    <string name="goodsdatails_reminder24">Please enter a refund amount</string>
+    <string name="goodsdatails_reminder25">Wrong refund amount</string>
+    <string name="goodsdatails_reminder26">Wrong amount of refund</string>
+    <string name="goodsdatails_reminder27">Complaint</string>
+    <string name="goodsdatails_reminder28">Appeal information</string>
+    <string name="goodsdatails_reminder29">Appeal content ：</string>
+    <string name="goodsdatails_reminder30">Evidence of appeal ：</string>
+    <string name="goodsdatails_reminder31">Conversation details</string>
+    <string name="goodsdatails_reminder32">Appeal time ：</string>
+    <string name="goodsdatails_reminder33">Post a conversation ：</string>
+    <string name="goodsdatails_reminder34">Refresh the conversation</string>
+    <string name="goodsdatails_reminder35">Submit arbitration</string>
+    <string name="goodsdatails_reminder36">Post a conversation</string>
+    <string name="goodsdatails_reminder37">Dialogue record ：</string>
+    <string name="goodsdatails_reminder38">Avatar</string>
+    <string name="goodsdatails_reminder39">Please type in your name</string>
+    <string name="goodsdatails_reminder40">E-mail</string>
+    <string name="goodsdatails_reminder41">actual name</string>
+    <string name="goodsdatails_reminder42">please enter your real name</string>
+    <string name="goodsdatails_reminder43">Date of birth</string>
+    <string name="goodsdatails_reminder44">QQ number</string>
+    <string name="goodsdatails_reminder45">Please enter the QQ number</string>
+    <string name="goodsdatails_reminder46">Ali Wangwang</string>
+    <string name="goodsdatails_reminder47">Please enter your Aliwangwang account</string>
+    <string name="goodsdatails_reminder48">gender</string>
+    <string name="goodsdatails_reminder49">minutes ago</string>
+    <string name="goodsdatails_reminder50">yesterday </string>
+    <string name="goodsdatails_reminder51">on Monday</string>
+    <string name="goodsdatails_reminder52">on Tuesday</string>
+    <string name="goodsdatails_reminder53">on Wednesday</string>
+    <string name="goodsdatails_reminder54">Thursday</string>
+    <string name="goodsdatails_reminder55">Friday</string>
+    <string name="goodsdatails_reminder56">on Saturday</string>
+    <string name="goodsdatails_reminder57">Sunday</string>
+    <string name="goodsdatails_reminder58">【image】</string>
+    <string name="goodsdatails_reminder59">【voice】</string>
+    <string name="goodsdatails_reminder60">Sold</string>
+    <string name="goodsdatails_reminder61">Piece</string>
+    <string name="goodsdatails_reminder62">Please select a label</string>
+    <string name="goodsdatails_reminder63">Aite number：</string>
+    <string name="goodsdatails_reminder64">Report</string>
+    <string name="goodsdatails_reminder65">Gift success</string>
+    <string name="goodsdatails_reminder66">Can\'t talk to yourself</string>
+    <string name="country">country</string>
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
+</resources>

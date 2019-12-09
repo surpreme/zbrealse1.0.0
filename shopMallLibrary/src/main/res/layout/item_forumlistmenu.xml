@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:background="@color/white"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/tv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:text="最新"/>
+
+    <View
+        android:id="@+id/v_slide"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f00"/>
+
+</RelativeLayout>

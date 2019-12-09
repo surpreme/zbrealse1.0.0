@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/i_title"
+        layout="@layout/include_courier" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/i_title"
+        android:gravity="center"
+        android:text="2017-12-25 星期一"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/v_fg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_time"
+        android:background="#f2f2f2" />
+
+        <ListView
+            android:id="@+id/lv_kd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_add"
+            android:layout_below="@+id/v_fg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:divider="#f2f2f2"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="none"></ListView>
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/courierhome5"
+        android:gravity="center"
+        android:scrollbars="none"
+        android:text="+ 添加快递公司"
+        android:textColor="#17B8FF" />
+
+
+</RelativeLayout>

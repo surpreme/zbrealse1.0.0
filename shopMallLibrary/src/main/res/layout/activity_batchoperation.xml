@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/i_title"
+        layout="@layout/include_courier"/>
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/i_title"
+        android:scrollbars="none"
+        android:divider="#f2f2f2"
+        android:layout_above="@+id/tv_affirm"
+        android:dividerHeight="0.5dp">
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_affirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/courierhome3"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:text="确认入库"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <ImageView
+        android:id="@+id/iv_volume"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@drawable/volume1"/>
+</RelativeLayout>

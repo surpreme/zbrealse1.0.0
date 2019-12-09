@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F4F4F4">
+
+    <RelativeLayout
+        android:id="@+id/main_top_layout"
+        style="@style/title_ll"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_bj"
+        android:gravity="center_vertical"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/main_top_logo"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/splash_logo" />
+
+        <include
+            android:id="@+id/i_search"
+            layout="@layout/edit_and_serach"
+            android:layout_width="160dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/main_ib_sort"
+            android:layout_toRightOf="@+id/main_top_logo" />
+
+        <ImageView
+            android:id="@+id/main_ib_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/message" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_top_layout">
+
+        <com.aite.a.view.CustomScrollView
+            android:id="@+id/main_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.aite.a.view.MyAdGallery
+                        android:id="@+id/adgallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/ovalLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dip"
+                            android:background="#00FFFFFF"
+                            android:gravity="center"
+                            android:orientation="horizontal"></LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <include layout="@layout/line_cu" />
+
+                <!-- 导航 -->
+
+                <com.aite.a.view.MyGridView
+                    android:id="@+id/gv_miannavigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:numColumns="5"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:verticalSpacing="20dp"></com.aite.a.view.MyGridView>
+
+                <include layout="@layout/line_cu" />
+                <!-- 秒杀标题栏 -->
+
+                <include
+                    android:id="@+id/miaosha_goods_rl"
+                    layout="@layout/miaosha_goods_rl"
+                    android:visibility="gone" />
+
+                <View style="@style/view_line" />
+
+                <HorizontalScrollView
+                    android:id="@+id/hot_sell_scr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <com.aite.a.view.MyGridView
+                            android:id="@+id/sale_goods_gr"
+                            android:layout_width="fill_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:numColumns="3" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <include layout="@layout/line_cu" />
+
+                <include
+                    android:id="@+id/huobao_tj_rl"
+                    layout="@layout/huobao_tj_rl"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/hot_commodity_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f0f0f0"
+                    android:orientation="vertical">
+
+                    <com.aite.a.view.MyListView
+                        android:id="@+id/ad_sale_price_gv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:divider="#f0f0f0"
+                        android:dividerHeight="5dip" />
+                </LinearLayout>
+
+                <include layout="@layout/line_cu" />
+
+                <include
+                    android:id="@+id/sale_price_rl"
+                    layout="@layout/sale_price_rl"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/sale_price_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f0f0f0"
+                    android:orientation="vertical">
+
+                    <com.aite.a.view.MyListView
+                        android:id="@+id/ad_best_gv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:divider="#f0f0f0"
+                        android:dividerHeight="5dip" />
+                </LinearLayout>
+
+                <include layout="@layout/line_cu" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- 热门楼层 -->
+                    <!-- 1f标题栏 -->
+
+                    <include
+                        android:id="@+id/hot_one_floor_rl"
+                        layout="@layout/hot_one_floor_rl" />
+
+                    <View style="@style/view_line" />
+
+                    <!-- 1f内容 -->
+
+                    <com.aite.a.view.MyGridView
+                        android:id="@+id/hot_one_floor_gr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2dp"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="2"
+                        android:verticalSpacing="2dp" />
+
+                    <include layout="@layout/line_cu" />
+                    <!-- 2f标题栏 -->
+
+                    <include
+                        android:id="@+id/hot_two_floor_rl"
+                        layout="@layout/hot_two_floor_rl" />
+
+                    <View style="@style/view_line" />
+                    <!-- 2f内容 -->
+
+                    <com.aite.a.view.MyGridView
+                        android:id="@+id/hot_two_floor_gr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="2dp" />
+
+                    <include layout="@layout/line_cu" />
+                    <!-- 3f标题 -->
+
+                    <include
+                        android:id="@+id/hot_three_floor_rl"
+                        layout="@layout/hot_three_floor_rl" />
+
+                    <View style="@style/view_line" />
+                    <!-- 内容 -->
+
+                    <com.aite.a.view.MyGridView
+                        android:id="@+id/hot_three_floor_gr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="2dp" />
+
+                    <include layout="@layout/line_cu" />
+                    <!-- 4f标题 -->
+
+                    <include
+                        android:id="@+id/hot_four_floor_rl"
+                        layout="@layout/hot_four_floor_rl" />
+
+                    <View style="@style/view_line" />
+                    <!-- 内容 -->
+
+                    <com.aite.a.view.MyGridView
+                        android:id="@+id/hot_four_floor_gr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="2dp" />
+
+                    <include layout="@layout/line_cu" />
+                    <!-- 5f标题 -->
+
+                    <include
+                        android:id="@+id/hot_five_floor_rl"
+                        layout="@layout/hot_five_floor_rl" />
+
+                    <View style="@style/view_line" />
+                    <!-- 内容 -->
+
+                    <com.aite.a.view.MyGridView
+                        android:id="@+id/hot_five_floor_gr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="2dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="2dp" />
+
+                    <View style="@style/view_line" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_tese"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/hot_title"
+                        android:background="#FF0000" />
+
+                    <TextView
+                        android:id="@+id/hot_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/characteristic_market"
+                        android:textColor="#FF0000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/hot_title"
+                        android:background="#FF0000" />
+                </RelativeLayout>
+
+                <com.aite.a.utils.MyList
+                    android:id="@+id/lv_exceed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:divider="@color/gainsboro"
+                    android:dividerHeight="10.5dp"></com.aite.a.utils.MyList>
+
+                <!--<pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/adv_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    msrc="@drawable/icon_st" />-->
+
+                <com.aite.a.utils.MyGifView
+                    android:id="@+id/gif_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:enabled="false" />
+            </LinearLayout>
+        </com.aite.a.view.CustomScrollView>
+
+        <include
+            android:id="@+id/huobao_tj_rl2"
+            layout="@layout/huobao_tj_rl"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/sale_price_rl2"
+            layout="@layout/sale_price_rl"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/hot_one_floor_rl2"
+            layout="@layout/hot_one_floor_rl"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/hot_two_floor_rl2"
+            layout="@layout/hot_two_floor_rl"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/hot_three_floor_rl2"
+            layout="@layout/hot_three_floor_rl"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/hot_four_floor_rl2"
+            layout="@layout/hot_four_floor_rl"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/hot_five_floor_rl2"
+            layout="@layout/hot_five_floor_rl"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_to_top"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/main_return"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tesee"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/main_top_layout"
+        android:background="#fff"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/hot_title1"
+            android:background="#FF0000" />
+
+        <TextView
+            android:id="@+id/hot_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/characteristic_market"
+            android:textColor="#FF0000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/hot_title1"
+            android:background="#FF0000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_main_hongbao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/mian_hongbao" />
+    </RelativeLayout>
+
+</RelativeLayout>

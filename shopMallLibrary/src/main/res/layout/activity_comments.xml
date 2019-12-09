@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/hotel_datailsreturn" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/evaluation_tips5"
+            android:textColor="@color/txtcolor"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <com.aite.a.view.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.aite.a.view.PullableScrollView
+            android:id="@+id/pv_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/gainsboro" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_score1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" >
+
+                        <com.aite.a.view.ProgressRing
+                            android:id="@+id/pr_score1"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                        <TextView
+                            android:id="@+id/tv_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/minus"
+                            android:textColor="#0092DD"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/rl_score1"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1" >
+
+                            <LinearLayout
+                                android:id="@+id/rl_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/position"
+                                    android:textColor="@color/txtcolor"
+                                    android:textSize="12sp" />
+
+                                <com.aite.a.view.MyProgressBar
+                                    android:id="@+id/pr_score2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="15dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_score2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textColor="#0092DD"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rl_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_1"
+                                android:layout_marginTop="20dp"
+                                android:layout_centerHorizontal="true"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/service"
+                                    android:textColor="@color/txtcolor"
+                                    android:textSize="12sp" />
+
+                                <com.aite.a.view.MyProgressBar
+                                    android:id="@+id/pr_score3"
+                                    android:layout_height="15dp"
+                                    android:layout_width="60dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_score3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textColor="#0092DD"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1" >
+
+                            <LinearLayout
+                                android:id="@+id/rl_3"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/find_reminder135"
+                                    android:textColor="@color/txtcolor"
+                                    android:textSize="12sp" />
+
+                                <com.aite.a.view.MyProgressBar
+                                    android:id="@+id/pr_score4"
+                                    android:layout_width="60dp"
+                                    android:layout_height="15dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_score4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="0"
+                                    android:textColor="#0092DD"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rl_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_3"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/find_reminder136"
+                                    android:textColor="@color/txtcolor"
+                                    android:textSize="12sp" />
+
+                                <com.aite.a.view.MyProgressBar
+                                    android:id="@+id/pr_score5"
+                                    android:layout_width="60dp"
+                                    android:layout_height="15dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_score5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textColor="#0092DD"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/gainsboro" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_menu1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/communitymenu1"
+                        android:textColor="#0092DD"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_menu2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/beidianzan"
+                        android:textColor="@color/txtcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_menu3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/order_reminder177"
+                        android:textColor="@color/txtcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_menu4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/order_reminder178"
+                        android:textColor="@color/txtcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gainsboro"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <View
+                        android:id="@+id/v_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#0092DD"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/v_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#0092DD"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:id="@+id/v_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#0092DD"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:id="@+id/v_4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#0092DD"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <com.aite.a.view.MyListView
+                    android:id="@+id/mv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/gainsboro"
+                    android:dividerHeight="1dp" >
+                </com.aite.a.view.MyListView>
+            </LinearLayout>
+        </com.aite.a.view.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+    </com.aite.a.view.PullToRefreshLayout>
+
+</LinearLayout>

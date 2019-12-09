@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_img"
+            android:text="加载中..."
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_con"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_state"
+            android:layout_toRightOf="@+id/iv_img"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="加载中..."
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_state"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_con"
+            android:src="@drawable/hotel_room2" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <com.aite.a.view.MyListView
+        android:id="@+id/mv_offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/gainsboro"
+        android:dividerHeight="1dp" >
+    </com.aite.a.view.MyListView>
+
+   
+</LinearLayout>

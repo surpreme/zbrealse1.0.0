@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_80"
+    android:layout_height="@dimen/dp_25"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:layout_margin="@dimen/dp_4"
+    android:background="@drawable/num_edit"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/add_sub_btn_sub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/sub_selector"
+        android:contentDescription="@null" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/add_sub_tv_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/num_edit"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/add_sub_btn_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/add_selector"
+        android:contentDescription="@null" />
+
+</LinearLayout>

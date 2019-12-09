@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff3c81">
+
+        <ImageView
+            android:id="@+id/iv_goback"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/fanhui" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/find_reminder6"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_input"
+        android:layout_below="@+id/rl_top"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_icon"
+                    android:text="陌上花开"
+                    android:textColor="@color/red"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iv_icon"
+                    android:text="斯达克警方随即看到房价快速打击开发商的"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_desc"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv_icon">
+
+
+                    <com.aite.a.view.MyGridView
+                        android:id="@+id/gv_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:horizontalSpacing="1dp"
+                        android:numColumns="3"
+                        android:verticalSpacing="1dp"></com.aite.a.view.MyGridView>
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/gv_img"
+                        android:layout_marginTop="5dp"
+                        android:text="深圳·科技园"
+                        android:textColor="#626F97"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_address"
+                        android:layout_marginTop="5dp"
+                        android:text="2018年9月12日 下午18:44"
+                        android:textColor="@color/txtcolor"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_del"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_address"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/tv_time"
+                        android:text="@string/del"
+                        android:textColor="#626F97"
+                        android:textSize="10sp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/iv_pl"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBottom="@+id/tv_del"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/find_pyqpl" />
+
+                    <ImageView
+                        android:id="@+id/iv_gz"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBottom="@+id/tv_del"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/iv_pl"
+                        android:src="@drawable/heart1" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_dz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#eee"
+                android:ellipsize="end"
+                android:lines="1"
+                android:padding="10dp"
+                android:textColor="#ff3c81"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eee" />
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/lv_pl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#eee"
+                android:divider="#eee"></com.aite.a.view.MyListView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_input"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_sendmessage"
+            android:background="@drawable/ed_input14"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_sendmessage"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ed_input13"
+            android:gravity="center"
+            android:text="@string/evaluation_tips5"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/main_rl" >
+
+    <RelativeLayout
+        android:id="@+id/listrl_main_iv_nf"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="4dp"
+        android:background="@drawable/fc_5" >
+
+        <TextView
+            android:id="@+id/listtv_main_iv_nf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="12sp"
+            android:text="6F"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/listmain_tv_5f_name"
+        style="@style/main_tv_name"
+        android:layout_toRightOf="@+id/listrl_main_iv_nf"
+        android:text="@string/children_clothing" />
+
+    <ImageView
+        android:id="@+id/listmain_iv_5f_right"
+        style="@style/iv_right"
+        android:background="@drawable/f_r_5" />
+
+</RelativeLayout>

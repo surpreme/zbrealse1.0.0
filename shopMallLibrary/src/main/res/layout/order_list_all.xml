@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.aite.a.view.PullToRefreshView
+        android:id="@+id/order_list_refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/order_list_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/fengexian"
+            android:dividerHeight="10dip"
+            android:scrollbars="none" />
+    </com.aite.a.view.PullToRefreshView>
+
+    <TextView
+        android:id="@+id/order_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/no_order"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff3c81">
+
+        <ImageView
+            android:id="@+id/iv_goback"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/fanhui" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@+id/iv_goback"
+            android:background="@drawable/find_search">
+
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/iv_search"
+                android:background="@null"
+                android:hint="@string/find_reminder112"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/txtcolor"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@drawable/search" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.aite.a.view.MyGridView
+        android:id="@+id/gv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:verticalSpacing="10dp"></com.aite.a.view.MyGridView>
+
+</LinearLayout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+
+    <!-- 顶部 -->
+
+    <RelativeLayout
+        android:id="@+id/main_top_layout"
+        style="@style/title_ll"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_bj"
+        android:gravity="center_vertical"
+        android:padding="4dp" >
+
+        <ImageView
+            android:id="@+id/service_top"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/service_address"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/main_ib_sort"
+            android:layout_toRightOf="@+id/service_top"
+            android:background="@drawable/corners_white_solid"
+            android:paddingRight="5dp" >
+
+            <EditText
+                android:id="@+id/ed_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/service_searchhint"
+                android:paddingLeft="5dp"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/search" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/main_ib_sort"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+    <!-- 滚动内容 -->
+
+    <com.aite.a.view.CustomScrollView
+        android:id="@+id/sv_gd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 广告轮播 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:background="@color/white" >
+
+                <com.aite.a.view.MyAdGallery
+                    android:id="@+id/mag_shuffling"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_ovalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dip"
+                        android:background="#00FFFFFF"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 导航 -->
+
+            <com.aite.a.view.MyGridView
+                android:id="@+id/mgv_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:horizontalSpacing="5dp"
+                android:numColumns="4"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:verticalSpacing="5dp" >
+            </com.aite.a.view.MyGridView>
+
+            <ImageView
+                android:id="@+id/iv_tt"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:scaleType="fitXY" />
+            <!-- 头条 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iv_headlines"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/headlines" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/grey" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_headlines"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:paddingBottom="5dp"
+                    android:rotation="90" >
+                </androidx.viewpager.widget.ViewPager>
+            </LinearLayout>
+            <!-- 中间广告 -->
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="5dp"
+                layout="@layout/service_advertising" />
+            <!-- 广告二 -->
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                layout="@layout/service_advertising2" />
+            <!-- 推荐服务商 -->
+
+
+            <RelativeLayout
+                android:id="@+id/rl_recommended_serviceproviders"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_recommended"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/recommended" />
+
+                <TextView
+                    android:id="@+id/tv_recommended_serviceproviders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_recommended"
+                    android:text="@string/service_advertising11"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text=">"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <!-- 推荐服务商列表 -->
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/mlv_recommended_serviceproviders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:divider="#f2f2f2"
+                android:dividerHeight="1dp"
+                android:scrollbars="none" >
+            </com.aite.a.view.MyListView>
+            <!-- 推荐服务 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_recommended_service"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_recommended2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/recommended" />
+
+                <TextView
+                    android:id="@+id/tv_recommended_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_recommended2"
+                    android:text="@string/service_advertising12"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text=">"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <!-- 推荐服务列表 -->
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/mlv_recommended_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:divider="#f2f2f2"
+                android:dividerHeight="1dp"
+                android:scrollbars="none" >
+            </com.aite.a.view.MyListView>
+        </LinearLayout>
+    </com.aite.a.view.CustomScrollView>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_bbs_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <com.aite.a.view.CircleImageView
+            android:id="@+id/iv_bbs_titleicon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_bbs_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_bbs_titleicon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/iv_bbs_titleicon"
+            android:text="UserName"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_bbs_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_bbs_username"
+            android:layout_below="@+id/tv_bbs_username"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/bbs_address"
+            android:text="河北省教育考试院"
+            android:textColor="#4493DC"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bbs_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_bbs_texttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不积跬步无以至千里"
+            android:textColor="@color/grey"
+            android:textSize="12sp" />
+
+        <com.aite.a.view.MyGridView
+            android:id="@+id/gv_bbs_imagelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_bbs_texttitle"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:verticalSpacing="2dp"
+            android:horizontalSpacing="2dp"
+            android:numColumns="3" >
+        </com.aite.a.view.MyGridView>
+
+        <TextView
+            android:id="@+id/tv_bbs_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gv_bbs_imagelist"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/tv_bbs_praise"
+            android:drawableLeft="@drawable/bbs_comments"
+            android:gravity="center"
+            android:text="15"
+            android:textColor="@color/grey"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_bbs_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/gv_bbs_imagelist"
+            android:drawableLeft="@drawable/bbs_praise"
+            android:gravity="center"
+            android:text="21"
+            android:textColor="@color/grey"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</LinearLayout>

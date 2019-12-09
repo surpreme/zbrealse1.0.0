@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_img"
+        android:layout_alignTop="@+id/iv_img"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="@string/release_goods14"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_price"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="@string/gifts7"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_number"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="@string/recommended7"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_xz"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="-5dp"
+        android:layout_toRightOf="@+id/tv_val"
+        android:layout_alignTop="@+id/tv_val"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/release_goods1"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/recommended8"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_xz"
+        android:layout_marginTop="10dp"
+        android:background="#f2f2f2">
+    </View>
+</RelativeLayout>

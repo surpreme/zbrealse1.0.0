@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <!-- 顶部 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="-25dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_qrcode"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_sas"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/jd_qrcode2" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_se"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="9dp"
+            android:layout_toLeftOf="@+id/ll_message"
+            android:layout_toRightOf="@+id/ll_qrcode"
+            android:background="@drawable/jd_homesearch2" >
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/jd_search" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/iv_aide"
+                android:layout_toRightOf="@+id/iv_search"
+                android:background="@null"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_aide"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/jd_aide" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_message"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/jd_message2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        android:orientation="horizontal" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_level1"
+            android:layout_width="0dp"
+            android:background="#F5F5F5"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="3"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_topimg"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/jd_false3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_level2"
+                android:background="#F5F5F5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

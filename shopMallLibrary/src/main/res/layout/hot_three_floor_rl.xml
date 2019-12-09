@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/main_rl" >
+
+    <ImageView
+        android:id="@+id/main_iv_3f"
+        style="@style/main_iv_left"
+        android:background="@drawable/f_3" />
+
+    <TextView
+        android:id="@+id/main_tv_3f_name"
+        style="@style/main_tv_name"
+        android:layout_toRightOf="@+id/main_iv_3f"
+        android:text="@string/underwear" />
+
+    <ImageView
+        android:id="@+id/main_iv_3f_right"
+        style="@style/iv_right"
+        android:background="@drawable/f_r_3" />
+
+</RelativeLayout>

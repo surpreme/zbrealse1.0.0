@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ed_input" >
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF9100"
+            android:padding="10dp"
+            android:text="@string/order_reminder1"
+            android:textSize="12sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_storename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/order_reminder93"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_storenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_storename"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/order_reminder2"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_storenum"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/distribution_center46"
+            android:textColor="#3382DB"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/v_fg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_state"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#e2e2e2" />
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/v_fg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tv_gname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_img"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/iv_img"
+            android:text="深圳军都大酒店（原军都旅游度假村）"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_gp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_gname"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/iv_img"
+            android:text="@string/find_reminder197"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_gprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_gp"
+            android:layout_toRightOf="@+id/tv_gp"
+            android:text="￥ 0.00"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_gp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/iv_img"
+            android:text="商品数目 : 1"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/v_fg2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_img"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#e2e2e2" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/v_fg2"
+            android:layout_marginRight="10dp"
+            android:text="共1种商品 实付款：￥0.00"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_cz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_price"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_evaluation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#999999"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/evaluation"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_ordercancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#D9434E"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/cancel_order"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_orderdatails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#999999"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/order_datails"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/ll_cz"
+            android:background="#D9434E"
+            android:gravity="center"
+            android:text="@string/find_reminder201"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

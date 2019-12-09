@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.aite.a.view.CircleImageView
+        android:id="@+id/iv_title"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+        android:src="@drawable/add_1" />
+
+    <TextView
+        android:id="@+id/tv_centent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/iv_title"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="tv_centent" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_centent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/iv_title"
+        android:text="tv_time"
+        android:textColor="@color/grey"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_centent"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_time"
+        android:text="tv_name"
+        android:textColor="@color/grey"
+        android:textSize="10sp" />
+
+</RelativeLayout>

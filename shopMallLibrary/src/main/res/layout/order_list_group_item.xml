@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_group_item_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/add_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="18dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray"
+        android:textSize="12dp" />
+
+    <View style="@style/view_line" />
+
+    <com.aite.a.view.MyListView
+        android:id="@+id/order_list_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:dividerHeight="0dp" />
+
+    <View style="@style/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_deleteorder"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/bt_pay"
+            android:background="@color/gainsboro"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="@string/cancel_order" />
+
+        <Button
+            android:id="@+id/bt_pay"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            android:background="#ff0000"
+            android:text="@string/confirm_payment"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

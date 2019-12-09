@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.aite.a.view.MyGridView
+        android:id="@+id/mgv_selsectcity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:numColumns="4" >
+    </com.aite.a.view.MyGridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+	
+        <TextView
+            android:id="@+id/tv_shouzimu"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_marginRight="2dp"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            android:text="测试" />
+    </LinearLayout>
+
+</RelativeLayout>

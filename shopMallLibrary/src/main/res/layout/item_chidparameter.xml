@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- 商品名称 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="1dp"
+        android:background="#E7E7E7">
+
+        <LinearLayout
+            android:id="@+id/ll_gn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ll_inputname"
+            android:layout_alignTop="@+id/ll_inputname"
+            android:layout_marginRight="1dp"
+            android:background="#F5F5F5"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <CheckBox
+                android:id="@+id/cb_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_inputname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ll_gn"
+            android:background="#F5F5F5"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ed_input1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/release_goods2"
+                android:paddingLeft="5dp"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -9,6 +9,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
+import com.aite.mainlibrary.Mainbean.TwoSuccessCodeBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.lzy.basemodule.BaseConstant.AppConstant;
@@ -101,6 +102,7 @@ public class QrCodeActivity extends BaseActivity<QrCodeContract.View, QrCodePres
 //        Uri uri = Uri.parse(result);
 //        String id = uri.getQueryParameter("id");
         showToast("扫码成功", Gravity.TOP);
+//        mPresenter.sureBook(initParams(result));
         mPresenter.sureBook(initParams(getUrlKey(result, "id")));
 
     }
@@ -130,8 +132,12 @@ public class QrCodeActivity extends BaseActivity<QrCodeContract.View, QrCodePres
 
     @Override
     public void onSureSuccess(Object msg) {
-        LogUtils.d(msg.toString());
-        onBackPressed();
+        if (((TwoSuccessCodeBean) msg).getResult().equals("1") && ((TwoSuccessCodeBean) msg).getMsg().equals("核销成功")) {
+            showToast(((TwoSuccessCodeBean) msg).getMsg());
+            LogUtils.d(msg.toString());
+            onBackPressed();
+        }
+
 
     }
 

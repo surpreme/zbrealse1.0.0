@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ruzhu_biaoti" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_personal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gm_1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/personal_openshop"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/bt_enterprise"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gm_1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/enterprise_openshop"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/bt_property"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gm_1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/property_openshop"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/bt_supplier"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gm_1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/supplier_openshop"
+        android:textColor="@color/white" />
+
+</LinearLayout>

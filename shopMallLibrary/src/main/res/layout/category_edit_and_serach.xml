@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                android:paddingEnd="@dimen/dp_4"
+    android:background="@drawable/edit_style_selector" >
+
+    <com.aite.a.view.EditTextWithDel
+        android:id="@+id/_search_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:hint="@string/put_in_goods_name"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+</RelativeLayout>

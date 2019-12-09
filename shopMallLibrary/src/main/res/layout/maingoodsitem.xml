@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_goodsitem"
+    android:orientation="vertical" >
+
+    <!-- 5f标题 -->
+
+    <include
+        android:id="@+id/lv_hot_five_floor_rl"
+        layout="@layout/listhot_five_floor_rl" />
+
+    <View style="@style/view_line" />
+    <!-- 内容 -->
+
+    <com.aite.a.view.MyGridView
+        android:id="@+id/lv_hot_five_floor_gr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gainsboro"
+        android:horizontalSpacing="2dp"
+        android:numColumns="2"
+        android:verticalSpacing="2dp" />
+
+</LinearLayout>

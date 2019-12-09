@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/cart_top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <include 
+            android:id="@+id/i_carttitle"
+            layout="@layout/include_phone_title" />
+        <View
+            android:id="@+id/v_fg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/il_touu"
+            android:background="#eee"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cart_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cart_rl_xia"
+        android:layout_below="@+id/cart_top_ll"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/cart_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#eeeeee"
+            android:dividerHeight="1dp"
+            android:scrollbars="none" >
+        </ListView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cart_rl_xia"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="10dp"
+        android:layout_above="@+id/dibu"
+        android:visibility="gone" >
+
+        <CheckBox
+            android:id="@+id/cart_cb_all_title"
+            style="@style/cart_cb"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="@string/select_all"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/cart_btn_pay"
+            style="@style/btn_cart"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/cart_cb_all_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_selector"
+            android:padding="@dimen/dp_4"
+            android:text="@string/total_price"
+            android:textColor="@color/cursor_text"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dibu"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/gainsboro" />
+    <!-- 没有登录、没有数据 -->
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="@string/am_hungry"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/shooping"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/commRed"
+        android:text="@string/goto_shopping"
+        android:textColor="#ffffff"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/shooping_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/cart_shopping" />
+
+</RelativeLayout>

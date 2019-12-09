@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_index"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="70dp"
+        android:src="@drawable/zb_index"/>
+
+    <LinearLayout
+        android:layout_below="@+id/iv_index"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="-10dp"
+        android:padding="10dp"
+        android:background="@drawable/zb_state6"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:text="@string/find_reminder309"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/find_reminder310"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#a0a0a0"/>
+
+        <ListView
+            android:id="@+id/lv_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gainsboro"
+            android:dividerHeight="1dp"
+            android:layout_marginTop="20dp"
+            android:scrollbars="none">
+        </ListView>
+
+    </LinearLayout>
+</RelativeLayout>

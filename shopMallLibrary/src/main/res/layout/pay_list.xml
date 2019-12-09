@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2" >
+
+    <include
+        android:id="@+id/il_biaoti"
+        layout="@layout/include_titile_sort" />
+
+    <com.aite.a.view.CustomScrollView
+        android:id="@+id/cs_gunnn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/il_biaoti" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gainsboro" />
+
+            <LinearLayout
+                android:id="@+id/ll_timing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_reminder36"
+                    android:textColor="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_time1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/darkgray"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_time2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/darkgray"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_time3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/darkgray"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_time4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/darkgray"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gainsboro" />
+        </LinearLayout>
+    </com.aite.a.view.CustomScrollView>
+
+    <ListView
+        android:id="@+id/lv_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_paylistttt"
+        android:layout_below="@+id/cs_gunnn"
+        android:divider="@color/gainsboro"
+        android:dividerHeight="1dp" >
+    </ListView>
+
+    <!-- 虚拟订单 -->
+    <ScrollView
+        android:id="@+id/sv_vr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cs_gunnn"
+        android:visibility="gone"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_storename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/order_reminder37"
+                android:textColor="@color/txtcolor"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_goodsimg"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/tv_goodsname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iv_goodsimg"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_goodsprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_goodsname"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iv_goodsimg"
+                    android:text="@string/order_reminder38"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_goodsnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_goodsprice"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iv_goodsimg"
+                    android:text="@string/order_reminder32"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_totalamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/order_reminder33"
+                android:textColor="@color/red"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    
+    <LinearLayout
+        android:id="@+id/ll_paylistttt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gainsboro" />
+
+        <ListView
+            android:id="@+id/pay_list"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:divider="@color/gainsboro"
+            android:dividerHeight="1px" />
+
+        <Button
+            android:id="@+id/pay_bt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/red"
+            android:text="@string/sure_confirm"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_zhifubaopay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="ceshi" />
+    </LinearLayout>
+
+</RelativeLayout>

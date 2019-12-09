@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_specname"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#D9EDF7"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/release_goods130"
+        android:textColor="#3A87BD"
+        android:textSize="12sp" />
+    <!-- 市场价 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/ll_gscp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/tv_dian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="*"
+                android:textColor="#f00"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_scj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_dian"
+                android:text="@string/release_goods23"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/ed_inputscj"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:layout_toLeftOf="@+id/tv_mop3"
+            android:layout_toRightOf="@+id/rl_name"
+            android:background="@drawable/release_goods2"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mop3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/release_goods3"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="元"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+    <!-- 价格 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/ll_gscp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_name2"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/tv_dian2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="*"
+                android:textColor="#f00"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_dian2"
+                android:text="@string/storehome33"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ed_inputprice"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:layout_toLeftOf="@+id/tv_mop"
+            android:layout_toRightOf="@+id/rl_name2"
+            android:background="@drawable/release_goods2"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mop"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/release_goods3"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="元"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!-- 成本价 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/ll_gscp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_name6"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/tv_dian6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="*"
+                android:textColor="#f00"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_dian6"
+                android:text="@string/release_goods25"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ed_inputcostprice"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:layout_toLeftOf="@+id/tv_mop6"
+            android:layout_toRightOf="@+id/rl_name6"
+            android:background="@drawable/release_goods2"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mop6"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/release_goods3"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="元"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!-- 会员价格/认证价格 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#f2f2f2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
+                    android:text="*"
+                    android:textColor="#f00"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/release_goods1477"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <!-- 高级代理商价格 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/ll_gscp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/ed_inputmenberprrice1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:layout_toLeftOf="@+id/tv_mop7"
+                    android:background="@drawable/release_goods2"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_mop7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/release_goods3"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- 铜牌代理商价格 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/ll_gscp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/ed_inputmenberprrice2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:layout_toLeftOf="@+id/tv_mop8"
+                    android:background="@drawable/release_goods2"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_mop8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/release_goods3"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <!-- 金牌代理商价格 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/ll_gscp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/ed_inputmenberprrice3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:layout_toLeftOf="@+id/tv_mop9"
+                    android:background="@drawable/release_goods2"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_mop9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/release_goods3"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- 钻石代理商价格 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/ll_gscp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/ed_inputmenberprrice4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:layout_toLeftOf="@+id/tv_mop10"
+                    android:background="@drawable/release_goods2"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_mop10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/release_goods3"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#f2f2f2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
+                    android:text="*"
+                    android:textColor="#f00"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/release_goods1488"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <!-- 认证高级代理商价格 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/ll_gscp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/ed_inputmenberprrice5"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:layout_toLeftOf="@+id/tv_mop11"
+                    android:background="@drawable/release_goods2"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_mop11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/release_goods3"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- 认证铜牌代理商价格 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/ll_gscp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/ed_inputmenberprrice6"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:layout_toLeftOf="@+id/tv_mop12"
+                    android:background="@drawable/release_goods2"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_mop12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/release_goods3"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <!-- 认证金牌代理商价格 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/ll_gscp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/ed_inputmenberprrice7"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@+id/tv_mop13"
+                    android:background="@drawable/release_goods2"
+                    android:paddingLeft="5dp"
+                    android:inputType="number"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_mop13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/release_goods3"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- 认证钻石代理商价格 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/ll_gscp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/ed_inputmenberprrice8"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@+id/tv_mop14"
+                    android:background="@drawable/release_goods2"
+                    android:paddingLeft="5dp"
+                    android:inputType="number"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_mop14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/release_goods3"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- 库存 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/ll_gscp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_name3"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/tv_dian3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="*"
+                android:textColor="#f00"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_dian3"
+                android:text="@string/storehome34"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ed_inputinventory"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:layout_toLeftOf="@+id/tv_mop2"
+            android:layout_toRightOf="@+id/rl_name3"
+            android:background="@drawable/release_goods2"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mop2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/release_goods3"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="元"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <!-- 预警值 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/ll_gscp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_name4"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/tv_dian4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="*"
+                android:textColor="#f00"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_dian4"
+                android:text="@string/release_goods131"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ed_inputwarning"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:layout_toLeftOf="@+id/tv_mop4"
+            android:layout_toRightOf="@+id/rl_name4"
+            android:background="@drawable/release_goods2"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mop4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/release_goods3"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="元"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <!-- 商品货号 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/ll_gscp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_name5"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/tv_dian5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="*"
+                android:textColor="#f00"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_dian5"
+                android:text="@string/release_goods132"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ed_inputnum"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/tv_mop5"
+            android:layout_toRightOf="@+id/rl_name5"
+            android:background="@drawable/release_goods2"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mop5"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/release_goods3"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="元"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <!-- 可用积分 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/ll_gscp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_name15"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right">
+
+            <TextView
+                android:id="@+id/tv_dian15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:text="*"
+                android:textColor="#f00"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_dian15"
+                android:text="@string/release_goods1499"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ed_inputintegral"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:layout_toLeftOf="@+id/tv_mop15"
+            android:layout_toRightOf="@+id/rl_name15"
+            android:background="@drawable/release_goods2"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mop15"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/release_goods3"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="元"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+</LinearLayout>

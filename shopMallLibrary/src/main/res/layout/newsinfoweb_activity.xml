@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/title_ll"
+        layout="@layout/include_titile_sort" />
+    <!-- 评论 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gainsboro" />
+
+        <ImageView
+            android:id="@+id/iv_pl"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/look_pl" />
+
+        <TextView
+            android:id="@+id/tv_pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/iv_pl"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_zan"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_pl"
+            android:src="@drawable/look_zan" />
+
+        <TextView
+            android:id="@+id/tv_zan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_pl"
+            android:layout_toRightOf="@+id/iv_zan"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/ed_input"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/tv_submit"
+            android:layout_toRightOf="@+id/tv_zan"
+            android:background="@drawable/tv_kongxinyuanjiao"
+            android:hint="@string/input_comments"
+            android:paddingLeft="10dp"
+            android:textSize="12sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/tv_kongxinyuanjiao"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/submitt" />
+    </RelativeLayout>
+    <!-- 内容 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_button"
+        android:layout_below="@+id/title_ll"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 推荐人信息 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_userinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_headline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:textSize="20sp" />
+
+                <com.aite.a.view.CircleImageView
+                    android:id="@+id/iv_title"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_headline"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@color/red"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_headline"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/iv_title"
+                    android:text="name"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/tv_name"
+                    android:layout_below="@+id/tv_headline"
+                    android:layout_marginLeft="5dp"
+                    android:text="time"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_title"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gainsboro" />
+            </RelativeLayout>
+            <!-- 文章详情 -->
+
+            <WebView
+                android:id="@+id/web"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/tv_xiangguan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/xiangguanwenzhang"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/iv_title"
+                android:background="@color/gainsboro" />
+            <!-- 相关文章 -->
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/mlv_related"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/gainsboro"
+                android:dividerHeight="1dp"
+                android:scrollbars="none" >
+            </com.aite.a.view.MyListView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

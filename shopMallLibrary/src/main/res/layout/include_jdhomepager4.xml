@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:clipChildren="false"
+    android:orientation="vertical" >
+
+    <!-- 广告 -->
+
+    <ImageView
+        android:id="@+id/iv_brandadvertising"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/jd_false2"
+        android:scaleType="fitCenter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_brand1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_brandadvertising"
+        android:background="#E82873" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_brand2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_brand1"
+        android:background="#E82873" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_pp1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="发现好货"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pp2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="0.5"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="优品专辑"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pp3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="艾特精选"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_pp4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="排行榜"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pp5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="0.5"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="新品首发"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pp6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="闪购"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 推荐板块 -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_life"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!-- 直播 -->
+
+    <RelativeLayout
+        android:id="@+id/ll_pager"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:clipChildren="false"
+        android:gravity="center"
+        android:layerType="software" >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_advertising"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:clipChildren="false" >
+        </androidx.viewpager.widget.ViewPager>
+    </RelativeLayout>
+    <!-- 为你推荐 -->
+
+    <ImageView
+        android:id="@+id/iv_recommended"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:scaleType="fitCenter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_goodstj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

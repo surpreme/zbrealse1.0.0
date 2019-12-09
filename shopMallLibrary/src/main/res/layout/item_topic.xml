@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp" >
+
+    <com.aite.a.view.CircleImageView
+        android:id="@+id/cv_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cv_icon"
+        android:text="话题作者 : "
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_cn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/cv_icon"
+        android:text="话asdsadsadsa"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_cn"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/cv_icon"
+        android:text="2017-06-12"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/iv_commentsnum"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/tv_zan"
+        android:background="@drawable/look_pl" />
+
+    <TextView
+        android:id="@+id/tv_zan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+</RelativeLayout>

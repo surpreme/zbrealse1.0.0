@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/toolbar_content_rlyt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="UselessParent" >
+
+        <Button
+            android:id="@+id/toolbar_left_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_back_selector"
+            android:visibility="invisible" />
+
+        
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/perdata"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/toolbar_right_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_bottom_arrow_selector"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/toolbar_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/more"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

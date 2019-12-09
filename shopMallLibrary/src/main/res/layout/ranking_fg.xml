@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ranking_ll"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:layout_margin="10dp"
+        android:layout_weight="2" >
+
+        <ImageView
+            android:id="@+id/ranking_oods1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/link_r" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:background="#70000000" >
+
+            <TextView
+                android:id="@+id/ranking_oods1_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="$200.0"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/ranking_oods1_price"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="$200.0"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ranking_oods2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:background="@drawable/link_r" />
+
+            <TextView
+                android:id="@+id/ranking_oods2_sale"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:background="#70000000"
+                android:text="@string/sold_one"
+                android:textColor="#ffffff" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ranking_oods3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:background="@drawable/link_r" />
+
+            <TextView
+                android:id="@+id/ranking_oods3_sale"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:background="#70000000"
+                android:text="@string/sold_one"
+                android:textColor="#ffffff" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

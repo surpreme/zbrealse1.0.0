@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true" >
+
+    <com.aite.a.view.CustomScrollView
+        android:id="@+id/csv_gd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-25dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 顶部 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_info"
+                android:layout_width="match_parent"
+                android:layout_height="190dp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/my_center_top1" />
+
+                <com.aite.a.view.CircleImageView
+                    android:id="@+id/civ_icon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/civ_icon"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/civ_icon"
+                    android:text="UserName"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/civ_icon"
+                    android:background="@drawable/jd_personal_center"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="银牌会员"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/tv_level"
+                    android:background="@drawable/jd_personal_center"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="小白信用79.1 >"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_privilege"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_marginRight="-5dp"
+                    android:background="@drawable/jd_privilege"
+                    android:padding="10dp"
+                    android:rotation="6" >
+
+                    <ImageView
+                        android:id="@+id/iv_hg"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/jd_hg" />
+
+                    <TextView
+                        android:id="@+id/tv_hydj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/iv_hg"
+                        android:text="PLUS会员"
+                        android:textColor="#DECA81"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_privilege"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_hydj"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/jd_personal_center2"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:text="点击查看特权 >"
+                        android:textColor="#DECA81"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="-20dp" >
+
+                <com.aite.a.view.CurveLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_menu1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/iv_menu2bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_menu2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_menu3"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" />
+
+            <ImageView
+                android:id="@+id/iv_gg"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </com.aite.a.view.CustomScrollView>
+    <!-- 顶部 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="-25dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_set"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/iv_message"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/iv_message"
+            android:src="@drawable/jd_set" />
+
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="35dp"
+            android:padding="3dp"
+            android:src="@drawable/jd_message" />
+
+        <TextView
+            android:id="@+id/tv_titlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"
+            android:text="我的"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <com.aite.a.view.CircleImageView
+            android:id="@+id/civ_xicon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="35dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/gainsboro"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="A"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
+
+    <com.aite.a.view.MyListView
+        android:id="@+id/rv_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/transparent"
+        android:dividerHeight="1dp"
+        android:scrollbars="none">
+    </com.aite.a.view.MyListView>
+
+</LinearLayout>

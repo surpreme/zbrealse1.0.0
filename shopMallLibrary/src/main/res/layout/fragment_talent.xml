@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_phone_title"/>
+    
+    <!-- 顶部 -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_talent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/talent1"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_talent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/group_xia" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:background="@color/gainsboro" />
+
+       
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:background="@color/gainsboro" />
+
+        <LinearLayout
+            android:id="@+id/ll_sort"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_talent4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/talent4"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_talent4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/group_xia" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+    <!-- 列表 -->
+
+    <ListView
+        android:id="@+id/lv_talent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/gainsboro"
+        android:dividerHeight="1dp"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

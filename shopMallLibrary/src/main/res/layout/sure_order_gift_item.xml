@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<TextView
+    android:id="@+id/sure_ordersn_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="订单编号"
+    android:layout_marginTop="@dimen/dp_6"
+    android:textColor="@color/wxcolor"
+    android:layout_marginStart="@dimen/dp_6"
+    android:visibility="gone"
+    />
+    <RelativeLayout
+        android:id="@+id/store_name_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:id="@+id/store_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp_6"
+            android:background="@drawable/xiugai_1" />
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/store_img"
+            android:text="@string/app_name"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/more_d" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <com.aite.a.view.MyListView
+        android:id="@+id/buy_goods_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/view_line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/order_reminder8"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et_eaveamessage"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ed_input"
+            android:gravity="top"
+            android:hint="@string/order_reminder165"
+            android:padding="5dp"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <View style="@style/view_line" />
+    <TextView
+        android:id="@+id/freight_message"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp"
+        android:gravity="right"
+        android:text="@string/app_name"
+        android:textSize="12dp" />
+
+    <View style="@style/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+
+        <TextView
+            android:id="@+id/store_goods_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="@string/total_100"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/goods_num"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/store_goods_total"
+            android:text="@string/app_name"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</LinearLayout>

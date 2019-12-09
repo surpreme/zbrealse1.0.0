@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+
+    <!-- 顶部菜单 -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_recyclerview_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:scrollbars="none" />
+
+    <!-- 内容区 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <!-- 主页内容 -->
+
+        <ScrollView
+            android:id="@+id/sv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 轮播广告 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp" >
+
+                    <com.aite.a.view.MyAdGallery
+                        android:id="@+id/mag_adgallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_adgalleryname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="8dp"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#88000000"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_ovalLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dip"
+                            android:background="#00FFFFFF"
+                            android:gravity="right"
+                            android:orientation="horizontal"
+                            android:paddingRight="10dp" >
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 推荐文章 -->
+
+                <com.aite.a.view.MyListView
+                    android:id="@+id/mlv_recommended"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:dividerHeight="5dp" >
+                </com.aite.a.view.MyListView>
+
+                <!-- 艾特精选 -->
+
+                <ImageView
+                    android:id="@+id/iv_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:scaleType="fitXY" />
+                <!-- 推荐列表 -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/recommended"
+                    android:textColor="@color/red"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro" />
+
+                <com.aite.a.view.MyListView
+                    android:id="@+id/mlv_recommendedlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/gainsboro"
+                    android:dividerHeight="1dp" >
+                </com.aite.a.view.MyListView>
+            </LinearLayout>
+        </ScrollView>
+        <!-- 分类列表 -->
+
+        <ListView
+            android:id="@+id/lv_classify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/gainsboro"
+            android:dividerHeight="1dp"
+            android:visibility="gone" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

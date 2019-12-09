@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/release_goods1"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/main_top_search" />
+
+        <EditText
+            android:id="@+id/ed_input1"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/tv_search"
+            android:background="@drawable/release_goods2"
+            android:hint="@string/gifts11"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/v_fg2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ed_input1"
+            android:background="#f2f2f2" >
+        </View>
+    </RelativeLayout>
+
+    <com.aite.a.view.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.aite.a.view.PullableListView
+            android:id="@+id/lv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gainsboro"
+            android:dividerHeight="1dp"
+            android:scrollbars="none" >
+        </com.aite.a.view.PullableListView>
+
+        <include layout="@layout/load_more" />
+    </com.aite.a.view.PullToRefreshLayout>
+
+</LinearLayout>

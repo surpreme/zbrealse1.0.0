@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aiteshangcheng.a">
+    <!-- 环信所需权限 -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> -->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" /> <!-- 添加可以向外拨打电话的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限(讯飞所需权限) -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 【必须】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 【可选】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
+    <application>
+        <activity android:name="com.aite.a.activity.li.activity.MessageActivity" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="4cef1d6cb644508d70d7f6a5d9fef740" /> <!-- 百度地图 -->
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!--        <meta-data-->
+        <!--            android:name="com.baidu.lbsapi.API_KEY"-->
+        <!--            android:value="kWHVHLMQQEyeP3qGIemZLYbfnaPjrmL9" />-->
+        <!--
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Gj3utG2LNFCYUerGrPI95Mtt" />
+        -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service> <!-- 百度地图End -->
+
+
+        <activity
+            android:name="com.aite.a.activity.PayListActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.aite.a.NetworkStateService"
+            android:enabled="true" />
+
+        <activity
+            android:name="courier.CourierHomeTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.CourierDistributionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.StorageLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.SmsModerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.DataStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.RecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.CustomerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.SiteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.IncomeDatailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.CollectionWayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.ConsumeLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.CourierstorageAcivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.AllIncomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.SendTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.NoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.OpenPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.TopUpLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.EditCostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.CompanyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.IntegralMallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="courier.BatchOperationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.aite.a.activity.li.activity.AmClassifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.GoodsEvaluateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.qq.xgdemo.DiagnosisActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.aite.a.activity.PushActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.aite.a.activity.InvoiceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.aite.a.activity.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.VirtualConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.EditBindingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.MeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.CustomHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.BalanceTx2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ShoppingCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ProductDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.GoodsDatailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.GoodsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ParameterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ReleaseTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ServicehomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.aite.a.activity.ComplaintsApplyForActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ServiceSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="livestream.activity.RoomReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ServiceHallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.HomeTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.BaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.aite.a.activity.NearbyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.aite.a.activity.MyStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.Myevaluation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="livestream.activity.LiveStreamTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="livestream.activity.ClassificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="livestream.activity.HostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="livestream.activity.AudienceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="livestream.activity.PostedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="livestream.activity.ChooseLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="livestream.activity.PrepareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.VrOrder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.PreferentialSuitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.MyfootprintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.SendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.BalanceTxActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.aite.a.activity.PersonalMiYaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.RecommendCombinationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.activity.PlaceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.activity.DialogueActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.aite.a.activity.StoreHomePageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.MyCalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.FindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.ReleaseCircleoffriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.MyGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.NewFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.SelectAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.TabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.PraiseListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.ReleaseCircleoffriendsTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.CircleoffriendsDatilsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.community.activity.MyDoingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.ImagePreview"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.community.activity.GettogetherListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.CreateGettogetherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.JoinGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.ForumListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.GroupDatailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.CreateGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.CircleoffriendsActivityu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.GettogetherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.ForumSectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.ForumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.PostGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.AdvisoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.ReleasePostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.community.activity.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ServiceDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.OrderDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.IntegralShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.CreditsExchangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.HotVouchersListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.FreeOpenShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.MerchantsinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.FirmruzhuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.DistributionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.BbsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ReleasepostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.CommentsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.InformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.CommunityGoods"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.FoundCommenListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.aite.a.activity.NewsinfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.TopicdateilsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ShaiDanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.CustomerServiceActtivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.PersonalInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ConsultingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.GoodsSevaluationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.IdentityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.OnlineTopUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.PhoneCertificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jd.page.JDGoodsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jd.page.JDGoodsData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jd.page.JDShoppingCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jd.page.JDPersonalCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jd.page.JDHomePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="jd.page.JDClassifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.RecommendedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.MainActivity"
+            android:screenOrientation="portrait">
+                        <intent-filter>
+                            <action android:name="com.aite.zhongbao.shop.MainActivity" />
+
+<!--                            <category android:name="android.intent.category.LAUNCHER" />-->
+                        </intent-filter>
+        </activity>
+        <activity
+            android:name="com.aite.a.activity.EditValActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.MyRefereeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.Web2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.IntegarlOrderInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.HotIntegralGiftListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.IntegralWinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.IntegralGoodsInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.IntegralCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ConfirmIntegralActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.TopupPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ClientListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.RedPackageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.GoodsDetailsFargmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.OrderSureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.VouchersListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ExchangeRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.BuyerOrderFgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.MoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelScreeningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelOrderDatails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelOrderListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelConventionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelCommentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.OrderInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.FrogetPassWord"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.TopicListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.OrderRefundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.AddClientActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ReportDatalistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.RichListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.IntegralInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.RefundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.FreightModeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ViolationsReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.EdiAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.PersonalDataActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.aite.a.activity.MyMoneyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.PersonalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.GoodssImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.AddressManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.GiftsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.RedPackageActivityList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.AddresSregionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.StoreDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ReleaseGoodsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.FavoriteListFargmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ComplaintsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.ComplaintDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.BindingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.StoreAboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.OpenStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.GoodsManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.DistributionCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.SellerOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.IntegralRulesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.MyStoreDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.PostTradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.CommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.StationLetterListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.AmendPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.SendLetterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.PayPswActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.MyTeamActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.PayPsw2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.RedPackageDatails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.aite.a.activity.TopUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelChooseAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hotel.HotelDatailsActivity"
+            android:screenOrientation="portrait" /> <!-- 微信支付 -->
+        <activity
+            android:name="com.aiteshangcheng.a.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wxc8d6770ec7bde16a" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.aiteshangcheng.a.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.aite.a.NetworkDialog"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar" />
+        <activity
+            android:name="com.aite.a.zxing.CaptureActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.aite.a.activity.SellerOrderprice" /> <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.pay.AlipayActivity"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" /> <!-- QQ登录 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105250647" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.aite.a.activity.li.activity.ChoiceActivity" />
+        <activity android:name="com.aite.a.activity.li.activity.ShopHomeActivity" />
+        <activity
+            android:name="com.aite.a.activity.li.activity.AroundActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.aite.a.activity.li.activity.Amapactivity" />
+        <activity android:name="com.aite.a.activity.li.activity.AroundLocationChoiceActivity" />
+        <activity android:name="com.aite.a.activity.li.activity.WelcomeActivity" /> <!-- 自定义相机 end -->
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <!-- 【必须】 exported设置为true -->
+        <!-- <activity -->
+        <!-- android:name="com.tencent.android.tpush.XGPushActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:theme="@android:style/Theme.Translucent" > -->
+        <!-- <intent-filter> -->
+        <!-- &lt;!&ndash; 若使用AndroidStudio，请设置android:name="android.intent.action" &ndash;&gt; -->
+        <!-- <action android:name="" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v2">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+            <!-- 【可选】 usb相关的系统广播，增强信鸽service的复活机会，请根据需要添加 -->
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver> <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushService"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v2" /> <!-- 【必须】 通知service，其中android:name部分要改为当前包名 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 【必须】 请修改为当前APP名包.PUSH_ACTION，如demo的包名为：com.qq.xgdemo -->
+                <action android:name="com.qq.xgdemo.PUSH_ACTION" />
+            </intent-filter>
+        </service> <!-- 已废弃，可删除之；若不删除也不会有任何副作用 -->
+            <service
+            android:name="com.tencent.android.tpush.service.XGDaemonService"
+            android:process=":qq_push_daemon" />
+        <!-- 【可选】信鸽拉起其他APP应用，若应用在本地找不到可以自动下载 -->
+              <service
+            android:name="com.tencent.android.tpush.XGDownloadService"
+            android:enabled="true"
+            android:exported="false" />
+        <!-- 【可选】APP实现的Receiver，用于接收消息透传和操作结果的回调，请根据需要添加 -->
+        <!-- YOUR_PACKAGE_PATH.CustomPushReceiver需要改为自己的Receiver： -->
+        <receiver android:name="com.qq.xgdemo.MessageReceiver">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver> <!-- 【必须】 请修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="2100136937" /> <!-- 【必须】 请修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="A5C8N8GVW43E" /> <!-- 【！！不需要添加！！】 此处的secretkey主要是为了Demo一键诊断用，实际APP不用添加，切记！ -->
+        <meta-data
+            android:name="XG_V2_SECRET_KEY"
+            android:value="fc8e03bb34b8b1ae948aee54f0fd6e17" /> <!-- 腾讯IM -->
+        <!-- 消息收发 service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="false"
+            android:process=":QALSERVICE" /> <!-- 消息收发辅助 service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE" /> <!-- 离线消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal" />
+            </intent-filter>
+        </receiver> <!-- 系统消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

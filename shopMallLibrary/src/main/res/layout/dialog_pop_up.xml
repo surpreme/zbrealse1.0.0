@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/icon_bg_pop"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" >
+
+        <Button
+            android:id="@+id/btn_received_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="6dp"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/icon_received_letter"
+            android:text="@string/received_station_letter"
+            android:textColor="@color/text_color" />
+
+        
+        <Button
+            android:id="@+id/btn_send_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/icon_send_letter"
+            android:text="@string/send_station_letter"
+            android:textColor="@color/text_color" />
+
+        <Button
+            android:id="@+id/btn_direct_messages"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/icon_direct_messages"
+            android:text="@string/direct_messages"
+            android:textColor="@color/text_color" />
+
+        <Button
+            android:id="@+id/btn_to_send"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/icon_to_send"
+            android:text="@string/to_send_station_letter"
+            android:textColor="@color/text_color" />
+    </LinearLayout>
+
+</RelativeLayout>

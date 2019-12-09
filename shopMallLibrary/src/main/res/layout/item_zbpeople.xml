@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:text="微尘兄"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/iv_sex"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:src="@drawable/zb_sex2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_sex"
+        android:background="@drawable/zb_level"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/zb_diamond" />
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_motto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_sex"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:text="@string/find_reminder272"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="1.0km内·23小时前"
+        android:textColor="@color/gray"
+        android:textSize="10sp" />
+
+</RelativeLayout>

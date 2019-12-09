@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff3c81">
+
+        <ImageView
+            android:id="@+id/iv_gobac"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/fanhui" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/find_reminder52"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:padding="13dp"
+            android:src="@drawable/courier_search" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white">
+
+                <com.aite.a.view.MyAdGallery
+                    android:id="@+id/adgallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/ovalLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal"></LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <View
+                    android:id="@+id/v_1"
+                    android:layout_width="5dp"
+                    android:layout_height="18dp"
+                    android:background="#ff3c81" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/v_1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/v_1"
+                    android:text="@string/find_reminder51"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_tomore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/v_1"
+                    android:layout_alignParentRight="true"
+                    android:text="&gt;"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_gettogether"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/v_1"
+                    android:layout_toLeftOf="@+id/tv_tomore1"
+                    android:text="@string/more"
+                    android:textColor="#ff3c81"
+                    android:textSize="12sp" />
+
+                <com.aite.a.view.MyGridView
+                    android:id="@+id/gv_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v_1"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:numColumns="4"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:verticalSpacing="10dp"></com.aite.a.view.MyGridView>
+
+                <TextView
+                    android:id="@+id/tv_releasehd"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/gv_menu"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/find_btn"
+                    android:gravity="center"
+                    android:text="@string/find_reminder50"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_menu1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/last_new"
+                    android:textColor="#ff3c81"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_menu2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/find_reminder49"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_menu3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/find_reminder48"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_menu4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/find_reminder47"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/v_slip1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ff3c81" />
+                <View
+                    android:id="@+id/v_slip2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:background="#ff3c81" />
+                <View
+                    android:id="@+id/v_slip3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:background="#ff3c81" />
+                <View
+                    android:id="@+id/v_slip4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:background="#ff3c81" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="马云对女人创业的观点是什么"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_postimg1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/iv_postimg2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/iv_postimg3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_zd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_img"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/find_tag"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:text="@string/placedatthetop"
+                    android:textColor="#ff3c81"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_titme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_img"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/tv_zd"
+                    android:text="08/25  CEO观点"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/lv_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:divider="#eeeeee"
+                android:dividerHeight="1dp"></com.aite.a.view.MyListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_morepost"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/find_btn"
+                    android:gravity="center"
+                    android:text="@string/xlistview_footer_hint_normal"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/iv_buttomimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

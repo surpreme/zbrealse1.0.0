@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FE6C89">
+
+        <ImageView
+            android:id="@+id/iv_goback"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/fanhui" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/find_reminder62"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_new"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="@string/find_reminder13"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white">
+
+                <com.aite.a.view.MyAdGallery
+                    android:id="@+id/adgallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/ovalLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal"></LinearLayout>
+            </RelativeLayout>
+
+            <com.aite.a.view.MyGridView
+                android:id="@+id/gv_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="4"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:verticalSpacing="10dp">
+
+            </com.aite.a.view.MyGridView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <View
+                    android:id="@+id/v_1"
+                    android:layout_width="5dp"
+                    android:layout_height="18dp"
+                    android:background="#ff3c81" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/v_1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/v_1"
+                    android:text="@string/find_reminder39"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_tomore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/v_1"
+                    android:layout_alignParentRight="true"
+                    android:text="&gt;"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_hotmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/v_1"
+                    android:layout_toLeftOf="@+id/tv_tomore1"
+                    android:text="@string/more"
+                    android:textColor="#ff3c81"
+                    android:textSize="12sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/v_1"
+                    android:layout_marginTop="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <View
+                    android:id="@+id/v_2"
+                    android:layout_width="5dp"
+                    android:layout_height="18dp"
+                    android:background="#ff3c81" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/v_2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/v_2"
+                    android:text="@string/find_reminder61"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_tomore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/v_2"
+                    android:layout_alignParentRight="true"
+                    android:text="&gt;"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_official"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/v_2"
+                    android:layout_toLeftOf="@+id/tv_tomore2"
+                    android:text="@string/more"
+                    android:textColor="#ff3c81"
+                    android:textSize="12sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_official"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/v_2"
+                    android:layout_marginTop="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/lv_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:divider="@color/transparent"
+                android:dividerHeight="5dp">
+
+            </com.aite.a.view.MyListView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

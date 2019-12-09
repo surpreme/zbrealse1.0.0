@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F9">
+
+    <FrameLayout
+        android:id="@+id/fm_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/v_fg"
+        android:background="#F7F7F9" />
+
+    <View
+        android:id="@+id/v_fg"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_above="@+id/rv_menu"
+        android:background="#F7F7F9"></View>
+
+    <LinearLayout
+        android:id="@+id/rv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_menu1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/fandmenu_a2" />
+
+            <TextView
+                android:id="@+id/tv_menu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/discover"
+                android:textColor="#ff3c81"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/fandmenu_b1" />
+
+            <TextView
+                android:id="@+id/tv_menu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/find_reminder111"
+                android:textColor="@color/txtcolor"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/ll_menu3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/fandmenu_c1" />
+
+            <TextView
+                android:id="@+id/tv_menu3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/message"
+                android:textColor="@color/txtcolor"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/fandmenu_d1" />
+
+            <TextView
+                android:id="@+id/tv_menu4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/tab_personal"
+                android:textColor="@color/txtcolor"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/fandmenu_e1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/find_reminder103"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_item">
+
+    <ImageView
+        android:id="@+id/iv_iocn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/tv_nikename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_iocn"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="nikename"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nikename"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_iocn"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="的凯撒觉得很喀什觉得卡刷点卡手机电话卡到喀什的凯撒航空基地吧奥斯卡大奖拉萨"
+        android:textColor="@color/txtcolor"
+        android:textSize="12sp" />
+
+    <com.aite.a.view.MyGridView
+        android:id="@+id/gn_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_iocn"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/iv_iocn"
+        android:horizontalSpacing="2dp"
+        android:numColumns="3"
+        android:verticalSpacing="2dp"></com.aite.a.view.MyGridView>
+
+    <TextView
+        android:id="@+id/tv_titme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gn_img"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/iv_iocn"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="8月17日 10:33"
+        android:textColor="@color/txtcolor"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/iv_pl"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/tv_titme"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/find_pyqpl" />
+
+    <ImageView
+        android:id="@+id/iv_gz"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/tv_titme"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/iv_pl"
+        android:src="@drawable/heart1" />
+
+    <com.aite.a.view.MyListView
+        android:id="@+id/lv_pl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_titme"
+        android:layout_margin="10dp"
+        android:divider="#EEEEEE"
+        android:layout_toRightOf="@+id/iv_iocn"
+        android:background="#EEEEEE">
+
+    </com.aite.a.view.MyListView>
+
+</RelativeLayout>

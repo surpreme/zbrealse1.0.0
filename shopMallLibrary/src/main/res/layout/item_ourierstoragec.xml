@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="创建时间 : 2017-12-23 13:47"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/iv_cha"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:src="@drawable/del_x" />
+
+    <com.aite.a.view.CircleImageView
+        android:id="@+id/cv_icon"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="申通快递"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/cv_icon"
+        android:layout_alignTop="@+id/cv_icon"/>
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_below="@+id/tv_name"
+        android:textColor="@color/black"
+        android:text="13655648546"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/cv_icon"/>
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#FD9236"
+        android:text="未入库"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+    
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:background="@drawable/courierhome3"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:text="入库"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_type"/>
+    
+</RelativeLayout>

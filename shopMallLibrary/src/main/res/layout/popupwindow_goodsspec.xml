@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/goodsdatails_btn7">
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:src="@drawable/zb_close" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:text="￥0.0"
+        android:textColor="#FF5000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_instock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_price"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:text="@string/goodsdatails_reminder14"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_instock"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_toEndOf="@+id/iv_icon"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="撒旦风口浪尖上的看来飞机上的离开"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/v_fg2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/iv_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#eee" />
+
+    <ListView
+        android:id="@+id/lv_spec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/v_fg"
+        android:layout_below="@+id/v_fg2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="#eee"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/counts" />
+
+            <TextView
+                android:id="@+id/pop_num_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/zhijiao"
+                android:paddingRight="12dp"
+                android:paddingLeft="12dp"
+                android:layout_marginStart="@dimen/dp_150"
+                android:textSize="12sp"
+                android:text="—" />
+
+            <EditText
+                android:id="@+id/pop_good_num"
+                android:layout_width="50dp"
+                android:layout_height="38dp"
+                android:singleLine="true"
+                android:background="@drawable/zhijiao"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/pop_num_add"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/zhijiao"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textSize="12sp"
+                android:text="+" />
+        </LinearLayout>
+
+        <!--<View
+            android:id="@+id/v_fg"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:background="#eee" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_6">
+        <TextView
+            android:id="@+id/tv_addcart"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:background="@drawable/goodsdatails_btn1"
+            android:gravity="center"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_buy"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:background="@drawable/goodsdatails_btn2"
+            android:gravity="center"
+            android:text="@string/buy_immediately"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

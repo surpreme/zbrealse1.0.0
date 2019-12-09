@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/order_sure_title_ll"
+        layout="@layout/include_titile_sort" />
+
+    <RelativeLayout
+        android:id="@+id/order_sure_rl_di"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_8" >
+
+        <Button
+            android:id="@+id/order_btn_submit"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/red"
+            android:text="@string/commit_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/order_sure_rl_di"
+        android:layout_below="@+id/order_sure_title_ll"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/order_sure_rl_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_marginTop="@dimen/dp_6" >
+
+                <TextView
+                    style="@style/product_black_text"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/consignee_information" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/more_d" />
+            </RelativeLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                style="@style/order_ll_h"
+                android:layout_marginTop="@dimen/dp_6" >
+
+                <TextView
+                    android:id="@+id/order_sure_tv_address_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:text="@string/name_ng"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/order_sure_tv_address_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:text="@string/phone_133"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/order_ll_h"
+                android:layout_marginBottom="@dimen/dp_6" >
+
+                <TextView
+                    android:id="@+id/order_sure_tv_address_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:text="@string/address_sc"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <include layout="@layout/line_cu" />
+
+            <LinearLayout
+                android:id="@+id/order_sure_ll_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.aite.a.view.MyListView
+                    android:id="@+id/order_sure_mylistview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/gainsboro"
+                    android:dividerHeight="2px" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <include
+                    android:id="@+id/i_fg"
+                    layout="@layout/line_cu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/i_fg"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/release_goods72"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_updata"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/i_fg"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/gm_selector"
+                    android:gravity="center"
+                    android:text="@string/update"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_updata"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/invoice23"
+                    android:textColor="@color/txtcolor"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line_cu" />
+
+            <!-- 支付方式 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_marginTop="@dimen/dp_6" >
+
+                <TextView
+                    android:id="@+id/tv_product_black_text"
+                    style="@style/product_black_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/payment_and_delivery" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/ed_fcoding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_product_black_text"
+                    android:background="@null"
+                    android:hint="@string/inputfcoding"
+                    android:paddingLeft="4dp"
+                    android:visibility="gone" >
+                </com.aite.a.view.EditTextWithDel>
+            </RelativeLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                style="@style/order_ll_h"
+                android:layout_marginTop="@dimen/dp_6" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:padding="@dimen/dp_6"
+                    android:singleLine="true"
+                    android:text="@string/zhifufangshi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <CheckBox
+                    android:id="@+id/order_sure_cb_zhi"
+                    style="@style/order_sure_check"
+                    android:layout_marginLeft="10dp"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:text="@string/online_payment" />
+
+                <CheckBox
+                    android:id="@+id/order_sure_cb_yin"
+                    style="@style/order_sure_check"
+                    android:layout_marginLeft="15dp"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:text="@string/cash_on_delivery"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/order_ll_h"
+                style="@style/order_ll_h" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:text="@string/pre_deposit_payment"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    android:text=":" />
+
+                <CheckBox
+                    android:id="@+id/Advance_yes"
+                    style="@style/order_sure_check"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:text="@string/yes" />
+
+                <CheckBox
+                    android:id="@+id/Advance_no"
+                    style="@style/order_sure_check"
+                    android:layout_marginLeft="15dp"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:text="@string/nono" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:visibility="gone"
+                android:background="@drawable/ed_input"
+                android:textSize="12sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:layout_margin="7dp"
+                android:hint="@string/put_in_payment_password"/>
+
+            <include layout="@layout/line_cu" />
+
+            <View style="@style/view_line" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

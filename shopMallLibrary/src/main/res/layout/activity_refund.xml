@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/include_titile_sort" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_6"
+        android:background="@color/gainsboro" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_menu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_12"
+            android:textColor="@drawable/compliant_text_color_selector"
+            android:gravity="center"
+            android:text="@string/order_reminder107"
+            android:textSize="15sp" />
+            <View
+                android:id="@+id/tv_menu1_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@color/commRed"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_menu2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_12"
+            android:gravity="center"
+            android:textColor="@drawable/compliant_text_color_selector"
+            android:textIsSelectable="false"
+            android:text="@string/order_reminder108"
+            android:textSize="15sp" />
+            <View
+                android:id="@+id/tv_menu2_line"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="@color/commRed"
+                />
+    </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_6"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text="@string/act_no_data_load"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <com.aite.a.view.PullToRefreshLayout
+            android:id="@+id/refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <!--android:layout_marginTop="@dimen/dp_4"-->
+
+            <include layout="@layout/refresh_head" />
+
+            <com.aite.a.view.PullableListView
+                android:id="@+id/lv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/gainsboro"
+                android:dividerHeight="@dimen/dp_6"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none" >
+            </com.aite.a.view.PullableListView>
+                <!--android:background="#f5f5f5f5"-->
+
+            <include layout="@layout/load_more" />
+        </com.aite.a.view.PullToRefreshLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

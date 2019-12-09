@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/store_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/ic_launcher" />
+
+                <Button
+                    android:id="@+id/collect_store2"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/store_collect_bt"
+                    android:text="@string/store_up"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toLeftOf="@+id/collect_store"
+                    android:layout_toRightOf="@+id/store_image"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/store_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="@string/app_name"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/store_zy"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/app_name"
+                        android:textColor="#888888"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/area_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="17dp"
+                    android:layout_margin="15dp"
+                    android:text="@string/start_shop"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/store_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/s_z_d"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/evaluation_content1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_margin="15dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/m_des"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/evaluation_content2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/service_attitude"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/evaluation_content3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/delivery_speed"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <RatingBar
+                        android:id="@+id/evaluation_grade1"
+                        style="@style/roomRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="17dp"
+                        android:gravity="center_vertical"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="4" >
+                    </RatingBar>
+
+                    <RatingBar
+                        android:id="@+id/evaluation_grade2"
+                        style="@style/roomRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="17dp"
+                        android:gravity="center_vertical"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="4" >
+                    </RatingBar>
+
+                    <RatingBar
+                        android:id="@+id/evaluation_grade3"
+                        style="@style/roomRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="4" >
+                    </RatingBar>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_contactservices"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp" >
+
+                    <TextView
+                        android:id="@+id/store_qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/m_qq"
+                        android:textColor="#888888"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_contactservices"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/contactservice" />
+                </RelativeLayout>
+
+                <View style="@style/view_line" />
+
+                <TextView
+                    android:id="@+id/store_ww"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/m_ww"
+                    android:textSize="12sp" />
+
+                <View style="@style/view_line" />
+
+                <TextView
+                    android:id="@+id/store_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/m_dh"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_xiangqing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/go_to_shop"
+        android:textColor="@color/white" />
+
+</LinearLayout>

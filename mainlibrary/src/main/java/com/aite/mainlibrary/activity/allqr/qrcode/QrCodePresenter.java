@@ -45,11 +45,11 @@ public class QrCodePresenter extends BasePresenterImpl<QrCodeContract.View> impl
                             LogUtils.e(e);
                         }
                         JSONObject object = jsonObject.optJSONObject("datas");
-                        String dataresult = object.optString("msg");
-//                        Gson gson = new Gson();
-//                        SettingAddressListBean settingAddressListBean = gson.fromJson(object.toString(), SettingAddressListBean.class);
+//                        String dataresult = object.optString("msg");
+                        Gson gson = new Gson();
+                        TwoSuccessCodeBean twoSuccessCodeBean = gson.fromJson(object.toString(), TwoSuccessCodeBean.class);
                         ((Activity) mView.getContext()).runOnUiThread(()
-                                -> mView.onSureSuccess(dataresult));
+                                -> mView.onSureSuccess(twoSuccessCodeBean));
                         return null;
                     }
 

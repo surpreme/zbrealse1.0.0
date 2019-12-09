@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/zb_state9">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/direct_messages"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_ignore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#FF3571"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/find_reminder305"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/white">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msp_demo_title_bg"
+        android:scaleType="center"
+        android:src="@drawable/msp_demo_title"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/pay_code"
+                    android:textColor="#777777"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/pay_sn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="0001"
+                    android:textColor="#333333"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/goods_name"
+                    android:textColor="#777777"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/goods_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:text="@string/test_goods"
+                    android:textColor="#333333"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/goods_des"
+                    android:textColor="#777777"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/goods_describe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/test_des"
+                    android:textColor="#333333"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/goods_price"
+                    android:textColor="#777777"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/goods_price"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/yuan_test"
+                    android:textColor="#ff6600"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/pay_bt"
+                android:onClick="pay"
+                android:text="@string/payment"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/check"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/pay_bt"
+                android:onClick="check"
+                android:text="@string/checking_account"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

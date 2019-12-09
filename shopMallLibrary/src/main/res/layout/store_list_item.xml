@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/list_ll_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+    <com.aite.a.view.custom.MyCircleImage
+        android:id="@+id/store_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
+        app:angle="10"
+        app:ratio="1"
+        />
+
+  <!--  <ImageView
+        android:id="@+id/store_more"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/qianwangfcf" />-->
+
+        <!--android:layout_toLeftOf="@+id/store_more"-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/store_image"
+        android:layout_alignTop="@+id/store_image"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="1"
+            android:text="店铺标题"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/store_zy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:lines="1"
+            android:text="df df df df "
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/store_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/store_item_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/collection_icon2" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/del"
+            android:textSize="10dp" />-->
+    </LinearLayout>
+
+</RelativeLayout>

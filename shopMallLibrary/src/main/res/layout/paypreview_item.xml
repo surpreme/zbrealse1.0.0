@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_storebh1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_dianpufcf"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dianpuxiaotubiao" />
+
+        <TextView
+            android:id="@+id/tv_names1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_dianpufcf"
+            android:textColor="#000000" />
+
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:text=">"
+            android:textColor="@color/darkgrey"
+            android:textSize="15dp" />-->
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <com.aite.a.view.MyListView
+        android:id="@+id/mlv_goodsl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/gainsboro"
+        android:dividerHeight="1dp" >
+    </com.aite.a.view.MyListView>
+
+    
+
+</LinearLayout>

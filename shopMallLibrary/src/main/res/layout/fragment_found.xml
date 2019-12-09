@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2" >
+
+    <!-- 顶部菜单 -->
+
+    <GridView
+        android:id="@+id/gv_topmenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:numColumns="4" >
+    </GridView>
+
+    <!-- 底部滑块 -->
+
+    <LinearLayout
+        android:id="@+id/ll_hua"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/gv_topmenu"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_sliding_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <View
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sliding_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <View
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sliding_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <View
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
+                android:background="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sliding_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <View
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
+                android:background="@color/red" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.aite.a.view.CustomScrollView
+        android:id="@+id/sc_gd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_hua"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 商品列表 -->
+
+            <com.aite.a.view.MyGridView
+                android:id="@+id/mgv_goodslist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="5dp"
+                android:numColumns="2"
+                android:verticalSpacing="5dp" >
+            </com.aite.a.view.MyGridView>
+            <!-- 店铺街 -->
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/lv_shop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/gainsboro"
+                android:dividerHeight="1dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone" >
+            </com.aite.a.view.MyListView>
+
+            <TextView
+                android:id="@+id/tv_more"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="@string/load_more2"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </com.aite.a.view.CustomScrollView>
+    <!-- 底部翻页 -->
+
+    <LinearLayout
+        android:id="@+id/ll_but"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone"
+        android:weightSum="10" >
+
+        <TextView
+            android:id="@+id/tv_shouye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_kongxinyuanjiao"
+            android:padding="5dp"
+            android:text="@string/tab_home"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_shangyiye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/tv_kongxinyuanjiao"
+            android:padding="5dp"
+            android:text="@string/previouspage"
+            android:textSize="12sp" />
+        <!-- 页码 -->
+
+        <TextView
+            android:id="@+id/tv_pagenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_kongxinyuanjiao"
+            android:padding="5dp"
+            android:text="第0/0页"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_xiayiye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/tv_kongxinyuanjiao"
+            android:padding="5dp"
+            android:text="@string/nextpage"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_weiye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_kongxinyuanjiao"
+            android:padding="5dp"
+            android:text="@string/lastpage"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

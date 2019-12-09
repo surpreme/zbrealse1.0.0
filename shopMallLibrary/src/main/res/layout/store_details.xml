@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <com.aite.a.view.CustomScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeeeee" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/my_center_top2" >
+
+                <ImageView
+                    android:id="@+id/store_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/store_avatar"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/store_avatar"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_store_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="艾特旗舰店"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/tv_shixinyuanjiao"
+                        android:text="@string/find_reminder324"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/collect_store"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:background="#DD2727"
+                        android:padding="10dp"
+                        android:text="@string/store_up"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:background="#D0021B"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/tv_fins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#ffffff"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_reminder130"
+                            android:textColor="#ffffff"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/hot_ranking"
+                        style="@style/goods_details_text"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/top_ranking"
+                        android:textColor="@color/cursor_text" />
+
+                    <View
+                        style="@style/view_height"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/new_ranking"
+                        style="@style/goods_details_text"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/latest_ranking"
+                        android:textColor="#aaaaaa" />
+
+                    <View
+                        style="@style/view_height"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/sales_ranking"
+                        style="@style/goods_details_text"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/sales_ranking"
+                        android:textColor="#aaaaaa" />
+
+                    <View
+                        style="@style/view_height"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ranking_cursor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="matrix"
+                    android:src="@drawable/cursor" />
+
+                <View
+                    android:id="@+id/product_view_line"
+                    style="@style/view_line"
+                    android:layout_marginBottom="8dp" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/ranking_viewpager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="230dp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:text="@string/shop_bb"
+                    android:textColor="#aaaaaa" />
+
+                <com.aite.a.view.MyGridView
+                    android:id="@+id/store_goods"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#eeeeee"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="5dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/store_more"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:gravity="center_horizontal|fill_vertical"
+                android:text="@string/see_more_bb" />
+        </LinearLayout>
+    </com.aite.a.view.CustomScrollView>
+
+</LinearLayout>

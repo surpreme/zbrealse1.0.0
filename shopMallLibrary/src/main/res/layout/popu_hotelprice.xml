@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/near_reminder10"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
+
+    <com.aite.a.view.MyGridView
+        android:id="@+id/mv_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:horizontalSpacing="3dp"
+        android:numColumns="3"
+        android:verticalSpacing="10dp" >
+    </com.aite.a.view.MyGridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/near_reminder11"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/ed_startprice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:background="@drawable/ed_input"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/ed_endprice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:background="@drawable/ed_input"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/near_reminder12"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
+
+    <com.aite.a.view.MyGridView
+        android:id="@+id/mv_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:horizontalSpacing="3dp"
+        android:numColumns="3"
+        android:verticalSpacing="10dp" >
+    </com.aite.a.view.MyGridView>
+
+    <TextView
+        android:id="@+id/tv_determine"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/hotel_determine"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+</LinearLayout>

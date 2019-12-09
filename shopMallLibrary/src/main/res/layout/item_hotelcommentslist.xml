@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0分"
+        android:textColor="#0092DD"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_score"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_score"
+        android:text="加载中"
+        android:textColor="@color/txtcolor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_score"
+        android:layout_marginTop="5dp"
+        android:text="1970-01-01发表"
+        android:textColor="@color/txtcolor"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginTop="5dp"
+        android:text="加载中"
+        android:textColor="@color/txtcolor"
+        android:textSize="12sp" />
+
+</RelativeLayout>

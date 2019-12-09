@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+
+        <TextView
+            android:id="@+id/goods_list_tv_new"
+            style="@style/goods_details_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/last_new"
+            android:textColor="@color/cursor_text" />
+
+        <View
+            style="@style/view_height"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/goods_list_tv_sales"
+                style="@style/goods_details_text"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/sales_volume" />
+
+            <ImageView
+                android:id="@+id/goods_list_iv_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/goods_list_tv_sales"
+                android:background="@drawable/group_xia" />
+        </RelativeLayout>
+
+        <View
+            style="@style/view_height"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/goods_list_tv_complex"
+                style="@style/goods_details_text"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/liulanliang" />
+
+            <ImageView
+                android:id="@+id/goods_list_iv_complexindex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/goods_list_tv_complex" />
+        </RelativeLayout>
+
+        <View
+            style="@style/view_height"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/goods_list_tv_price"
+                style="@style/goods_details_text"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/g_price" />
+
+            <ImageView
+                android:id="@+id/goods_list_iv_priceindex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/goods_list_tv_price" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/favorite_iv_cursor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@drawable/cursor" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gainsboro" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/goods_list_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

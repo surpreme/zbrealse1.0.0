@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/rl_item"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_hotelname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="深圳百合酒店"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hotelname"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="暂未评分"
+        android:textColor="#4F92DD"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hotelname"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_score"
+        android:text="0条点评|五星级/豪华型"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_score"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="布吉镇百鸽路,地铁3号布吉站，"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_address"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="距您约12.312公里。"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_price"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="￥"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_distance"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/tv_rmb"
+        android:text="0.00"
+        android:textColor="#FF6508"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_price"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/tv_price"
+        android:text="@string/find_reminder294"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+</RelativeLayout>

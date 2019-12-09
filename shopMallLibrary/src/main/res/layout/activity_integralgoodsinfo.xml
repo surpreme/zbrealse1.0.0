@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <ImageView
+        android:id="@+id/iv_goodsimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_lastprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/evaluation_tips37"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_lastprice"
+            android:layout_marginTop="5dp"
+            android:text="@string/evaluation_tips38"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_integral"
+            android:layout_marginTop="5dp"
+            android:text="@string/evaluation_tips39"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_number"
+            android:layout_marginTop="5dp"
+            android:text="@string/evaluation_tips43"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/bt_exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/integral_4"
+            android:paddingBottom="6dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="6dp"
+            android:text="@string/integral_prompt18"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bt_exchange"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/bt_exchange"
+            android:text="@string/evaluation_tips44"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_dxnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/evaluation_tips45"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_dxnumber"
+            android:layout_alignRight="@+id/tv_dxnumber"
+            android:layout_below="@+id/tv_dxnumber"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ed_input"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="1"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

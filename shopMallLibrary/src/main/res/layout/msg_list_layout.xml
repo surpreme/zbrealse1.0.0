@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nogray"
+    android:id="@+id/msg_layout"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_background_white"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/im_shop_msg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@android:color/holo_blue_bright" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="艾特商城"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_shop_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="信息" />
+
+                <TextView
+                    android:id="@+id/tv_shop_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="2019.01.01" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

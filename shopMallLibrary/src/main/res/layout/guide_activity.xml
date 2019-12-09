@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/guide_activity_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </androidx.viewpager.widget.ViewPager>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp" >
+
+        <ImageView
+            android:id="@+id/circular_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circular_selected" />
+
+        <ImageView
+            android:id="@+id/circular_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/circular_01"
+            android:src="@drawable/circular_normal" />
+
+        <ImageView
+            android:id="@+id/circular_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/circular_02"
+            android:src="@drawable/circular_normal" />
+
+        <ImageView
+            android:id="@+id/circular_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/circular_03"
+            android:src="@drawable/circular_normal" />
+
+        <ImageView
+            android:id="@+id/circular_05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/circular_04"
+            android:src="@drawable/circular_normal" />
+    </RelativeLayout>
+
+</RelativeLayout>

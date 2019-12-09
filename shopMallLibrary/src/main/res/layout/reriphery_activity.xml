@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <include
+        android:id="@+id/il_touu"
+        layout="@layout/include_titile_sort"/>
+
+    <View
+        android:id="@+id/v_fg"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/il_touu"
+        android:background="#eee"/>
+
+    <LinearLayout
+        android:id="@+id/ll_classify"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/v_fg"
+        android:background="@color/gainsboro"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/album_dp_1"
+                android:id="@+id/tv_city"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nearby_distrinct_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/cityy"/>
+
+            <ImageView
+                android:layout_width="@dimen/album_dp_10"
+                android:layout_height="@dimen/album_dp_10"
+                android:layout_marginStart="@dimen/album_dp_2"
+                android:src="@drawable/arrow_down"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+                android:id="@+id/tv_classification"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nearby_category_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/tab_category"/>
+
+            <ImageView
+                android:layout_width="@dimen/album_dp_10"
+                android:layout_height="@dimen/album_dp_10"
+                android:layout_marginStart="@dimen/album_dp_2"
+                android:src="@drawable/arrow_down"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+                android:layout_marginStart="1dp"
+                android:id="@+id/tv_typee"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nearby_sort_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/paixu"/>
+
+            <ImageView
+                android:layout_width="@dimen/album_dp_10"
+                android:layout_height="@dimen/album_dp_10"
+                android:layout_marginStart="@dimen/album_dp_2"
+                android:src="@drawable/arrow_down"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/album_dp_1"
+                android:id="@+id/tv_distance"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nearby_distance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/distancee"/>
+
+            <ImageView
+                android:layout_width="@dimen/album_dp_10"
+                android:layout_height="@dimen/album_dp_10"
+                android:layout_marginStart="@dimen/album_dp_2"
+                android:src="@drawable/arrow_down"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_classify"
+        android:background="@color/grey"
+        android:ellipsize="end"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:text="地址xxxxxxxxxxxxxx"
+        android:textSize="12sp" />
+
+    <ListView
+        android:id="@+id/reriphery_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_address"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:divider="@color/fengexian"
+        android:dividerHeight="1dp"
+        android:fastScrollEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"/>
+
+    <FrameLayout
+        android:id="@+id/fl_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000"
+        android:clickable="true"
+        android:visibility="gone">
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/sv_dizhi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/il_touu"
+        android:background="#e2e2e2"
+        android:orientation="vertical"
+       >
+
+        <RelativeLayout
+            android:id="@+id/ll_dizhi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_addresslist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp">
+            </ListView>
+
+            <Button
+                android:id="@+id/bt_returntop"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/main_return"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

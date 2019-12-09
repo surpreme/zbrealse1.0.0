@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tv_bbsdata_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="求助,鞋子买来三天就坏掉买家不理怎么办！"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_bbsdata_imgtitle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_bbsdata_title"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_bbsdata_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_bbsdata_imgtitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/iv_bbsdata_imgtitle"
+                android:text="ws李小归"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_bbsdata_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tv_bbsdata_username"
+                android:layout_marginLeft="10dp"
+                android:text="2016-07-12"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/v_fengexian"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/iv_bbsdata_imgtitle"
+                android:layout_marginTop="15dp"
+                android:background="@color/gainsboro" />
+
+            <TextView
+                android:id="@+id/tv_bbsdata_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_fengexian"
+                android:layout_marginTop="15dp"
+                android:text="View在Draw的时候分成两个阶段：measure和layout，在measure阶段时主要就是为了计算两个参数：height和width。而且要注意的是，这是个递归的过程，从顶向下，DecorView开始依次调用自己子元素的measure。计算完成这两个参数后就开始layout，最后再是draw的调用。
+对于ListView，当然每一个Item都会被调用measure方法，而在这个过程中getView和getCount会被调用，而且看用户的需求，可能会有很多次调用。
+
+而为什么会有很多组次调用呢？"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/mlv_bbsdata_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bbsdata_content"
+                android:layout_marginTop="10dp"
+                android:divider="@color/white"
+                android:dividerHeight="10dp"
+                android:scrollbars="none" >
+            </com.aite.a.view.MyListView>
+
+            <View
+                android:id="@+id/v_fengexian2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/mlv_bbsdata_img"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/gainsboro" />
+
+            <TextView
+                android:id="@+id/tv_bbsdata_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_fengexian2"
+                android:drawableLeft="@drawable/bbs_hot"
+                android:gravity="center_vertical"
+                android:text="热门评论"
+                android:textColor="@color/red"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/v_fengexian3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_bbsdata_hot"
+                android:layout_marginTop="15dp"
+                android:background="@color/gainsboro" />
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/mlv_bbsdata_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_fengexian3"
+                android:layout_marginTop="10dp"
+                android:divider="@color/white"
+                android:dividerHeight="10dp"
+                android:scrollbars="none" >
+            </com.aite.a.view.MyListView>
+
+            <TextView
+                android:id="@+id/tv_bbsdata_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mlv_bbsdata_comments"
+                android:layout_marginBottom="15dp"
+                android:background="@color/gainsboro"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/all_comments"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/v_fengexian4"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/tv_bbsdata_all"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/gainsboro" />
+
+            <LinearLayout
+                android:id="@+id/ll_bbsdata_input"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/v_fengexian4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_bbsdata_praisenum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/bbs_praise"
+                    android:text="0"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_bbsdata_commentsnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/bbs_comments"
+                    android:text="0"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_bbsdata_inputcen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/gainsboro"
+                    android:hint="@string/input_comments"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

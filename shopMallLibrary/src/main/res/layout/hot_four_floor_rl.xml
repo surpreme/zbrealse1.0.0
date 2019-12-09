@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/main_rl" >
+
+    <ImageView
+        android:id="@+id/main_iv_4f"
+        style="@style/main_iv_left"
+        android:background="@drawable/f_4" />
+
+    <TextView
+        android:id="@+id/main_tv_4f_name"
+        style="@style/main_tv_name"
+        android:layout_toRightOf="@+id/main_iv_4f"
+        android:text="@string/accessories" />
+
+    <ImageView
+        android:id="@+id/main_iv_4f_right"
+        style="@style/iv_right"
+        android:background="@drawable/f_r_4" />
+
+</RelativeLayout>

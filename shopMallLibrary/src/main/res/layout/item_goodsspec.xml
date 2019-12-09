@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="出马"
+        android:textColor="#051B28"
+        android:textSize="15sp" />
+
+    <com.donkingliang.labels.LabelsView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/labels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:labelBackground="@drawable/goodsspec_bg"
+        app:labelTextColor="@drawable/goodsspectxt_color"
+        app:labelTextPaddingBottom="5dp"
+        app:labelTextPaddingLeft="10dp"
+        app:labelTextPaddingRight="10dp"
+        app:labelTextPaddingTop="5dp"
+        app:labelTextSize="13sp"
+        app:lineMargin="10dp"
+        app:maxSelect="1"
+        app:selectType="SINGLE"
+        android:layout_marginBottom="10dp"
+        app:wordMargin="15dp" />
+</LinearLayout>

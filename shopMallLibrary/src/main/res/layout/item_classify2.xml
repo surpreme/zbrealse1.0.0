@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/classify2_iv"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_location"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:text="羽绒服"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <com.aite.a.view.MyGridView
+        android:id="@+id/mv_goodslist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:numColumns="3"
+        />
+        <!--android:layout_marginBottom="@dimen/dp_6"-->
+
+</LinearLayout>

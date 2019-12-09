@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/title_ll"
+    android:background="@color/white"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:lines="1"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18" />
+
+    <ImageView
+        android:id="@+id/_iv_right"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/_tx_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="15dp"
+        android:textSize="@dimen/album_sp_14"
+        android:textColor="@color/wxcolor"
+        android:text="清空"
+        android:visibility="gone"
+        />
+  <!--  <TextView
+        android:id="@+id/foot_title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="15dp"
+        android:textSize="@dimen/album_sp_14"
+        android:textColor="@color/wxcolor"
+        android:text="清空"
+        />-->
+    <TextView
+        android:id="@+id/_tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14dp"
+        android:visibility="gone" />
+
+    
+    <ImageView
+        android:id="@+id/_iv_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_6"
+        android:scaleType="centerInside"
+        android:src="@drawable/back" />
+
+</RelativeLayout>

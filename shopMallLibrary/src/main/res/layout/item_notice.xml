@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_iocn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/courier_data4" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/tv_time"
+        android:layout_toRightOf="@+id/iv_iocn"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="关于扫描派件费结算的公"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="2017-12-23"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:lines="2"
+        android:ellipsize="end"
+        android:layout_toRightOf="@+id/iv_iocn"
+        android:text="为了加快驿站各商家派费发放速度，明确派费商家计算依据，特制订本通知"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+</RelativeLayout>

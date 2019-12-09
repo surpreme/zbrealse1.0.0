@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gainsboro" >
+
+    <include
+        android:id="@+id/il_title"
+        layout="@layout/include_titile_sort" />
+
+    <ScrollView
+        android:id="@+id/sl_1"
+        android:layout_below="@+id/il_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gainsboro" >
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="@string/bbsinput"
+                android:padding="5dp" />
+
+            <com.aite.a.view.MyGridView
+                android:id="@+id/gv_bbs_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:scrollbars="none"
+                android:verticalSpacing="2dp" >
+            </com.aite.a.view.MyGridView>
+
+            <CheckBox
+                android:id="@+id/cb_bbs_anonymous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/gv_bbs_image"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:button="@drawable/checkboxtu"
+                android:checked="false"
+                android:text="@string/anonymous" />
+
+            <Button
+                android:id="@+id/bt_starrelease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cb_bbs_anonymous"
+                android:layout_margin="15dp"
+                android:background="@drawable/gm_1"
+                android:text="@string/determinerelease"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

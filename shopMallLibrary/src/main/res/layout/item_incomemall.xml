@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_item"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_ordersn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_time"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:text="订单编号 : 1000000000001801"/>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/gray"
+        android:text="2018-01-25"/>
+    <TextView
+        android:id="@+id/tv_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="10dp"
+        android:layout_toLeftOf="@+id/tv_money"
+        android:layout_below="@+id/tv_ordersn"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:text="来源 : 牛魔王杂货铺"/>
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/tv_form"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/red"
+        android:text="¥20.00"/>
+
+</RelativeLayout>

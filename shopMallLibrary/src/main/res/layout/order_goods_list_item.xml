@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/order_list_rl_"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/order_item_iv_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/order_item_tv_details"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/order_item_iv_image"
+            android:maxLines="2"
+            android:text="@string/japanese_interpretation"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_refundreturn"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@+id/order_item_tv_details"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/order_item_iv_image"
+            android:background="@color/red"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/distribution_center24"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_complaint"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@+id/order_item_tv_details"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_refundreturn"
+            android:background="@color/darkgrey"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/goodsdatails_reminder27"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_item_tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal|right"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.5"
+                android:text="@string/yuan_68"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/order_item_tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|right"
+                android:layout_marginTop="5dp"
+                android:text="@string/number_2"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

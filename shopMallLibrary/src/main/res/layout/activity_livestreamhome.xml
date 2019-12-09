@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00264D"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/fm_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/v_fg"
+        android:background="@color/white" />
+
+    <View
+        android:id="@+id/v_fg"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_above="@+id/ll_main_menu"
+        android:background="@color/gray"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f2f2"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/ll_menu_home"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu_home"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/live_streammenua2" />
+
+            <TextView
+                android:id="@+id/tv_menu_home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/order_reminder163"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_classification"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu_classification"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/live_streammenub1" />
+
+            <TextView
+                android:id="@+id/tv_menu_classification"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/find_reminder222"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_menu_distribution"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_menu_distribution"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/live_streammenuc1" />
+
+            <TextView
+                android:id="@+id/tv_menu_distribution"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/iv_menu_distribution"
+                android:layout_centerHorizontal="true"
+                android:text="@string/find_reminder223"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_members"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu_members"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/live_streammenud1" />
+
+            <TextView
+                android:id="@+id/tv_menu_members"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/near_reminder5"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_menu_mall"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu_mall"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/live_streammenue1" />
+
+            <TextView
+                android:id="@+id/tv_menu_mall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/tab_personal"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

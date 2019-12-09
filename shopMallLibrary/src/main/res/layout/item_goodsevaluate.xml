@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <com.aite.a.view.CircleImageView
+        android:id="@+id/iv_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="sadas"
+        android:textColor="@color/txtcolor"
+        android:textSize="12sp" />
+
+    <RatingBar
+        android:id="@+id/rb_score"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/tv_name"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_name"
+        android:progressDrawable="@drawable/rating_yellow" />
+
+    <TextView
+        android:id="@+id/tv_centent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_img"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="skjdfdkjljsjkdfskgksjkdfjkjkdfjgdkjfgjk"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+    <com.aite.a.view.MyGridView
+        android:id="@+id/gv_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_centent"
+        android:layout_marginTop="10dp"
+        android:horizontalSpacing="1dp"
+        android:numColumns="3"
+        android:verticalSpacing="1dp"></com.aite.a.view.MyGridView>
+</RelativeLayout>

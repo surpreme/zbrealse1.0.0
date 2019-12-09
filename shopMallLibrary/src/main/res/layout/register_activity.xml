@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <LinearLayout
+        android:id="@+id/regist_way_ll"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:background="#D22D31"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingEnd="@dimen/dp_8"
+        >
+        <!--android:background="@color/redff2832"-->
+        <TextView
+            android:id="@+id/sms_regist_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:text="手机"
+            android:background="@drawable/regist_way_selector"
+            android:textColor="@drawable/regist_way_color_selector"
+            android:textSize="18sp"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginBottom="@dimen/dp_2"
+            />
+        <TextView
+            android:id="@+id/email_regist_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_8"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="邮箱"
+            android:background="@drawable/regist_way_selector"
+            android:textColor="@drawable/regist_way_color_selector"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/tv_kongxinyuanjiao"
+       android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/dp_30">
+
+        <TextView
+            android:id="@+id/register_tv_name"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:padding="6dp"
+            android:text="@string/user_name" />
+
+        <com.aite.a.view.EditTextWithDel
+            android:id="@+id/register_et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/register_tv_name"
+            android:background="@null"
+            android:hint="@string/type_in_phone_regist"
+            android:inputType="textUri"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_code"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/tv_kongxinyuanjiao"
+       android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/register_passwrod_tv_msg"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:padding="6dp"
+            android:text="@string/school_check_code" />
+
+        <com.aite.a.view.EditTextWithDel
+            android:id="@+id/register_et_code"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/ll_right"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/register_passwrod_tv_msg"
+            android:background="@null"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_14" />
+
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/register_btn_gain"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/gm_selector"
+                android:text="@string/click_get_check_code"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_email"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/tv_kongxinyuanjiao"
+       android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/register_tv_email"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:padding="6dp"
+            android:text="@string/m_email" />
+
+        <com.aite.a.view.EditTextWithDel
+            android:id="@+id/register_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/register_tv_email"
+            android:background="@null"
+            android:hint="@string/type_in_email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/tv_kongxinyuanjiao"
+       android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+        >
+        <!--android:visibility="gone"-->
+
+        <TextView
+            android:id="@+id/register_passwrod_tv_new_password"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:padding="6dp"
+            android:text="@string/m_password" />
+
+        <com.aite.a.view.EditTextWithDel
+            android:id="@+id/register_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/register_passwrod_tv_new_password"
+            android:background="@null"
+            android:maxLength="24"
+            android:hint="@string/put_in_your_password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/tv_kongxinyuanjiao"
+       android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/register_tv_confirm_password"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:padding="4dp"
+            android:text="@string/m_confirm_password" />
+
+        <com.aite.a.view.EditTextWithDel
+            android:id="@+id/register_et_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/register_tv_confirm_password"
+            android:background="@null"
+            android:hint="@string/re_put_in_new_d"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp">
+
+
+        <CheckBox
+            android:id="@+id/protected_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/checkboxtu"
+            android:checked="false"
+            android:textColor="@color/gray"
+            android:text="隐私条款" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/register_btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@drawable/gm_selector"
+        android:text="@string/confirm_regist"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16" />
+
+</LinearLayout>

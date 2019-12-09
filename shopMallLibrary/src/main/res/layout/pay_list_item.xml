@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_zhifubao"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/zhifubao" />
+
+        <TextView
+            android:id="@+id/tv_biaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/rb_statefcf"
+            android:layout_toRightOf="@+id/iv_zhifubao"
+            android:text="支付宝移动支付"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/rb_statefcf"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:clickable="false"
+            android:enabled="false"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_selectorfcf"
+            android:button="@null"/>
+    </RelativeLayout>
+
+</LinearLayout>

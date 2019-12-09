@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gainsboro" />
+
+            <com.aite.a.view.CircleImageView
+                android:id="@+id/cv_icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="10dp"
+                android:text="username"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+            <!-- 一级推荐人 -->
+
+            <LinearLayout
+                android:id="@+id/ll_level1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro" />
+
+                <TextView
+                    android:id="@+id/tv_no1"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/distribution_level"
+                    android:gravity="center"
+                    android:text="@string/member_centre19"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_level1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" 
+                    android:padding="10dp" >
+
+                    <com.aite.a.view.CircleImageView
+                        android:id="@+id/cv_level1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_1name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cv_level1"
+                        android:text="username"
+                        android:textColor="#1571FA"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_sex1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/tv_1name"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/cv_level1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/member_sex1" />
+
+                    <TextView
+                        android:id="@+id/tv_isdocus1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_1name"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/iv_sex1"
+                        android:background="#54B956"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/distribution_center13"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_isdocus1"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/cv_level1"
+                        android:text="@string/distribution_center15"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_email"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/cv_level1"
+                        android:text="@string/distribution_center16"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- 二级推荐人 -->
+
+            <LinearLayout
+                android:id="@+id/ll_level2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro" />
+
+                <TextView
+                    android:id="@+id/tv_no2"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/distribution_level"
+                    android:gravity="center"
+                    android:text="@string/member_centre20"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_level2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <com.aite.a.view.CircleImageView
+                        android:id="@+id/cv_level2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_2name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cv_level2"
+                        android:text="username"
+                        android:textColor="#1571FA"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_sex2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/tv_2name"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/cv_level2"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/member_sex1" />
+
+                    <TextView
+                        android:id="@+id/tv_isdocus2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_2name"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/iv_sex2"
+                        android:background="#54B956"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/distribution_center13"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_email2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_isdocus2"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/cv_level2"
+                        android:text="@string/distribution_center15"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_email2"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/cv_level2"
+                        android:text="@string/distribution_center16"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- 三级推荐人 -->
+
+            <LinearLayout
+                android:id="@+id/ll_level3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro" />
+
+                <TextView
+                    android:id="@+id/tv_no3"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/distribution_level"
+                    android:gravity="center"
+                    android:text="@string/member_centre21"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_level3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <com.aite.a.view.CircleImageView
+                        android:id="@+id/cv_level3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_3name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cv_level3"
+                        android:text="username"
+                        android:textColor="#1571FA"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_sex3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/tv_3name"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/cv_level3"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/member_sex1" />
+
+                    <TextView
+                        android:id="@+id/tv_isdocus3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_3name"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/iv_sex3"
+                        android:background="#54B956"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/distribution_center13"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_email3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_isdocus3"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/cv_level3"
+                        android:text="@string/distribution_center15"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_email3"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/cv_level3"
+                        android:text="@string/distribution_center16"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

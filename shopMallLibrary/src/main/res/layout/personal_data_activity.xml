@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+
+    <LinearLayout
+        android:id="@id/new_address_ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <include layout="@layout/include_titile_sort" />
+
+        <com.aite.a.view.CustomScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/portrait" />
+
+                    <com.aite.a.view.CircleImageView
+                        android:id="@+id/now_icon"
+                        android:layout_width="80.0dip"
+                        android:layout_height="80.0dip"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tv_startt" />
+
+                    <TextView
+                        android:id="@+id/tv_startt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text=">"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical" >
+
+                        <LinearLayout style="@style/new_address_ll" >
+
+                            <TextView
+                                android:id="@+id/tv_username"
+                                style="@style/new_tv_name"
+                                android:ems="5"
+                                android:text="@string/rhm" />
+
+                            <TextView
+                                android:id="@+id/et_username"
+                                style="@style/new_et_name" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/view_line"
+                            android:padding="@dimen/dp_10" />
+
+                        <LinearLayout style="@style/new_address_ll" >
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                style="@style/new_tv_name"
+                                android:ems="5"
+                                android:text="@string/xm_xm" />
+
+                            <com.aite.a.view.EditTextWithDel
+                                android:id="@+id/et_name"
+                                style="@style/new_et_name" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--
+                    <FrameLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="150.0dip"
+                        android:layout_weight="1.0" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="6.0dip" >
+
+                            <com.aite.a.view.CircleImageView
+                                android:id="@+id/now_icon"
+                                android:layout_width="80.0dip"
+                                android:layout_height="80.0dip"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20.0dip"
+                                android:src="@drawable/ic_launcher" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/now_icon"
+                                android:layout_centerHorizontal="true"
+                                android:text="@string/now_photo"
+                                android:textColor="#ffea6942"
+                                android:textSize="@dimen/text_size_14" />
+                        </RelativeLayout>
+                    </FrameLayout>
+                    -->
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        style="@style/new_tv_name"
+                        android:layout_marginRight="10dp"
+                        android:ems="5"
+                        android:text="@string/xb" />
+
+                    <RadioButton
+                        android:id="@+id/rb_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/boy"
+                        android:checked="true"
+                        android:button="@drawable/checkboxtu"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <RadioButton
+                        android:id="@+id/rb_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkboxtu"
+                        android:text="@string/girl"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <RadioButton
+                        android:id="@+id/rb_secrecy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/confidential"
+                        android:layout_marginLeft="10dp"
+                        android:button="@drawable/checkboxtu"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        android:id="@+id/tv_birthdayy"
+                        style="@style/new_tv_name"
+                        android:ems="5"
+                        android:text="@string/sr" />
+
+                    <TextView
+                        android:id="@+id/tv_birthday"
+                        style="@style/new_et_name"
+                        android:gravity="center_horizontal"
+                        android:hint="@string/select_date" />
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        android:id="@+id/tv_homee"
+                        style="@style/new_tv_name"
+                        android:ems="5"
+                        android:text="@string/where" />
+
+                    <TextView
+                        android:id="@+id/tv_province"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="35dp"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:textColor="@color/gray"
+                        android:text="@string/order_reminder53"/>
+                    <TextView
+                        android:id="@+id/tv_city"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="35dp"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:textColor="@color/gray"
+                        android:text="@string/order_reminder54"/>
+                    <TextView
+                        android:id="@+id/tv_district"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="35dp"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:textColor="@color/gray"
+                        android:text="@string/order_reminder52"/>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/view_line"
+                    android:padding="@dimen/dp_10" />
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        android:id="@+id/tv_detailed"
+                        style="@style/new_tv_name"
+                        android:ems="5"
+                        android:text="@string/detail_address" />
+
+                    <com.aite.a.view.EditTextWithDel
+                        android:id="@+id/et_detailed_address"
+                        style="@style/new_et_name" />
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        android:id="@+id/tv_ww"
+                        style="@style/new_tv_name"
+                        android:ems="5"
+                        android:text="@string/ww" />
+
+                    <com.aite.a.view.EditTextWithDel
+                        android:id="@+id/et_ww"
+                        style="@style/new_et_name"
+                        android:numeric="integer" />
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        android:id="@+id/tv_qq"
+                        style="@style/new_tv_name"
+                        android:ems="5"
+                        android:text="@string/qq" />
+
+                    <com.aite.a.view.EditTextWithDel
+                        android:id="@+id/et_qq"
+                        style="@style/new_et_name"
+                        android:numeric="integer" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro"/>
+                <Button
+                    android:id="@+id/personal_data_btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/red"
+                    android:padding="10dp"
+                    android:text="@string/confirm_update"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+        </com.aite.a.view.CustomScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>

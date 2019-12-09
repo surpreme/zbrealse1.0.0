@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gainsboro" >
+
+    <View
+        android:id="@+id/v_j"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+
+    <ListView
+        android:id="@+id/lv_nearpopulist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_j"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/white"
+        android:divider="@color/gainsboro"
+        android:dividerHeight="1dp" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/lv_nearpopulist2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/v_j"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/gainsboro"
+        android:divider="@color/white"
+        android:visibility="gone"
+        android:dividerHeight="1dp" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/lv_nearpopulist3"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/v_j"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/white"
+        android:divider="@color/gainsboro"
+        android:visibility="gone"
+        android:dividerHeight="1dp" >
+    </ListView>
+
+</RelativeLayout>

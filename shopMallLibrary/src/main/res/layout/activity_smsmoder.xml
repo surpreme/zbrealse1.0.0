@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/i_title"
+        layout="@layout/include_courier" />
+
+    <ListView
+        android:id="@+id/lv_sms"
+        android:layout_below="@+id/i_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"></ListView>
+    <LinearLayout
+        android:id="@+id/ll_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/i_title"
+        android:gravity="center"
+        android:clickable="true"
+        android:background="#F8F8F8"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/couriersend_null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/join_merchant12"
+            android:textColor="#D1D1D1"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

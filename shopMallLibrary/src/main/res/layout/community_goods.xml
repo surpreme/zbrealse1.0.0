@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/i_title"
+        layout="@layout/include_phone_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_tou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/i_title"
+        android:layout_marginTop="10dp"
+        android:paddingRight="5dp" >
+
+        <com.aite.a.view.CircleImageView
+            android:id="@+id/iv_title"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/iv_title"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:singleLine="true"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_name"
+            android:layout_marginRight="10dp"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_goodsname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_goodsname"
+            android:layout_below="@+id/tv_goodsname"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/red"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_gobuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_price"
+            android:layout_marginRight="10dp"
+            android:background="@color/red"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/gobuy"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_fenge"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_tou"
+        android:layout_marginTop="5dp"
+        android:background="@color/gainsboro" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_fenge"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/iv_goodsimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_button"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scaleType="fitCenter" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/rl_button"
+        android:background="@color/gainsboro" />
+
+    <RelativeLayout
+        android:id="@+id/rl_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/iv_pl"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/look_pl" />
+
+        <TextView
+            android:id="@+id/tv_pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/iv_pl"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_zan"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_pl"
+            android:src="@drawable/look_zan" />
+
+        <TextView
+            android:id="@+id/tv_zan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_pl"
+            android:layout_toRightOf="@+id/iv_zan"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/ed_input"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/tv_submit"
+            android:layout_toRightOf="@+id/tv_zan"
+            android:background="@drawable/tv_kongxinyuanjiao"
+            android:hint="@string/input_comments"
+            android:paddingLeft="10dp"
+            android:textSize="12sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/tv_kongxinyuanjiao"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/submitt" />
+    </RelativeLayout>
+
+</RelativeLayout>

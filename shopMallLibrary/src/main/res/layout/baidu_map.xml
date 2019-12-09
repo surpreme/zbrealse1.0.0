@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/include_phone_title"
+        layout="@layout/include_phone_title" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/id_bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/include_phone_title"
+        android:clickable="true" />
+
+    <RelativeLayout
+        android:id="@+id/id_marker_info"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true"
+        android:background="#CC4e5a6b"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/info_img"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:alpha="1.0"
+            android:background="@drawable/map_image_border_white"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_map_bottom"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/info_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:textColor="#FFF5EB" />
+
+                    <TextView
+                        android:id="@+id/info_distance"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:textColor="#FFF5EB" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/info_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#FFF5EB" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/id_menu_map_style"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/navi_map_gps_locked" />
+
+</RelativeLayout>

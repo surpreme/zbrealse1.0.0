@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DFF0D8"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/evaluation_tips1"
+            android:textColor="#468847"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_prompt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/find_reminder244"
+            android:textColor="#468847"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_prompt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/find_reminder245"
+            android:textColor="#468847"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_prompt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. 如果您的手机已失效，可以绑定邮箱 后通过接收邮件完成验证。 "
+            android:textColor="#468847"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_prompt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/find_reminder247"
+            android:textColor="#468847"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_prompt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/find_reminder248"
+            android:textColor="#468847"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_dian1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_ts1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_dian1"
+            android:text="@string/find_reminder231"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/ed_phone"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_ts1"
+            android:hint="@string/type_in_phone_regist"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_verify"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ed_phone"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="@string/get_verification_code"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2f2f2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_dian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_ts"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_dian"
+            android:text="@string/find_reminder249"
+            android:textColor="@color/red"
+            android:textSize="12dp" />
+
+        <Spinner
+            android:id="@+id/sp_menu"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_ts" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2f2f2" />
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/red"
+        android:paddingBottom="8dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="8dp"
+        android:text="@string/find_reminder250"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2f2f2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_dian2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_ts2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_dian2"
+            android:text="@string/find_reminder251"
+            android:textColor="@color/red"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/ed_email"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_ts2"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2f2f2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_dian3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_ts3"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_dian3"
+            android:text="@string/find_reminder252"
+            android:textColor="@color/red"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/ed_email2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_ts3"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_validation"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_validation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/find_reminder253"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="150dp"
+        android:background="@color/red"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/find_reminder254"
+        android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

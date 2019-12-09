@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/fm_service"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_above="@+id/ll_bottom" />
+    
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:elevation="10dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_mall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/iv_menu1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/service_mall2" />
+
+            <TextView
+                android:id="@+id/tv_menu_mall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_menu1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:text="@string/servicehome"
+                android:textColor="#83B226"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_market"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/iv_market"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/talent_market1" />
+
+            <TextView
+                android:id="@+id/tv_market"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_market"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:text="@string/talentmarket"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_add"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/tv_add"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/service_add" />
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:text="@string/fbtask"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_service_hall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/service_hall"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/service_hall1" />
+
+            <TextView
+                android:id="@+id/tv_service_hall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/service_hall"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:text="@string/talentmarket2"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/iv_service_mine"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/service_mine1" />
+
+            <TextView
+                android:id="@+id/tv_service_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_service_mine"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:text="@string/mall2"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

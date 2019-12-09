@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_phone_title" />
+
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/ed_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="@string/demandtitle"
+                android:padding="5dp"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gainsboro" />
+
+            <EditText
+                android:id="@+id/ed_demand"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="@string/inputdemand"
+                android:padding="5dp"
+                android:textSize="13sp" />
+
+            <com.aite.a.view.MyGridView
+                android:id="@+id/mgv_fujian"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:horizontalSpacing="10dp"
+                android:numColumns="5" >
+            </com.aite.a.view.MyGridView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_addimg"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/nopicture" />
+                <ImageView
+                    android:id="@+id/iv_addfile"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="2dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/qyg_addfile" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_category"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/tv_leimu"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/category" />
+
+                <View
+                    android:id="@+id/v_fenge"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tv_leimu"
+                    android:background="@color/gainsboro" />
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/v_fenge"
+                    android:gravity="center"
+                    android:text="@string/servicexzlm" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text=">" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/tv_ms"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/fbtype" />
+
+                <View
+                    android:id="@+id/v_fg"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tv_ms"
+                    android:background="@color/gainsboro" />
+
+                <RadioGroup
+                    android:id="@+id/rg_ms"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/v_fg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb_zhaobiao"
+                        android:text="@string/zhaobiao"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_areward"
+                        android:text="@string/areward"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/tv_yusuansj"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/budgettime" />
+
+                <View
+                    android:id="@+id/v_fg2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tv_yusuansj"
+                    android:background="@color/gainsboro" />
+
+                <TextView
+                    android:id="@+id/tv_svtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/v_fg2"
+                    android:gravity="center"
+                    android:text="@string/servicexztime" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_budget"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/tv_yusuan"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/budget" />
+
+                <View
+                    android:id="@+id/v_fenge2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tv_yusuan"
+                    android:background="@color/gainsboro" />
+
+                <EditText
+                    android:id="@+id/ed_budget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/v_fenge2"
+                    android:background="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/tv_svnum"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/svnum" />
+
+                <View
+                    android:id="@+id/v_fg3"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tv_svnum"
+                    android:background="@color/gainsboro" />
+
+                <EditText
+                    android:id="@+id/ed_svnum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/v_fg3"
+                    android:background="@null" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/corners_orange_solid"
+                android:text="@string/submitt"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

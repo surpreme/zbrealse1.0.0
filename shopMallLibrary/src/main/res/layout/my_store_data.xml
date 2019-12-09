@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/store_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:gravity="center"
+                        android:text="@string/app_name"
+                        android:textColor="@color/red"
+                        android:textSize="18.0dip" />
+
+                    <LinearLayout style="@style/new_address_ll" >
+
+                        <TextView
+                            style="@style/new_tv_name"
+                            android:text="@string/main_product" />
+
+                    <com.aite.a.view.EditTextWithDel
+                            android:id="@+id/et_nickname"
+                            style="@style/new_et_name" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/new_address_ll" >
+
+                        <TextView
+                            style="@style/new_tv_name"
+                            android:text="@string/two_level_domain_name" />
+
+                        <com.aite.a.view.EditTextWithDel
+                            android:id="@+id/et_email"
+                            style="@style/new_et_name" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <com.aite.a.view.CircleImageView
+                        android:id="@+id/store_image"
+                        android:layout_width="90.0dip"
+                        android:layout_height="90.0dip"
+                        android:src="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="75.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:background="@drawable/check_size_2"
+                        android:gravity="center"
+                        android:text="@string/replacement"
+                        android:textColor="@color/red"
+                        android:textSize="10.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/view_line"
+                android:padding="@dimen/dp_10" />
+
+            <View style="@style/view_ge" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:orientation="vertical" >
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        style="@style/new_tv_name"
+                        android:text="Q\u0009\u0009\u0009\u0009Q：" />
+
+                               <com.aite.a.view.EditTextWithDel
+                        android:id="@+id/et_name"
+                        style="@style/new_et_name" />
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        style="@style/new_tv_name"
+                        android:text="@string/ali_wangwang" />
+
+                                <com.aite.a.view.EditTextWithDel
+                        android:id="@+id/et_sex"
+                        style="@style/new_et_name" />
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        style="@style/new_tv_name"
+                        android:text="@string/shop_phone" />
+
+                    <com.aite.a.view.EditTextWithDel
+                        android:id="@+id/et_birthday"
+                        style="@style/new_et_name" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/view_ge" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:orientation="vertical" >
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        style="@style/new_tv_name"
+                        android:text="S\u0009\u0009E\u0009\u0009O： " />
+
+                       <com.aite.a.view.EditTextWithDel
+                        android:id="@+id/et_ww"
+                        style="@style/new_et_name" />
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/new_address_ll" >
+
+                    <TextView
+                        style="@style/new_tv_name"
+                        android:text="@string/seo_des" />
+
+                    <com.aite.a.view.EditTextWithDel
+                        android:id="@+id/et_qq"
+                        style="@style/new_et_name" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

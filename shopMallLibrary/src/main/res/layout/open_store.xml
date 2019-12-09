@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.aite.a.view.CustomScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <include layout="@layout/include_titile_sort" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:layout_margin="10.0dip"
+                android:gravity="center_vertical"
+                android:text="@string/shop_contact_info"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
+
+            <View style="@style/view_line" />
+
+            <RelativeLayout
+                android:id="@+id/username_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/store_name"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/shop_name" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_store_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/store_name"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/code_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:gravity="center_vertical"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/register_passwrod_tv_msg"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="@string/where" />
+
+                <Spinner
+                    android:id="@+id/sp_province"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Spinner
+                    android:id="@+id/sp_city"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Spinner
+                    android:id="@+id/sp_district"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/register_passwrod_tv_msg"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/password_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/detailed_address"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/detail_address" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_detailed_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/detailed_address"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/confirm_password_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/contact_name"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/xm" />
+
+          <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_contact_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/contact_name"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/contact_phone"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/dh" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_contact_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/contact_phone"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/email_addr" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/email"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <View style="@style/view_line" />
+
+            <View style="@style/view_ge" />
+
+            <View style="@style/view_line" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:layout_margin="10.0dip"
+                android:gravity="center_vertical"
+                android:text="@string/identity_card_information"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
+
+            <View style="@style/view_line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/xm" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/name"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/id_number"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/ID_number" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_id_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/id_number"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/id_card_scanning"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/scan_part" />
+
+                <ImageView
+                    android:id="@+id/iv_id_card_scanning"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/id_card_scanning"
+                    android:src="@drawable/gridview_addpic" />
+            </RelativeLayout>
+
+            <View style="@style/view_line" />
+
+            <View style="@style/view_ge" />
+
+            <View style="@style/view_line" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:layout_margin="10.0dip"
+                android:gravity="center_vertical"
+                android:text="@string/settlement_account_information"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
+
+            <View style="@style/view_line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/pay_name"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/xm" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_pay_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/pay_name"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/pay_account"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/zh" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_pay_account"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/pay_account"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <View style="@style/view_line" />
+
+            <View style="@style/view_ge" />
+
+            <View style="@style/view_line" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:layout_margin="10.0dip"
+                android:gravity="center_vertical"
+                android:text="@string/store_management_information"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
+
+            <View style="@style/view_line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/merchant_name" />
+
+                <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_company_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/company_name"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/merchant_account"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/merchant_no" />
+
+                   <com.aite.a.view.EditTextWithDel
+                    android:id="@+id/et_merchant_account"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_toRightOf="@id/merchant_account"
+                    android:background="@drawable/pingjia_edit"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:gravity="center_vertical"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:id="@+id/register_tv6"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/shop_level" />
+
+                <Spinner
+                    android:id="@+id/sp_store_level"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/shop_category" />
+
+                <Spinner
+                    android:id="@+id/sp_store_category"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:gravity="center_vertical"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/business_category" />
+
+                <Spinner
+                    android:id="@+id/sp_one_category"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Spinner
+                    android:id="@+id/sp_two_category"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_weight="1.0"
+                    android:text="@string/shop_category" />
+
+                <Spinner
+                    android:id="@+id/sp_three_category"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Button
+                    android:id="@+id/bt_add"
+                    android:layout_width="55.0dip"
+                    android:layout_height="30.0dip"
+                    android:background="#10000000"
+                    android:text="@string/add"
+                    android:textSize="15.0sp" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:background="#fffdf5e6"
+                android:gravity="center_vertical"
+                android:padding="8.0dip" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:text="@string/one_category" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:text="@string/two_category" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:text="@string/three_category" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:text="@string/operation" />
+            </LinearLayout>
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/cusiness_category"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15.0dip" />
+
+            <LinearLayout
+                android:id="@+id/register_cb_"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20.0dip"
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/cb_look"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75.0dip"
+                    android:button="@drawable/reg_check_selector"
+                    android:text="@string/read_and_accepted"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/tv_look"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cursor_text"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_margin="8.0dip"
+                android:background="@drawable/gm_selector"
+                android:text="@string/confirm_regist"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+    </com.aite.a.view.CustomScrollView>
+</ScrollView>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_item"
+    android:background="@color/white">
+
+    <com.aite.a.view.CircleImageView
+        android:id="@+id/cv_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/cv_icon"
+        android:textColor="@color/black"
+        android:text="姓名 : 王英"/>
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/cv_icon"
+        android:textColor="@color/black"
+        android:layout_below="@+id/tv_name"
+        android:text="姓名 : 王英"/>
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/courierhome3"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/tv_phone"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="加入VIP客户"/>
+</RelativeLayout>

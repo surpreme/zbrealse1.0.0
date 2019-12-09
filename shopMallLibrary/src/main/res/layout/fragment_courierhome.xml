@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 滚动广告 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <com.aite.a.view.MyAdGallery
+            android:id="@+id/adgallery"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/ovalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="#00FFFFFF"
+                android:gravity="center"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_msg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/courier_msg"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_below="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/courierhome"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/iv_viceo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/courier_voice" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_send"
+            android:layout_toRightOf="@+id/iv_viceo"
+            android:background="@null"
+            android:hint="提货码/运单号/手机号"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/courierhome2"
+            android:gravity="center"
+            android:text="查/取件"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gv_menu"
+        android:layout_below="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:numColumns="3"
+        android:scrollbars="none"></GridView>
+
+    <ImageView
+        android:id="@+id/iv_volume"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:elevation="11dp"
+        android:src="@drawable/volume1"/>
+</RelativeLayout>

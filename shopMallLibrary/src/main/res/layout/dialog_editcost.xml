@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/release_goods7"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:inputType="number|numberDecimal"
+        android:background="@drawable/ed_input1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:hint="@string/find_reminder263"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_qs"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_code"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="@string/sure_confirm"
+        android:textColor="#3398FF"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_qx"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/et_code"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tv_qs"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="#3398FF"
+        android:textSize="15sp" />
+
+</RelativeLayout>

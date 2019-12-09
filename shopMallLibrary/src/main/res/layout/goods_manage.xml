@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <LinearLayout
+        android:id="@+id/order_yes_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="35.0dip"
+        android:background="#ffffffff" >
+
+        <TextView
+            android:id="@+id/un_shelve"
+            style="@style/goods_details_text"
+            android:layout_width="0.0dip"
+            android:layout_weight="1.0"
+            android:text="@string/up_goods"
+            android:textColor="@color/cursor_text" />
+
+        <View
+            style="@style/view_height"
+            android:layout_marginBottom="4.0dip"
+            android:layout_marginTop="4.0dip" />
+
+        <TextView
+            android:id="@+id/lock_up"
+            style="@style/goods_details_text"
+            android:layout_width="0.0dip"
+            android:layout_weight="1.0"
+            android:text="@string/illegal_goods" />
+
+        <View
+            style="@style/view_height"
+            android:layout_marginBottom="4.0dip"
+            android:layout_marginTop="4.0dip" />
+
+        <TextView
+            android:id="@+id/wait_verify"
+            style="@style/goods_details_text"
+            android:layout_width="0.0dip"
+            android:layout_weight="1.0"
+            android:text="@string/waiting_for_audit" />
+
+        <View
+            style="@style/view_height"
+            android:layout_marginBottom="4.0dip"
+            android:layout_marginTop="4.0dip" />
+
+        <TextView
+            android:id="@+id/verified"
+            style="@style/goods_details_text"
+            android:layout_width="0.0dip"
+            android:layout_weight="1.0"
+            android:text="@string/audit_success" />
+    </LinearLayout>
+
+    <View style="@style/view_line" />
+
+    <ImageView
+        android:id="@+id/seller_order_iv_cursor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@drawable/cursor" />
+
+    <com.aite.a.view.PullToRefreshView
+        android:id="@+id/goods_manage_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/goods_manage_List"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#fff0f0f0"
+            android:dividerHeight="5.0dip" />
+    </com.aite.a.view.PullToRefreshView>
+
+</LinearLayout>

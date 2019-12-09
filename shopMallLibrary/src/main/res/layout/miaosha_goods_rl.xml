@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/main_rl" >
+
+    <ImageView
+        android:id="@+id/main_iv_miaosha"
+        style="@style/main_iv_left"
+        android:background="@drawable/time" />
+
+    <TextView
+        android:id="@+id/main_tv_miaosha"
+        style="@style/main_tv_name"
+        android:layout_toRightOf="@+id/main_iv_miaosha"
+        android:text="@string/palm_spike"
+        android:textColor="#ff0000" />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_item"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="模板1 : 本小区自提"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="您的快递 : *5678已到达xxxx,验证码6xx8,电话136xxxxx642"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/tv_name"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>

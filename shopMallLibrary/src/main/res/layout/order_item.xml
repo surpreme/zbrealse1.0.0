@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/dianpuxiaotubiao"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/order_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/state_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:textSize="13sp"
+            android:text="@string/trade_off"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <com.aite.a.view.MyListView
+        android:id="@+id/order_item_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp" />
+
+    <View style="@style/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp" >
+
+        <TextView
+            android:id="@+id/goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="13sp"
+            android:text="@string/total_1" />
+        <TextView
+            android:id="@+id/goods_shipping_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/goods_price"
+            android:layout_toEndOf="@+id/goods_price"
+            android:textSize="13sp"
+            android:textColor="@color/dazhe_text"
+            android:text="10"/>
+        <TextView
+            android:id="@+id/goods_should_paied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/goods_shipping_fee"
+            android:layout_toEndOf="@+id/goods_shipping_fee"
+            android:layout_marginStart="@dimen/album_dp_1"
+            android:textSize="13sp"
+            android:text="@string/should_pay" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/goods_should_paied"
+            android:layout_toEndOf="@+id/goods_should_paied"
+            android:textSize="13sp"
+            android:textColor="@color/dazhe_text"
+            android:text="@string/yuan_10" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/order_logistics"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="#10000000"
+            android:gravity="center"
+            android:text="@string/view_logistics"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/order_datails"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="#10000000"
+            android:gravity="center"
+            android:text="@string/order_datails"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/tv_refund"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="#10000000"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/order_refund"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/detele_bt"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="#10000000"
+            android:text="@string/delete_order"
+            android:textColor="#666666"
+            android:visibility="gone"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/affirm_tx"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="#10000000"
+            android:text="@string/delete_order"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/order_pay"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/commRed"
+            android:text="@string/confirm_payment"
+            android:textColor="#ffffff"
+            android:visibility="gone"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

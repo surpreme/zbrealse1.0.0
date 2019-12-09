@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titile_sort" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#f2f2f2"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/order_reminder64"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/order_reminder65"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_securitylevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/order_reminder55"
+                android:textColor="@color/orange"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/order_reminder66"
+                android:gravity="center_vertical"
+                android:textColor="@color/orange"
+                android:textSize="12dp" />
+        </LinearLayout>
+                <!--android:gravity="center"-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_bt1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/order_reminder67"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_state1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bt1"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/order_reminder58"
+                android:textColor="#3BB6FF"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_ts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_bt1"
+                android:text="@string/order_reminder68"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_operation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ff5000"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/update_password"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_bt2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/order_reminder69"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_state2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bt2"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/order_reminder59"
+                android:textColor="@color/orange"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_ts2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_bt2"
+                android:text="@string/order_reminder70"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_operation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ts2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ff5000"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/verification_prompt11"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_bt3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/phonebinding"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_state3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bt3"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/order_reminder59"
+                android:textColor="@color/orange"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_ts3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_bt3"
+                android:text="@string/order_reminder71"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_operation3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ts3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ff5000"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/verification_prompt13"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_bt4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/order_reminder39"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_state4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bt4"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/order_reminder59"
+                android:textColor="@color/orange"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_ts4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_bt4"
+                android:text="@string/order_reminder72"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_operation4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ts4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ff5000"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/order_reminder62"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

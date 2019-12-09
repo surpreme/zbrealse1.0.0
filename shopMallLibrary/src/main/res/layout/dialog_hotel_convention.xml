@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/find_reminder264"
+        android:textColor="@color/txtcolor"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:text="X"
+        android:textColor="@color/txtcolor"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/v_fg"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_return"
+        android:background="@color/gainsboro" />
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_fg"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_trait1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/hotel_convention1"
+            android:drawablePadding="10dp"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_trait2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/hotel_convention2"
+            android:drawablePadding="10dp"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_iscancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_1"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/txtcolor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_customer_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_iscancel"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/txtcolor"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/v_fg2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_customer_service"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gainsboro" />
+
+    <TextView
+        android:id="@+id/tv_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_fg2"
+        android:text="@string/order_reminder83"
+        android:textColor="@color/txtcolor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_fg2"
+        android:layout_toRightOf="@+id/tv_m"
+        android:text="￥ 0"
+        android:textColor="#FF6508"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_convention"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/hotel_convention"
+        android:gravity="center"
+        android:text="@string/find_reminder265"
+        android:layout_below="@+id/v_fg2"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

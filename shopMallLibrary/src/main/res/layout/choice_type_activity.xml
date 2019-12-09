@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/nav_icon_search" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/_search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入商品名称/品牌/店铺"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/thingsfix_tabMode"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/black">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/thingsfix_tab1_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分类" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/thingsfix_tab2_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="品牌" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/thingsfix_tab3_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店铺" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

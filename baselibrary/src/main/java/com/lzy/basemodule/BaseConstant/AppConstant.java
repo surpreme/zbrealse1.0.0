@@ -99,8 +99,8 @@ public class AppConstant {
     public static final String INFORMATIONAIRINSERVICEURL = BASEURL + "index.php?act=respite&op=detail";
     //喘息服务相关接口 服务接单
     public static final String STARTAIRINSERVICEURL = BASEURL + "index.php?act=respite&op=order";
-    //我发布的服务-核销码接口 时间银行
-    public static final String SUREBOOKSERVICETIMEBANKURL = BASEURL + "index.php?act=member_timebank&op=my_qrcode";
+    //核销码接口 时间银行-喘息 助医
+    public static final String SUREBOOKSERVICETIMEBANKURL = BASEURL + "index.php?act=member_timebank&op=verify";
     //购物车 添加
     public static final String ADDSHOPCARDURL = BASEURL + "index.php?act=member_cart&op=app_cart_add";
 

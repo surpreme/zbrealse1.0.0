@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="@string/find_reminder266"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:hint="@string/near_reminder19"
+        android:inputType="number"
+        android:id="@+id/ev_number"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:maxLength="3"
+        android:hint="@string/find_reminder267"
+        android:inputType="number"
+        android:id="@+id/ev_discount"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="right">
+        <TextView
+            android:id="@+id/tv_qd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#1571FA"
+            android:padding="10dp"
+            android:text="@string/confirm"/>
+        <TextView
+            android:id="@+id/tv_qx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#1571FA"
+            android:padding="10dp"
+            android:text="@string/cancel"/>
+
+    </LinearLayout>
+</LinearLayout>

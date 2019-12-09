@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:attr="http://schemas.android.com/apk/res-auto"
+         android:id="@android:id/tabhost"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/android_layout_bg" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:background="#FFFFFF"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gainsboro" />
+
+        <RadioGroup
+            android:id="@+id/home_radio_button_group"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+
+            <com.aite.a.view.custom.MyRadioButton
+                android:id="@+id/home_tab_main"
+                style="@style/home_tab_bottom"
+                android:checked="true"
+                attr:drawableTop="@drawable/home_tab_main_selector"
+                attr:bounds = "55"
+                android:gravity="center_horizontal"
+                android:text="@string/tab_home"
+                android:textColor="@color/red"
+                android:textSize="12dp" />
+
+            <com.aite.a.view.custom.MyRadioButton
+                android:id="@+id/home_tab_category"
+                style="@style/home_tab_bottom"
+                attr:drawableTop ="@drawable/home_tab_category_selector"
+                attr:bounds = "55"
+                android:gravity="center_horizontal"
+                android:text="@string/tab_category"
+                android:textColor="@color/main_text"
+                android:textSize="12dp" />
+
+            <com.aite.a.view.custom.MyRadioButton
+                android:id="@+id/home_tab_periphery"
+                style="@style/home_tab_bottom"
+                attr:drawableTop="@drawable/home_tab_message_selector"
+                attr:bounds = "55"
+                android:gravity="center_horizontal"
+                android:text="@string/tab_message"
+                android:textColor="@color/main_text"
+                android:textSize="12dp" />
+
+            <com.aite.a.view.custom.MyRadioButton
+                android:id="@+id/home_tab_message"
+                android:visibility="gone"
+                style="@style/home_tab_bottom"
+                android:gravity="center_horizontal"
+                android:text="@string/tab_message"
+                android:textColor="@color/main_text"
+                android:textSize="12dp"
+                attr:bounds="55"
+                attr:drawableTop="@drawable/message" />
+
+            <com.aite.a.view.custom.MyRadioButton
+                android:id="@+id/home_tab_cart"
+                style="@style/home_tab_bottom"
+                attr:drawableTop="@drawable/home_tab_cart_selector"
+                attr:bounds = "55"
+                android:gravity="center_horizontal"
+                android:text="@string/tab_cart"
+                android:textColor="@color/main_text"
+                android:textSize="12dp" />
+
+            <com.aite.a.view.custom.MyRadioButton
+                android:id="@+id/home_tab_personal"
+                style="@style/home_tab_bottom"
+                attr:drawableTop="@drawable/home_tab_personal_selector"
+                attr:bounds = "55"
+                android:gravity="center_horizontal"
+                android:text="@string/tab_personal"
+                android:textColor="@color/main_text"
+                android:textSize="12dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

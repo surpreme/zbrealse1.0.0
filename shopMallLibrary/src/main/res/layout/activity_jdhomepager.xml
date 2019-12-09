@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true" >
+
+    <com.aite.a.view.ListeningScrollView
+        android:id="@+id/msv_gd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-22dp"
+        android:background="#F5F5F5"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 滚动广告 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.aite.a.view.MyAdGallery
+                    android:id="@+id/adgallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp" >
+
+                    <LinearLayout
+                        android:id="@+id/ovalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dip"
+                        android:background="#00FFFFFF"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 导航部分 -->
+
+            <include
+                android:id="@+id/i_dh"
+                layout="@layout/include_jdhomepager2" />
+            <!-- 秒杀部分 -->
+
+            <include layout="@layout/include_jdhomepager3" />
+            <!-- 广告部分 -->
+
+            <include layout="@layout/include_jdhomepager5" />
+
+            <!-- 楼层部分 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_ts"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_height="40dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/hot_title"
+                    android:background="#FF0000" />
+
+                <TextView
+                    android:id="@+id/hot_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/characteristic_market"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/hot_title"
+                    android:background="#FF0000" />
+            </RelativeLayout>
+
+            <com.aite.a.view.MyListView
+                android:id="@+id/ml_goods"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/transparent"
+                android:layout_marginTop="10dp" >
+            </com.aite.a.view.MyListView>
+
+            <!-- 品牌部分 -->
+
+            <include
+                layout="@layout/include_jdhomepager4"
+                android:visibility="gone" />
+        </LinearLayout>
+    </com.aite.a.view.ListeningScrollView>
+
+    <!-- 顶部 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="-25dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:clickable="true" >
+
+        <LinearLayout
+            android:id="@+id/ll_qrcode"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_sas"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/jd_qrcode" />
+
+            <TextView
+                android:id="@+id/tv_sas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫啊扫"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_se"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="9dp"
+            android:layout_toLeftOf="@+id/ll_message"
+            android:layout_toRightOf="@+id/ll_qrcode"
+            android:background="@drawable/jd_homesearch" >
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/jd_search" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/iv_search"
+                android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:background="@null"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_aide"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:src="@drawable/jd_aide" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_message"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/jd_message" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

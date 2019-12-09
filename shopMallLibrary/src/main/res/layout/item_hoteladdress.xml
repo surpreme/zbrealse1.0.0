@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:text="热门城市"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp" />
+
+    <com.aite.a.view.MyGridView
+        android:id="@+id/mv_chit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:horizontalSpacing="1dp"
+        android:numColumns="5"
+        android:background="@color/white"
+        android:verticalSpacing="1dp" >
+    </com.aite.a.view.MyGridView>
+
+</LinearLayout>

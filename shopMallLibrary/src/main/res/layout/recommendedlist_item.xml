@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/ll_item"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_listname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="男子撞树上，民警为其撑伞遮阴"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_listtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/grey"
+            android:text="10评 2016-03-03"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="110dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY" />
+    
+</LinearLayout>

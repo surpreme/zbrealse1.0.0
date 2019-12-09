@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <SurfaceView
+        android:id="@+id/main_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/zb_prepareicon1" />
+
+        <ImageView
+            android:id="@+id/iv_reverse"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/zb_prepareicon4" />
+
+        <LinearLayout
+            android:id="@+id/ll_address"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_reverse"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/zb_prepareicon2" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="深圳市"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_margin="20dp"
+        android:background="@drawable/zb_state3"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/find_reminder225"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_choosechannel"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/tv_bt"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="@string/find_reminder226"
+                android:textColor="#FB3A71"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/zb_prepareicon5" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_fg"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tv_bt"
+            android:layout_marginTop="10dp"
+            android:background="#55ffffff" />
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/v_fg"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:hint="@string/find_reminder8" />
+
+        <LinearLayout
+            android:id="@+id/ll_addlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_below="@+id/et_title"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:gravity="center"
+            android:background="@drawable/zb_state4"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/zb_prepareicon3"/>
+
+            <TextView
+                android:id="@+id/tv_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/find_reminder227"
+                android:textColor="#55ffffff"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_start"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/zb_state5"
+        android:layout_below="@+id/rl_data"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/find_reminder228"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

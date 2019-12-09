@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edit_style_selector" >
+
+    <!-- 如果要实现仿淘宝的图片模糊搜索功能,则需要把该页面的id为ib_bamera与_search_button互换,并把gone属性删除 -->
+
+    <ImageButton
+        android:id="@+id/ib_camera"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:background="@drawable/home_tab_periphery_selector"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_s"
+        android:layout_width="0.3dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@id/ib_camera"
+        android:background="@color/gray"
+        android:visibility="gone" />
+
+    <com.aite.a.view.EditTextWithDel
+        android:id="@+id/_search_edit"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dip"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/view_i"
+        android:layout_toRightOf="@id/view_s"
+        android:background="@null"
+        android:hint="@string/put_in_goods_name"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/_search_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/mainsearch" />
+
+    <View
+        android:id="@+id/view_i"
+        android:layout_width="0.3dp"
+        android:layout_height="match_parent"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/_search_button"
+        android:background="@color/gray" />
+
+</RelativeLayout>

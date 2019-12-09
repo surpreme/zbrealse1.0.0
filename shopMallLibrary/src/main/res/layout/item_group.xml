@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_item">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/iv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/tv_join"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:text="第二届CMF会议交流群"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_join"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/find_btn"
+        android:gravity="center"
+        android:text="@string/find_reminder122"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_numberpeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_title"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:text="本群共96人"
+        android:textColor="@color/txtcolor"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_icon"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:background="#eeeeee"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/find_reminder123"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="探讨CMF行业趋势"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/find_reminder124"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="探讨CMF行业趋势"
+            android:textColor="@color/txtcolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/find_reminder125"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <com.aite.a.view.MyGridView
+            android:id="@+id/gv_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="5"
+            android:verticalSpacing="10dp"></com.aite.a.view.MyGridView>
+    </LinearLayout>
+</RelativeLayout>

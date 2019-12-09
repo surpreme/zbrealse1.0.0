@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/main_rl" >
+
+    <ImageView
+        android:id="@+id/main_iv_5f"
+        style="@style/main_iv_left"
+        android:background="@drawable/f_5" />
+
+    <TextView
+        android:id="@+id/main_tv_5f_name"
+        style="@style/main_tv_name"
+        android:layout_toRightOf="@+id/main_iv_5f"
+        android:text="@string/children_clothing" />
+
+    <ImageView
+        android:id="@+id/main_iv_5f_right"
+        style="@style/iv_right"
+        android:background="@drawable/f_r_5" />
+
+</RelativeLayout>

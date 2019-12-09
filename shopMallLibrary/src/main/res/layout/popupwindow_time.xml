@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_c">
+    <ImageView
+        android:id="@+id/iv_index"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="80dp"
+        android:src="@drawable/zb_index" />
+    <LinearLayout
+        android:layout_below="@+id/iv_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:background="@drawable/dialog_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="100dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <level3.widget.WheelView
+            android:id="@+id/wv_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <level3.widget.WheelView
+            android:id="@+id/wv_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/find_reminder304"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <level3.widget.WheelView
+            android:id="@+id/wv_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <level3.widget.WheelView
+            android:id="@+id/wv_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>
