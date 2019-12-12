@@ -33,6 +33,7 @@ public abstract class mBaseFragment<V extends BaseView, T extends BasePresenterI
     public Context context;
     public T mPresenter;
     //下拉刷新
+    protected abstract boolean isUseMvp();
 
     protected int mCurrentPage = 1;
 

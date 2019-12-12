@@ -1,4 +1,4 @@
-package com.aite.mainlibrary.activity;
+package com.aite.mainlibrary.activity.allmain.device;
 
 import com.aite.mainlibrary.R;
 import com.lzy.basemodule.base.BaseActivity;

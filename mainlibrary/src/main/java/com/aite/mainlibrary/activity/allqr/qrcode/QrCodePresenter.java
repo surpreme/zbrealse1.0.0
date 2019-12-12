@@ -66,5 +66,48 @@ public class QrCodePresenter extends BasePresenterImpl<QrCodeContract.View> impl
                     }
                 });
 
-}
+    }
+
+    @Override
+    public void BindingDevice(HttpParams httpParams) {
+        OkGo.<BaseData<TwoSuccessCodeBean>>get(AppConstant.GETDEVICEHEADINFORMATIONURL)
+                .tag(mView.getContext())
+                .params(httpParams)
+                .execute(new AbsCallback<BaseData<TwoSuccessCodeBean>>() {
+                    @Override
+                    public BaseData<TwoSuccessCodeBean> convertResponse(okhttp3.Response response) throws Throwable {
+                        LogUtils.d(response.request());
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+                        try {
+                            BaseData baseData = BeanConvertor.convertBean(jsonObject.toString(), BaseData.class);
+                            if (baseData.getDatas().getError() != null) {
+                                mView.showError(baseData.getDatas().getError());
+                            }
+
+                        } catch (Exception e) {
+                            LogUtils.e(e);
+                        }
+                        JSONObject object = jsonObject.optJSONObject("datas");
+//                        String dataresult = object.optString("msg");
+                        Gson gson = new Gson();
+                        TwoSuccessCodeBean twoSuccessCodeBean = gson.fromJson(object.toString(), TwoSuccessCodeBean.class);
+                        ((Activity) mView.getContext()).runOnUiThread(()
+                                -> mView.onBindingDeviceSuccess(twoSuccessCodeBean));
+                        return null;
+                    }
+
+                    @Override
+                    public void onStart(Request<BaseData<TwoSuccessCodeBean>, ? extends Request> request) {
+                        LogUtils.d("onStart");
+
+                    }
+
+                    @Override
+                    public void onSuccess(Response<BaseData<TwoSuccessCodeBean>> response) {
+                        LogUtils.d("onSuccess");
+
+                    }
+                });
+
+    }
 }

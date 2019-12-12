@@ -102,7 +102,8 @@ dependencies {
     api 'com.blankj:rxbus:1.1'
 
     api 'com.android.support:multidex:1.0.3'
-
+    //弹窗
+    api 'com.lxj:xpopup:1.8.2'
     //拼音
     //arouter
 //    api 'com.alibaba:arouter-api:1.5.0'

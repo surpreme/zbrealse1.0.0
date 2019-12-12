@@ -23,8 +23,8 @@ allprojects {
         maven {
             url 'http://mvn.gt.igexin.com/nexus/content/repositories/releases'
         }
-        flatDir {
-            dirs project(':shopMallLibrary').file('libs')
+        repositories {
+            flatDir { dirs 'libs' }
         }
     }
 }

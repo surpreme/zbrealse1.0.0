@@ -12,11 +12,13 @@ import com.lzy.okgo.model.HttpParams;
 public class QrCodeContract {
     interface View extends BaseView {
         void onSureSuccess(Object msg);
+        void onBindingDeviceSuccess(Object msg);
 
     }
 
     interface Presenter extends BasePresenter<View> {
         void sureBook(HttpParams httpParams);
+        void BindingDevice(HttpParams httpParams);
 
     }
 }

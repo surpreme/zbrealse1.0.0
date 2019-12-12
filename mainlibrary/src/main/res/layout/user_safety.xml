@@ -14,7 +14,7 @@
         android:background="@color/noglay" />
 
     <LinearLayout
-        android:layout_width="300dp"
+        android:layout_width="335dp"
         android:layout_height="43dp"
         android:layout_gravity="center">
 
@@ -44,7 +44,7 @@
             app:hintEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/key_get_edit"
+                android:id="@+id/phone_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -56,6 +56,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            android:id="@+id/timer_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -74,6 +75,7 @@
         app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone_code_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -95,6 +97,7 @@
         app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/get_password_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -116,6 +119,7 @@
         app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sure_password_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -133,7 +137,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/sure_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -143,7 +147,7 @@
             android:background="@drawable/round_background_doctor_blue"
             android:text="确定"
             android:textColor="@color/white"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
     </RelativeLayout>
 
 </LinearLayout>

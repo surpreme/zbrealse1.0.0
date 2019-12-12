@@ -3,7 +3,7 @@ package com.lzy.basemodule;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,15 +14,23 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.bumptech.glide.Glide;
+import com.lzy.basemodule.logcat.LogUtils;
+import com.lzy.basemodule.view.PickerView;
+
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class PopwindowUtils {
     private static PopwindowUtils mInstance;
@@ -36,6 +44,8 @@ public class PopwindowUtils {
     private static final int chioceGenderlayoutid = R.layout.choice_gender;
     private static final int bootomrecylayoutid = R.layout.choice_bottom;
     private static final int qrcodelayoutid = R.layout.pop_img;
+    private static final int payawylayoutid = R.layout.pop_pay_awy;
+    private static final int choicethreerecylayoutid = R.layout.choice_three_recy;
 
     public static PopwindowUtils getmInstance() {
         if (mInstance == null) {
@@ -68,15 +78,56 @@ public class PopwindowUtils {
         });
 
     }
-    public void showImgPopupWindow(final Context context,String url) {
+
+    public void showImgPopupWindow(final Context context, String url) {
         @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(qrcodelayoutid, null);
         setBackGroundAlpha(0.6f, context);
         popupWindow = new PopupWindow(view, 1000, 700, false);
-        ImageView qrcode_iv=view.findViewById(R.id.qrcode_iv);
+        ImageView qrcode_iv = view.findViewById(R.id.qrcode_iv);
         Glide.with(context).load(url).into(qrcode_iv);
         popupWindow.setOutsideTouchable(true);
         popupWindow.setContentView(view);
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                setBackGroundAlpha(1.0f, context);
+            }
+        });
+
+    }
+
+    class oo {
+        int a;
+        List<bb> b;
+
+        class bb {
+            int c;
+
+
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    public void showThreeRecyPopupWindow(final Context context, List<String> yearlist, List<String> mondaylist, View ui) {
+        @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(choicethreerecylayoutid, null);
+        setBackGroundAlpha(1.0f, context);
+        popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, 330, false);
+        PickerView yearPick = view.findViewById(R.id.year_picker);
+        PickerView dayPick = view.findViewById(R.id.day_picker);
+        yearPick.setDataList(yearlist);
+        yearPick.setOnSelectListener(new PickerView.OnSelectListener() {
+            @Override
+            public void onSelect(View view, String selected) {
+                dayPick.setDataList(mondaylist);
+
+            }
+        });
+
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setContentView(view);
+//        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+        popupWindow.showAsDropDown(ui, 0, 0, Gravity.CENTER);
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {
@@ -187,7 +238,7 @@ public class PopwindowUtils {
 
     }
 
-    public void showRecyPopupWindow(final Context context, RecyclerView.Adapter recyadpater, LinearLayoutManager linearLayoutManager, View ui) {
+    public void showRecyPopupWindow(final Context context, RecyclerView.Adapter recyadpater, RecyclerView.LayoutManager layoutManager, View ui) {
         @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(recylayoutid, null);
         setBackGroundAlpha(1.0f, context);
         popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, false);
@@ -196,7 +247,7 @@ public class PopwindowUtils {
 
         //图片设置透明度
 //        recyclerView.setAlpha(0.4f);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recyadpater);
         popupWindow.setOutsideTouchable(true);
         popupWindow.setContentView(view);
@@ -231,23 +282,28 @@ public class PopwindowUtils {
 
     }
 
-    public void showThreeRecyPopupWindow(final Context context, RecyclerView.Adapter recyadpater, Object data1, Object data2, Object data3, LinearLayoutManager linearLayoutManager, View ui) {
-        @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(threeRecylayoutid, null);
-        setBackGroundAlpha(1.0f, context);
-        popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, true);
-        final RecyclerView first_recy = view.findViewById(R.id.first_recy);
-        final RecyclerView second_recy = view.findViewById(R.id.second_recy);
-        final RecyclerView thrid_recy = view.findViewById(R.id.thrid_recy);
 
-        popupWindow.setFocusable(true);
-
-        //图片设置透明度
-//        recyclerView.setAlpha(0.4f);
-        first_recy.setLayoutManager(linearLayoutManager);
-        first_recy.setAdapter(recyadpater);
+    public void showPayRecyPopupWindow(final Context context, int gravity, RecyclerView.Adapter adapter, LinearLayoutManager linearLayoutManager) {
+        @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(payawylayoutid, null);
+//        ButterKnife.bind(this,view);
+        setBackGroundAlpha(0.7f, context);
+        popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, false);
+        popupWindow.setFocusable(false);
+        //设置触摸
+        popupWindow.setTouchable(true);
+        RecyclerView recycler_view = view.findViewById(R.id.recycler_view);
+        ImageView closeiv = view.findViewById(R.id.close_iv);
+        recycler_view.setLayoutManager(linearLayoutManager);
+        recycler_view.setAdapter(adapter);
+        closeiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismissPopWindow();
+            }
+        });
         popupWindow.setOutsideTouchable(true);
         popupWindow.setContentView(view);
-        popupWindow.showAsDropDown(ui, 0, 0);
+        popupWindow.showAtLocation(view, gravity, 0, 0);
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {

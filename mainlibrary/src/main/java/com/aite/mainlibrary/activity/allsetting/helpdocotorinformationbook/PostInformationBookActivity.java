@@ -19,7 +19,9 @@ import com.aite.mainlibrary.activity.allshopcard.hekpstart.HekpStartActivity;
 import com.bumptech.glide.Glide;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.base.BaseActivity;
+import com.lzy.basemodule.bean.ContentValue;
 import com.lzy.basemodule.logcat.LogUtils;
+import com.lzy.basemodule.util.TimeUtils;
 import com.lzy.okgo.model.HttpParams;
 
 import butterknife.BindView;
@@ -147,8 +149,13 @@ public class PostInformationBookActivity extends BaseActivity<PostInformationBoo
         Glide.with(context).load(infoBean.getInfo().getEnd_thumb()).into(endIv);
 
         bottomBtn.setEnabled(!infoBean.getInfo().getOrder_status().equals("3"));
-        startTimeTv.setText(String.format("开始时间：%s", infoBean.getInfo().getStart_time()));
-        endTimeTv.setText(String.format("结束时间：%s", infoBean.getInfo().getEnd_time()));
+        try {
+            startTimeTv.setText(String.format("开始时间：%s", TimeUtils.stampToDatemm2(Long.parseLong(infoBean.getInfo().getStart_time()))));
+            endTimeTv.setText(String.format("结束时间：%s", TimeUtils.stampToDatemm2(Long.parseLong(infoBean.getInfo().getEnd_time()))));
+        } catch (Exception e) {
+
+        }
+
         bottomBtn.setAlpha(infoBean.getInfo().getOrder_status().equals("3") ? 0.5f : 1.0f);
         mobileTv.setText(String.format("手机号：%s", infoBean.getInfo().getMobile()));
         // case "1":
@@ -166,30 +173,55 @@ public class PostInformationBookActivity extends BaseActivity<PostInformationBoo
                 bottomBtn.setAlpha(0.7f);
                 break;
             case "1":
-            case "2":
-                bottomBtn.setText("开始服务");
+                bottomBtn.setText("已接单");
                 bottomBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(HekpStartActivity.class, "tb_id", bundle.getString("tb_id"));
+                        startActivityWithCls(HekpStartActivity.class, 0
+                                , new ContentValue("tb_id", bundle.getString("tb_id"))
+                                , new ContentValue("URLTYPE", "START")
+                                , new ContentValue("type", getIntent().getStringExtra("type")));
+
+                    }
+                });
+            case "2":
+                bottomBtn.setText("已开始-点击结束");
+                bottomBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivityWithCls(HekpStartActivity.class, 0
+                                , new ContentValue("tb_id", bundle.getString("tb_id"))
+                                , new ContentValue("URLTYPE", "END")
+                                , new ContentValue("type", getIntent().getStringExtra("type")));
 
                     }
                 });
                 break;
             case "3":
-                bottomBtn.setText("结束服务");
+                bottomBtn.setText("已结束服务");
+                bottomBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivityWithCls(HekpStartActivity.class, 0
+                                , new ContentValue("tb_id", bundle.getString("tb_id"))
+                                , new ContentValue("URLTYPE", "END")
+                                , new ContentValue("type", getIntent().getStringExtra("type")));
+
+
+                    }
+                });
                 break;
             case "4":
                 bottomBtn.setText("已评价");
                 break;
         }
-        if (!infoBean.getInfo().getOrder_status().equals("3")) {
-            overServiceHideLl.setVisibility(View.GONE);
-        } else {
-            bottomBtn.setText("已结束");
-            bottomBtn.setEnabled(false);
-            overServiceHideLl.setVisibility(View.VISIBLE);
-        }
+//        if (infoBean.getInfo().getOrder_status().equals("1")||infoBean.getInfo().getOrder_status().equals("-1")||infoBean.getInfo().getOrder_status().equals("0")||infoBean.getInfo().getOrder_status().equals("2")) {
+//            overServiceHideLl.setVisibility(View.GONE);
+//        } else {
+//            bottomBtn.setText("已结束");
+//            bottomBtn.setEnabled(false);
+//            overServiceHideLl.setVisibility(View.VISIBLE);
+//        }
     }
 
 

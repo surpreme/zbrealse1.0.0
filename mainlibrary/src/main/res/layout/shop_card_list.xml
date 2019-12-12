@@ -3,25 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
 
     <include layout="@layout/toolbar_right_layout" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="@dimen/margin_15dp"
-        android:layout_marginTop="@dimen/margin_10dp"
-        android:layout_marginRight="@dimen/margin_15dp"
-        android:layout_weight="1"
-        app:cardCornerRadius="10dp"
-        android:layout_marginBottom="@dimen/margin_10dp">
 
-        <include layout="@layout/recy_layout" />
+    <include layout="@layout/recy_layout" />
 
-    </androidx.cardview.widget.CardView>
 
     <RelativeLayout
         android:id="@+id/delete_bottom_ll"
@@ -54,12 +44,12 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/all_mag_ll"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/white"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <CheckBox
             android:id="@+id/all_check"
@@ -117,7 +107,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:background="@color/oranger"
-            android:text="加入购物车"
+            android:text="支付订单"
             android:textColor="@color/white" />
     </RelativeLayout>
 

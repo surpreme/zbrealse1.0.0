@@ -36,8 +36,6 @@ import butterknife.ButterKnife;
  */
 
 public class HelpEatActivity extends BaseActivity<HelpEatContract.View, HelpEatPresenter> implements HelpEatContract.View, OnBannerListener {
-    @BindView(R2.id.tv_title_right)
-    TextView tvTitleR2ight;
     @BindView(R2.id.morning_ll)
     LinearLayout morningLl;
     @BindView(R2.id.noon_ll)

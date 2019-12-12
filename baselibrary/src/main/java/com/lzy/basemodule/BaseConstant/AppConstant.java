@@ -26,7 +26,6 @@ public class AppConstant {
     //找回密码-提交
     public static final String ALLSUREFINDKEYCODE = BASEURL + "index.php?act=login&op=setting_password";
 
-
     //注册第一步提交
     public static final String NEWUSERFIRSTURL = BASEURL + "index.php?act=login&op=register";
     //注册第2步提交
@@ -37,10 +36,15 @@ public class AppConstant {
 
     //登录
     public static final String LOGINURL = BASEURL + "index.php?act=login&op=index";
+    //
+    //获取支付方式 注：如果使用钱包支付 则单独调用对应钱包支付提交接口
+    public static final String PAYAWYGETINFORMATIONURL = BASEURL + "index.php?act=member_payment&op=APP_getPaymentList";
     //app首页
     public static final String MAINUIDATAURL = BASEURL + "index.php?act=index&op=APPindex";
     //添加地址 -获取地址列表信息
     public static final String LISTINFORMATIONADDRESSDATAURL = BASEURL + "index.php?act=member_address&op=address_list";
+    //添加地址 -地址详细信息
+    public static final String INFORMATIONADDRESSPERSONDATAURL = BASEURL + "index.php?act=member_address&op=address_info";
     //添加地址-提交
     public static final String ADDADDRESSDATAURL = BASEURL + "index.php?act=member_address&op=address_add";
     //健康档案-得到信息
@@ -84,6 +88,16 @@ public class AppConstant {
     public static final String BOOKINFORMATIONTIMEBANKURL = BASEURL + "index.php?act=timebank&op=detail";
     //时间银行 服务接单
     public static final String STARTHELPTIMEBANKURL = BASEURL + "index.php?act=timebank&op=order";
+    //
+    //获取积分银行页信息
+    public static final String NUMBERBANKINFORMATIONURL = BASEURL + "index.php?act=member_timebank_point&op=index";
+    //获取积分银行  获取会员积分记录
+    public static final String AGOGETNUMBERBANKINFORMATIONURL = BASEURL + "index.php?act=member_timebank_point&op=points_log_list";
+    //获取积分礼品
+    public static final String NUMBERSHOPLISTINFORMATIONURL = BASEURL + "index.php?act=member_timebank_point&op=points_goods_list";
+    //获取积分规则页信息 直接返回H5内容
+    public static final String RULESNUMBERINFORMATIONURL = BASEURL + "index.php?act=member_timebank_point&op=rule";
+    //
     // index.php?act=timebank&op=order
     // index.php?act=timebank&op=detail
     //喘息服务相关接口 获取服务列表页筛选条件及广告信息接口
@@ -204,7 +218,8 @@ public class AppConstant {
 
     //我参与的服务-服务开始接口
     public static String STARTSERVICEPOSTIMNGURL = BASEURL + "index.php?act=member_timebank&op=order_start";
-
+    //我参与的服务-服务结束接口
+    public static String ENDSERVICEPOSTIMNGURL = BASEURL + "index.php?act=member_timebank&op=order_end";
 
     public static String AITEURL = "https://aitecc.com/mobile/";
     //圈子
@@ -226,5 +241,18 @@ public class AppConstant {
     // * 我的社区 发布列表页信息
     public static String MINECOLLECTPOSTLIST = AITEURL + "index.php?act=member_circle&op=Release_list";
     // index.php?act=member_circle&op=Release_list
+
+
+    /**
+     * 手表服务器
+     */
+//    http://watchapi.topqizhi.com/solgoWatch/deviceGetServerIp.do
+    public static String DEVICEURL = "https://watchapi.topqizhi.com/solgoWatch/";
+
+    public static String STARTDEVICEURL = DEVICEURL + "deviceGet0ServerIp.do";
+    //deviceParamInit.do  http://watchapi.topqizhi.com/solgoWatch/deviceParamInit.do
+    public static String GETDEVICEINFORMATIONURL = DEVICEURL + "deviceParamInit.do";
+    //心率数据查询
+    public static String GETDEVICEHEADINFORMATIONURL = DEVICEURL + "HEART_QUERY";
 
 }

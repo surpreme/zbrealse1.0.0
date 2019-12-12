@@ -63,8 +63,11 @@ public abstract class BaseFragment<V extends BaseView, T extends BasePresenterIm
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         try {
-            mPresenter = getInstance(this, 1);
-            mPresenter.attachView((V) this);
+            if (isUseMvp()) {
+                mPresenter = getInstance(this, 1);
+                mPresenter.attachView((V) this);
+            }
+
         } catch (Exception e) {
             LogUtils.e("mvp错误" + e);
         }
@@ -72,6 +75,11 @@ public abstract class BaseFragment<V extends BaseView, T extends BasePresenterIm
             screenwidth = context.getResources().getDisplayMetrics().widthPixels;
         }
 
+    }
+
+    @Override
+    protected boolean isUseMvp() {
+        return true;
     }
 
     @Override

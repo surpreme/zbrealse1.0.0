@@ -88,6 +88,12 @@ public class QrCodeActivity extends BaseActivity<QrCodeContract.View, QrCodePres
 
     }
 
+    private HttpParams initDeviceParams(String IMEI) {
+        HttpParams httpParams = new HttpParams();
+        httpParams.put("imei", IMEI);
+        return httpParams;
+    }
+
     private HttpParams initParams(String ID) {
         HttpParams httpParams = new HttpParams();
         httpParams.put("key", AppConstant.KEY);
@@ -103,7 +109,9 @@ public class QrCodeActivity extends BaseActivity<QrCodeContract.View, QrCodePres
 //        String id = uri.getQueryParameter("id");
         showToast("扫码成功", Gravity.TOP);
 //        mPresenter.sureBook(initParams(result));
-        mPresenter.sureBook(initParams(getUrlKey(result, "id")));
+        if (!getIntent().getStringExtra("type").equals("watch"))
+            mPresenter.sureBook(initParams(getUrlKey(result, "id")));
+        else mPresenter.BindingDevice(initDeviceParams(getUrlKey(result,"imei")));
 
     }
 
@@ -138,6 +146,11 @@ public class QrCodeActivity extends BaseActivity<QrCodeContract.View, QrCodePres
             onBackPressed();
         }
 
+
+    }
+
+    @Override
+    public void onBindingDeviceSuccess(Object msg) {
 
     }
 

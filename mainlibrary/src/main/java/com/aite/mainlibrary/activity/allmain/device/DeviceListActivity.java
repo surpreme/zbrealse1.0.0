@@ -7,7 +7,6 @@ import android.widget.LinearLayout;
 
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.DeviceInformationActivity;
 import com.lzy.basemodule.base.BaseActivity;
 
 import butterknife.BindView;

@@ -1,8 +1,6 @@
 package com.aite.mainlibrary.activity.allshopcard.morningnooneat;
 
 
-import android.os.Bundle;
-
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,7 +8,7 @@ import com.aite.mainlibrary.Mainbean.MorningNoonEatBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allshopcard.remembershopbook.RememberShopBookActivity;
-import com.aite.mainlibrary.adapter.MorningNoonEatRecyAdapter;
+import com.aite.mainlibrary.adapter.MorningNoonEatsRecyAdapter;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.OnClickLstenerInterface;
 import com.lzy.basemodule.base.BaseActivity;
@@ -21,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 
 /**
@@ -35,7 +32,7 @@ public class MorningNoonEatActivity extends BaseActivity<MorningNoonEatContract.
     RecyclerView recyclerView;
     @BindView(R2.id.smartlayout)
     SmartRefreshLayout smartlayout;
-    private MorningNoonEatRecyAdapter morningNoonEatRecyAdapter;
+    private MorningNoonEatsRecyAdapter morningNoonEatRecyAdapter;
     private List<MorningNoonEatBean.GoodsListBean> goodsListBeanList = new ArrayList<>();
     private String moniningnoontyye;
 
@@ -51,7 +48,7 @@ public class MorningNoonEatActivity extends BaseActivity<MorningNoonEatContract.
         initToolbar(moniningnoontyye.equals("morning") ? "早餐" : "午餐");
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        morningNoonEatRecyAdapter = new MorningNoonEatRecyAdapter(context, goodsListBeanList);
+        morningNoonEatRecyAdapter = new MorningNoonEatsRecyAdapter(context, goodsListBeanList);
         recyclerView.setAdapter(morningNoonEatRecyAdapter);
         smartlayout.setEnableAutoLoadMore(false);
         morningNoonEatRecyAdapter.setLstenerInterface(new OnClickLstenerInterface.OnRecyClickInterface() {

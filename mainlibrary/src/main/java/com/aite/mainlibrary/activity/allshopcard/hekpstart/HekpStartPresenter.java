@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 
 import com.aite.mainlibrary.Mainbean.HelpDoctorBookInformationBean;
+import com.aite.mainlibrary.Mainbean.TwoSuccessCodeBean;
 import com.google.gson.Gson;
 import com.lzy.basemodule.androidlife.AppManager;
 import com.lzy.basemodule.bean.BaseData;
@@ -27,12 +28,12 @@ public class HekpStartPresenter extends BasePresenterImpl<HekpStartContract.View
 
     @Override
     public void PostImg(HttpParams httpParams, String url) {
-        OkGo.<BaseData<HelpDoctorBookInformationBean>>post(url)
+        OkGo.<BaseData<TwoSuccessCodeBean>>post(url)
                 .tag(mView.getContext())
                 .params(httpParams)
-                .execute(new AbsCallback<BaseData<HelpDoctorBookInformationBean>>() {
+                .execute(new AbsCallback<BaseData<TwoSuccessCodeBean>>() {
                     @Override
-                    public BaseData<HelpDoctorBookInformationBean> convertResponse(okhttp3.Response response) throws Throwable {
+                    public BaseData<TwoSuccessCodeBean> convertResponse(okhttp3.Response response) throws Throwable {
                         LogUtils.d(response.request());
                         JSONObject jsonObject = new JSONObject(response.body().string());
                         String login = jsonObject.optString("login", jsonObject.toString());
@@ -51,22 +52,22 @@ public class HekpStartPresenter extends BasePresenterImpl<HekpStartContract.View
                         }
                         JSONObject object = jsonObject.optJSONObject("datas");
                         Gson gson = new Gson();
-                        HelpDoctorBookInformationBean helpDoctorBookInformationBean = gson.fromJson(object.toString(), HelpDoctorBookInformationBean.class);
+                        TwoSuccessCodeBean twoSuccessCodeBean = gson.fromJson(object.toString(), TwoSuccessCodeBean.class);
                         ((Activity) mView.getContext()).runOnUiThread(()
-                                -> mView.onPostImgSuccess(helpDoctorBookInformationBean));
+                                -> mView.onPostImgSuccess(twoSuccessCodeBean));
 
 
                         return null;
                     }
 
                     @Override
-                    public void onStart(Request<BaseData<HelpDoctorBookInformationBean>, ? extends Request> request) {
+                    public void onStart(Request<BaseData<TwoSuccessCodeBean>, ? extends Request> request) {
                         LogUtils.d("onStart");
 
                     }
 
                     @Override
-                    public void onSuccess(Response<BaseData<HelpDoctorBookInformationBean>> response) {
+                    public void onSuccess(Response<BaseData<TwoSuccessCodeBean>> response) {
                         LogUtils.d("onSuccess");
 
                     }

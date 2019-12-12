@@ -19,9 +19,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    repositories {
-        flatDir { dirs 'libs' }
-    }
+//    flatDir {
+//        dirs project(':shopMallLibrary').file('libs')
+//    }
 
 }
 

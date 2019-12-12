@@ -2,8 +2,11 @@ package com.aite.mainlibrary.activity.allshopcard.remembershopbook;
 
 import android.app.Activity;
 
+import com.aite.mainlibrary.Mainbean.MoreAdressInormationBean;
 import com.aite.mainlibrary.Mainbean.MorningNoonEatBean;
+import com.aite.mainlibrary.Mainbean.PayListBean;
 import com.aite.mainlibrary.Mainbean.RememberFoodInformationBean;
+import com.google.gson.Gson;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.bean.BaseData;
 import com.lzy.basemodule.bean.BeanConvertor;
@@ -103,5 +106,93 @@ public class RememberShopBookPresenter extends BasePresenterImpl<RememberShopBoo
                     }
                 });
 
+    }
+
+    @Override
+    public void getAddress(HttpParams httpParams) {
+        OkGo.<BaseData<MoreAdressInormationBean>>post(AppConstant.INFORMATIONADDRESSPERSONDATAURL)
+                .tag(mView.getContext())
+                .params(httpParams)
+                .execute(new AbsCallback<BaseData<MoreAdressInormationBean>>() {
+                    @Override
+                    public BaseData<MoreAdressInormationBean> convertResponse(okhttp3.Response response) throws Throwable {
+                        LogUtils.d(response.request());
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+                        BaseData baseData = BeanConvertor.convertBean(jsonObject.toString(), BaseData.class);
+                        if (baseData.getDatas().getError() != null) {
+                            mView.showError(baseData.getDatas().getError());
+                            return null;
+                        } else {
+                            JSONObject object = jsonObject.optJSONObject("datas");
+                            Gson gson = new Gson();
+                            MoreAdressInormationBean moreAdressInormationBean = gson.fromJson(object.toString(), MoreAdressInormationBean.class);
+                            ((Activity) mView.getContext()).runOnUiThread(()
+                                    -> mView.onGetAddressSuccess(moreAdressInormationBean));
+                        }
+
+//                        dfadsg
+
+                        return null;
+                    }
+
+                    @Override
+                    public void onStart(Request<BaseData<MoreAdressInormationBean>, ? extends Request> request) {
+                        LogUtils.d("onStart");
+
+                    }
+
+                    @Override
+                    public void onSuccess(Response<BaseData<MoreAdressInormationBean>> response) {
+                        LogUtils.d("onSuccess");
+
+                    }
+                });
+    }
+
+    @Override
+    public void getPayList(HttpParams httpParams) {
+        OkGo.<BaseData<PayListBean>>get(AppConstant.PAYAWYGETINFORMATIONURL)
+                .tag(mView.getContext())
+                .params(httpParams)
+                .execute(new AbsCallback<BaseData<PayListBean>>() {
+                    @Override
+                    public BaseData<PayListBean> convertResponse(okhttp3.Response response) throws Throwable {
+                        LogUtils.d(response.request());
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+                        try {
+                            BaseData baseData = BeanConvertor.convertBean(jsonObject.toString(), BaseData.class);
+                            if (baseData.getDatas().getError() != null) {
+                                mView.showError(baseData.getDatas().getError());
+                                return null;
+                            } else {
+//                            JSONObject object = jsonObject.optJSONObject("datas");
+
+                            }
+
+                        } catch (Exception e) {
+
+                        }
+
+                        Gson gson = new Gson();
+                        PayListBean payListBean = gson.fromJson(jsonObject.toString(), PayListBean.class);
+                        ((Activity) mView.getContext()).runOnUiThread(()
+                                -> mView.onPayListSuccess(payListBean));
+//                        dfadsg
+
+                        return null;
+                    }
+
+                    @Override
+                    public void onStart(Request<BaseData<PayListBean>, ? extends Request> request) {
+                        LogUtils.d("onStart");
+
+                    }
+
+                    @Override
+                    public void onSuccess(Response<BaseData<PayListBean>> response) {
+                        LogUtils.d("onSuccess");
+
+                    }
+                });
     }
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.aite.mainlibrary.Mainbean.SettingAddressListBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
+import com.lzy.basemodule.OnClickLstenerInterface;
 import com.mcxtzhang.swipemenulib.SwipeMenuLayout;
 
 import java.util.List;
@@ -31,6 +33,16 @@ public class AdrressFixRecyAdapter extends RecyclerView.Adapter<AdrressFixRecyAd
         this.addressListBeans = addressListBeans;
     }
 
+    public OnClickLstenerInterface.OnThingClickInterface getOnItemRecyClickInterface() {
+        return onItemRecyClickInterface;
+    }
+
+    public void setOnItemRecyClickInterface(OnClickLstenerInterface.OnThingClickInterface onItemRecyClickInterface) {
+        this.onItemRecyClickInterface = onItemRecyClickInterface;
+    }
+
+    private OnClickLstenerInterface.OnThingClickInterface onItemRecyClickInterface;
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -43,7 +55,10 @@ public class AdrressFixRecyAdapter extends RecyclerView.Adapter<AdrressFixRecyAd
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tvAddress.setText(addressListBeans.get(position).getArea_info());
         holder.tvNamephone.setText(String.format("%s %s", addressListBeans.get(position).getTrue_name(), addressListBeans.get(position).getMob_phone()));
-
+        holder.press.setOnClickListener(v -> {
+            if (onItemRecyClickInterface!= null)
+                onItemRecyClickInterface.getString(addressListBeans.get(position).getAddress_id());
+        });
     }
 
     @Override
@@ -63,6 +78,8 @@ public class AdrressFixRecyAdapter extends RecyclerView.Adapter<AdrressFixRecyAd
         TextView tvDelete;
         @BindView(R2.id.swipeMenuLayout)
         SwipeMenuLayout swipeMenuLayout;
+        @BindView(R2.id.press)
+        LinearLayout press;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);

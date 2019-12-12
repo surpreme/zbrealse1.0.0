@@ -82,8 +82,8 @@ public class PostHelpDoctorActivity extends BaseActivity<PostHelpDoctorContract.
     @BindView(R2.id.end_time_ll)
     LinearLayout endTimeLl;
     //性别
-    @BindView(R2.id.gender_ll)
-    LinearLayout genderLl;
+//    @BindView(R2.id.gender_ll)
+//    LinearLayout genderLl;
     @BindView(R2.id.service_type_ll)
     LinearLayout serviceTypeLl;
     @BindView(R2.id.service_type_tv)
@@ -251,8 +251,8 @@ public class PostHelpDoctorActivity extends BaseActivity<PostHelpDoctorContract.
 
     }
 
-
-    @OnClick({R2.id.area_choice_ll, R2.id.time_ll, R2.id.end_time_ll, R2.id.gender_ll, R2.id.service_type_ll})
+// R2.id.gender_ll,
+    @OnClick({R2.id.area_choice_ll, R2.id.time_ll, R2.id.end_time_ll, R2.id.service_type_ll})
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.area_choice_ll) {

@@ -3,24 +3,32 @@ package com.aite.mainlibrary.activity.allshopcard.dayinformation;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.aite.mainlibrary.Mainbean.LessBodyInformationBean;
 import com.aite.mainlibrary.Mainbean.TwoSuccessCodeBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allmain.buydaytogether.BuyDayTogetherActivity;
+import com.aite.mainlibrary.adapter.LessBodyGoodListRecyAdapter;
 import com.bumptech.glide.Glide;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.base.BaseActivity;
 import com.lzy.basemodule.logcat.LogUtils;
 import com.lzy.okgo.model.HttpParams;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
@@ -58,6 +66,10 @@ public class DayInformationActivity extends BaseActivity<DayInformationContract.
     TextView talkBadNumberTv;
     @BindView(R2.id.talk_all_number_tv)
     TextView talkAllNumberTv;
+    @BindView(R2.id.goods_recy)
+    RecyclerView goodsRecy;
+    private LessBodyGoodListRecyAdapter lessBodyGoodListRecyAdapter;
+    private List<LessBodyInformationBean.GoodsCommendListBean> goodsCommendListBeans = new ArrayList<>();
 
     @Override
     protected int getLayoutResId() {
@@ -68,6 +80,8 @@ public class DayInformationActivity extends BaseActivity<DayInformationContract.
     protected void initView() {
 //        buy_tv.setOnClickListener(this);
 //        collectIv.setOnClickListener(this);
+        goodsRecy.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        goodsRecy.setAdapter(lessBodyGoodListRecyAdapter = new LessBodyGoodListRecyAdapter(context, goodsCommendListBeans));
 
     }
 
@@ -126,6 +140,10 @@ public class DayInformationActivity extends BaseActivity<DayInformationContract.
         talkBadNumberTv.setText(String.format("%s%%", String.format("差评(%d)", lessBodyInformationBean.getEvaluate_info().getBad_percent())));
         talkNormNumberTv.setText(String.format("%s%%", String.format("中评(%d)", lessBodyInformationBean.getEvaluate_info().getNormal_percent())));
         talkGoodNumberTv.setText(String.format("%s%%", String.format("好评(%d)", lessBodyInformationBean.getEvaluate_info().getGood_percent())));
+        if (!lessBodyInformationBean.getGoods_commend_list().isEmpty()) {
+            goodsCommendListBeans.addAll(lessBodyInformationBean.getGoods_commend_list());
+            lessBodyGoodListRecyAdapter.notifyDataSetChanged();
+        }
 
     }
 
@@ -143,4 +161,10 @@ public class DayInformationActivity extends BaseActivity<DayInformationContract.
 
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 }

@@ -80,7 +80,7 @@ public class AirActivity extends BaseActivity<AirContract.View, AirPresenter> im
     @Override
     protected void initView() {
         initToolbar("喘息服务", getResources().getColor(R.color.white));
-        initMoreRecy();
+        initRecy();
         //初始化banner
         initBanner(banner);
         //smartlayout

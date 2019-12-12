@@ -14,6 +14,8 @@ public class RememberShopBookContract {
         void onGetFoodInformationSuccess(Object msg);
 
         void postAllInformationSuccess(Object msg);
+        void onGetAddressSuccess(Object msg);
+        void onPayListSuccess(Object msg);
 
 
     }
@@ -22,6 +24,8 @@ public class RememberShopBookContract {
         void getFoodInformation(HttpParams httpParams);
 
         void postAllInformation(HttpParams httpParams);
+        void getAddress(HttpParams httpParams);
+        void getPayList(HttpParams httpParams);
 
 
     }

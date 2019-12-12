@@ -30,5 +30,9 @@ public class BaseConstant {
 
 
     }
+    public class ACTIVITY_RESULT_CODE {
+        public static final int REQUEST_CODE_ACTIVITY_RESULT = 4515;
+
+    }
 
 }

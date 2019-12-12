@@ -105,54 +105,68 @@
         android:textColor="@color/black"
         android:textSize="17sp" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginLeft="@dimen/margin_20dp"
         android:layout_marginTop="@dimen/margin_20dp"
-        android:layout_marginBottom="40dp"
-        android:background="@color/noglay"
-        android:orientation="vertical">
+        android:layout_marginBottom="40dp">
 
-        <View
+
+
+        <LinearLayout
+            android:id="@+id/choice_iv_ll"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:background="@color/noglay"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_weight="0.7"
+                android:gravity="bottom|center"
+                android:paddingRight="15dp"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:paddingRight="15dp"
+                android:text="上传类型"
+                android:textColor="@color/glay"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_weight="0.3"
+                android:gravity="center|top"
+                android:paddingRight="15dp"
+                android:text="（最多三张）"
+                android:textColor="@color/glay"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/src_iv"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.3" />
+            android:layout_height="match_parent" />
+    </RelativeLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="@dimen/margin_10dp"
-            android:layout_weight="0.7"
-            android:gravity="center"
-            android:paddingRight="15dp"
-            android:text="+"
-            android:textColor="@color/black"
-            android:textSize="23sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="@dimen/margin_10dp"
-            android:layout_weight="0.3"
-            android:gravity="center"
-            android:paddingRight="15dp"
-            android:text="上传凭证"
-            android:textColor="@color/glay"
-            android:textSize="15sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="@dimen/margin_10dp"
-            android:layout_weight="0.3"
-            android:gravity="center|top"
-            android:paddingRight="15dp"
-            android:text="（最多三张）"
-            android:textColor="@color/glay"
-            android:textSize="15sp" />
-
-    </LinearLayout>
 
     <View
         android:layout_width="match_parent"

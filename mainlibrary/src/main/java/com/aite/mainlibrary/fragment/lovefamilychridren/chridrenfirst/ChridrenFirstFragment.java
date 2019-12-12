@@ -11,6 +11,7 @@ import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.adapter.NewsRecyAdapter;
 import com.lzy.basemodule.base.BaseFragment;
+import com.lzy.basemodule.base.BaseLazyFragment;
 import com.lzy.okgo.model.HttpParams;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -28,7 +29,7 @@ import static com.youth.banner.BannerConfig.NUM_INDICATOR_TITLE;
  * 邮箱 784787081@qq.com
  */
 
-public class ChridrenFirstFragment extends BaseFragment<ChridrenFirstContract.View, ChridrenFirstPresenter> implements ChridrenFirstContract.View, OnBannerListener {
+public class ChridrenFirstFragment extends BaseLazyFragment<ChridrenFirstContract.View, ChridrenFirstPresenter> implements ChridrenFirstContract.View, OnBannerListener {
     @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
     @BindView(R2.id.banner)
@@ -41,7 +42,6 @@ public class ChridrenFirstFragment extends BaseFragment<ChridrenFirstContract.Vi
 
     @Override
     protected void initModel() {
-        mPresenter.getlist(initParams());
     }
 
     @Override
@@ -51,7 +51,7 @@ public class ChridrenFirstFragment extends BaseFragment<ChridrenFirstContract.Vi
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(newsRecyAdapter);
         //banner
-        initBanner(banner, BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
+        initBanner(banner, BannerConfig.CIRCLE_INDICATOR);
         banner.setIndicatorGravity(BannerConfig.RIGHT)
                 .setOnBannerListener(this);
     }
@@ -66,6 +66,12 @@ public class ChridrenFirstFragment extends BaseFragment<ChridrenFirstContract.Vi
     @Override
     protected int getLayoutResId() {
         return R.layout.news_layout;
+    }
+
+    @Override
+    public void loadData() {
+        mPresenter.getlist(initParams());
+
     }
 
     @Override

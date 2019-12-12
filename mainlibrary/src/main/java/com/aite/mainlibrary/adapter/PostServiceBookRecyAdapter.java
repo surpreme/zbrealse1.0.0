@@ -25,6 +25,7 @@ import butterknife.ButterKnife;
 
 
 public class PostServiceBookRecyAdapter extends RecyclerView.Adapter<PostServiceBookRecyAdapter.ViewHolder> {
+
     private Context context;
     private LayoutInflater inflater;
     private List<MineTogetherServiceBean.ListBean> listBean;
@@ -44,6 +45,24 @@ public class PostServiceBookRecyAdapter extends RecyclerView.Adapter<PostService
     }
 
     private OnClickLstenerInterface.OnRecyClickInterface clickInterface;
+    private TalkedUsedInterface talkedUsedInterface;
+    private UnUsedInterface unUsedInterface;
+
+    public TalkedUsedInterface getTalkedUsedInterface() {
+        return talkedUsedInterface;
+    }
+
+    public void setTalkedUsedInterface(TalkedUsedInterface talkedUsedInterface) {
+        this.talkedUsedInterface = talkedUsedInterface;
+    }
+
+    public UnUsedInterface getUnUsedInterface() {
+        return unUsedInterface;
+    }
+
+    public void setUnUsedInterface(UnUsedInterface unUsedInterface) {
+        this.unUsedInterface = unUsedInterface;
+    }
 
     public OnClickLstenerInterface.OnRecyClickInterface getClickInterface() {
         return clickInterface;
@@ -101,13 +120,27 @@ public class PostServiceBookRecyAdapter extends RecyclerView.Adapter<PostService
             holder.isOveringTv.setText("参与中");
         else if (listBean.get(position).getStatus().equals("3"))
             holder.isOveringTv.setText("已完成");
-        holder.elderSureTv.setVisibility(listBean.get(position).getIsverify()==1?View.VISIBLE:View.GONE);
-        holder.unusedTv.setVisibility(listBean.get(position).getIs_evaluate()==1?View.VISIBLE:View.GONE);
-        if (listBean.get(position).getIsverify()==1){
+        holder.elderSureTv.setVisibility(listBean.get(position).getIsverify() == 1 ? View.VISIBLE : View.GONE);
+        holder.unusedTv.setVisibility(listBean.get(position).getIs_cancel() == 1 ? View.VISIBLE : View.GONE);
+        holder.talkGoodsTv.setVisibility(listBean.get(position).getIs_evaluate() == 1 ? View.VISIBLE : View.GONE);
+        holder.unusedTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                unUsedInterface.onUnUsed(String.valueOf(position));
+            }
+        });
+        holder.talkGoodsTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                talkedUsedInterface.onTalkedUsed(String.valueOf(position));
+            }
+        });
+
+        if (listBean.get(position).getIsverify() == 1) {
             holder.elderSureTv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    PopwindowUtils.getmInstance().showImgPopupWindow(context,listBean.get(position).getQrcodeimg());
+                    PopwindowUtils.getmInstance().showImgPopupWindow(context, listBean.get(position).getQrcodeimg());
                 }
             });
         }
@@ -145,11 +178,22 @@ public class PostServiceBookRecyAdapter extends RecyclerView.Adapter<PostService
         TextView elderSureTv;
         @BindView(R2.id.unused_tv)
         TextView unusedTv;
+        @BindView(R2.id.talk_goods_tv)
+        TextView talkGoodsTv;
+
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
 
         }
+    }
+
+    public interface TalkedUsedInterface {
+        void onTalkedUsed(String number);
+    }
+
+    public interface UnUsedInterface {
+        void onUnUsed(String number);
     }
 }

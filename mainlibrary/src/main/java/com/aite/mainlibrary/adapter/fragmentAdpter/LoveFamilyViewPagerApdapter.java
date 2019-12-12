@@ -10,51 +10,29 @@ import com.aite.mainlibrary.fragment.lovefamilychridren.ChridrenFragmentSencond;
 import com.aite.mainlibrary.fragment.lovefamilychridren.ChridrenFragmentThrid;
 import com.aite.mainlibrary.fragment.lovefamilychridren.chridrenfirst.ChridrenFirstFragment;
 
+import java.util.ArrayList;
+
 /**
  * @Auther: liziyang
  * @datetime: 2019-11-26
  * @desc:
  */
 public class LoveFamilyViewPagerApdapter extends FragmentPagerAdapter {
-    private int num;
-    ChridrenFirstFragment chridrenFragmentFirst;
-    ChridrenFragmentSencond chridrenFragmentSencond;
-    ChridrenFragmentThrid chridrenFragmentThrid;
-    ChridrenFragmentFour chridrenFragmentFour;
+    private ArrayList<Fragment> fragments;
 
-
-    public LoveFamilyViewPagerApdapter(FragmentManager fm, int num) {
-        super(fm);
-        this.num = num;
+    public LoveFamilyViewPagerApdapter(FragmentManager fm, ArrayList<Fragment> fragments) {
+        super(fm, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        this.fragments = fragments;
     }
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-            case 0:
-                if (chridrenFragmentFirst == null) {
-                    return new ChridrenFirstFragment();
-                }
-            case 1:
-                if (chridrenFragmentSencond == null) {
-                    return new ChridrenFragmentSencond();
-                }
-            case 2:
-                if (chridrenFragmentThrid == null) {
-                    return new ChridrenFragmentThrid();
-                }
-            case 3:
-                if (chridrenFragmentFour == null) {
-                    return new ChridrenFragmentFour();
-                }
-            default:
-                return null;
-        }
+        return fragments.get(position);
     }
 
     @Override
     public int getCount() {
-        return num;
+        return fragments.size();
     }
 }

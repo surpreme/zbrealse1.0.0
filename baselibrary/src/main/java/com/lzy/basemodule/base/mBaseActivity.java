@@ -34,6 +34,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.lzy.basemodule.OnClickLstenerInterface;
 import com.lzy.basemodule.OnSmartLayoutLstenerInterface;
 import com.lzy.basemodule.R;
+import com.lzy.basemodule.bean.ContentValue;
 import com.lzy.basemodule.logcat.LogUtils;
 import com.lzy.basemodule.mvp.BasePresenterImpl;
 import com.lzy.basemodule.mvp.BaseView;
@@ -222,7 +223,7 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
         Calendar selectedDate = Calendar.getInstance();
         Calendar startDate = Calendar.getInstance();
         Calendar endDate = Calendar.getInstance();
-        startDate.set(year, 10, 21);
+        startDate.set(year, 1, 1);
         endDate.set(2050, 11, 31);
         pvTime = new TimePickerBuilder(this, listener)
                 .setType(new boolean[]{true, true, true, isHM, isHM, false})// 默认全部显示
@@ -245,7 +246,7 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
         Calendar selectedDate = Calendar.getInstance();
         Calendar startDate = Calendar.getInstance();
         Calendar endDate = Calendar.getInstance();
-        startDate.set(2019, 10, 21);
+        startDate.set(2019, 1, 1);
         endDate.set(2050, 11, 31);
         pvTime = new TimePickerBuilder(this, listener)
                 .setType(new boolean[]{false, false, false, true, true, isSS})// 默认全部显示
@@ -271,7 +272,7 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
 
     }
 
-    protected void initMoreRecy() {
+    protected void initRecy() {
         mBaserecyclerView = this.findViewById(R.id.recycler_view);
     }
 
@@ -603,7 +604,34 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
 
         startActivity(intent);
     }
+    /**
+     * 跳转页面
+     *
+     * @param cls 所跳转的目的Activity类
+     */
+    protected void startActivityWithCls(Class cls, int requestCode, ContentValue... values) {
+        Intent intent = new Intent(this, cls);
 
+        if (values != null && values.length > 0) {
+            for (ContentValue value : values) {
+                value.fillIntent(intent);
+            }
+        }
+
+        if (requestCode > 0) {
+            startActivityForResult(intent, requestCode);
+        } else {
+            startActivity(intent);
+        }
+    }
+
+    protected void startActivityWithCls(Intent intent, int requestCode) {
+        if (requestCode > 0) {
+            startActivityForResult(intent, requestCode);
+        } else {
+            startActivity(intent);
+        }
+    }
     /**
      * 跳转页面
      *
@@ -664,6 +692,7 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
         mSwipeBackHelper.swipeBackward();
 
     }
+
 
     @Override
     public void onBackPressed() {

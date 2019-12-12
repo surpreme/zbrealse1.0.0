@@ -13,8 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.aite.a.HomeTabActivity;
-import com.aite.a.activity.InformationActivity;
 import com.aite.mainlibrary.fragment.activityfragment.AroundBackgroundFragment;
 import com.aite.mainlibrary.fragment.activityfragment.LoveFamilyFragment;
 import com.aite.mainlibrary.fragment.activityfragment.ShopFragment;
@@ -59,7 +57,7 @@ public class MainActivity extends BaseActivity {
     TextView myTv;
     @BindView(R.id.my_layout)
     RelativeLayout myLayout;
-    private static final String[] FRAGMENT_TAG = {"MainFragment" /*"ShopFragment"*/, "AroundBackgroundFragment", "LoveFamilyFragment", "MineFragment"};
+    private static final String[] FRAGMENT_TAG = {"MainFragment", "ShopFragment", "AroundBackgroundFragment", "LoveFamilyFragment", "MineFragment"};
     protected String CODE_FRAGMENT_KEY = "fragment_tag";//key
 
     private MainFragment mainFragment;
@@ -244,8 +242,8 @@ public class MainActivity extends BaseActivity {
 //                break;
             case R.id.shop_layout:
                 //       setTabSelection(1);
-                Intent intent = new Intent(getContext(), HomeTabActivity.class);
-//                intent.setClassName(getContext(),"com.aite.a.activity.MainActivity");
+                Intent intent = new Intent(/*getContext(), HomeTabActivity.class*/);
+                intent.setClassName(getContext(),"com.aite.a.HomeTabActivity");
                 //getContext(),com.aite.a.activity.MainActivity.class
 //                intent.setAction("com.aite.zhongbao.shop.MainActivity");
                 startActivity(intent);
@@ -256,9 +254,10 @@ public class MainActivity extends BaseActivity {
 //            case R.id.aroundbackground_tv:
 //                break;
             case R.id.aroundbackground_layout:
-//                setTabSelection(1);
-                Intent information = new Intent(getContext(), InformationActivity.class);
-                startActivity(information);
+                setTabSelection(1);
+//                Intent information = new Intent(/*getContext(), InformationActivity.class*/);
+//                information.setClassName(getContext(),"com.aite.a.activity.InformationActivity");
+//                startActivity(information);
 
                 break;
 //            case R.id.news_img:
@@ -269,10 +268,11 @@ public class MainActivity extends BaseActivity {
 //                Intent intent1 = new Intent(com.aite.a.activity.MainActivity.this,
 //                        InformationActivity.class);
 //                startActivity(intent1);
-                Intent person_in = new Intent(getContext(), InformationActivity.class);
-                person_in.putExtra("person_in", "2");
-                startActivity(person_in);
-//                setTabSelection(2);
+//                Intent person_in = new Intent(/*getContext(), InformationActivity.class*/);
+//                person_in.setClassName(getContext(),"com.aite.a.activity.InformationActivity");
+//                person_in.putExtra("person_in", "2");
+//                startActivity(person_in);
+                setTabSelection(2);
                 break;
 //            case R.id.my_img:
 //                break;

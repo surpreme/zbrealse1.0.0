@@ -38,7 +38,7 @@ public class BaseWelcomeActivity extends BaseActivity {
     @Override
     protected void initView() {
         StatusBarUtils.setTransparent(context);
-        initRecy();
+        initiRecy();
         if (urls.size() == 0) {
             startActivity(LoginActivity.class);
             killThisActvity();
@@ -77,7 +77,7 @@ public class BaseWelcomeActivity extends BaseActivity {
         }
     }
 
-    private void initRecy() {
+    private void initiRecy() {
         recycler_view.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         PagerSnapHelper snapHelper = new PagerSnapHelper();
         snapHelper.attachToRecyclerView(recycler_view);

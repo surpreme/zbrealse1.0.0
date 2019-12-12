@@ -69,7 +69,7 @@ public class HelpElderHouseRecyAdapter extends RecyclerView.Adapter<HelpElderHou
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.nameTv.setText(listBean.get(position).getStore_name());
         Glide.with(context).load(listBean.get(position).getStore_avatar()).into(holder.userIconIv);
-        holder.stateTv.setText(listBean.get(position).getIs_binding().equals("1") ? "解绑" : "已绑定");
+        holder.stateTv.setText(listBean.get(position).getIs_binding().equals("1") ? "解绑" : "绑定");
         holder.stateTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

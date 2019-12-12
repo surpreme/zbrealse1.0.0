@@ -2,7 +2,6 @@ package com.aite.mainlibrary.activity.allshopcard.timebank;
 
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,8 +14,8 @@ import com.aite.mainlibrary.Mainbean.ElseTimeBankListBean;
 import com.aite.mainlibrary.Mainbean.TimeBankListBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.allshopcard.NumberBankActivity;
 import com.aite.mainlibrary.activity.allshopcard.booktimebankinformation.BookTimebankInformationActivity;
+import com.aite.mainlibrary.activity.allshopcard.numberbank.NumberBankActivity;
 import com.aite.mainlibrary.activity.allshopcard.posttimeneed.PostTimeNeedActivity;
 import com.aite.mainlibrary.adapter.RadioGroupRecyAdapter;
 import com.aite.mainlibrary.adapter.TimeBankRecyAdapter;
@@ -36,7 +35,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
@@ -93,7 +91,7 @@ public class TimeBankActivity extends BaseActivity<TimeBankContract.View, TimeBa
     @Override
     protected void initView() {
         initToolbar("时间银行");
-        initMoreRecy();
+        initRecy();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         mBaserecyclerView.setLayoutManager(linearLayoutManager);
         timeBankRecyAdapter = new TimeBankRecyAdapter(context, timeBankListBean);
@@ -314,10 +312,5 @@ public class TimeBankActivity extends BaseActivity<TimeBankContract.View, TimeBa
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 }

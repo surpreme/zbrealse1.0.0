@@ -1,10 +1,7 @@
 package com.aite.aitezhongbao.app;
 
 import android.content.Context;
-
 import androidx.annotation.NonNull;
-
-import com.aite.a.APPSingleton;
 import com.aite.aitezhongbao.R;
 import com.aite.mainlibrary.MainApp;
 import com.lzy.basemodule.base.BaseApp;
@@ -17,7 +14,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 
-public class App extends APPSingleton {
+public class App extends BaseApp {
     static {
         SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
             @NonNull

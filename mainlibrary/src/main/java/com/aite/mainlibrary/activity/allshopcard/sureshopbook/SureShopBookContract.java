@@ -12,11 +12,13 @@ import com.lzy.okgo.model.HttpParams;
 public class SureShopBookContract {
     interface View extends BaseView {
         void onGetInformationSuccess(Object msg);
+        void onGetAddressSuccess(Object msg);
 
     }
 
     interface Presenter extends BasePresenter<View> {
         void getInformation(HttpParams httpParams);
+        void getAddress(HttpParams httpParams);
 
     }
 }

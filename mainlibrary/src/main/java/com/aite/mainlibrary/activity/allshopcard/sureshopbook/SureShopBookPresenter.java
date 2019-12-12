@@ -3,7 +3,9 @@ package com.aite.mainlibrary.activity.allshopcard.sureshopbook;
 import android.app.Activity;
 
 import com.aite.mainlibrary.Mainbean.BookInfprmationMorningNoonEatBean;
+import com.aite.mainlibrary.Mainbean.MoreAdressInormationBean;
 import com.aite.mainlibrary.Mainbean.MorningNoonEatBean;
+import com.google.gson.Gson;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.bean.BaseData;
 import com.lzy.basemodule.bean.BeanConvertor;
@@ -54,6 +56,47 @@ public class SureShopBookPresenter extends BasePresenterImpl<SureShopBookContrac
 
                     @Override
                     public void onSuccess(Response<BaseData<BookInfprmationMorningNoonEatBean>> response) {
+                        LogUtils.d("onSuccess");
+
+                    }
+                });
+    }
+
+    @Override
+    public void getAddress(HttpParams httpParams) {
+        OkGo.<BaseData<MoreAdressInormationBean>>post(AppConstant.INFORMATIONADDRESSPERSONDATAURL)
+                .tag(mView.getContext())
+                .params(httpParams)
+                .execute(new AbsCallback<BaseData<MoreAdressInormationBean>>() {
+                    @Override
+                    public BaseData<MoreAdressInormationBean> convertResponse(okhttp3.Response response) throws Throwable {
+                        LogUtils.d(response.request());
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+                        BaseData baseData = BeanConvertor.convertBean(jsonObject.toString(), BaseData.class);
+                        if (baseData.getDatas().getError() != null) {
+                            mView.showError(baseData.getDatas().getError());
+                            return null;
+                        } else {
+                            JSONObject object = jsonObject.optJSONObject("datas");
+                            Gson gson = new Gson();
+                            MoreAdressInormationBean moreAdressInormationBean = gson.fromJson(object.toString(), MoreAdressInormationBean.class);
+                            ((Activity) mView.getContext()).runOnUiThread(()
+                                    -> mView.onGetAddressSuccess(moreAdressInormationBean));
+                        }
+
+//                        dfadsg
+
+                        return null;
+                    }
+
+                    @Override
+                    public void onStart(Request<BaseData<MoreAdressInormationBean>, ? extends Request> request) {
+                        LogUtils.d("onStart");
+
+                    }
+
+                    @Override
+                    public void onSuccess(Response<BaseData<MoreAdressInormationBean>> response) {
                         LogUtils.d("onSuccess");
 
                     }

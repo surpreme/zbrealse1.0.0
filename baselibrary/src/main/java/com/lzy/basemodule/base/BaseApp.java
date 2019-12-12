@@ -202,7 +202,7 @@ public class BaseApp extends Application {
         context = this;
         CrashHandler.init(new CrashHandler(getApplicationContext()));
         BGASwipeBackHelper.init(this, null);
-        initOkGo();
+//        initOkGo();
 
     }
 

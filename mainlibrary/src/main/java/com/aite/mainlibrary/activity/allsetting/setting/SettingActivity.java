@@ -1,7 +1,7 @@
-package com.aite.mainlibrary.activity.allsetting;
+package com.aite.mainlibrary.activity.allsetting.setting;
+
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,12 +10,14 @@ import android.widget.TextView;
 
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
+import com.aite.mainlibrary.activity.allsetting.PaySettingActivity;
 import com.aite.mainlibrary.activity.allsetting.adressfix.AdressFixActivity;
 import com.aite.mainlibrary.activity.allsetting.appsettinginformation.AppSettingInformationActivity;
 import com.aite.mainlibrary.activity.allsetting.bindinguser.BindingUserActivity;
 import com.aite.mainlibrary.activity.allsetting.elderhelphouse.ElderHelpHouseActivity;
 import com.aite.mainlibrary.activity.allsetting.sosuser.SosUserActivity;
 import com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity;
+import com.aite.mainlibrary.activity.allsetting.userinformation.usersafety.UserSafetyActivity;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.lzy.basemodule.BaseConstant.AppConstant;
@@ -23,9 +25,14 @@ import com.lzy.basemodule.androidlife.AppManager;
 import com.lzy.basemodule.base.BaseActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
-public class SettingActivity extends BaseActivity {
+
+/**
+ * MVPPlugin
+ * 邮箱 784787081@qq.com
+ */
+
+public class SettingActivity extends BaseActivity<SettingContract.View, SettingPresenter> implements SettingContract.View {
     @BindView(R2.id.iv_back)
     ImageView ivBack;
     @BindView(R2.id.tv_title)
@@ -121,9 +128,7 @@ public class SettingActivity extends BaseActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
+    public void onGetInformationSuccess(Object msg) {
+
     }
 }

@@ -1,7 +1,9 @@
 package com.aite.mainlibrary.activity.allshopcard.remembershopbook;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -9,14 +11,24 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
+import com.aite.mainlibrary.Mainbean.MoreAdressInormationBean;
+import com.aite.mainlibrary.Mainbean.PayListBean;
 import com.aite.mainlibrary.Mainbean.RememberFoodInformationBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.allshopcard.sureshopbook.SureShopBookActivity;
+import com.aite.mainlibrary.activity.allsetting.adressfix.AdressFixActivity;
+import com.aite.mainlibrary.adapter.PayRadioGroupRecyAdapter;
 import com.bigkoo.pickerview.listener.OnTimeSelectListener;
 import com.google.android.material.textfield.TextInputEditText;
 import com.lzy.basemodule.BaseConstant.AppConstant;
+import com.lzy.basemodule.BaseConstant.BaseConstant;
+import com.lzy.basemodule.OnClickLstenerInterface;
+import com.lzy.basemodule.PopwindowUtils;
 import com.lzy.basemodule.base.BaseActivity;
+import com.lzy.basemodule.bean.IImgBaseBean;
 import com.lzy.basemodule.logcat.LogUtils;
 import com.lzy.basemodule.util.TimeUtils;
 import com.lzy.okgo.model.HttpParams;
@@ -60,6 +72,10 @@ public class RememberShopBookActivity extends BaseActivity<RememberShopBookContr
     LinearLayout choiceOclockLl;
     @BindView(R2.id.phone_edit)
     TextInputEditText phoneEdit;
+    @BindView(R2.id.address_tv)
+    TextView addressTv;
+    @BindView(R2.id.address_ll)
+    LinearLayout addressLl;
     private String EATAWAYTYPE = "1";
     private String mDate = "";
     private boolean isYearCheck = false;
@@ -135,7 +151,7 @@ public class RememberShopBookActivity extends BaseActivity<RememberShopBookContr
 
     }
 
-    @OnClick({R2.id.bottom_btn, R2.id.choice_time_ll, R2.id.choice_oclock_ll})
+    @OnClick({R2.id.bottom_btn, R2.id.choice_time_ll, R2.id.choice_oclock_ll, R2.id.address_ll})
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.bottom_btn) {
@@ -169,9 +185,37 @@ public class RememberShopBookActivity extends BaseActivity<RememberShopBookContr
                     mDate = mDate + String.format(" %s:%s:%s", TimeUtils.timestampToDateStrHH(time), TimeUtils.timestampToDateStrMM(time), TimeUtils.timestampToDateStrSS(time));
                     isOclockCheck = true;
                 }
-            }, "选择用餐时间", true);
+            }, "选择用餐时间", false);
             pvTime.show();
+        } else if (v.getId() == R.id.address_ll) {
+            startActivityWithCls(AdressFixActivity.class, BaseConstant.ACTIVITY_RESULT_CODE.REQUEST_CODE_ACTIVITY_RESULT);
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == BaseConstant.ACTIVITY_RESULT_CODE.REQUEST_CODE_ACTIVITY_RESULT && resultCode == RESULT_OK) {
+            if (data != null) {
+//                ADDRESS_ID = data.getStringExtra("address_id");
+                mPresenter.getAddress(initParams(data.getStringExtra("address_id")));
+
+            }
+        }
+    }
+
+    /**
+     * address_id	post	整型	必须			地址编号
+     * key	post	字符串	必须			会员登陆key
+     *
+     * @param ADDRESS_ID
+     * @return
+     */
+    private HttpParams initParams(String ADDRESS_ID) {
+        HttpParams params = new HttpParams();
+        params.put("key", AppConstant.KEY);
+        params.put("address_id", ADDRESS_ID);
+        return params;
     }
 
     @Override
@@ -193,10 +237,42 @@ public class RememberShopBookActivity extends BaseActivity<RememberShopBookContr
         if ((String) msg != null || !isStringEmpty((String) msg)) {
             LogUtils.d(msg.toString());
             showToast("订单生成成功");
+            mPresenter.getPayList(initKeyParams());
+
             //订单id
-            startActivity(SureShopBookActivity.class, "order_id", msg.toString());
+//            startActivity(SureShopBookActivity.class, "order_id", msg.toString());
 
         }
+
+
+    }
+
+    @Override
+    public void onGetAddressSuccess(Object msg) {
+        MoreAdressInormationBean moreAdressInormationBean = ((MoreAdressInormationBean) msg);
+        if (moreAdressInormationBean == null) return;
+        addressTv.setText(String.format("%s%s", moreAdressInormationBean.getAddress_info().getArea_info(), moreAdressInormationBean.getAddress_info().getAddress()));
+
+
+    }
+
+    private List<PayListBean.DatasBean> paylist = new ArrayList<>();
+
+    @Override
+    public void onPayListSuccess(Object msg) {
+        paylist = ((PayListBean) msg).getDatas();
+        if (paylist == null || paylist.isEmpty()) return;
+        PayRadioGroupRecyAdapter payRadioGroupRecyAdapter = new PayRadioGroupRecyAdapter(context, paylist);
+        LinearLayoutManager manager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+        payRadioGroupRecyAdapter.setClickInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
+            @Override
+            public void getPostion(int postion) {
+                LogUtils.d(postion);
+                PopwindowUtils.getmInstance().dismissPopWindow();
+
+            }
+        });
+        PopwindowUtils.getmInstance().showPayRecyPopupWindow(context, Gravity.BOTTOM, payRadioGroupRecyAdapter, manager);
 
 
     }
@@ -206,5 +282,6 @@ public class RememberShopBookActivity extends BaseActivity<RememberShopBookContr
     public void OnBannerClick(int position) {
 
     }
+
 
 }

@@ -51,9 +51,9 @@
     </LinearLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:layout_below="@+id/tabll_ll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabll_ll">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -381,8 +381,28 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/noglay" />
+
+            <TextView
+                android:id="@+id/title_top_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_12dp"
+                android:paddingBottom="@dimen/padding_12dp"
+                android:text="--    推荐   --"
+                android:textColor="@color/red" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/noglay" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/goods_recy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -438,6 +458,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="2"
+            android:background="@color/white"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -458,6 +479,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="2"
+            android:background="@color/white"
             android:gravity="center"
             android:orientation="horizontal">
 

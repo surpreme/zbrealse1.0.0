@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.DeviceNumberEditActivity;
+import com.aite.mainlibrary.activity.allmain.device.DeviceNumberEditActivity;
 import com.aite.mainlibrary.activity.allqr.qrcode.QrCodeActivity;
 import com.lzy.basemodule.base.BaseActivity;
 import com.lzy.basemodule.logcat.LogUtils;
@@ -35,7 +35,7 @@ public class AddDeviceMainActvity extends BaseActivity {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.scode_img) {
-            startActivity(QrCodeActivity.class);
+            startActivity(QrCodeActivity.class,"type","watch");
         } else if (v.getId() == R.id.edit_device_number)
             startActivity(DeviceNumberEditActivity.class);
 

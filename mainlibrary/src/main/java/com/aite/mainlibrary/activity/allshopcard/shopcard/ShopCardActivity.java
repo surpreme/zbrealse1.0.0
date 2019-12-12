@@ -20,6 +20,7 @@ import com.aite.mainlibrary.Mainbean.ShopCardlistBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allshopcard.bookinformation.BookinformationActivity;
+import com.aite.mainlibrary.activity.allshopcard.sureshopbook.SureShopBookActivity;
 import com.aite.mainlibrary.adapter.shopcard.ShopcatAdapter;
 import com.bumptech.glide.Glide;
 import com.facebook.stetho.common.StringUtil;
@@ -96,6 +97,24 @@ public class ShopCardActivity extends BaseActivity<ShopCardContract.View, ShopCa
         initShopCardUI();
     }
 
+    /**
+     * 结算
+     */
+    private String surePay(List<ShopCardlistBean.CartListBean> mCartListBean) {
+        StringBuilder warehouse_order_id = new StringBuilder();
+        if (mCartListBean != null) {
+            for (int i = 0; i < mCartListBean.size(); i++) {
+                String a = mCartListBean.get(i).getCart_id();
+                if (mCartListBean.get(i).isChoosed()) {
+//                        if (i != mCartListBean.size() - 1)
+                    warehouse_order_id.append(a).append("|").append(mCartListBean.get(i).getGoods_num()).append(",");
+//                    else
+//                        warehouse_order_id.append(a).append("|").append(mCartListBean.get(i).getGoods_num());
+                }
+            }
+        }
+        return warehouse_order_id.substring(0, warehouse_order_id.lastIndexOf(","));
+    }
 
     /**
      * 统计操作
@@ -134,7 +153,9 @@ public class ShopCardActivity extends BaseActivity<ShopCardContract.View, ShopCa
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.add_shopcar_btn) startActivity(BookinformationActivity.class);
+        if (v.getId() == R.id.add_shopcar_btn)
+            LogUtils.d(surePay(cartListBeans).toString());
+//        startActivity(SureShopBookActivity.class);
         if (v.getId() == R.id.tv_delete) initDlete();
         if (v.getId() == R.id.tv_title_right) initTopState();
     }

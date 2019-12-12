@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:background="@color/white"
         android:gravity="center"
-        android:text="爱家"
+        android:text="广场"
         android:textColor="@color/black"
         android:textSize="@dimen/textSize_18sp" />
 
@@ -28,7 +28,7 @@
         android:layout_gravity="center"
         android:background="@color/white"
         app:tabIndicatorHeight="0dp"
-        app:tabSelectedTextColor="@color/yelllow"
+        app:tabSelectedTextColor="@color/blue"
         app:tabTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem

@@ -28,7 +28,7 @@ public class MinePostBookActivity extends BaseActivity {
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.minepostbook_activity;
+        return R.layout.recy_toolbar;
     }
 
     @Override

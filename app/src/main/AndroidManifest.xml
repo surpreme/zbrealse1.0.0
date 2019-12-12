@@ -6,7 +6,7 @@
     <application
         android:name=".app.App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -46,7 +46,7 @@
         <activity android:name="com.aite.mainlibrary.activity.allmoney.AddBankcarActvity" />
         <activity android:name="com.aite.mainlibrary.activity.allmain.device.DeviceListActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.helpdoctor.HelpdoctorActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allsetting.SettingActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.setting.SettingActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmain.ElseHelpActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allstep.StepActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmoney.MoneyUserInformationActivity" />
@@ -60,24 +60,24 @@
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.timebank.TimeBankActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmain.AddDeviceMainActvity" />
         <activity android:name="com.aite.mainlibrary.activity.allqr.qrcode.QrCodeActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.DeviceNumberEditActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allmain.device.DeviceNumberEditActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.DoctormainInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.daytogether.DayTogetherActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.dayinformation.DayInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmain.buydaytogether.BuyDayTogetherActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.StarDoctorPushActvity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.helpeat.HelpEatActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.DeviceInformationActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allmain.device.DeviceInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allanimation.ProgressBaractivity" />
         <activity android:name="com.aite.mainlibrary.activity.allanimation.LoveProgressBaractivity" />
         <activity android:name="com.aite.mainlibrary.activity.allanimation.SleepCircleBarStepViewActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allqr.GetEatQrcodeActvity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.shopcard.ShopCardActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allshopcard.NumberBankActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allshopcard.numberbank.NumberBankActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.minerural.MineRuralActivity" />
         <activity android:name="com.aite.mainlibrary.activity.MineCollectActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.healthbook.HealthBookActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allsetting.UserSafetyActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allsetting.userinformation.usersafety.UserSafetyActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.choiceeat.ChoiceEatActivity" />
         <activity android:name=".activity.newuser.NewUserActivity" />
         <activity android:name=".activity.findkey.FindKeyActivity" />
@@ -109,6 +109,10 @@
         <activity android:name="com.aite.mainlibrary.activity.allsetting.addhealthbook.AddHealthBookActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.elderhelphouse.ElderHelpHouseActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allsetting.healthbooklist.HealthBookListActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allmain.sendtimebank.SendTimeBankActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allshopcard.timebankrules.TimeBankRulesActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allshopcard.talkbook.TalkBookActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allshopcard.numbershop.NumberShopActivity" />
 
     </application>
 

@@ -41,6 +41,6 @@ dependencies {
     implementation project(path: ':baselibrary')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
-    api project(path: ':shopMallLibrary')
+//    api project(path: ':shopMallLibrary')
 //jpush聊天ui
 }

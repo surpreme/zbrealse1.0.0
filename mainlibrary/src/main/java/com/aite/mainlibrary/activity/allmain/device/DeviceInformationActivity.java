@@ -1,4 +1,4 @@
-package com.aite.mainlibrary.activity;
+package com.aite.mainlibrary.activity.allmain.device;
 
 import android.os.Bundle;
 import android.view.View;

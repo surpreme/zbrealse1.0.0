@@ -24,6 +24,7 @@ import com.lzy.basemodule.util.SystemUtil;
 import com.lzy.basemodule.util.toast.ToastUtils;
 import com.lzy.basemodule.util.toast.ToastTopUtils;
 import com.lzy.basemodule.view.StatusBarUtils;
+import com.lzy.okgo.model.HttpParams;
 
 import java.io.File;
 
@@ -104,6 +105,12 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
         }
 
 
+    }
+
+    protected HttpParams initKeyParams() {
+        HttpParams params = new HttpParams();
+        params.put("key", AppConstant.KEY);
+        return params;
     }
 
     public void initBottomBtn(String txt, View.OnClickListener listener) {

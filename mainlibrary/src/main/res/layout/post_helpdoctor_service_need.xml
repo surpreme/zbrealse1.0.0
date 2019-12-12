@@ -160,7 +160,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:text="时间："
+                        android:text="开始时间："
                         android:textColor="@color/black"
                         android:textSize="17sp" />
 
@@ -187,7 +187,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:text="时间："
+                        android:text="结束时间："
                         android:textColor="@color/black"
                         android:textSize="17sp" />
 
@@ -321,38 +321,38 @@
 
                 </LinearLayout>
                 <!--        Gender性别-->
-                <LinearLayout
-                    android:id="@+id/gender_ll"
-                    android:layout_width="match_parent"
-                    android:layout_height="43dp"
-                    android:layout_gravity="center"
-                    android:gravity="center">
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/gender_ll"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="43dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:gravity="center">-->
 
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:text="性别："
-                        android:textColor="@color/black"
-                        android:textSize="17sp" />
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:gravity="left"-->
+                <!--                        android:text="性别："-->
+                <!--                        android:textColor="@color/black"-->
+                <!--                        android:textSize="17sp" />-->
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="@dimen/margin_10dp"
-                        android:layout_weight="1"
-                        android:gravity="right|center"
-                        android:text="女"
-                        android:textSize="@dimen/textSize_16sp" />
+                <!--                    <TextView-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:layout_marginRight="@dimen/margin_10dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:gravity="right|center"-->
+                <!--                        android:text="女"-->
+                <!--                        android:textSize="@dimen/textSize_16sp" />-->
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|right"
-                        android:src="@mipmap/down" />
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_gravity="center|right"-->
+                <!--                        android:src="@mipmap/down" />-->
 
-                </LinearLayout>
+                <!--                </LinearLayout>-->
 
                 <LinearLayout
                     android:layout_width="match_parent"

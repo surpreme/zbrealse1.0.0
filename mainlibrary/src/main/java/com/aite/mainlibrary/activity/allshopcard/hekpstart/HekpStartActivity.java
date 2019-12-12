@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -13,11 +14,13 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
+import com.aite.mainlibrary.Mainbean.TwoSuccessCodeBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.bumptech.glide.Glide;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.BaseConstant.BaseConstant;
+import com.lzy.basemodule.PopwindowUtils;
 import com.lzy.basemodule.base.BaseActivity;
 import com.lzy.basemodule.logcat.LogUtils;
 import com.lzy.basemodule.util.FileUtils;
@@ -56,7 +59,11 @@ public class HekpStartActivity extends BaseActivity<HekpStartContract.View, Hekp
 
     @Override
     protected void initView() {
-        initToolbar("服务开始");
+        if (getIntent().getStringExtra("URLTYPE").equals("START")){
+            initToolbar("服务开始");
+        }else {
+            initToolbar("服务结束");
+        }
         TB_ID = getIntent().getStringExtra("tb_id");
         LogUtils.d(TB_ID);
         bottomBtn.setText("上传服务图片");
@@ -70,7 +77,7 @@ public class HekpStartActivity extends BaseActivity<HekpStartContract.View, Hekp
             startActivityForResult(intent, BaseConstant.RESULT_CODE.REQUEST_CAMERA);
 
         } else if (v.getId() == R.id.bottom_btn) {
-            mPresenter.PostImg(initParams(), AppConstant.STARTSERVICEPOSTIMNGURL);
+            mPresenter.PostImg(initParams(), getIntent().getStringExtra("URLTYPE").equals("START")?AppConstant.STARTSERVICEPOSTIMNGURL:AppConstant.ENDSERVICEPOSTIMNGURL);
 
         }
 
@@ -79,7 +86,8 @@ public class HekpStartActivity extends BaseActivity<HekpStartContract.View, Hekp
     private HttpParams initParams() {
         HttpParams httpParams = new HttpParams();
         httpParams.put("key", AppConstant.KEY);
-        httpParams.put("tb_id", isStringEmpty(TB_ID) ? "" : TB_ID);
+        httpParams.put("id", isStringEmpty(TB_ID) ? "" : TB_ID);
+        httpParams.put("type",getIntent().getStringExtra("type"));
         if (new File(Environment.getExternalStorageDirectory() + "/StartImg.png").exists())
             httpParams.put("thumb", new File(Environment.getExternalStorageDirectory() + "/StartImg.png"));
         return httpParams;
@@ -123,6 +131,11 @@ public class HekpStartActivity extends BaseActivity<HekpStartContract.View, Hekp
 
     @Override
     public void onPostImgSuccess(Object msg) {
+        if (((TwoSuccessCodeBean) msg).getMsg().equals("保存成功") && ((TwoSuccessCodeBean) msg).getResult().equals("1")) {
+            onBackPressed();
+            showToast(((TwoSuccessCodeBean) msg).getResult(), Gravity.TOP);
+//            PopwindowUtils
+        }
 
     }
 }

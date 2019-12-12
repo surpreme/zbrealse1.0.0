@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar_right_layout" />
+    <include layout="@layout/toolbar_layout" />
 
     <View
         android:layout_width="match_parent"
@@ -145,14 +145,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:background="@color/white"
         android:orientation="horizontal"
         android:paddingLeft="15dp"
-        android:background="@color/white"
         android:paddingTop="10dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             app:cardCornerRadius="7dp">
 
             <ImageView
@@ -169,6 +170,11 @@
             android:layout_weight="1"
             android:gravity="right|center"
             android:orientation="vertical">
+            <TextView
+                android:id="@+id/store_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="商店名称"/>
 
             <TextView
                 android:id="@+id/title_thing_tv"
@@ -210,8 +216,6 @@
                         android:text="￥15"
                         android:textColor="@color/red"
                         android:textSize="16sp" />
-
-
 
 
                 </LinearLayout>
@@ -284,7 +288,8 @@
         android:background="@color/white"
         android:gravity="center|left"
         android:orientation="horizontal"
-        android:paddingLeft="20dp">
+        android:paddingLeft="20dp"
+        android:visibility="gone">
 
 
         <TextView
@@ -293,12 +298,13 @@
             android:paddingRight="15dp"
             android:text="餐具份数："
             android:textSize="17sp" />
+
         <EditText
             android:id="@+id/eat_fix_number_edit"
-            android:background="@null"
-            android:inputType="number"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:inputType="number" />
 
 
         <View
@@ -322,12 +328,13 @@
             android:paddingRight="15dp"
             android:text="订单备注："
             android:textSize="17sp" />
+
         <EditText
             android:id="@+id/eat_another_information_edit"
-            android:background="@null"
-            android:inputType="text"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:inputType="text" />
 
         <View
             android:layout_width="20dp"

@@ -12,6 +12,7 @@ import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allqr.qrcode.QrCodeActivity;
 import com.aite.mainlibrary.activity.allsetting.helpdocotorinformationbook.PostInformationBookActivity;
+import com.aite.mainlibrary.activity.allshopcard.talkbook.TalkBookActivity;
 import com.aite.mainlibrary.adapter.PostServiceBookRecyAdapter;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.OnClickLstenerInterface;
@@ -38,7 +39,7 @@ public class MinePostBookChriendActivity extends BaseActivity<MinePostBookChrien
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.minepostbook_activity;
+        return R.layout.recy_right_toolbar;
     }
 
     /**
@@ -50,28 +51,41 @@ public class MinePostBookChriendActivity extends BaseActivity<MinePostBookChrien
     @Override
     protected void initView() {
         if (getIntent().getStringExtra("type").equals("1"))
-        initToolbar("时间银行", "核销", new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(QrCodeActivity.class,"type","1");
-            }
-        });
+            initToolbar("时间银行", "核销", new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(QrCodeActivity.class, "type", "1");
+                }
+            });
         if (getIntent().getStringExtra("type").equals("2"))
             initToolbar("助医服务", "核销", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(QrCodeActivity.class,"type","2");
+                    startActivity(QrCodeActivity.class, "type", "2");
                 }
             });
         if (getIntent().getStringExtra("type").equals("3"))
             initToolbar("喘息服务", "核销", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(QrCodeActivity.class,"type","3");
+                    startActivity(QrCodeActivity.class, "type", "3");
                 }
             });
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(postServiceBookRecyAdapter = new PostServiceBookRecyAdapter(context, minelistbean));
+        postServiceBookRecyAdapter.setUnUsedInterface(new PostServiceBookRecyAdapter.UnUsedInterface() {
+            @Override
+            public void onUnUsed(String number) {
+
+            }
+        });
+        postServiceBookRecyAdapter.setTalkedUsedInterface(new PostServiceBookRecyAdapter.TalkedUsedInterface() {
+            @Override
+            public void onTalkedUsed(String number) {
+                startActivity(TalkBookActivity.class,"id",minelistbean.get(Integer.parseInt(number)).getId());
+
+            }
+        });
         postServiceBookRecyAdapter.setClickInterface(new OnClickLstenerInterface.OnRecyClickInterface() {
             @Override
             public void getPostion(int postion) {
@@ -112,6 +126,7 @@ public class MinePostBookChriendActivity extends BaseActivity<MinePostBookChrien
 //                        !getIntent().getStringExtra("COMETYPE").equals("MINEGETBOOKACTIVITY") ?
 //                                AppConstant.POSTAIRSERVICEINFORMATIONMINETOGETHERURL :
 //                                AppConstant.AIRSERVICEINFORMATIONMINETOGETHERURL);
+                bundle.putString("type", getIntent().getStringExtra("type"));
                 startActivity(PostInformationBookActivity.class, bundle);
             }
         });

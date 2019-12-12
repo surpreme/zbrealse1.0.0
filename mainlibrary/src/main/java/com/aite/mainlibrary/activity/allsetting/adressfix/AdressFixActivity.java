@@ -1,6 +1,8 @@
 package com.aite.mainlibrary.activity.allsetting.adressfix;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,9 +12,12 @@ import com.aite.mainlibrary.Mainbean.SettingAddressListBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.aite.mainlibrary.activity.allsetting.addadrress.AddAdrressActivity;
+import com.aite.mainlibrary.activity.allshopcard.sureshopbook.SureShopBookActivity;
 import com.aite.mainlibrary.adapter.AdrressFixRecyAdapter;
 import com.lzy.basemodule.BaseConstant.AppConstant;
+import com.lzy.basemodule.OnClickLstenerInterface;
 import com.lzy.basemodule.base.BaseActivity;
+import com.lzy.basemodule.bean.ContentValue;
 import com.lzy.okgo.model.HttpParams;
 
 import java.util.ArrayList;
@@ -48,7 +53,17 @@ public class AdressFixActivity extends BaseActivity<AdressFixContract.View, Adre
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-        recyclerView.setAdapter( adrressFixRecyAdapter = new AdrressFixRecyAdapter(context, addressListBeans));
+        recyclerView.setAdapter(adrressFixRecyAdapter = new AdrressFixRecyAdapter(context, addressListBeans));
+        adrressFixRecyAdapter.setOnItemRecyClickInterface(new OnClickLstenerInterface.OnThingClickInterface() {
+            @Override
+            public void getString(String msg) {
+                Intent intent = getIntent();
+                intent.putExtra("address_id", msg);
+                // 设置返回码和返回携带的数据
+                setResult(Activity.RESULT_OK, intent);
+                finish();
+            }
+        });
     }
 
     @Override

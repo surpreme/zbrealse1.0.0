@@ -1,7 +1,6 @@
 package com.aite.mainlibrary.activity.allshopcard.helpdoctor;
 
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -33,7 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
@@ -79,7 +77,7 @@ public class HelpdoctorActivity extends BaseActivity<HelpdoctorContract.View, He
     @Override
     protected void initView() {
         initToolbar("助医服务", getResources().getColor(R.color.white));
-        initMoreRecy();
+        initRecy();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         mBaserecyclerView.setLayoutManager(linearLayoutManager);
         helpDoctorRecyAdapter = new HelpDoctorRecyAdapter(context, helpDoctorlistBean);

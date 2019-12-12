@@ -1,7 +1,6 @@
 package com.aite.mainlibrary.fragment.activityfragment.minefragment;
 
 
-import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -14,17 +13,16 @@ import com.aite.mainlibrary.Constant.MainUIConstant;
 import com.aite.mainlibrary.Mainbean.UseInformationBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
-import com.aite.mainlibrary.activity.MineCollectActivity;
 import com.aite.mainlibrary.activity.allmain.AddDeviceMainActvity;
 import com.aite.mainlibrary.activity.allmain.device.DeviceListActivity;
 import com.aite.mainlibrary.activity.allmain.messager.MessagerActivity;
 import com.aite.mainlibrary.activity.allmoney.MoneycartActivity;
 import com.aite.mainlibrary.activity.allsetting.LessbodybookActivity;
 import com.aite.mainlibrary.activity.allsetting.MinePostBookActivity;
-import com.aite.mainlibrary.activity.allsetting.SettingActivity;
 import com.aite.mainlibrary.activity.allsetting.bookdispute.BookDisputeActivity;
 import com.aite.mainlibrary.activity.allsetting.healthbook.HealthBookActivity;
 import com.aite.mainlibrary.activity.allsetting.minerural.MineRuralActivity;
+import com.aite.mainlibrary.activity.allsetting.setting.SettingActivity;
 import com.aite.mainlibrary.activity.allsetting.thingsbook.ThingsbookActivity;
 import com.aite.mainlibrary.activity.allsetting.userinformation.UserInformationActivity;
 import com.aite.mainlibrary.adapter.GridViewIconAdapter;
@@ -109,9 +107,9 @@ public class MineFragment extends BaseFragment<MineContract.View, MinePresenter>
                         break;
                     case 3:
 //                        startActivity(MineCollectActivity.class);
-                        Intent intent7 = new Intent(getContext(), com.aite.a.activity.FavoriteListFargmentActivity.class);
-                        intent7.putExtra("i", 1);
-                        context.startActivity(intent7);
+//                        Intent intent7 = new Intent(getContext(), com.aite.a.activity.FavoriteListFargmentActivity.class);
+//                        intent7.putExtra("i", 1);
+//                        context.startActivity(intent7);
                         break;
 
                     default:

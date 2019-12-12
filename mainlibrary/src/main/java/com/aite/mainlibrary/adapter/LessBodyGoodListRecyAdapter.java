@@ -11,8 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aite.mainlibrary.Mainbean.MainUiDataBean;
-import com.aite.mainlibrary.Mainbean.MorningNoonEatBean;
+import com.aite.mainlibrary.Mainbean.LessBodyInformationBean;
 import com.aite.mainlibrary.R;
 import com.aite.mainlibrary.R2;
 import com.bumptech.glide.Glide;
@@ -24,15 +23,15 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class MorningNoonEatRecyAdapter extends RecyclerView.Adapter<MorningNoonEatRecyAdapter.ViewHolder> {
+public class LessBodyGoodListRecyAdapter extends RecyclerView.Adapter<LessBodyGoodListRecyAdapter.ViewHolder> {
     private Context context;
     private LayoutInflater inflater;
-    private List<MorningNoonEatBean.GoodsListBean> goodsListBeanList;
+    private List<LessBodyInformationBean.GoodsCommendListBean> lessBodyInformationBeans;
 
-    public MorningNoonEatRecyAdapter(Context context, List<MorningNoonEatBean.GoodsListBean> goodsListBeanList) {
+    public LessBodyGoodListRecyAdapter(Context context, List<LessBodyInformationBean.GoodsCommendListBean> lessBodyInformationBeans) {
         this.context = context;
         this.inflater = LayoutInflater.from(context);
-        this.goodsListBeanList = goodsListBeanList;
+        this.lessBodyInformationBeans = lessBodyInformationBeans;
     }
 
     @NonNull
@@ -54,30 +53,24 @@ public class MorningNoonEatRecyAdapter extends RecyclerView.Adapter<MorningNoonE
     private OnClickLstenerInterface.OnRecyClickInterface lstenerInterface;
 
     /**
-     * goods_id : 9
-     * goods_name : 测试早餐2
-     * goods_short_title : 经典萝卜拌饭+萝卜酱+清蒸水蛋+早餐2
-     * goods_price : 0.10
-     * goods_promotion_price : 0.10
-     * goods_shipping_fee : 0.00
-     * goods_image : 2019/11/22/2_06277498241227640.jpg
-     * groupbuy_info : null
-     * xianshi_info : null
-     * miaosha_info : []
-     * spellgroup_info : []
-     * bargain_info : []
-     * goods_url : STORE_SITE_URL/index.php?act=goods&op=index&goods_id=9
-     * group_flag : false
-     * xianshi_flag : false
-     * goods_image_url : http://zhongbyi.aitecc.com/data/upload/shop/store/goods/2/2019/11/22/2_06277498241227640_360.jpg
+     * * goods_id : 8
+     * * goods_name : 测试早餐1
+     * * goods_price : 0.01
+     * * goods_marketprice : 1.00
+     * * goods_image_url : http://zhongbyi.aitecc.com/data/upload/shop/store/goods/2/2019/10/29/2_06256787071214709_240.jpg
+     * *
+     *
+     * @param holder
+     * @param position
      */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        holder.titleTv.setText(goodsListBeanList.get(position).getGoods_name());
-        holder.informationTv.setText(goodsListBeanList.get(position).getGoods_short_title());
-        holder.priceTv.setText(String.format("￥ %s", goodsListBeanList.get(position).getGoods_price()));
+        holder.titleTv.setText(lessBodyInformationBeans.get(position).getGoods_name());
+        holder.buyBtn.setVisibility(View.GONE);
+        holder.informationTv.setVisibility(View.GONE);
+        holder.priceTv.setText(String.format("￥ %s", lessBodyInformationBeans.get(position).getGoods_price()));
         Glide.with(context).
-                load(goodsListBeanList.get(position).getGoods_image_url())
+                load(lessBodyInformationBeans.get(position).getGoods_image_url())
                 .into(holder.icon);
         holder.buyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +82,7 @@ public class MorningNoonEatRecyAdapter extends RecyclerView.Adapter<MorningNoonE
 
     @Override
     public int getItemCount() {
-        return goodsListBeanList == null ? 0 : goodsListBeanList.size();
+        return lessBodyInformationBeans == null ? 0 : lessBodyInformationBeans.size();
     }
 
     static

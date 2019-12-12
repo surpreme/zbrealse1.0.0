@@ -112,6 +112,20 @@
             android:gravity="right">
 
             <TextView
+                android:id="@+id/talk_goods_tv"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/round_background_yellow"
+                android:gravity="center"
+                android:text="评价"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+            <TextView
                 android:id="@+id/elder_sure_tv"
                 android:layout_width="70dp"
                 android:layout_height="30dp"

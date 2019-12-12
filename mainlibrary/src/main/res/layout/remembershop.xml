@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar_right_layout" />
+    <include layout="@layout/toolbar_layout" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -80,7 +80,7 @@
         </RelativeLayout>
 
         <View
-            android:layout_width="40dp"
+            android:layout_width="15dp"
             android:layout_height="20dp"
             android:layout_gravity="center" />
 
@@ -129,10 +129,9 @@
 
         <ImageView
             android:layout_width="20dp"
-            android:layout_height="13dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
-            android:src="@drawable/longinok"
-            android:tint="@color/lightglay" />
+            android:src="@mipmap/year_icon" />
 
         <View
             android:layout_width="20dp"
@@ -227,11 +226,10 @@
                 android:layout_marginLeft="@dimen/margin_10dp"
                 android:layout_marginRight="@dimen/margin_10dp"
                 android:background="@null"
-                android:gravity="left|center"
+                android:gravity="right|center"
                 android:inputType="phone"
                 android:maxLength="15"
                 android:maxLines="1"
-                android:textColor="@color/black"
                 android:textSize="17sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -243,6 +241,7 @@
         android:background="@color/noglay" />
 
     <LinearLayout
+        android:id="@+id/address_ll"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/white"
@@ -266,21 +265,22 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:id="@+id/address_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right|center"
                 android:paddingRight="15dp"
-                android:text="南山街道养老院"
+                android:text="请选择用餐地址"
                 android:textColor="#ff999999"
                 android:textSize="15sp" />
         </LinearLayout>
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
             android:layout_gravity="center"
-            android:src="@mipmap/location" />
+            android:src="@drawable/go_black"/>
 
         <View
             android:layout_width="20dp"
