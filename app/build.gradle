@@ -103,6 +103,8 @@ dependencies {
     implementation project(path: ':baselibrary')
     implementation project(path: ':mainlibrary')
     implementation project(path: ':testlibrary')
+
+
 //    implementation project(path: ':mainmodules')
     //jpush
 //    implementation 'cn.jiguang.sdk:jpush:3.3.6'  // 此处以JPush 3.3.6 版本为例。

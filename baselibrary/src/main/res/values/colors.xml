@@ -24,6 +24,11 @@
     <color name="Violet">#8080C0</color>
     <color name="agreen">#00d7c7</color>
     <color name="green">#0A9952</color>
+    <color name="search_bg">#EFEFEF</color>
+
+
+
+
 
 
 </resources>

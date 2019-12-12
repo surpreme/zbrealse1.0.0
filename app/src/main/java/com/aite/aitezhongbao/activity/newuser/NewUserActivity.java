@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ import com.aite.aitezhongbao.R;
 import com.aite.aitezhongbao.activity.newusermsg.NewusermsgActivity;
 import com.aite.aitezhongbao.bean.FirstNewUserBean;
 import com.aite.aitezhongbao.bean.SureFindPasswordCodeBean;
+import com.aite.mainlibrary.Mainbean.AllAreaBean;
 import com.google.android.material.textfield.TextInputEditText;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.PopwindowUtils;
@@ -36,6 +38,7 @@ import butterknife.OnClick;
  */
 
 public class NewUserActivity extends BaseActivity<NewUserContract.View, NewUserPresenter> implements NewUserContract.View {
+
     @BindView(R.id.next_btn)
     Button next_btn;
     @BindView(R.id.sendcode_tv)
@@ -179,4 +182,5 @@ public class NewUserActivity extends BaseActivity<NewUserContract.View, NewUserP
         });
 
     }
+
 }

@@ -24,7 +24,10 @@ allprojects {
             url 'http://mvn.gt.igexin.com/nexus/content/repositories/releases'
         }
         repositories {
-            flatDir { dirs 'libs' }
+            flatDir {
+                dirs project(':shopMallLibrary').file('libs')
+                dirs project(':alipaylibrary').file('libs')
+            }
         }
     }
 }

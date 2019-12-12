@@ -4,6 +4,8 @@ import android.app.Activity;
 import com.aite.aitezhongbao.app.App;
 import com.aite.aitezhongbao.bean.FirstNewUserBean;
 import com.aite.aitezhongbao.bean.SureFindPasswordCodeBean;
+import com.aite.mainlibrary.Mainbean.AllAreaBean;
+import com.google.gson.Gson;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.bean.BaseData;
 import com.lzy.basemodule.bean.BeanConvertor;
@@ -61,4 +63,44 @@ public class NewusermsgPresenter extends BasePresenterImpl<NewusermsgContract.Vi
                 });
 
     }
+
+
+    @Override
+    public void getAreachoice() {
+        OkGo.<BaseData<AllAreaBean>>get(AppConstant.AREACHIOCEHELPDOCTORNEEDURL)
+                .tag(mView.getContext())
+                .execute(new AbsCallback<BaseData<AllAreaBean>>() {
+                    @Override
+                    public BaseData<AllAreaBean> convertResponse(okhttp3.Response response) throws Throwable {
+                        LogUtils.d(response.request());
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+                        BaseData baseData = BeanConvertor.convertBean(jsonObject.toString(), BaseData.class);
+                        if (baseData.getDatas().getError() != null) {
+                            mView.showError(baseData.getDatas().getError());
+                            return null;
+                        } else {
+                            JSONObject object = jsonObject.optJSONObject("datas");
+                            Gson gson = new Gson();
+                            AllAreaBean allAreaBean = gson.fromJson(object.toString(), AllAreaBean.class);
+//                            AllAreaBean allAreaBean = BeanConvertor.convertBean(object.toString(), AllAreaBean.class);
+                            ((Activity) mView.getContext()).runOnUiThread(()
+                                    -> mView.onGetAreaChoiceSuccess(allAreaBean));
+                        }
+                        return null;
+                    }
+
+                    @Override
+                    public void onStart(Request<BaseData<AllAreaBean>, ? extends Request> request) {
+                        LogUtils.d("onStart");
+
+                    }
+
+                    @Override
+                    public void onSuccess(Response<BaseData<AllAreaBean>> response) {
+                        LogUtils.d("onSuccess");
+
+                    }
+                });
+    }
+
 }

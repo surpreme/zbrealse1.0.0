@@ -379,7 +379,6 @@ public abstract class mBaseActivity<V extends BaseView, T extends BasePresenterI
         } catch (Exception e) {
             LogUtils.e("initToolbar-fail" + e);
         }
-
     }
 
     public void initToolbar(String title, String righTitle, View.OnClickListener listener) {

@@ -1,8 +1,12 @@
 package com.aite.aitezhongbao.activity.newuser;
 
+import android.app.Activity;
+
 import com.aite.aitezhongbao.app.App;
 import com.aite.aitezhongbao.bean.FirstNewUserBean;
 import com.aite.aitezhongbao.bean.SureFindPasswordCodeBean;
+import com.aite.mainlibrary.Mainbean.AllAreaBean;
+import com.google.gson.Gson;
 import com.lzy.basemodule.BaseConstant.AppConstant;
 import com.lzy.basemodule.bean.BaseData;
 import com.lzy.basemodule.bean.BeanConvertor;
@@ -96,6 +100,11 @@ public class NewUserPresenter extends BasePresenterImpl<NewUserContract.View> im
 
                     }
                 });
-
     }
+
+
+
+
+
+
 }

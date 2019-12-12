@@ -22,4 +22,10 @@
     <color name="blue_day_login">#00a0e9</color>
     <color name="green">#0A9952</color>
 
+    <color name="text1">#333</color>
+    <color name="text2">#666</color>
+    <color name="text3">#999</color>
+
+
+
 </resources>

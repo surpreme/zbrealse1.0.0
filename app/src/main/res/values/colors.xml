@@ -18,5 +18,7 @@
     <color name="red">#FF0000</color>
     <color name="titleblack">#333333</color>
 
+    <color name="black_333333">#333333</color>
+    <color name="line_DDDDDD">#DDDDDD</color>
 
 </resources>

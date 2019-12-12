@@ -61,7 +61,7 @@
         <activity android:name="com.aite.mainlibrary.activity.allmain.AddDeviceMainActvity" />
         <activity android:name="com.aite.mainlibrary.activity.allqr.qrcode.QrCodeActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmain.device.DeviceNumberEditActivity" />
-        <activity android:name="com.aite.mainlibrary.activity.allshopcard.DoctormainInformationActivity" />
+        <activity android:name="com.aite.mainlibrary.activity.allshopcard.DoctorInfoActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.daytogether.DayTogetherActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allshopcard.dayinformation.DayInformationActivity" />
         <activity android:name="com.aite.mainlibrary.activity.allmain.buydaytogether.BuyDayTogetherActivity" />

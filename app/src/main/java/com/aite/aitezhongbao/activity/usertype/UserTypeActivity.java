@@ -164,7 +164,6 @@ public class UserTypeActivity extends BaseActivity<UserTypeContract.View, UserTy
                     doctorPostMsgLl.setVisibility(View.VISIBLE);
                 } else {
                     doctorPostMsgLl.setVisibility(View.GONE);
-
                 }
             }
         });
