@@ -104,7 +104,7 @@ public class AddHealthBookActivity extends BaseActivity<AddHealthBookContract.Vi
                 File file = FileUtils.getFileByUri(context, uri);
                 if (file != null && file.exists()) {
                     httpParams.put("images", file);
-                }
+            }
             }
         }
         return httpParams;

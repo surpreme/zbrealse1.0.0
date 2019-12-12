@@ -45,7 +45,7 @@ public class AddAdrressPresenter extends BasePresenterImpl<AddAdrressContract.Vi
                             LogUtils.e(e);
                         }
                         JSONObject object = jsonObject.optJSONObject("datas");
-                        String dataresult=object.optString("address_id");
+                        String dataresult = object.optString("address_id");
 //                        Gson gson = new Gson();
 //                        AddbinduserfamilyBean addbinduserfamilyBean = gson.fromJson(jsonObject.toString(), AddbinduserfamilyBean.class);
                         ((Activity) mView.getContext()).runOnUiThread(()
@@ -82,15 +82,12 @@ public class AddAdrressPresenter extends BasePresenterImpl<AddAdrressContract.Vi
                             return null;
                         } else {
                             JSONObject object = jsonObject.optJSONObject("datas");
-
                             Gson gson = new Gson();
                             AllAreaBean allAreaBean = gson.fromJson(object.toString(), AllAreaBean.class);
 //                            AllAreaBean allAreaBean = BeanConvertor.convertBean(object.toString(), AllAreaBean.class);
                             ((Activity) mView.getContext()).runOnUiThread(()
                                     -> mView.onGetAreaChoiceSuccess(allAreaBean));
                         }
-
-
                         return null;
                     }
 

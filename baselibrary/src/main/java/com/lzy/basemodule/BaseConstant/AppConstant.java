@@ -160,13 +160,10 @@ public class AppConstant {
     public static final String POSTAIRSERVICEMINETOGETHERLISTURL = BASEURL + "index.php?act=member_respite&op=my_list";
     //喘息服务 我发布的服务——服务详情
     public static final String POSTAIRSERVICEINFORMATIONMINETOGETHERURL = BASEURL + "index.php?act=member_respite&op=my_detail";
-    //助医服务 我发布的服务——列表信息
+    // 我发布的服务——列表信息
     public static final String POSTHELPDOCTORMINETOGETHERLISTURL = BASEURL + "index.php?act=member_doctor_help&op=my_list";
     //助医服务 我发布的服务——服务详情
     public static final String POSTHELPDOCTORINFORMATIONMINETOGETHERURL = BASEURL + "index.php?act=member_doctor_help&op=my_detail";
-    /**
-     *
-     */
     /**
      * 参与
      */

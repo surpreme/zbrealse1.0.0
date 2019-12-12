@@ -181,7 +181,6 @@
         <!--百分号颜色-->
         <attr name="textPercentColor" format="color"></attr>
 
-
         <!--固定字体设置-->
         <attr name="showProgressText" format="string"></attr>
         <!--固定字体颜色-->
@@ -195,6 +194,16 @@
         <!--固定字体大小-->
         <attr name="setNumber" format="integer"></attr>
 
+
+    </declare-styleable>
+
+
+
+    <declare-styleable name="RatingBarView">
+        <attr name="starImageSize" format="dimension" />
+        <attr name="starCount" format="integer" />
+        <attr name="starEmpty" format="reference" />
+        <attr name="starFill" format="reference" />
 
     </declare-styleable>
 

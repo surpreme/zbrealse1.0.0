@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical">
 
     <include layout="@layout/toolbar_layout" />
@@ -10,14 +11,17 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/black" />
+        android:layout_height="@dimen/dp_8"
+        android:background="@color/noglay" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_margin="@dimen/margin_10dp"
-        android:background="@drawable/round_background_noyellow"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/search_bg"
         android:padding="@dimen/padding_8dp">
 
         <ImageView
@@ -33,17 +37,19 @@
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/margin_10dp"
             android:gravity="center|left"
-            android:text="请输入疾病、医生、科室、医院" />
+            android:text="@string/search_hint" />
+
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="48dp"
         android:layout_gravity="center"
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/ll_nationwide"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -54,8 +60,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="销量"
-                android:textSize="16sp" />
+                android:text="全国"
+                android:textColor="@color/text1"
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -74,6 +81,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_division"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -84,8 +92,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="销量"
-                android:textSize="16sp" />
+                android:text="科室"
+                android:textColor="@color/text1"
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -97,14 +106,13 @@
                     android:layout_height="12dp"
                     app:srcCompat="@drawable/top" />
 
-
             </LinearLayout>
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/buy_ll"
+            android:id="@+id/ll_sales"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -117,7 +125,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="销量"
-                android:textSize="16sp" />
+                android:textColor="@color/text1"
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/buy_choice_ll"
@@ -138,7 +147,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/away_ll"
+            android:id="@+id/ll_screen"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -150,8 +159,9 @@
                 android:id="@+id/away_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="距离"
-                android:textSize="16sp" />
+                android:text="筛选"
+                android:textColor="@color/text1"
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/away_choice_ll"
@@ -165,79 +175,9 @@
                     android:layout_width="20dp"
                     android:layout_height="12dp"
                     app:srcCompat="@drawable/low" />
-
             </LinearLayout>
-
-
         </LinearLayout>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="@color/noglay" />
-
-    <LinearLayout
-        android:id="@+id/doctor_infortion_ll"
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:paddingLeft="@dimen/padding_10dp"
-        android:paddingTop="@dimen/padding_10dp">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/yelllow" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="@dimen/padding_5dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/padding_5dp"
-                android:text="唐欣"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSize_16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/padding_5dp"
-                android:text="第一执业深圳市人民医院"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSize_13sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:paddingBottom="@dimen/padding_5dp"
-                android:text="坐诊医院：广州中医药大学固生堂深圳罗湖..."
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSize_13sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:paddingBottom="@dimen/padding_5dp"
-                android:text="擅长：儿童过敏性疾病（过敏性咳嗽、慢性腹..."
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSize_13sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/padding_5dp"
-                android:text="评分9.4 预约量29031 咨询量544 回复速度 较快"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSize_13sp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <include layout="@layout/recy_layout" />
+    <include layout="@layout/smart_refresh_layout" />
 </LinearLayout>

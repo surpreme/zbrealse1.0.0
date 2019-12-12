@@ -126,7 +126,6 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
 
-
     <include layout="@layout/bottom_btn" />
 
 </RelativeLayout>

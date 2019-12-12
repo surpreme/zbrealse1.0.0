@@ -1,5 +1,7 @@
 <resources>
     <string name="baseUrl">http://zhongbyi.aitecc.com</string>
 
+    <string name="search_hint">请输入疾病、医生、科室、医院</string>
+
 
 </resources>

@@ -14,7 +14,6 @@ public class BuyDayTogetherContract {
         void onBuyThingSuccesss(Object msg);
 
         void onGetInformationSuceess(Object msg);
-
     }
 
     interface Presenter extends BasePresenter<View> {

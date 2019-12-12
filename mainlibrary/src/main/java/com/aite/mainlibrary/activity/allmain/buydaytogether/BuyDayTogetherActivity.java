@@ -65,7 +65,6 @@ public class BuyDayTogetherActivity extends BaseActivity<BuyDayTogetherContract.
                 mPresenter.buyService(initPostAllParams());
             }
         });
-
     }
 
     private HttpParams initParams() {
@@ -82,8 +81,7 @@ public class BuyDayTogetherActivity extends BaseActivity<BuyDayTogetherContract.
         httpParams.put("key", AppConstant.KEY);
         httpParams.put("buyer_phone", getEditString(iphoneNumberEdit));
         httpParams.put("quantity", 1);
-        httpParams.put("goods_id",
-                !isStringEmpty(getIntent().getStringExtra("goods_id")) ? getIntent().getStringExtra("goods_id") : "");
+        httpParams.put("goods_id", !isStringEmpty(getIntent().getStringExtra("goods_id")) ? getIntent().getStringExtra("goods_id") : "");
         return httpParams;
     }
 
@@ -91,7 +89,6 @@ public class BuyDayTogetherActivity extends BaseActivity<BuyDayTogetherContract.
     @Override
     protected void initDatas() {
         mPresenter.getInformation(initParams());
-
     }
 
     @Override
@@ -111,7 +108,6 @@ public class BuyDayTogetherActivity extends BaseActivity<BuyDayTogetherContract.
             startActivity(SureShopBookActivity.class, "order_id", isStringEmpty(((PayHelpServiceSuccessBean) msg).getOrder_id()) ? "" : ((PayHelpServiceSuccessBean) msg).getOrder_id());
         else
             showToast("订单生成失败", Gravity.TOP);
-
     }
 
     /**
@@ -124,7 +120,6 @@ public class BuyDayTogetherActivity extends BaseActivity<BuyDayTogetherContract.
      * goods_info.quantity	字符串	购买数量
      * goods_info.goods_total	字符串	应付总额
      * error	字符串	错误信息 error_code=0 正确 其他编码错误
-     *
      * @param msg
      */
     @Override
@@ -133,8 +128,5 @@ public class BuyDayTogetherActivity extends BaseActivity<BuyDayTogetherContract.
         titleTv.setText(((BuySencondBean) msg).getGoods_info().getGoods_name());
         priceTv.setText(String.format("￥%s", ((BuySencondBean) msg).getGoods_info().getGoods_price()));
         bookPrice.setText(String.format("￥%s", ((BuySencondBean) msg).getGoods_info().getGoods_total()));
-
     }
-
-
 }

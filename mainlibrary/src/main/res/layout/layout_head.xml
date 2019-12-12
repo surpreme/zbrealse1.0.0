@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bao="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/agreen"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingTop="16dp"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingBottom="@dimen/margin_20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="唐欣"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18" />
+
+
+                    <TextView
+                        android:id="@+id/tv_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20dp"
+                        android:text="主任医师"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_hospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    android:text="第一执业深圳市人民医院"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    android:orientation="horizontal">
+
+                    <!--      bao:starEmpty="@mipmap/no_star_icon"
+                        bao:starFill="@drawable/star_icon"-->
+
+                    <com.lzy.basemodule.view.RatingBarView
+                        android:id="@+id/starView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:starEmpty="@mipmap/no_star_icon"
+                        app:starFill="@mipmap/star_icon"
+                        app:starImageSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tv_grade1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="9.4"
+                        android:textColor="#F4EA2A"
+                        android:textSize="@dimen/text_size_18" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+
+                <com.aite.a.view.CircleImageView
+                    android:id="@+id/user_icon"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/user_icon"
+                    android:layout_alignBottom="@+id/user_icon"
+                    android:src="@mipmap/on_line_icon" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_grade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common_font_size_12" />
+
+                <TextView
+                    android:id="@+id/tv_subscribe_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common_font_size_12" />
+
+
+                <TextView
+                    android:id="@+id/tv_consult_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common_font_size_12" />
+
+
+                <TextView
+                    android:id="@+id/tv_reply_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common_font_size_12" />
+
+            </LinearLayout>
+
+
+            <!--擅长-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="擅长"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common_font_size_16" />
+
+
+                <TextView
+                    android:id="@+id/tv_morbidity_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_toRightOf="@+id/tv_text"
+                    android:background="@drawable/morbidity_type_bg"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:text="慢性腹泻"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_13sp" />
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:src="@mipmap/down_icon" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="46dp"
+                android:layout_marginRight="@dimen/dp_12"
+                android:text="儿童过敏性疾病（过敏性咳嗽、慢性腹泻），新生儿及小儿常见病、多发病。"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_font_size_16" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

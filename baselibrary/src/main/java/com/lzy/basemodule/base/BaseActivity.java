@@ -37,6 +37,10 @@ import butterknife.Unbinder;
  */
 
 public abstract class BaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> extends mBaseActivity<V, T> implements View.OnClickListener, BaseView {
+
+    protected static final String TAG = "TODO";
+
+
     protected abstract int getLayoutResId();
 
     protected abstract void initView();
@@ -61,6 +65,7 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
+        ButterKnife.bind(this);
 //        if (isCanSavedInstanceState)
         if (savedInstanceState != null && !savedInstanceState.isEmpty())
             this.savedInstanceState = savedInstanceState;
@@ -216,7 +221,6 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
     @Override
     public void dimissLoading() {
         PopwindowUtils.getmInstance().dismissPopWindow();
-
     }
 
     @Override
@@ -228,6 +232,5 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenterIm
                 LogUtils.e("服务器返回错误信息-----------" + msg);
             }
         });
-
     }
 }

@@ -113,17 +113,21 @@
                         android:textSize="13sp" />
 
                     <LinearLayout
+                        android:id="@+id/ll_site"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
                         <TextView
+                            android:id="@+id/tv_region"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|right"
                             android:layout_weight="1"
+                            android:ellipsize="end"
                             android:gravity="right|center"
-                            android:text="省、市、区、街道" />
+                            android:hint="省、市、区、街道"
+                            android:maxLines="1" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -203,7 +207,9 @@
                             android:gravity="right|center"
                             android:hint="请输入身份证号"
                             android:maxEms="25"
+                            android:maxLength="18"
                             android:maxLines="1"
+                            android:text="41000119910101123X"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
                     </com.google.android.material.textfield.TextInputLayout>
