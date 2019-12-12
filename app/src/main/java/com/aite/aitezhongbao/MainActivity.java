@@ -241,6 +241,9 @@ public class MainActivity extends BaseActivity {
 //            case R.id.shop_tv:
 //                break;
             case R.id.shop_layout:
+
+
+
                 //       setTabSelection(1);
 //                Intent intent = new Intent(/*getContext(), HomeTabActivity.class*/);
 //                intent.setClassName(getContext(),com.aite.a.HomeTabActivity);
