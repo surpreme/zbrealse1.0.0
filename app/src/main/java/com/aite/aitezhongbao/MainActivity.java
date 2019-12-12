@@ -242,11 +242,11 @@ public class MainActivity extends BaseActivity {
 //                break;
             case R.id.shop_layout:
                 //       setTabSelection(1);
-                Intent intent = new Intent(/*getContext(), HomeTabActivity.class*/);
-                intent.setClassName(getContext(),"com.aite.a.HomeTabActivity");
-                //getContext(),com.aite.a.activity.MainActivity.class
-//                intent.setAction("com.aite.zhongbao.shop.MainActivity");
-                startActivity(intent);
+//                Intent intent = new Intent(/*getContext(), HomeTabActivity.class*/);
+//                intent.setClassName(getContext(),com.aite.a.HomeTabActivity);
+//                //getContext(),com.aite.a.activity.MainActivity.class
+////                intent.setAction("com.aite.zhongbao.shop.MainActivity");
+//                startActivity(intent);
 
                 break;
 //            case R.id.aroundbackground_img:
